@@ -38,7 +38,7 @@ const CongressHero = () => {
             IN THE PACIFIC
           </h1>
 
-          <p className="text-lg mt-4 text-white/90 leading-relaxed max-w-3xl text-blue-800  text-right w-full">
+          <p className="text-lg mt-4 text-accent leading-relaxed max-w-3xl text-orange-800 text-opacity-65 text-right w-full">
             {" "}
             Exploring the dynamic relationship between archaeological heritage
             and environmental transformations across Pacific regions. Join
