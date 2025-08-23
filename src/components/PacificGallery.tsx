@@ -89,10 +89,10 @@ const PacificGallery = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <Card className="bg-gradient-pacific text-white shadow-congress max-w-4xl mx-auto">
+            <Card className="bg-gradient-pacific text-black shadow-congress max-w-4xl mx-auto">
               <CardContent className="pt-8">
                 <h3 className="text-3xl font-bold mb-4">Connecting Pacific Cultures</h3>
-                <p className="text-white/90 leading-relaxed mb-6 text-lg">
+                <p className="text-black/90 leading-relaxed mb-6 text-lg">
                   These iconic sites represent just a fraction of the rich archaeological heritage 
                   spanning the Pacific. Our congress will explore how environmental changes have 
                   shaped these cultures and how they, in turn, have adapted their environments 
@@ -101,15 +101,15 @@ const PacificGallery = () => {
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div>
                     <div className="text-3xl font-bold mb-2">1000+</div>
-                    <div className="text-white/80">Archaeological Sites</div>
+                    <div className="text-black">Archaeological Sites</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold mb-2">50+</div>
-                    <div className="text-white/80">Pacific Islands</div>
+                    <div className="text-black">Pacific Islands</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold mb-2">3000+</div>
-                    <div className="text-white/80">Years of History</div>
+                    <div className="text-black">Years of History</div>
                   </div>
                 </div>
               </CardContent>

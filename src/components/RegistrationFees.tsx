@@ -64,7 +64,7 @@ const RegistrationFees = () => {
                   }`}
                 >
                   {fee.highlight && (
-                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-pacific-blue text-white">
+                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-pacific-blue text-black">
                       Chilean Rate
                     </Badge>
                   )}
@@ -91,7 +91,7 @@ const RegistrationFees = () => {
                       ))}
                     </ul>
                     <Button 
-                      className="w-full mt-6" 
+                      className="w-full mt-6 text-black" 
                       variant={fee.highlight ? "congress" : "outline"}
                     >
                       Register Now

@@ -62,9 +62,9 @@ const CallForPapers = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="bg-gradient-pacific p-6 rounded-lg text-white">
+                <div className="bg-gradient-pacific p-6 rounded-lg ">
                   <h4 className="font-bold text-lg mb-2">Best Professional Paper</h4>
-                  <p className="text-2xl font-bold">$400 USD</p>
+                  <p className="text-2xl font-bold ">$400 USD</p>
                   <p className="text-sm opacity-90">Outstanding research contribution</p>
                 </div>
                 

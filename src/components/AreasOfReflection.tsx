@@ -100,10 +100,10 @@ const AreasOfReflection = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <Card className="bg-gradient-pacific text-white shadow-congress max-w-3xl mx-auto">
+            <Card className="bg-gradient-pacific text-black shadow-congress max-w-3xl mx-auto">
               <CardContent className="pt-8">
-                <h3 className="text-2xl font-bold mb-4">Multi-Scale Integration</h3>
-                <p className="text-white/90 leading-relaxed">
+                <h3 className="text-2xl font-bold mb-4 ">Multi-Scale Integration</h3>
+                <p className="text-white/90 leading-relaxed text-black">
                   We especially encourage submissions that integrate multiple scales of analysis, 
                   combining local archaeological evidence with regional patterns and global contexts. 
                   Interdisciplinary approaches connecting archaeology with climatology, oceanography, 

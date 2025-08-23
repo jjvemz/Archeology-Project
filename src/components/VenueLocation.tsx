@@ -123,11 +123,11 @@ const VenueLocation = () => {
             </div>
           </div>
 
-          <Card className="shadow-congress bg-gradient-pacific text-white">
+          <Card className="shadow-congress bg-gradient-pacific text-black">
             <CardContent className="pt-8 text-center">
-              <Camera className="h-12 w-12 mx-auto mb-6 text-white" />
+              <Camera className="h-12 w-12 mx-auto mb-6 text-black" />
               <h3 className="text-2xl font-bold mb-4">Cultural Immersion</h3>
-              <p className="text-white/90 leading-relaxed mb-6 max-w-3xl mx-auto">
+              <p className="text-black leading-relaxed mb-6 max-w-3xl mx-auto">
                 Beyond the academic sessions, immerse yourself in Chilean culture and heritage. 
                 The Colchagua Valley offers unique opportunities to explore local archaeology, 
                 colonial history, and indigenous traditions, making it an ideal setting for our Pacific congress.
@@ -136,7 +136,7 @@ const VenueLocation = () => {
                 <Button size="lg" variant="yellow">
                   Book Accommodation
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-pacific-blue">
+                <Button size="lg" variant="outline" className="border-grey text-black hover:bg-white hover:text-pacific-blue">
                   Download Travel Guide
                 </Button>
               </div>
