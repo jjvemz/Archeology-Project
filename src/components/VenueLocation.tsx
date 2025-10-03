@@ -1,22 +1,24 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Car, Plane, Wine, Mountain, Camera } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 //import colchaguaValley from "@/assets/colchagua-valley.jpg";
 
 const PLACEHOLDER_IMAGE = "https://placehold.co/600x400"
 
 const VenueLocation = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="venue" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Venue & Location
+              {t("venue.title")}
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Join us at the prestigious Hotel Santa Cruz in Chile's renowned Colchagua Valley, 
-              a perfect setting that combines academic excellence with cultural heritage.
+              {t("venue.description")}
             </p>
           </div>
 
@@ -26,29 +28,27 @@ const VenueLocation = () => {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-3">
                     <MapPin className="h-8 w-8 text-coral" />
-                    Hotel Santa Cruz
+                    {t("venue.hotelName")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="border-l-4 border-coral pl-4">
-                    <h4 className="font-semibold text-foreground">Address</h4>
+                    <h4 className="font-semibold text-foreground">{t("venue.address")}</h4>
                     <p className="text-muted-foreground">
-                      Plaza de Armas s/n, Santa Cruz<br />
-                      Colchagua Valley, Sixth Region of Chile
+                      {t("venue.addressText")}<br />
+                      {t("venue.addressText2")}
                     </p>
                   </div>
                   <div className="border-l-4 border-pacific-blue pl-4">
-                    <h4 className="font-semibold text-foreground">World-Class Facilities</h4>
+                    <h4 className="font-semibold text-foreground">{t("venue.facilities")}</h4>
                     <p className="text-muted-foreground">
-                      State-of-the-art conference rooms, high-speed internet, 
-                      simultaneous translation capabilities, and audio-visual equipment
+                      {t("venue.facilities.desc")}
                     </p>
                   </div>
                   <div className="border-l-4 border-pacific-teal pl-4">
-                    <h4 className="font-semibold text-foreground">Accommodation</h4>
+                    <h4 className="font-semibold text-foreground">{t("venue.accommodation")}</h4>
                     <p className="text-muted-foreground">
-                      Luxury rooms with valley views, spa services, and fine dining options. 
-                      Special congress rates available for attendees.
+                      {t("venue.accommodation.desc")}
                     </p>
                   </div>
                 </CardContent>
@@ -58,25 +58,25 @@ const VenueLocation = () => {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-3">
                     <Plane className="h-8 w-8 text-pacific-blue" />
-                    Getting There
+                    {t("venue.gettingThere")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-start gap-3">
                     <Car className="h-5 w-5 text-pacific-teal mt-1" />
                     <div>
-                      <h4 className="font-semibold text-foreground">From Santiago</h4>
+                      <h4 className="font-semibold text-foreground">{t("venue.fromSantiago")}</h4>
                       <p className="text-muted-foreground text-sm">
-                        2 hours drive via Ruta 5 Sur. Shuttle service available from Santiago airport.
+                        {t("venue.fromSantiago.desc")}
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Plane className="h-5 w-5 text-pacific-blue mt-1" />
                     <div>
-                      <h4 className="font-semibold text-foreground">International Flights</h4>
+                      <h4 className="font-semibold text-foreground">{t("venue.internationalFlights")}</h4>
                       <p className="text-muted-foreground text-sm">
-                        Fly to Santiago (SCL), then ground transport to venue.
+                        {t("venue.internationalFlights.desc")}
                       </p>
                     </div>
                   </div>
@@ -86,15 +86,15 @@ const VenueLocation = () => {
 
             <div className="space-y-6">
               <div className="relative overflow-hidden rounded-lg shadow-congress">
-                <img 
-                  src={PLACEHOLDER_IMAGE} 
-                  alt="Colchagua Valley wine region landscape" 
+                <img
+                  src={PLACEHOLDER_IMAGE}
+                  alt="Colchagua Valley wine region landscape"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-volcanic/60 to-transparent flex items-end">
                   <div className="p-6 text-white">
-                    <h3 className="text-xl font-bold mb-2">Colchagua Valley</h3>
-                    <p className="text-white/90 text-sm">A UNESCO World Heritage wine region</p>
+                    <h3 className="text-xl font-bold mb-2">{t("venue.colchaguaValley")}</h3>
+                    <p className="text-white/90 text-sm">{t("venue.unescoBadge")}</p>
                   </div>
                 </div>
               </div>
@@ -103,9 +103,9 @@ const VenueLocation = () => {
                 <Card className="text-center shadow-card">
                   <CardContent className="pt-6">
                     <Wine className="h-8 w-8 text-coral mx-auto mb-3" />
-                    <h4 className="font-semibold text-foreground mb-2">Wine Heritage</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{t("venue.wineHeritage")}</h4>
                     <p className="text-muted-foreground text-sm">
-                      World-renowned vineyards and wine tastings
+                      {t("venue.wineHeritage.desc")}
                     </p>
                   </CardContent>
                 </Card>
@@ -113,9 +113,9 @@ const VenueLocation = () => {
                 <Card className="text-center shadow-card">
                   <CardContent className="pt-6">
                     <Mountain className="h-8 w-8 text-pacific-blue mx-auto mb-3" />
-                    <h4 className="font-semibold text-foreground mb-2">Scenic Beauty</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{t("venue.scenicBeauty")}</h4>
                     <p className="text-muted-foreground text-sm">
-                      Andean foothills and rolling vineyard landscapes
+                      {t("venue.scenicBeauty.desc")}
                     </p>
                   </CardContent>
                 </Card>
@@ -123,21 +123,19 @@ const VenueLocation = () => {
             </div>
           </div>
 
-          <Card className="shadow-congress bg-gradient-pacific text-black">
+          <Card className="shadow-congress bg-gradient-pacific text-orange-800 text-opacity-65">
             <CardContent className="pt-8 text-center">
-              <Camera className="h-12 w-12 mx-auto mb-6 text-black" />
-              <h3 className="text-2xl font-bold mb-4">Cultural Immersion</h3>
-              <p className="text-black leading-relaxed mb-6 max-w-3xl mx-auto">
-                Beyond the academic sessions, immerse yourself in Chilean culture and heritage. 
-                The Colchagua Valley offers unique opportunities to explore local archaeology, 
-                colonial history, and indigenous traditions, making it an ideal setting for our Pacific congress.
+              <Camera className="h-12 w-12 mx-auto mb-6 text-orange-800 text-opacity-65" />
+              <h3 className="text-2xl font-bold mb-4">{t("venue.culturalImmersion")}</h3>
+              <p className="text-orange-800 text-opacity-65 leading-relaxed mb-6 max-w-3xl mx-auto">
+                {t("venue.culturalImmersion.desc")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="yellow">
-                  Book Accommodation
+                  {t("venue.bookAccommodation")}
                 </Button>
-                <Button size="lg" variant="outline" className="border-grey text-black hover:bg-white hover:text-pacific-blue">
-                  Download Travel Guide
+                <Button size="lg" variant="outline" className="border-grey text-orange-800 text-opacity-65 hover:bg-white hover:text-pacific-blue">
+                  {t("venue.downloadGuide")}
                 </Button>
               </div>
             </CardContent>

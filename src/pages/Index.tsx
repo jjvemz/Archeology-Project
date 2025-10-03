@@ -8,6 +8,7 @@ import ScientificCommittee from "@/components/ScientificCommittee";
 import PacificGallery from "@/components/PacificGallery";
 import VideoSection from "@/components/VideoSection";
 import Footer from "@/components/Footer";
+import { AreasOfReflectionGallery } from "@/components/AreasOfReflectionGallery";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <CongressHero />
       <CallForPapers />
       <AreasOfReflection />
+      <AreasOfReflectionGallery />
       <VideoSection />
       <PacificGallery />
       <RegistrationFees />
