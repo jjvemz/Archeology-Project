@@ -1,0 +1,161 @@
+SCIENTIFIC LANDING PAGE COMPONENTS FOR RAPA NUI & PACIFIC MIGRATION EXPOSITION
+==================================================================================
+
+HERO SECTION
+------------
+Title: 10th International Conference on Rapa Nui and Early Pacific Migration
+Subtitle: Exploring the mysteries left behind by our Polynesian ancestors
+Date: November 10-16, 2018
+Location: Hanga Roa, Rapa Nui
+Call to Action: "Save the Date" / "Register Now"
+Background: Traditional Polynesian navigation framework/rope structure imagery
+Website Reference: earlypacificmigration.org
+
+
+ABOUT THE CONFERENCE
+--------------------
+Description: Following on from the successful 2016 International Conference on Early Pacific Migration in Ubud, Bali, the Mata Ki Te Rangi Rapa Nui Foundation hosts this five-day conference where Pacific experts will explore a wide range of topics covering the latest research on:
+- History
+- Landscape
+- Arts
+- Languages
+- Wayfinding
+- Polynesian ancestral mysteries
+
+
+MAIN THEMES / SECTIONS
+----------------------
+
+1. CULTURAL SIMILARITIES AMONG PACIFIC PEOPLES
+   (Semejanzas Culturales Entre Pueblos del Pacífico)
+
+   Content:
+   - Stone architecture with megalithic characteristics present throughout Polynesia
+   - Evidence of cultural community across the region
+   - Marae temples (heiau in Hawaii, ahu in Rapa Nui)
+   - Archaeological remains extending west to the Caroline Islands
+   - Shared language and ways of life as cultural similarity indicators
+   - Cultural survival despite geographic, political, and foreign cultural influences
+
+   Visual: Interactive map showing connections between:
+   - Hawaii (heiau)
+   - Caroline Islands (marae)
+   - Rapa Nui (ahu)
+   - Palau, New Guinea, Marshall Islands, Line Islands, Solomon Islands, Tuvalu, Tokelau, Samoa, Marquesas, Cook Islands, Tuamotu, Tahiti, Fiji, Vanuatu, New Caledonia, Tonga, Austral Islands, New Zealand
+
+
+2. MIGRATION AND THE SEA AS COMMUNICATION PLATFORM
+   (Migración y el Mar como Plataforma de Comunicación)
+
+   Content:
+   - Pacific peoples view the sea as connection, not barrier
+   - "Vasa" (Samoan word for ocean) derived from "va" meaning space or relationship between places, objects, and people (dynamic tension)
+   - Radical difference in Pacific perspective vs. Western perspective
+   - The sea as a medium of communication and travel
+   - Knowledge and technology enabling this ocean relationship
+   - Inter-island trade development (ancient and modern)
+   - Deep understanding of sea travel challenges
+   - Generational knowledge transfer during eastward migration
+   - Natural social, cultural, and commercial exchange between Pacific islands
+   - The ocean as a highway for the Polynesian community, not a geographic barrier
+
+   Visual: Map showing migration routes and trade connections across Pacific islands
+
+
+3. THE PACIFIC OCEAN (Scientific Context)
+   (El Océano Pacífico)
+
+   Key Facts:
+   - Area: 165,700,000 km²
+   - Largest body of water on Earth
+   - Covers one-third of Earth's surface
+   - Evolved from the Panthalassa Ocean
+   - Formed 750 million years ago from Rodinia separation
+   - Pacific Plate: first oceanic floor, formed 160 million years ago
+   - Expansion center in western central Pacific
+   - Largest oceanic plate on Earth
+   - Current Nazca, Cocos, and Juan de Fuca (Gorda) plates initially united
+   - North-South extent: ~15,000 km (Bering Sea to Antarctica)
+   - East-West extent: ~19,800 km maximum width (Indonesia to Panama coast)
+
+   Visual: Globe or 3D representation of the Pacific Ocean with tectonic plate information
+
+
+VISUAL ELEMENTS TO INCLUDE
+---------------------------
+1. Traditional Polynesian navigation rope framework (main hero image)
+2. Carved stone/petroglyph artwork examples (4 cultural artifacts shown in original):
+   - Carved wooden bowl with geometric patterns
+   - Traditional Pacific art with spiral/circular motifs
+   - Stone carving with detailed relief patterns
+   - Traditional Polynesian portrait/sculpture
+3. Interactive map of Pacific showing cultural connections (heiau-marae-ahu)
+4. Migration routes map across Pacific islands
+5. Globe visualization showing Pacific Ocean extent
+6. Moai or other Rapa Nui iconography
+
+
+RESEARCH TOPICS (Sub-sections or Accordion Menu)
+-------------------------------------------------
+- History of Pacific migration
+- Landscape archaeology
+- Arts and cultural artifacts
+- Polynesian languages
+- Traditional wayfinding and navigation
+- Megalithic architecture
+- Inter-island trade networks
+- Cultural preservation
+
+
+DESIGN PALETTE SUGGESTIONS
+---------------------------
+Primary Colors:
+- Deep ocean blue (#1e3a5f, #2c5f8d)
+- Navy/dark blue for headers
+- Orange/gold accents (#ff9500, #ffb347) - as seen in the original maps
+- White text on dark backgrounds
+
+Secondary Elements:
+- Natural stone textures
+- Ocean gradient backgrounds
+- Traditional Polynesian patterns as dividers
+
+
+FOOTER INFORMATION
+------------------
+Host Organization: Mata Ki Te Rangi Rapa Nui Foundation
+Previous Conference: 2016 International Conference on Early Pacific Migration, Ubud, Bali
+Website: earlypacificmigration.org
+Contact: [To be added]
+Social Media: [To be added]
+
+
+CONTENT SECTIONS STRUCTURE
+---------------------------
+1. Hero Section
+2. About the Conference
+3. Theme 1: Cultural Similarities
+4. Theme 2: Migration & Sea Communication
+5. Theme 3: The Pacific Ocean (Scientific Context)
+6. Research Topics
+7. Conference Schedule/Program
+8. Registration
+9. Venue & Travel Information
+10. Sponsors & Partners
+11. Contact & Footer
+
+
+INTERACTIVE ELEMENTS
+---------------------
+- Animated migration route maps
+- Clickable island locations with popup information
+- Image gallery of archaeological sites
+- Timeline of Pacific migration
+- 3D visualization of Pacific Ocean/tectonic plates
+- Cultural artifact viewer
+- Video presentations from previous conferences
+
+
+BILINGUAL CONTENT
+------------------
+Note: All content should be available in both Spanish and English as shown in the original materials.

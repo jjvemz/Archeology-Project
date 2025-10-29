@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const ExhibitionDetails = () => {
   return (
-    <section id="details" className="py-20 bg-gradient-to-b from-sand/20 to-background">
+    <section id="details" className="py-20 bg-gradient-to-b from-sand/20 to-[#fef2cd]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">

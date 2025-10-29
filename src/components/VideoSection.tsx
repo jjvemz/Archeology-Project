@@ -7,7 +7,7 @@ const VideoSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="video" className="py-20 bg-gradient-section">
+    <section id="video" className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -54,7 +54,7 @@ const VideoSection = () => {
                     </div>
                   </div>
 
-                  <Button variant="congress" size="lg" className="w-full">
+                  <Button variant="congress" size="lg" className="w-full text-black">
                     {t("video.watchVideo")}
                   </Button>
                 </CardContent>
@@ -116,7 +116,7 @@ const VideoSection = () => {
                 <Card className="shadow-card text-center">
                   <CardContent className="pt-4">
                     <div className="w-12 h-12 bg-gradient-pacific rounded-full mx-auto mb-3 flex items-center justify-center">
-                      <Users className="h-6 w-6 text-white" />
+                      <Users className="h-6 w-6 text-black" />
                     </div>
                     <h4 className="font-semibold text-foreground mb-1">{t("video.teamExpertise")}</h4>
                     <p className="text-muted-foreground text-sm">{t("video.teamExpertise.desc")}</p>

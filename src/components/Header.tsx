@@ -9,10 +9,16 @@ const Header = () => {
     <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <h1 className="text-2xl font-bold text-primary">{t("header.title")}</h1>
-            <span className="text-muted-foreground">|</span>
-            <span className="text-muted-foreground">{t("header.subtitle")}</span>
+          <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 flex-wrap">
+              <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-primary whitespace-nowrap">
+                {t("header.title")}
+              </h1>
+              <span className="text-muted-foreground hidden sm:inline">|</span>
+              <span className="text-xs sm:text-sm md:text-base text-muted-foreground">
+                {t("header.subtitle")}
+              </span>
+            </div>
           </div>
 
           <nav className="hidden md:flex items-center space-x-6">

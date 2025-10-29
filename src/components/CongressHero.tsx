@@ -7,11 +7,18 @@ const CongressHero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden ]">
       {/* Background Image */}
-      <div className="absolute inset-0 grid grid-cols-5 grid-rows-5 gap-0 w-full h-full">
+      <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-5 gap-0 w-full h-full">
         {/* Image on the left */}
-        <div className="col-span-3 row-span-5 relative">
+        <div className="col-span-full md:col-span-3 row-span-full md:row-span-5 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-volcanic/80 via-volcanic/60 to-transparent flex items-center justify-center">
+            <img
+              src="/images/logo_centro-removebg-preview.png"
+              alt="Pacific Congress Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
           <img
             src={OceanImg}
             alt="Moai statues at Easter Island representing Pacific archaeology"
@@ -20,17 +27,18 @@ const CongressHero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-volcanic/80 via-volcanic/60 to-transparent"></div>
         </div>
         {/* Empty grid area for spacing */}
-        <div className="col-span-2 row-span-5"></div>
+        <div className="hidden md:block md:col-span-2 md:row-span-5"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-4 text-left text-white flex justify-end ">
-        <div className="max-w-5xl w-full md:w-3/4 lg:w-2/3 flex flex-col items-end">
+      <div className="relative z-10 w-full px-4 md:px-8 lg:px-12 flex justify-center md:justify-end">
+        <div className="w-full md:w-2/5 lg:w-2/5 flex flex-col items-center md:items-end text-center md:text-right">
+          
           <Badge className="mb-6 bg-congress-yellow text-volcanic font-bold text-lg px-6 py-2 text-blue-900 text-opacity-65 ">
             {t("congressHero.badge")}
           </Badge>
 
-          <h1 className="text-5xl md:text-7xl lg:text-4xl font-bold mb-8 text-orange-800 text-opacity-65 leading-tight tracking-wider text-right w-full">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-orange-800 text-opacity-65 leading-tight tracking-wider w-full">
             <span className="text-blue-800">{t("congressHero.title1")}</span>
             <br />
             {t("congressHero.title2")}
@@ -39,30 +47,29 @@ const CongressHero = () => {
             {t("congressHero.title3")}
           </h1>
 
-          <p className="text-lg mt-4 text-accent leading-relaxed max-w-3xl text-orange-800 text-opacity-65 text-right w-full">
+          <p className="text-base sm:text-lg md:text-xl mt-4 text-accent leading-relaxed text-orange-800 text-opacity-65 w-full">
             {t("congressHero.description")}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-end w-full my-px-24">
+          <div className="flex flex-col xlg:flex-row gap-3 sm:gap-4 justify-center lg:justify-end w-full mt-8 md:mt-12">
             <Button
               size="lg"
               variant="congress"
-              className="text-lg px-8 py-6 text-orange-800 text-opacity-65"
+              className="text-sm sm:text-base md:text-lg px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-orange-800 text-opacity-65 w-full lg:w-auto"
             >
               {t("congressHero.submitAbstract")}
             </Button>
             <Button
               size="lg"
-              variant="yellow"
-              className="text-lg px-8 py-6 text-orange-800 text-opacity-65"
+              variant="congress"
+              className="text-sm sm:text-base md:text-lg px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-orange-800 text-opacity-65 w-full lg:w-auto"
             >
               {t("congressHero.registerNow")}
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 border-accent text-pacific-blue bg-blue/20 hover:bg-white/40 hover:text-volcanic text-accent"
-              style={{ backdropFilter: "blur(2px)" }}
+              variant="congress"
+              className="text-sm sm:text-base md:text-lg px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 border-accent text-pacific-blue bg-blue/20  hover:text-volcanic text-accent w-full lg:w-auto"
             >
               {t("congressHero.callForPapers")}
             </Button>

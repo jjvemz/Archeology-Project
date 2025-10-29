@@ -9,6 +9,10 @@ import PacificGallery from "@/components/PacificGallery";
 import VideoSection from "@/components/VideoSection";
 import Footer from "@/components/Footer";
 import { AreasOfReflectionGallery } from "@/components/AreasOfReflectionGallery";
+import ConferenceSchedule from "@/components/ConferenceSchedule";
+import SponsorsPartners from "@/components/SponsorsPartners";
+import CulturalArtifactsGallery from "@/components/CulturalArtifactsGallery";
+import PacificMigrationTimeline from "@/components/PacificMigrationTimeline";
 
 const Index = () => {
   return (
@@ -16,13 +20,17 @@ const Index = () => {
       <Header />
       <CongressHero />
       <CallForPapers />
+      <PacificMigrationTimeline />
       <AreasOfReflection />
       <AreasOfReflectionGallery />
+      <CulturalArtifactsGallery />
       <VideoSection />
       <PacificGallery />
       <RegistrationFees />
       <VenueLocation />
+      <ConferenceSchedule />
       <ScientificCommittee />
+      <SponsorsPartners />
       <Footer />
     </div>
   );

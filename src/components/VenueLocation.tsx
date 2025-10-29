@@ -10,7 +10,7 @@ const VenueLocation = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="venue" className="py-20 bg-background">
+    <section id="venue" className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -123,7 +123,7 @@ const VenueLocation = () => {
             </div>
           </div>
 
-          <Card className="shadow-congress bg-gradient-pacific text-orange-800 text-opacity-65">
+          <Card className="shadow-congress  text-orange-800 text-opacity-65">
             <CardContent className="pt-8 text-center">
               <Camera className="h-12 w-12 mx-auto mb-6 text-orange-800 text-opacity-65" />
               <h3 className="text-2xl font-bold mb-4">{t("venue.culturalImmersion")}</h3>

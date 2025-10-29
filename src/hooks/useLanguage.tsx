@@ -12,8 +12,8 @@ interface Translations {
 const translations: Translations = {
   // Header
   "header.title": {
-    en: "Pacific Congress 2027",
-    es: "Congreso del Pacífico 2027"
+    en: "Pacific Congress 2026",
+    es: "Congreso del Pacífico 2026"
   },
   "header.subtitle": {
     en: "Archaeology & Changing Environment",
@@ -21,7 +21,7 @@ const translations: Translations = {
   },
   "header.callForPapers": {
     en: "Call for Papers",
-    es: "Convocatoria de Artículos"
+    es: "Convocatoria de ponencías"
   },
   "header.areas": {
     en: "Areas",
@@ -71,13 +71,13 @@ const translations: Translations = {
   },
   "congressHero.callForPapers": {
     en: "Call for Papers",
-    es: "Convocatoria de Artículos"
+    es: "Convocatoria de ponencías"
   },
 
   // Call for Papers
   "callForPapers.title": {
     en: "Call for Papers",
-    es: "Convocatoria de Artículos"
+    es: "Convocatoria de ponencías"
   },
   "callForPapers.description": {
     en: "The First International Congress on Archaeology and Changing Environment in the Pacific invites researchers, scholars, and practitioners to submit their contributions exploring the dynamic relationship between archaeological heritage and environmental transformations across Pacific regions.",
@@ -876,6 +876,810 @@ const translations: Translations = {
     es: "Mantener altos estándares académicos y promover mejores prácticas"
   },
 
+  // Additional Areas of Reflection (New Research Topics)
+  "areas.culturalScale": {
+    en: "Cultural Scale",
+    es: "Escala Cultural"
+  },
+  "areas.linguisticScale": {
+    en: "Linguistic Scale",
+    es: "Escala Lingüística"
+  },
+  "areas.navigationScale": {
+    en: "Navigation Scale",
+    es: "Escala de Navegación"
+  },
+  "areas.architecturalScale": {
+    en: "Architectural Scale",
+    es: "Escala Arquitectónica"
+  },
+  "areas.arts.title": {
+    en: "Arts & Cultural Artifacts",
+    es: "Artes y Artefactos Culturales"
+  },
+  "areas.arts.desc": {
+    en: "Studying traditional art forms, petroglyphs, wood carving, stone sculpture, and cultural motifs that reflect Pacific societies' artistic expressions and symbolic systems.",
+    es: "Estudiando formas de arte tradicional, petroglifos, talla en madera, escultura en piedra y motivos culturales que reflejan las expresiones artísticas y sistemas simbólicos de las sociedades del Pacífico."
+  },
+  "areas.languages.title": {
+    en: "Polynesian Languages",
+    es: "Lenguas Polinesias"
+  },
+  "areas.languages.desc": {
+    en: "Examining language families, linguistic evolution, and Proto-Polynesian connections. Understanding how language preservation and comparative linguistics inform cultural relationships.",
+    es: "Examinando familias lingüísticas, evolución lingüística y conexiones proto-polinesias. Comprendiendo cómo la preservación del lenguaje y la lingüística comparada informan las relaciones culturales."
+  },
+  "areas.wayfinding.title": {
+    en: "Traditional Wayfinding & Navigation",
+    es: "Navegación y Orientación Tradicional"
+  },
+  "areas.wayfinding.desc": {
+    en: "Investigating traditional navigation techniques including star navigation, ocean currents, wave patterns, and celestial navigation that enabled trans-Pacific voyaging.",
+    es: "Investigando técnicas de navegación tradicional incluyendo navegación estelar, corrientes oceánicas, patrones de olas y navegación celeste que permitieron viajes trans-Pacífico."
+  },
+  "areas.megalithic.title": {
+    en: "Megalithic Architecture",
+    es: "Arquitectura Megalítica"
+  },
+  "areas.megalithic.desc": {
+    en: "Exploring stone platforms (ahu, heiau, marae), megalithic construction techniques, engineering innovations, and ceremonial structures across the Pacific.",
+    es: "Explorando plataformas de piedra (ahu, heiau, marae), técnicas de construcción megalítica, innovaciones de ingeniería y estructuras ceremoniales a través del Pacífico."
+  },
+
+  // Conference Schedule
+  "schedule.title": {
+    en: "Conference Schedule",
+    es: "Programa del Congreso"
+  },
+  "schedule.description": {
+    en: "Explore our comprehensive seven-day program featuring keynote presentations, concurrent sessions, workshops, and field trips across Pacific archaeology and environmental change themes.",
+    es: "Explora nuestro programa integral de siete días que incluye presentaciones magistrales, sesiones concurrentes, talleres y excursiones sobre temas de arqueología del Pacífico y cambio ambiental."
+  },
+  "schedule.downloadProgram": {
+    en: "Download Full Program (PDF)",
+    es: "Descargar Programa Completo (PDF)"
+  },
+  "schedule.sessionTypes": {
+    en: "Session Types",
+    es: "Tipos de Sesión"
+  },
+  "schedule.type.keynote": {
+    en: "Keynote",
+    es: "Magistral"
+  },
+  "schedule.type.plenary": {
+    en: "Plenary",
+    es: "Plenaria"
+  },
+  "schedule.type.concurrent": {
+    en: "Concurrent",
+    es: "Concurrente"
+  },
+  "schedule.type.workshop": {
+    en: "Workshop",
+    es: "Taller"
+  },
+  "schedule.type.panel": {
+    en: "Panel",
+    es: "Panel"
+  },
+  "schedule.type.poster": {
+    en: "Poster Session",
+    es: "Sesión de Pósters"
+  },
+  "schedule.type.fieldtrip": {
+    en: "Field Trip",
+    es: "Excursión"
+  },
+  "schedule.type.social": {
+    en: "Social Event",
+    es: "Evento Social"
+  },
+  "schedule.coffeeBreak": {
+    en: "Coffee Break & Networking",
+    es: "Coffee Break y Networking"
+  },
+  "schedule.lunchBreak": {
+    en: "Lunch Break",
+    es: "Almuerzo"
+  },
+  "schedule.location.lobby": {
+    en: "Main Lobby",
+    es: "Lobby Principal"
+  },
+  "schedule.location.grandHall": {
+    en: "Grand Hall",
+    es: "Salón Principal"
+  },
+  "schedule.location.terrace": {
+    en: "Garden Terrace",
+    es: "Terraza Jardín"
+  },
+  "schedule.location.multiple": {
+    en: "Multiple Rooms (A, B, C)",
+    es: "Salones Múltiples (A, B, C)"
+  },
+  "schedule.location.dining": {
+    en: "Dining Hall",
+    es: "Comedor"
+  },
+  "schedule.location.exhibitHall": {
+    en: "Exhibition Hall",
+    es: "Sala de Exhibición"
+  },
+  "schedule.location.ballroom": {
+    en: "Grand Ballroom",
+    es: "Salón de Baile"
+  },
+  "schedule.location.roomA": {
+    en: "Conference Room A",
+    es: "Sala de Conferencias A"
+  },
+  "schedule.location.roomB": {
+    en: "Conference Room B",
+    es: "Sala de Conferencias B"
+  },
+  "schedule.location.vineyard": {
+    en: "Vineyard Terrace",
+    es: "Terraza del Viñedo"
+  },
+
+  // Day 1
+  "schedule.day1.name": {
+    en: "Day 1",
+    es: "Día 1"
+  },
+  "schedule.day1.session1.title": {
+    en: "Registration & Welcome Coffee",
+    es: "Registro y Café de Bienvenida"
+  },
+  "schedule.day1.session2.title": {
+    en: "Opening Ceremony",
+    es: "Ceremonia de Apertura"
+  },
+  "schedule.day1.session2.speakers": {
+    en: "Dr. Maria Rodriguez, Congress Chair",
+    es: "Dra. Maria Rodriguez, Presidenta del Congreso"
+  },
+  "schedule.day1.session2.desc": {
+    en: "Welcome address, congress overview, and introduction to Pacific archaeology themes",
+    es: "Discurso de bienvenida, descripción general del congreso e introducción a los temas de arqueología del Pacífico"
+  },
+  "schedule.day1.session3.title": {
+    en: "Keynote: Climate Change & Pacific Archaeological Heritage",
+    es: "Magistral: Cambio Climático y Patrimonio Arqueológico del Pacífico"
+  },
+  "schedule.day1.session3.speakers": {
+    en: "Dr. James Tanaka, University of Hawaii",
+    es: "Dr. James Tanaka, Universidad de Hawaii"
+  },
+  "schedule.day1.session3.desc": {
+    en: "Examining the impacts of rising sea levels and climate change on Pacific archaeological sites",
+    es: "Examinando los impactos del aumento del nivel del mar y el cambio climático en los sitios arqueológicos del Pacífico"
+  },
+  "schedule.day1.session4.title": {
+    en: "Concurrent Sessions: Island Settlement Patterns",
+    es: "Sesiones Concurrentes: Patrones de Asentamiento Insular"
+  },
+  "schedule.day1.session4.desc": {
+    en: "Parallel sessions exploring colonization patterns, maritime adaptations, and early settlement archaeology",
+    es: "Sesiones paralelas explorando patrones de colonización, adaptaciones marítimas y arqueología de asentamiento temprano"
+  },
+  "schedule.day1.session5.title": {
+    en: "Concurrent Sessions: Cultural Change & Adaptation",
+    es: "Sesiones Concurrentes: Cambio Cultural y Adaptación"
+  },
+  "schedule.day1.session5.desc": {
+    en: "Papers on technological innovation, social organization, and cultural evolution",
+    es: "Artículos sobre innovación tecnológica, organización social y evolución cultural"
+  },
+  "schedule.day1.session6.title": {
+    en: "Poster Session I: Regional Studies",
+    es: "Sesión de Pósters I: Estudios Regionales"
+  },
+  "schedule.day1.session6.desc": {
+    en: "Interactive poster presentations on regional archaeological projects",
+    es: "Presentaciones interactivas de pósters sobre proyectos arqueológicos regionales"
+  },
+  "schedule.day1.session7.title": {
+    en: "Welcome Reception & Cultural Performance",
+    es: "Recepción de Bienvenida y Presentación Cultural"
+  },
+  "schedule.day1.session7.desc": {
+    en: "Evening reception with Chilean wine tasting and traditional Pacific cultural performances",
+    es: "Recepción vespertina con degustación de vinos chilenos y presentaciones culturales tradicionales del Pacífico"
+  },
+
+  // Day 2
+  "schedule.day2.name": {
+    en: "Day 2",
+    es: "Día 2"
+  },
+  "schedule.day2.session1.title": {
+    en: "Keynote: Trans-Pacific Connections in Prehistory",
+    es: "Magistral: Conexiones Trans-Pacífico en la Prehistoria"
+  },
+  "schedule.day2.session1.speakers": {
+    en: "Dr. Patricia Chen, National Taiwan University",
+    es: "Dra. Patricia Chen, Universidad Nacional de Taiwán"
+  },
+  "schedule.day2.session1.desc": {
+    en: "New evidence for long-distance trade and cultural exchange across the Pacific Ocean",
+    es: "Nueva evidencia de comercio de larga distancia e intercambio cultural a través del Océano Pacífico"
+  },
+  "schedule.day2.session2.title": {
+    en: "Concurrent Sessions: Environmental Archaeology",
+    es: "Sesiones Concurrentes: Arqueología Ambiental"
+  },
+  "schedule.day2.session2.desc": {
+    en: "Paleoenvironmental reconstruction, climate data, and human-environment interactions",
+    es: "Reconstrucción paleoambiental, datos climáticos e interacciones humano-ambiente"
+  },
+  "schedule.day2.session3.title": {
+    en: "Concurrent Sessions: Colonial Impact Studies",
+    es: "Sesiones Concurrentes: Estudios de Impacto Colonial"
+  },
+  "schedule.day2.session3.desc": {
+    en: "Bioarchaeology, disease patterns, and demographic changes during colonial periods",
+    es: "Bioarqueología, patrones de enfermedades y cambios demográficos durante períodos coloniales"
+  },
+  "schedule.day2.session4.title": {
+    en: "Workshop: GIS and Spatial Analysis in Pacific Archaeology",
+    es: "Taller: SIG y Análisis Espacial en Arqueología del Pacífico"
+  },
+  "schedule.day2.session4.desc": {
+    en: "Hands-on workshop on digital mapping and spatial analysis techniques",
+    es: "Taller práctico sobre mapeo digital y técnicas de análisis espacial"
+  },
+
+  // Day 3
+  "schedule.day3.name": {
+    en: "Day 3",
+    es: "Día 3"
+  },
+  "schedule.day3.session1.title": {
+    en: "Keynote: Megalithic Architecture Across the Pacific",
+    es: "Magistral: Arquitectura Megalítica a Través del Pacífico"
+  },
+  "schedule.day3.session1.speakers": {
+    en: "Dr. Rodrigo Valenzuela, University of Chile",
+    es: "Dr. Rodrigo Valenzuela, Universidad de Chile"
+  },
+  "schedule.day3.session1.desc": {
+    en: "Comparative analysis of stone platform construction from Rapa Nui to Hawaii",
+    es: "Análisis comparativo de construcción de plataformas de piedra desde Rapa Nui hasta Hawaii"
+  },
+  "schedule.day3.session2.title": {
+    en: "Concurrent Sessions: Traditional Navigation & Wayfinding",
+    es: "Sesiones Concurrentes: Navegación Tradicional y Orientación"
+  },
+  "schedule.day3.session2.desc": {
+    en: "Papers on celestial navigation, ocean currents, and traditional seafaring knowledge",
+    es: "Artículos sobre navegación celeste, corrientes oceánicas y conocimiento tradicional de navegación marítima"
+  },
+  "schedule.day3.session3.title": {
+    en: "Panel Discussion: Heritage Management in the 21st Century",
+    es: "Panel de Discusión: Gestión del Patrimonio en el Siglo XXI"
+  },
+  "schedule.day3.session3.desc": {
+    en: "Expert panel on contemporary challenges in site preservation and community archaeology",
+    es: "Panel de expertos sobre desafíos contemporáneos en preservación de sitios y arqueología comunitaria"
+  },
+  "schedule.day3.session4.title": {
+    en: "Poster Session II: Methodological Innovations",
+    es: "Sesión de Pósters II: Innovaciones Metodológicas"
+  },
+  "schedule.day3.session4.desc": {
+    en: "New techniques in dating, remote sensing, and archaeological analysis",
+    es: "Nuevas técnicas en datación, teledetección y análisis arqueológico"
+  },
+
+  // Day 4
+  "schedule.day4.name": {
+    en: "Day 4",
+    es: "Día 4"
+  },
+  "schedule.day4.session1.title": {
+    en: "Field Trip: Colchagua Valley Archaeological Sites",
+    es: "Excursión: Sitios Arqueológicos del Valle de Colchagua"
+  },
+  "schedule.day4.session1.location": {
+    en: "Various archaeological sites in Colchagua Valley",
+    es: "Varios sitios arqueológicos en el Valle de Colchagua"
+  },
+  "schedule.day4.session1.desc": {
+    en: "Guided tours of local pre-Columbian sites and colonial archaeological remains",
+    es: "Tours guiados de sitios precolombinos locales y restos arqueológicos coloniales"
+  },
+  "schedule.day4.session2.title": {
+    en: "Vineyard Dinner & Networking Event",
+    es: "Cena en Viñedo y Evento de Networking"
+  },
+  "schedule.day4.session2.desc": {
+    en: "Evening event at a local vineyard with wine pairing dinner and informal networking",
+    es: "Evento nocturno en viñedo local con cena de maridaje de vinos y networking informal"
+  },
+
+  // Day 5
+  "schedule.day5.name": {
+    en: "Day 5",
+    es: "Día 5"
+  },
+  "schedule.day5.session1.title": {
+    en: "Keynote: Arts and Cultural Expression in Pacific Societies",
+    es: "Magistral: Artes y Expresión Cultural en Sociedades del Pacífico"
+  },
+  "schedule.day5.session1.speakers": {
+    en: "Dr. Aroha Williams, Auckland University",
+    es: "Dra. Aroha Williams, Universidad de Auckland"
+  },
+  "schedule.day5.session1.desc": {
+    en: "Examining petroglyphs, wood carving, and artistic traditions across the Pacific",
+    es: "Examinando petroglifos, talla en madera y tradiciones artísticas a través del Pacífico"
+  },
+  "schedule.day5.session2.title": {
+    en: "Concurrent Sessions: Language and Archaeology",
+    es: "Sesiones Concurrentes: Lenguaje y Arqueología"
+  },
+  "schedule.day5.session2.desc": {
+    en: "Linguistic evidence for migration patterns and cultural connections",
+    es: "Evidencia lingüística para patrones migratorios y conexiones culturales"
+  },
+  "schedule.day5.session3.title": {
+    en: "Concurrent Sessions: Coastal Archaeology",
+    es: "Sesiones Concurrentes: Arqueología Costera"
+  },
+  "schedule.day5.session3.desc": {
+    en: "Marine resource exploitation, shoreline changes, and coastal adaptations",
+    es: "Explotación de recursos marinos, cambios costeros y adaptaciones costeras"
+  },
+  "schedule.day5.session4.title": {
+    en: "Workshop: Community Engagement in Archaeological Projects",
+    es: "Taller: Participación Comunitaria en Proyectos Arqueológicos"
+  },
+  "schedule.day5.session4.desc": {
+    en: "Best practices for collaborative archaeology and indigenous partnerships",
+    es: "Mejores prácticas para arqueología colaborativa y asociaciones indígenas"
+  },
+
+  // Day 6
+  "schedule.day6.name": {
+    en: "Day 6",
+    es: "Día 6"
+  },
+  "schedule.day6.session1.title": {
+    en: "Panel: Future Directions in Pacific Archaeology",
+    es: "Panel: Direcciones Futuras en Arqueología del Pacífico"
+  },
+  "schedule.day6.session1.desc": {
+    en: "Leading researchers discuss emerging trends and research priorities",
+    es: "Investigadores líderes discuten tendencias emergentes y prioridades de investigación"
+  },
+  "schedule.day6.session2.title": {
+    en: "Concurrent Sessions: Student Research Presentations",
+    es: "Sesiones Concurrentes: Presentaciones de Investigación Estudiantil"
+  },
+  "schedule.day6.session2.desc": {
+    en: "Graduate student papers on diverse Pacific archaeology topics",
+    es: "Artículos de estudiantes de posgrado sobre diversos temas de arqueología del Pacífico"
+  },
+  "schedule.day6.session3.title": {
+    en: "Concurrent Sessions: Interdisciplinary Approaches",
+    es: "Sesiones Concurrentes: Enfoques Interdisciplinarios"
+  },
+  "schedule.day6.session3.desc": {
+    en: "Papers integrating archaeology with oceanography, climatology, and anthropology",
+    es: "Artículos que integran arqueología con oceanografía, climatología y antropología"
+  },
+  "schedule.day6.session4.title": {
+    en: "Plenary: Synthesis and Integration",
+    es: "Plenaria: Síntesis e Integración"
+  },
+  "schedule.day6.session4.desc": {
+    en: "Summary of congress themes and emerging research directions",
+    es: "Resumen de temas del congreso y direcciones de investigación emergentes"
+  },
+
+  // Day 7
+  "schedule.day7.name": {
+    en: "Day 7",
+    es: "Día 7"
+  },
+  "schedule.day7.session1.title": {
+    en: "Final Plenary: Roundtable Discussion",
+    es: "Plenaria Final: Mesa Redonda"
+  },
+  "schedule.day7.session1.desc": {
+    en: "Open discussion on congress outcomes and future collaborations",
+    es: "Discusión abierta sobre resultados del congreso y colaboraciones futuras"
+  },
+  "schedule.day7.session2.title": {
+    en: "Awards Ceremony & Closing Remarks",
+    es: "Ceremonia de Premios y Clausura"
+  },
+  "schedule.day7.session2.speakers": {
+    en: "Scientific Committee & Congress Organizers",
+    es: "Comité Científico y Organizadores del Congreso"
+  },
+  "schedule.day7.session2.desc": {
+    en: "Presentation of best paper awards and closing addresses",
+    es: "Presentación de premios a mejores artículos y discursos de clausura"
+  },
+  "schedule.day7.session3.title": {
+    en: "Farewell Lunch",
+    es: "Almuerzo de Despedida"
+  },
+  "schedule.day7.session3.desc": {
+    en: "Final networking opportunity and congress conclusion",
+    es: "Última oportunidad de networking y conclusión del congreso"
+  },
+
+  // Sponsors & Partners
+  "sponsors.title": {
+    en: "Sponsors & Partners",
+    es: "Patrocinadores y Socios"
+  },
+  "sponsors.description": {
+    en: "This congress is made possible through the generous support of institutions, foundations, and organizations committed to advancing Pacific archaeology research.",
+    es: "Este congreso es posible gracias al generoso apoyo de instituciones, fundaciones y organizaciones comprometidas con el avance de la investigación en arqueología del Pacífico."
+  },
+  "sponsors.platinum": {
+    en: "Platinum Sponsors",
+    es: "Patrocinadores Platino"
+  },
+  "sponsors.gold": {
+    en: "Gold Sponsors",
+    es: "Patrocinadores Oro"
+  },
+  "sponsors.silver": {
+    en: "Silver Sponsors",
+    es: "Patrocinadores Plata"
+  },
+  "sponsors.institutionalPartners": {
+    en: "Institutional Partners",
+    es: "Socios Institucionales"
+  },
+  "sponsors.becomeASponsor": {
+    en: "Become a Sponsor",
+    es: "Conviértete en Patrocinador"
+  },
+  "sponsors.sponsorshipBenefits": {
+    en: "Support groundbreaking research in Pacific archaeology while gaining visibility among international scholars and institutions. Multiple sponsorship levels available with tailored benefits.",
+    es: "Apoya investigación innovadora en arqueología del Pacífico mientras ganas visibilidad entre académicos e instituciones internacionales. Múltiples niveles de patrocinio disponibles con beneficios personalizados."
+  },
+  "sponsors.viewPackages": {
+    en: "View Sponsorship Packages",
+    es: "Ver Paquetes de Patrocinio"
+  },
+  "sponsors.contactUs": {
+    en: "Contact Us",
+    es: "Contáctanos"
+  },
+  "sponsors.partnerType.academic": {
+    en: "Academic Partner",
+    es: "Socio Académico"
+  },
+  "sponsors.partnerType.cultural": {
+    en: "Cultural Partner",
+    es: "Socio Cultural"
+  },
+  "sponsors.partnerType.community": {
+    en: "Community Partner",
+    es: "Socio Comunitario"
+  },
+  "sponsors.partnerType.research": {
+    en: "Research Partner",
+    es: "Socio de Investigación"
+  },
+  "sponsors.mataKiTeRangi.name": {
+    en: "Mata Ki Te Rangi Rapa Nui Foundation",
+    es: "Fundación Mata Ki Te Rangi Rapa Nui"
+  },
+  "sponsors.mataKiTeRangi.desc": {
+    en: "Host organization and primary sponsor dedicated to Rapa Nui cultural preservation and Pacific research",
+    es: "Organización anfitriona y patrocinador principal dedicado a la preservación cultural de Rapa Nui y la investigación del Pacífico"
+  },
+  "sponsors.nationalGeographic.name": {
+    en: "National Geographic Society",
+    es: "National Geographic Society"
+  },
+  "sponsors.nsf.name": {
+    en: "National Science Foundation",
+    es: "Fundación Nacional de Ciencias"
+  },
+  "sponsors.chileMinistry.name": {
+    en: "Chilean Ministry of Culture",
+    es: "Ministerio de Cultura de Chile"
+  },
+  "sponsors.smithsonian.name": {
+    en: "Smithsonian Institution",
+    es: "Institución Smithsonian"
+  },
+  "sponsors.bishopMuseum.name": {
+    en: "Bishop Museum, Hawaii",
+    es: "Museo Bishop, Hawaii"
+  },
+  "sponsors.archaeologicalInstitute.name": {
+    en: "Archaeological Institute of America",
+    es: "Instituto Arqueológico de América"
+  },
+  "sponsors.pacificArchaeology.name": {
+    en: "Society for Pacific Archaeology",
+    es: "Sociedad de Arqueología del Pacífico"
+  },
+  "sponsors.universityHawaii.name": {
+    en: "University of Hawaii",
+    es: "Universidad de Hawaii"
+  },
+  "sponsors.universityChile.name": {
+    en: "University of Chile",
+    es: "Universidad de Chile"
+  },
+  "sponsors.australianNationalUniversity.name": {
+    en: "Australian National University",
+    es: "Universidad Nacional Australiana"
+  },
+  "sponsors.museumSantiago.name": {
+    en: "National Museum of Natural History, Santiago",
+    es: "Museo Nacional de Historia Natural, Santiago"
+  },
+  "sponsors.bernicePauahi.name": {
+    en: "Bernice Pauahi Bishop Museum",
+    es: "Museo Bernice Pauahi Bishop"
+  },
+  "sponsors.aucklandMuseum.name": {
+    en: "Auckland War Memorial Museum",
+    es: "Museo Conmemorativo de Guerra de Auckland"
+  },
+  "sponsors.rapaNuiCommunity.name": {
+    en: "Rapa Nui Indigenous Community",
+    es: "Comunidad Indígena Rapa Nui"
+  },
+  "sponsors.polynesiaSociety.name": {
+    en: "The Polynesian Society",
+    es: "La Sociedad Polinesia"
+  },
+
+  // Cultural Artifacts Gallery
+  "artifacts.title": {
+    en: "Cultural Artifacts & Traditional Arts",
+    es: "Artefactos Culturales y Artes Tradicionales"
+  },
+  "artifacts.description": {
+    en: "Explore remarkable examples of Pacific artistic expression through carved artifacts that showcase the sophisticated craftsmanship and symbolic systems of Polynesian cultures.",
+    es: "Explora ejemplos notables de expresión artística del Pacífico a través de artefactos tallados que muestran la sofisticada artesanía y sistemas simbólicos de las culturas polinesias."
+  },
+  "artifacts.woodenBowl.name": {
+    en: "Carved Wooden Ceremonial Bowl",
+    es: "Tazón Ceremonial de Madera Tallado"
+  },
+  "artifacts.woodenBowl.type": {
+    en: "Ceremonial Vessel",
+    es: "Vasija Ceremonial"
+  },
+  "artifacts.woodenBowl.origin": {
+    en: "Marquesas Islands",
+    es: "Islas Marquesas"
+  },
+  "artifacts.woodenBowl.desc": {
+    en: "Traditional ceremonial bowl featuring intricate geometric patterns used in important social and religious gatherings.",
+    es: "Tazón ceremonial tradicional con patrones geométricos intrincados usado en reuniones sociales y religiosas importantes."
+  },
+  "artifacts.woodenBowl.pattern1": {
+    en: "Geometric Patterns",
+    es: "Patrones Geométricos"
+  },
+  "artifacts.woodenBowl.pattern2": {
+    en: "Ceremonial Use",
+    es: "Uso Ceremonial"
+  },
+  "artifacts.spiralArt.name": {
+    en: "Spiral Motif Carving",
+    es: "Talla con Motivo Espiral"
+  },
+  "artifacts.spiralArt.type": {
+    en: "Traditional Carving",
+    es: "Talla Tradicional"
+  },
+  "artifacts.spiralArt.origin": {
+    en: "New Zealand (Māori)",
+    es: "Nueva Zelanda (Māori)"
+  },
+  "artifacts.spiralArt.desc": {
+    en: "Intricate spiral and circular patterns representing growth, life, and connection in Māori cosmology.",
+    es: "Patrones espirales y circulares intrincados que representan crecimiento, vida y conexión en la cosmología māori."
+  },
+  "artifacts.spiralArt.pattern1": {
+    en: "Koru Spirals",
+    es: "Espirales Koru"
+  },
+  "artifacts.spiralArt.pattern2": {
+    en: "Circular Motifs",
+    es: "Motivos Circulares"
+  },
+  "artifacts.stoneRelief.name": {
+    en: "Stone Relief Petroglyph",
+    es: "Petroglifo en Relieve de Piedra"
+  },
+  "artifacts.stoneRelief.type": {
+    en: "Petroglyph",
+    es: "Petroglifo"
+  },
+  "artifacts.stoneRelief.origin": {
+    en: "Easter Island (Rapa Nui)",
+    es: "Isla de Pascua (Rapa Nui)"
+  },
+  "artifacts.stoneRelief.desc": {
+    en: "Detailed stone carving with relief patterns depicting ancestral figures and symbolic representations.",
+    es: "Talla en piedra detallada con patrones en relieve que representan figuras ancestrales y representaciones simbólicas."
+  },
+  "artifacts.stoneRelief.pattern1": {
+    en: "Relief Patterns",
+    es: "Patrones en Relieve"
+  },
+  "artifacts.stoneRelief.pattern2": {
+    en: "Symbolic Icons",
+    es: "Iconos Simbólicos"
+  },
+  "artifacts.portrait.name": {
+    en: "Polynesian Portrait Sculpture",
+    es: "Escultura de Retrato Polinesio"
+  },
+  "artifacts.portrait.type": {
+    en: "Sculpture",
+    es: "Escultura"
+  },
+  "artifacts.portrait.origin": {
+    en: "Hawaiian Islands",
+    es: "Islas Hawaianas"
+  },
+  "artifacts.portrait.desc": {
+    en: "Traditional portrait sculpture depicting cultural identity and ancestral connections through artistic representation.",
+    es: "Escultura de retrato tradicional que representa identidad cultural y conexiones ancestrales a través de representación artística."
+  },
+  "artifacts.portrait.pattern1": {
+    en: "Human Form",
+    es: "Forma Humana"
+  },
+  "artifacts.portrait.pattern2": {
+    en: "Cultural Identity",
+    es: "Identidad Cultural"
+  },
+  "artifacts.culturalSignificance.title": {
+    en: "Cultural Significance of Pacific Arts",
+    es: "Significado Cultural de las Artes del Pacífico"
+  },
+  "artifacts.culturalSignificance.desc": {
+    en: "These artifacts represent more than artistic expression—they embody cultural knowledge, social hierarchies, spiritual beliefs, and historical narratives passed down through generations across the Pacific.",
+    es: "Estos artefactos representan más que expresión artística: encarnan conocimiento cultural, jerarquías sociales, creencias espirituales y narrativas históricas transmitidas a través de generaciones en todo el Pacífico."
+  },
+  "artifacts.stats.artifacts": {
+    en: "Documented Artifacts",
+    es: "Artefactos Documentados"
+  },
+  "artifacts.stats.cultures": {
+    en: "Pacific Cultures",
+    es: "Culturas del Pacífico"
+  },
+  "artifacts.stats.years": {
+    en: "Years of Tradition",
+    es: "Años de Tradición"
+  },
+
+  // Pacific Migration Timeline
+  "timeline.title": {
+    en: "Timeline of Pacific Migration",
+    es: "Línea de Tiempo de Migración del Pacífico"
+  },
+  "timeline.description": {
+    en: "Trace the remarkable journey of Polynesian peoples across the vast Pacific Ocean, one of humanity's greatest feats of exploration and navigation.",
+    es: "Rastrea el notable viaje de los pueblos polinesios a través del vasto Océano Pacífico, una de las mayores hazañas de exploración y navegación de la humanidad."
+  },
+  "timeline.event1.year": {
+    en: "1500-1300 BCE",
+    es: "1500-1300 a.C."
+  },
+  "timeline.event1.event": {
+    en: "Lapita Culture Expansion",
+    es: "Expansión de la Cultura Lapita"
+  },
+  "timeline.event1.location": {
+    en: "Bismarck Archipelago → Fiji, Tonga, Samoa",
+    es: "Archipiélago de Bismarck → Fiji, Tonga, Samoa"
+  },
+  "timeline.event1.desc": {
+    en: "First major eastward migration into Remote Oceania, marked by distinctive pottery styles and advanced seafaring capabilities.",
+    es: "Primera gran migración hacia el este en Oceanía Remota, marcada por estilos de cerámica distintivos y capacidades avanzadas de navegación marítima."
+  },
+  "timeline.event2.year": {
+    en: "200 BCE - 300 CE",
+    es: "200 a.C. - 300 d.C."
+  },
+  "timeline.event2.event": {
+    en: "Settlement of Eastern Polynesia",
+    es: "Asentamiento de Polinesia Oriental"
+  },
+  "timeline.event2.location": {
+    en: "Society Islands, Cook Islands",
+    es: "Islas de la Sociedad, Islas Cook"
+  },
+  "timeline.event2.desc": {
+    en: "Polynesians establish settlements in Eastern Polynesia, developing distinct cultural traditions and seafaring technologies.",
+    es: "Los polinesios establecen asentamientos en Polinesia Oriental, desarrollando tradiciones culturales distintivas y tecnologías de navegación marítima."
+  },
+  "timeline.event3.year": {
+    en: "300-500 CE",
+    es: "300-500 d.C."
+  },
+  "timeline.event3.event": {
+    en: "Marquesas Islands Settlement",
+    es: "Asentamiento de las Islas Marquesas"
+  },
+  "timeline.event3.location": {
+    en: "Marquesas Islands",
+    es: "Islas Marquesas"
+  },
+  "timeline.event3.desc": {
+    en: "Polynesians reach the Marquesas Islands, establishing a cultural hub that would launch further eastern migrations.",
+    es: "Los polinesios alcanzan las Islas Marquesas, estableciendo un centro cultural que lanzaría más migraciones hacia el este."
+  },
+  "timeline.event4.year": {
+    en: "500-700 CE",
+    es: "500-700 d.C."
+  },
+  "timeline.event4.event": {
+    en: "Hawaii Colonization",
+    es: "Colonización de Hawaii"
+  },
+  "timeline.event4.location": {
+    en: "Hawaiian Islands",
+    es: "Islas Hawaianas"
+  },
+  "timeline.event4.desc": {
+    en: "First Polynesian settlers reach Hawaii via long-distance voyaging, beginning a unique cultural development in isolation.",
+    es: "Primeros colonos polinesios alcanzan Hawaii mediante viajes de larga distancia, comenzando un desarrollo cultural único en aislamiento."
+  },
+  "timeline.event5.year": {
+    en: "800-1000 CE",
+    es: "800-1000 d.C."
+  },
+  "timeline.event5.event": {
+    en: "Rapa Nui (Easter Island) Settlement",
+    es: "Asentamiento de Rapa Nui (Isla de Pascua)"
+  },
+  "timeline.event5.location": {
+    en: "Easter Island (Rapa Nui)",
+    es: "Isla de Pascua (Rapa Nui)"
+  },
+  "timeline.event5.desc": {
+    en: "Polynesians reach the most remote inhabited island on Earth, developing the iconic moai statue culture.",
+    es: "Los polinesios alcanzan la isla habitada más remota de la Tierra, desarrollando la icónica cultura de las estatuas moai."
+  },
+  "timeline.event6.year": {
+    en: "1200-1300 CE",
+    es: "1200-1300 d.C."
+  },
+  "timeline.event6.event": {
+    en: "New Zealand (Aotearoa) Settlement",
+    es: "Asentamiento de Nueva Zelanda (Aotearoa)"
+  },
+  "timeline.event6.location": {
+    en: "Aotearoa (New Zealand)",
+    es: "Aotearoa (Nueva Zelanda)"
+  },
+  "timeline.event6.desc": {
+    en: "Last major Polynesian migration reaches New Zealand, where Māori culture develops unique adaptations to temperate environment.",
+    es: "Última gran migración polinesia alcanza Nueva Zelanda, donde la cultura māori desarrolla adaptaciones únicas al ambiente templado."
+  },
+  "timeline.seafaring.title": {
+    en: "The Art of Polynesian Navigation",
+    es: "El Arte de la Navegación Polinesia"
+  },
+  "timeline.seafaring.desc": {
+    en: "These migrations represent extraordinary achievements in seafaring, navigation, and human adaptation. Using star paths, ocean swells, bird migrations, and ancestral knowledge, Polynesian navigators crossed thousands of miles of open ocean without modern instruments, settling the vast Pacific triangle.",
+    es: "Estas migraciones representan logros extraordinarios en navegación marítima, navegación y adaptación humana. Usando caminos estelares, oleajes oceánicos, migraciones de aves y conocimiento ancestral, los navegantes polinesios cruzaron miles de millas de océano abierto sin instrumentos modernos, poblando el vasto triángulo del Pacífico."
+  },
+
   // Video Section
   "video.title": {
     en: "Meet the Organizing Team",
@@ -968,52 +1772,76 @@ const translations: Translations = {
 
   // Footer
   "footer.title": {
-    en: "ArcheoVault",
-    es: "ArcheoVault"
+    en: "Mata Ki Te Rangi Foundation",
+    es: "Fundación Mata Ki Te Rangi"
   },
   "footer.description": {
-    en: "Bringing ancient civilizations to life through extraordinary archaeological discoveries and immersive experiences.",
-    es: "Dando vida a civilizaciones antiguas a través de extraordinarios descubrimientos arqueológicos y experiencias inmersivas."
+    en: "Dedicated to preserving and sharing the cultural heritage of Rapa Nui and the Pacific region through research, education, and international collaboration.",
+    es: "Dedicada a preservar y compartir el patrimonio cultural de Rapa Nui y la región del Pacífico a través de investigación, educación y colaboración internacional."
   },
-  "footer.quickLinks": {
-    en: "Quick Links",
-    es: "Enlaces Rápidos"
+  "footer.followingFrom": {
+    en: "Following from:",
+    es: "Siguiendo a:"
   },
-  "footer.aboutExhibition": {
-    en: "About Exhibition",
-    es: "Sobre la Exposición"
+  "footer.previous2016Congress": {
+    en: "2016 International Conference on Early Pacific Migration",
+    es: "Conferencia Internacional 2016 sobre Migración Temprana del Pacífico"
   },
-  "footer.featuredArtifacts": {
-    en: "Featured Artifacts",
-    es: "Artefactos Destacados"
+  "footer.ubudBali": {
+    en: "Ubud, Bali, Indonesia",
+    es: "Ubud, Bali, Indonesia"
   },
-  "footer.visitorInfo": {
-    en: "Visitor Information",
-    es: "Información para Visitantes"
+  "footer.congressLinks": {
+    en: "Congress Links",
+    es: "Enlaces del Congreso"
   },
-  "footer.virtualTour": {
-    en: "Virtual Tour",
-    es: "Tour Virtual"
+  "footer.callForPapers": {
+    en: "Call for Papers",
+    es: "Convocatoria de Artículos"
   },
-  "footer.visitUs": {
-    en: "Visit Us",
-    es: "Visítanos"
+  "footer.researchAreas": {
+    en: "Research Areas",
+    es: "Áreas de Investigación"
   },
-  "footer.museum": {
-    en: "Museum of Natural History",
-    es: "Museo de Historia Natural"
+  "footer.registration": {
+    en: "Registration",
+    es: "Registro"
   },
-  "footer.address": {
-    en: "1234 Heritage Avenue",
-    es: "Avenida Patrimonio 1234"
+  "footer.venueTravel": {
+    en: "Venue & Travel",
+    es: "Sede y Viaje"
+  },
+  "footer.schedule": {
+    en: "Schedule",
+    es: "Programa"
+  },
+  "footer.committee": {
+    en: "Scientific Committee",
+    es: "Comité Científico"
+  },
+  "footer.contactInfo": {
+    en: "Contact Information",
+    es: "Información de Contacto"
+  },
+  "footer.foundation": {
+    en: "Mata Ki Te Rangi Rapa Nui Foundation",
+    es: "Fundación Mata Ki Te Rangi Rapa Nui"
+  },
+  "footer.location": {
+    en: "Hanga Roa, Rapa Nui, Chile",
+    es: "Hanga Roa, Rapa Nui, Chile"
   },
   "footer.phone": {
-    en: "Phone: (555) 123-4567",
-    es: "Teléfono: (555) 123-4567"
+    en: "Phone: +56 32 2100 236",
+    es: "Teléfono: +56 32 2100 236"
   },
   "footer.email": {
-    en: "Email: info@archeovault.org",
-    es: "Email: info@archeovault.org"
+    en: "Email: info@earlypacificmigration.org",
+    es: "Email: info@earlypacificmigration.org"
+  },
+  "footer.website": {
+    en: "earlypacificmigration.org",
+    es: "earlypacificmigration.org"
   },
   "footer.followUs": {
     en: "Follow Us",
@@ -1031,9 +1859,13 @@ const translations: Translations = {
     en: "Instagram",
     es: "Instagram"
   },
+  "footer.linkedin": {
+    en: "LinkedIn",
+    es: "LinkedIn"
+  },
   "footer.copyright": {
-    en: "© 2024 ArcheoVault Exhibition. All rights reserved. | Created with archaeological passion.",
-    es: "© 2024 Exposición ArcheoVault. Todos los derechos reservados. | Creado con pasión arqueológica."
+    en: "© 2025 Pacific Congress on Archaeology & Changing Environment. All rights reserved.",
+    es: "© 2025 Congreso del Pacífico sobre Arqueología y Medio Ambiente Cambiante. Todos los derechos reservados."
   }
 };
 

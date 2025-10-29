@@ -46,7 +46,7 @@ const PacificGallery = () => {
   ];
 
   return (
-    <section id="heritage" className="py-20 bg-background">
+    <section id="heritage" className="py-20 ]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -104,7 +104,7 @@ const PacificGallery = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <Card className="bg-gradient-pacific text-orange-800 text-opacity-65 shadow-congress max-w-4xl mx-auto">
+            <Card className=" text-orange-800 text-opacity-65 shadow-congress max-w-4xl mx-auto">
               <CardContent className="pt-8">
                 <h3 className="text-3xl font-bold mb-4">{t("gallery.connecting.title")}</h3>
                 <p className="text-orange-800 text-opacity-65/90 leading-relaxed mb-6 text-lg">

@@ -66,7 +66,7 @@ const ScientificCommittee = () => {
   ];
 
   return (
-    <section id="committee" className="py-20 bg-gradient-section">
+    <section id="committee" className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -121,7 +121,7 @@ const ScientificCommittee = () => {
               <Card key={index} className="shadow-card hover:shadow-congress transition-all duration-300">
                 <CardHeader className="text-center pb-3">
                   <div className="w-16 h-16 bg-gradient-pacific rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="h-8 w-8 text-white" />
+                    <Users className="h-8 w-8 text-black" />
                   </div>
                   <CardTitle className="text-lg leading-tight">{member.name}</CardTitle>
                   <Badge variant="secondary" className="bg-pacific-blue/10 text-pacific-blue text-xs">
@@ -142,10 +142,10 @@ const ScientificCommittee = () => {
           </div>
 
           <div className="mt-16">
-            <Card className="shadow-congress bg-gradient-pacific text-white">
+            <Card className="shadow-congress text-black">
               <CardContent className="pt-8 text-center">
                 <h3 className="text-2xl font-bold mb-4">{t("committee.responsibilities")}</h3>
-                <div className="grid md:grid-cols-3 gap-6 text-white/90">
+                <div className="grid md:grid-cols-3 gap-6 text-black/90">
                   <div>
                     <h4 className="font-semibold mb-2">{t("committee.abstractReview")}</h4>
                     <p className="text-sm">

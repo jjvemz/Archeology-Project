@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-background to-sand/20">
+    <section id="about" className="py-20 bg-gradient-to-b from-[#fef2cd] to-sand/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">

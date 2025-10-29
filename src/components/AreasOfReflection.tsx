@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Map, Waves, TreePine, Users, Globe, MapPin } from "lucide-react";
+import { Map, Waves, TreePine, Users, Globe, MapPin, Palette, Languages as LanguagesIcon, Compass, Building2 } from "lucide-react";
 import { AreasOfReflectionGallery } from "./AreasOfReflectionGallery";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -49,11 +49,39 @@ const AreasOfReflection = () => {
       scaleKey: "areas.conservationScale",
       descKey: "areas.preservation.desc",
       keywords: ["Heritage Management", "Site Preservation", "Community Archaeology", "Threat Assessment"]
+    },
+    {
+      icon: Palette,
+      titleKey: "areas.arts.title",
+      scaleKey: "areas.culturalScale",
+      descKey: "areas.arts.desc",
+      keywords: ["Petroglyphs", "Wood Carving", "Stone Sculpture", "Traditional Motifs"]
+    },
+    {
+      icon: LanguagesIcon,
+      titleKey: "areas.languages.title",
+      scaleKey: "areas.linguisticScale",
+      descKey: "areas.languages.desc",
+      keywords: ["Proto-Polynesian", "Language Families", "Linguistic Evolution", "Language Preservation"]
+    },
+    {
+      icon: Compass,
+      titleKey: "areas.wayfinding.title",
+      scaleKey: "areas.navigationScale",
+      descKey: "areas.wayfinding.desc",
+      keywords: ["Star Navigation", "Ocean Currents", "Wave Patterns", "Celestial Navigation"]
+    },
+    {
+      icon: Building2,
+      titleKey: "areas.megalithic.title",
+      scaleKey: "areas.architecturalScale",
+      descKey: "areas.megalithic.desc",
+      keywords: ["Stone Platforms", "Ahu & Marae", "Engineering Techniques", "Ceremonial Structures"]
     }
   ];
 
   return (
-    <section id="areas" className="py-20 bg-background">
+    <section id="areas" className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -103,7 +131,7 @@ const AreasOfReflection = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <Card className="bg-gradient-pacific text-orange-800 textopacity-65 shadow-congress max-w-3xl mx-auto">
+            <Card className=" text-orange-800 textopacity-65 shadow-congress max-w-3xl mx-auto">
               <CardContent className="pt-8">
                 <h3 className="text-2xl font-bold mb-4 text-orange-800 text-opacity-65">{t("areas.multiScale.title")}</h3>
                 <p className=" leading-relaxed text-orange-800 text-opacity-65">
