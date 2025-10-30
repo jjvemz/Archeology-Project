@@ -7,6 +7,13 @@ import PlasticSea from "/images/plasticsea.jpeg";
 import tijuanotas from "/images/tijuanotas.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
 
+import Circle2 from "/images/circulo2.png";
+import Circle3 from "/images/circulo3.png";
+import Circle4 from "/images/circulo4.png";
+import Circle5 from "/images/circulo5.png";
+import Circle6 from "/images/circulo6.png";
+import Circle7 from "/images/circulo7.png";
+
 export function AreasOfReflectionGallery() {
   const { t } = useLanguage();
 
@@ -15,7 +22,7 @@ export function AreasOfReflectionGallery() {
       titleKey: "areasGallery.islands.title",
       descKey: "areasGallery.islands.desc",
       scaleKey: "areasGallery.islands.scale",
-      image: ProfileStatueImage,
+      image: Circle2,
       topics: [
         "areasGallery.islands.topic1",
         "areasGallery.islands.topic2",
@@ -27,7 +34,7 @@ export function AreasOfReflectionGallery() {
       titleKey: "areasGallery.cultural.title",
       descKey: "areasGallery.cultural.desc",
       scaleKey: "areasGallery.cultural.scale",
-      image: NavCard2,
+      image: Circle3,
       topics: [
         "areasGallery.cultural.topic1",
         "areasGallery.cultural.topic2",
@@ -39,7 +46,7 @@ export function AreasOfReflectionGallery() {
       titleKey: "areasGallery.diseases.title",
       descKey: "areasGallery.diseases.desc",
       scaleKey: "areasGallery.diseases.scale",
-      image: PlasticSea,
+      image: Circle4,
       topics: [
         "areasGallery.diseases.topic1",
         "areasGallery.diseases.topic2",
@@ -51,7 +58,7 @@ export function AreasOfReflectionGallery() {
       titleKey: "areasGallery.climate.title",
       descKey: "areasGallery.climate.desc",
       scaleKey: "areasGallery.climate.scale",
-      image: SeaWoods,
+      image: Circle5,
       topics: [
         "areasGallery.climate.topic1",
         "areasGallery.climate.topic2",
@@ -63,7 +70,7 @@ export function AreasOfReflectionGallery() {
       titleKey: "areasGallery.coastal.title",
       descKey: "areasGallery.coastal.desc",
       scaleKey: "areasGallery.coastal.scale",
-      image: tijuanotas,
+      image: Circle6,
       topics: [
         "areasGallery.coastal.topic1",
         "areasGallery.coastal.topic2",
@@ -75,7 +82,7 @@ export function AreasOfReflectionGallery() {
       titleKey: "areasGallery.paleo.title",
       descKey: "areasGallery.paleo.desc",
       scaleKey: "areasGallery.paleo.scale",
-      image: null,
+      image: Circle7,
       topics: [
         "areasGallery.paleo.topic1",
         "areasGallery.paleo.topic2",

@@ -3,6 +3,10 @@ import hawaiiImage from "@/assets/hawaii-archaeology.jpg";
 import tahitiImage from "@/assets/tahiti-archaeology.jpg";
 import heroImage from "@/assets/hero-pacific-congress.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
+import Circle2 from "/images/circulo2.png";
+import Circle3 from "/images/circulo3.png";
+import Circle4 from "/images/circulo4.png";
+
 
 const PLACEHOLDER_IMAGE = "https://placehold.co/600x400"
 
@@ -14,7 +18,7 @@ const PacificGallery = () => {
       nameKey: "gallery.rapaNui.name",
       locationKey: "gallery.rapaNui.location",
       descKey: "gallery.rapaNui.desc",
-      image: PLACEHOLDER_IMAGE,
+      image: Circle2,
       highlights: [
         "gallery.rapaNui.highlight1",
         "gallery.rapaNui.highlight2",
@@ -25,7 +29,7 @@ const PacificGallery = () => {
       nameKey: "gallery.hawaii.name",
       locationKey: "gallery.hawaii.location",
       descKey: "gallery.hawaii.desc",
-      image: PLACEHOLDER_IMAGE,
+      image: Circle3,
       highlights: [
         "gallery.hawaii.highlight1",
         "gallery.hawaii.highlight2",
@@ -36,7 +40,7 @@ const PacificGallery = () => {
       nameKey: "gallery.tahiti.name",
       locationKey: "gallery.tahiti.location",
       descKey: "gallery.tahiti.desc",
-      image: PLACEHOLDER_IMAGE,
+      image: Circle4,
       highlights: [
         "gallery.tahiti.highlight1",
         "gallery.tahiti.highlight2",
