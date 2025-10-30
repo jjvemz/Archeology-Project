@@ -2,7 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/hooks/useLanguage";
 
-const PLACEHOLDER_IMAGE = "https://placehold.co/600x400";
+import Circle8 from "/images/circulo8.png";
+import Circle9 from "/images/circulo9.png";
+import Circle10 from "/images/circulo10.png";
+import Circle11 from "/images/circulo11.png";
 
 const CulturalArtifactsGallery = () => {
   const { t } = useLanguage();
@@ -13,7 +16,7 @@ const CulturalArtifactsGallery = () => {
       typeKey: "artifacts.woodenBowl.type",
       originKey: "artifacts.woodenBowl.origin",
       descKey: "artifacts.woodenBowl.desc",
-      image: PLACEHOLDER_IMAGE,
+      image: Circle8,
       patterns: [
         "artifacts.woodenBowl.pattern1",
         "artifacts.woodenBowl.pattern2"
@@ -24,7 +27,7 @@ const CulturalArtifactsGallery = () => {
       typeKey: "artifacts.spiralArt.type",
       originKey: "artifacts.spiralArt.origin",
       descKey: "artifacts.spiralArt.desc",
-      image: PLACEHOLDER_IMAGE,
+      image: Circle9,
       patterns: [
         "artifacts.spiralArt.pattern1",
         "artifacts.spiralArt.pattern2"
@@ -35,7 +38,7 @@ const CulturalArtifactsGallery = () => {
       typeKey: "artifacts.stoneRelief.type",
       originKey: "artifacts.stoneRelief.origin",
       descKey: "artifacts.stoneRelief.desc",
-      image: PLACEHOLDER_IMAGE,
+      image: Circle10,
       patterns: [
         "artifacts.stoneRelief.pattern1",
         "artifacts.stoneRelief.pattern2"
@@ -46,7 +49,7 @@ const CulturalArtifactsGallery = () => {
       typeKey: "artifacts.portrait.type",
       originKey: "artifacts.portrait.origin",
       descKey: "artifacts.portrait.desc",
-      image: PLACEHOLDER_IMAGE,
+      image: Circle11,
       patterns: [
         "artifacts.portrait.pattern1",
         "artifacts.portrait.pattern2"
@@ -84,7 +87,7 @@ const CulturalArtifactsGallery = () => {
 
                   {/* Origin badge */}
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-pacific-blue/90 text-white backdrop-blur-sm">
+                    <Badge className="bg-pacific-blue/90 text-black backdrop-blur-sm">
                       {t(artifact.originKey)}
                     </Badge>
                   </div>
