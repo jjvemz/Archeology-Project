@@ -2,27 +2,29 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/hooks/useLanguage";
 import OceanImg from "/images/ocean.jpg";
+import Circulos from "/images/circulos1.png";
+
 
 const CongressHero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden ]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden ">
       {/* Background Image */}
       <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-5 gap-0 w-full h-full">
         {/* Image on the left */}
-        <div className="col-span-full md:col-span-3 row-span-full md:row-span-5 relative">
+        <div className="col-span-full md:col-span-3 row-span-full md:row-span-5 relative bg-[#ffeecd]">
           <div className="absolute inset-0 bg-gradient-to-r from-volcanic/80 via-volcanic/60 to-transparent flex items-center justify-center">
-            <img
+            {/* <img
               src="/images/logo_centro-removebg-preview.png"
               alt="Pacific Congress Logo"
               className="w-full h-full object-cover"
-            />
+            /> */}
           </div>
           <img
-            src={OceanImg}
+            src={Circulos}
             alt="Moai statues at Easter Island representing Pacific archaeology"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-volcanic/80 via-volcanic/60 to-transparent"></div>
         </div>
