@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Globe, Award, BookOpen, Users } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -124,9 +123,11 @@ const ScientificCommittee = () => {
                     <Users className="h-8 w-8 text-black" />
                   </div>
                   <CardTitle className="text-lg leading-tight">{member.name}</CardTitle>
-                  <Badge variant="secondary" className="bg-pacific-blue/10 text-pacific-blue text-xs">
-                    {member.region}
-                  </Badge>
+                  <img
+                    src={`/flags/${member.region}.png`}
+                    alt={member.region}
+                    className="h-6 w-auto mx-auto"
+                  />
                 </CardHeader>
                 <CardContent className="pt-0">
                   <div className="space-y-2 text-center">

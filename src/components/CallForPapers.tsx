@@ -91,7 +91,7 @@ const CallForPapers = () => {
                 {t("callForPapers.submitDescription")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="congress">
+                <Button size="lg" variant="outline">
                   {t("callForPapers.submitAbstract")}
                 </Button>
                 <Button size="lg" variant="outline">

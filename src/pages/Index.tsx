@@ -30,7 +30,7 @@ const Index = () => {
       <VenueLocation />
       <ConferenceSchedule />
       <ScientificCommittee />
-      <SponsorsPartners />
+      {/* SponsorsPartners */}
       <Footer />
     </div>
   );

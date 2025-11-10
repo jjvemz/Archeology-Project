@@ -87,7 +87,7 @@ const VenueLocation = () => {
             <div className="space-y-6">
               <div className="relative overflow-hidden rounded-lg shadow-congress">
                 <img
-                  src={PLACEHOLDER_IMAGE}
+                  src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/57/7e/fa/photo0jpg.jpg?w=900&h=500&s=1"
                   alt="Colchagua Valley wine region landscape"
                   className="w-full h-64 object-cover"
                 />

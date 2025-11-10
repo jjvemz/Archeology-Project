@@ -12,8 +12,8 @@ const SponsorsPartners = () => {
     platinum: [
       {
         nameKey: "sponsors.mataKiTeRangi.name",
-        logo: PLACEHOLDER_LOGO,
-        url: "https://earlypacificmigration.org",
+        logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHkkodk2p4UlA/company-logo_200_200/company-logo_200_200/0/1710190960217?e=2147483647&v=beta&t=ilxWZsHaz9S7feJOpJffT-yNIhrUXyTP-NrRhTLKS68",
+        url: "https://fundacionmatakiterangi.cl/index.php/es/",
         descKey: "sponsors.mataKiTeRangi.desc"
       }
     ],
@@ -30,7 +30,7 @@ const SponsorsPartners = () => {
       },
       {
         nameKey: "sponsors.chileMinistry.name",
-        logo: PLACEHOLDER_LOGO,
+        logo: "https://www.cultura.gob.cl/wp-content/themes/cnca-portal-2021/imagenes/logo-mincap.svg",
         url: "#"
       }
     ],
@@ -47,7 +47,7 @@ const SponsorsPartners = () => {
       },
       {
         nameKey: "sponsors.archaeologicalInstitute.name",
-        logo: PLACEHOLDER_LOGO,
+        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Ku-ucph-logo-svg.svg/330px-Ku-ucph-logo-svg.svg.png",
         url: "#"
       },
       {
@@ -59,12 +59,12 @@ const SponsorsPartners = () => {
     partners: [
       {
         nameKey: "sponsors.universityHawaii.name",
-        logo: PLACEHOLDER_LOGO,
+        logo: "https://en.wikipedia.org/wiki/University_of_Hawai%CA%BBi#/media/File:University_of_Hawaii_seal.svg",
         typeKey: "sponsors.partnerType.academic"
       },
       {
         nameKey: "sponsors.universityChile.name",
-        logo: PLACEHOLDER_LOGO,
+        logo: "https://uchile.cl/dam/imagenes/Uchile/imagenes-contenidos-generales/LogoUdeChile/02-escudo-uchile-jpg/escudo-uchile-vertical-color.jpg",
         typeKey: "sponsors.partnerType.academic"
       },
       {
@@ -198,6 +198,9 @@ const SponsorsPartners = () => {
                         alt={t(sponsor.nameKey)}
                         className="h-16 mx-auto object-contain"
                       />
+                      <p className="text-xs text-muted-foreground mt-2">
+                        {t(sponsor.nameKey)}
+                      </p>
                     </a>
                   </CardContent>
                 </Card>

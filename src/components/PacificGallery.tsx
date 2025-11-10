@@ -73,9 +73,9 @@ const PacificGallery = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-volcanic/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 right-4">
-                    <span className="bg-pacific-blue text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
+                    {/* <span className="bg-pacific-blue text-white px-3 py-1 rounded-full text-sm font-medium">
                       {t(site.locationKey)}
-                    </span>
+                    </span> */}
                   </div>
                 </div>
 
