@@ -395,31 +395,32 @@ const ConferenceSchedule = () => {
     }
   ];
 
+
   const getTypeColor = (type: string) => {
     switch (type) {
       case "keynote":
-        return "bg-coral text-white";
+        return "bg-orange-400 text-white"; // Coral
       case "plenary":
-        return "bg-pacific-blue text-white";
+        return "bg-blue-900 text-white"; // Azul Pacífico
       case "concurrent":
-        return "bg-pacific-teal/80 text-white";
+        return "bg-teal-600 text-white"; // Verde mar
       case "workshop":
-        return "bg-congress-yellow text-volcanic";
+        return "bg-yellow-500 text-black"; // Amarillo dorado
       case "panel":
-        return "bg-volcanic/80 text-white";
+        return "bg-amber-800 text-white"; // Marrón volcánico
       case "poster":
-        return "bg-purple-600 text-white";
+        return "bg-purple-700 text-white"; // Púrpura
       case "fieldtrip":
-        return "bg-green-600 text-white";
+        return "bg-green-700 text-white"; // Verde natural
       case "social":
-        return "bg-gray-400 text-white";
+        return "bg-gray-400 text-white"; // Gris piedra
       default:
-        return "bg-gray-400 text-white";
+        return "bg-gray-300 text-black";
     }
   };
 
   return (
-    <section id="schedule" className="py-20 ">
+    <section id="schedule" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -459,11 +460,11 @@ const ConferenceSchedule = () => {
                   return (
                     <div
                       key={idx}
-                      className="flex gap-4 p-4 hover:bg-pacific-blue/5 rounded-lg transition-colors border border-transparent hover:border-pacific-blue/20"
+                      className="flex gap-4 p-4  rounded-lg transition-colors border border-transparent "
                     >
                       {/* Time column */}
-                      <div className="w-32 flex-shrink-0">
-                        <Badge variant="outline" className="text-sm font-mono">
+                      <div className="w-32 flex-shrink-0"> 
+                        <Badge variant="outline" className="text-sm font-mono text-orange-700">
                           {session.time}
                         </Badge>
                       </div>
@@ -472,30 +473,30 @@ const ConferenceSchedule = () => {
                       <div className="flex-grow">
                         <div className="flex items-start justify-between mb-2 gap-3">
                           <div className="flex items-center gap-2">
-                            <IconComponent className="h-5 w-5 text-pacific-blue flex-shrink-0" />
-                            <h4 className="text-lg font-semibold">
+                            <IconComponent className="h-5 w-5 text-blue-800 flex-shrink-0" />
+                            <h4 className="text-lg font-semibold text-orange-800">
                               {t(session.titleKey)}
                             </h4>
                           </div>
-                          <Badge className={`flex-shrink-0 ${getTypeColor(session.type)}`}>
+                          <Badge className={`flex-shrink-0  ${getTypeColor(session.type)}`}>
                             {t(`schedule.type.${session.type}`)}
                           </Badge>
                         </div>
 
                         {session.speakersKey && (
-                          <p className="text-sm text-muted-foreground mb-1">
-                            <Users className="w-4 h-4 inline mr-1" />
+                          <p className="text-sm text-muted-foreground mb-1 text-orange-700">
+                            <Users className="w-4 h-4 inline mr-1 " />
                             {t(session.speakersKey)}
                           </p>
                         )}
 
-                        <p className="text-sm text-muted-foreground mb-1">
+                        <p className="text-sm text-muted-foreground mb-1 text-orange-700">
                           <MapPin className="w-4 h-4 inline mr-1" />
                           {t(session.locationKey)}
                         </p>
 
                         {session.descKey && (
-                          <p className="text-sm mt-2 text-foreground/80">
+                          <p className="text-sm mt-2 text-foreground/80 text-orange-700">
                             {t(session.descKey)}
                           </p>
                         )}
@@ -508,41 +509,59 @@ const ConferenceSchedule = () => {
           </Card>
 
           {/* Download schedule button */}
-          <div className="mt-8 text-center">
+          <div className="mt-8 text-center text-black">
             <Button variant="congress" size="lg">
-              <FileText className="mr-2 h-5 w-5" />
+              <FileText className="mr-2 h-5 w-5 text-black" />
               {t("schedule.downloadProgram")}
             </Button>
           </div>
 
           {/* Session types legend */}
-          <Card className="mt-8 shadow-congress ">
+          <Card className="mt-8 shadow-congress">
             <CardContent className="pt-6">
-              <h3 className="text-lg font-semibold mb-4 text-center">{t("schedule.sessionTypes")}</h3>
+              <h3 className="text-lg font-semibold mb-4 text-center">
+                {t("schedule.sessionTypes")}
+              </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div className="flex items-center gap-2">
-                  <Badge className="bg-coral text-black">{t("schedule.type.keynote")}</Badge>
+                  <Badge className="bg-orange-400 text-white">
+                    {t("schedule.type.keynote")}
+                  </Badge>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge className="bg-pacific-blue text-black">{t("schedule.type.plenary")}</Badge>
+                  <Badge className="bg-blue-900 text-white">
+                    {t("schedule.type.plenary")}
+                  </Badge>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge className="bg-pacific-teal/80 text-black">{t("schedule.type.concurrent")}</Badge>
+                  <Badge className="bg-teal-600 text-white">
+                    {t("schedule.type.concurrent")}
+                  </Badge>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge className="bg-congress-yellow text-volcanic">{t("schedule.type.workshop")}</Badge>
+                  <Badge className="bg-yellow-500 text-black">
+                    {t("schedule.type.workshop")}
+                  </Badge>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge className="bg-volcanic/80 text-black">{t("schedule.type.panel")}</Badge>
+                  <Badge className="bg-amber-800 text-white">
+                    {t("schedule.type.panel")}
+                  </Badge>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge className="bg-purple-600 text-black">{t("schedule.type.poster")}</Badge>
+                  <Badge className="bg-purple-700 text-white">
+                    {t("schedule.type.poster")}
+                  </Badge>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge className="bg-green-600 text-black">{t("schedule.type.fieldtrip")}</Badge>
+                  <Badge className="bg-green-700 text-white">
+                    {t("schedule.type.fieldtrip")}
+                  </Badge>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Badge className="bg-gray-400 text-black">{t("schedule.type.social")}</Badge>
+                  <Badge className="bg-gray-400 text-white">
+                    {t("schedule.type.social")}
+                  </Badge>
                 </div>
               </div>
             </CardContent>
@@ -552,5 +571,4 @@ const ConferenceSchedule = () => {
     </section>
   );
 };
-
 export default ConferenceSchedule;

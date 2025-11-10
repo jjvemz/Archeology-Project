@@ -14,7 +14,7 @@ const Footer = () => {
             </p>
 
             {/* Previous Conference Reference */}
-            <div className="mt-6 pt-4 border-t border-primary-foreground/20">
+            {/* <div className="mt-6 pt-4 border-t border-primary-foreground/20">
               <p className="text-sm text-primary-foreground/60 mb-1">
                 {t("footer.followingFrom")}
               </p>
@@ -24,7 +24,7 @@ const Footer = () => {
               <p className="text-xs text-primary-foreground/60">
                 {t("footer.ubudBali")}
               </p>
-            </div>
+            </div> */}
           </div>
 
           <div>

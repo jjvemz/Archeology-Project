@@ -84,16 +84,16 @@ const PacificMigrationTimeline = () => {
                     >
                       {/* Content card */}
                       <div className="w-5/12">
-                        <Card className="shadow-congress hover:shadow-warm transition-all duration-300 group">
+                        <Card className="shadow-congress hover:shadow-warm transition-all duration-300 group text-orange-800">
                           <CardContent className="p-6">
-                            <Badge className="mb-3 bg-pacific-blue">{t(event.yearKey)}</Badge>
-                            <h3 className="text-xl font-bold mb-2 group-hover:text-pacific-blue transition-colors">
+                            <Badge className="mb-3 bg-pacific-blue text-orange-800">{t(event.yearKey)}</Badge>
+                            <h3 className="text-xl font-bold mb-2 group-hover:text-pacific-blue transition-colors text-orange-800">
                               {t(event.eventKey)}
                             </h3>
-                            <p className="text-sm text-muted-foreground mb-3 font-semibold">
+                            <p className="text-sm text-muted-foreground mb-3 font-semibold text-orange-700">
                               {t(event.locationKey)}
                             </p>
-                            <p className="text-sm text-foreground/80 leading-relaxed">
+                            <p className="text-sm text-foreground/80 leading-relaxed text-orange-700">
                               {t(event.descKey)}
                             </p>
                           </CardContent>

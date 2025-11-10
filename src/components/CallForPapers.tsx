@@ -21,33 +21,33 @@ const CallForPapers = () => {
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             <Card className="shadow-congress">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-2xl">
+              <CardHeader >
+                <CardTitle className="flex items-center gap-3 text-2xl text-orange-800">
                   <Calendar className="h-8 w-8 text-pacific-blue" />
                   {t("callForPapers.importantDates")}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="border-l-4 border-pacific-blue pl-6 py-3">
-                  <h4 className="font-bold text-lg text-foreground">{t("callForPapers.abstractDeadline")}</h4>
-                  <p className="text-muted-foreground">{t("callForPapers.abstractDeadlineDate")}</p>
-                  <p className="text-sm text-muted-foreground mt-1">
+              <CardContent className="space-y-6 text-orange-800">
+                <div className="border-l-4 border-pacific-blue pl-6 py-3 text-orange-700">
+                  <h4 className="font-bold text-lg text-foreground text-orange-700">{t("callForPapers.abstractDeadline")}</h4>
+                  <p className="text-muted-foreground text-orange-700">{t("callForPapers.abstractDeadlineDate")}</p>
+                  <p className="text-sm text-muted-foreground mt-1 text-orange-700">
                     {t("callForPapers.abstractDeadlineDesc")}
                   </p>
                 </div>
 
                 <div className="border-l-4 border-pacific-teal pl-6 py-3">
-                  <h4 className="font-bold text-lg text-foreground">{t("callForPapers.acceptanceNotification")}</h4>
-                  <p className="text-muted-foreground">{t("callForPapers.acceptanceDate")}</p>
-                  <p className="text-sm text-muted-foreground mt-1">
+                  <h4 className="font-bold text-lg text-foreground text-orange-700">{t("callForPapers.acceptanceNotification")}</h4>
+                  <p className="text-muted-foreground text-orange-700">{t("callForPapers.acceptanceDate")}</p>
+                  <p className="text-sm text-muted-foreground mt-1 text-orange-700">
                     {t("callForPapers.acceptanceDesc")}
                   </p>
                 </div>
 
                 <div className="border-l-4 border-coral pl-6 py-3">
-                  <h4 className="font-bold text-lg text-foreground">{t("callForPapers.fullPaperSubmission")}</h4>
-                  <p className="text-muted-foreground">{t("callForPapers.fullPaperDate")}</p>
-                  <p className="text-sm text-muted-foreground mt-1">
+                  <h4 className="font-bold text-lg text-foreground text-orange-700">{t("callForPapers.fullPaperSubmission")}</h4>
+                  <p className="text-muted-foreground text-orange-700">{t("callForPapers.fullPaperDate")}</p>
+                  <p className="text-sm text-muted-foreground mt-1 text-orange-700">
                     {t("callForPapers.fullPaperDesc")}
                   </p>
                 </div>
@@ -56,12 +56,12 @@ const CallForPapers = () => {
 
             <Card className="shadow-congress">
               <CardHeader>
-                <CardTitle className="flex items-center gap-3 text-2xl">
+                <CardTitle className="flex items-center gap-3 text-2xl text-orange-800">
                   <Award className="h-8 w-8 text-coral" />
                   {t("callForPapers.awards")}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 text-orange-800">
                 <div className="bg-gradient-pacific p-6 rounded-lg ">
                   <h4 className="font-bold text-lg mb-2">{t("callForPapers.bestProfessional")}</h4>
                   <p className="text-2xl font-bold ">$400 USD</p>
@@ -84,13 +84,13 @@ const CallForPapers = () => {
           </div>
 
           <Card className="shadow-congress text-center">
-            <CardContent className="pt-8">
+            <CardContent className="pt-8 text-orange-800">
               <FileText className="h-16 w-16 text-pacific-blue mx-auto mb-6" />
-              <h3 className="text-2xl font-bold mb-4 text-foreground">{t("callForPapers.readyToSubmit")}</h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold mb-4 text-foreground text-orange-800">{t("callForPapers.readyToSubmit")}</h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto text-orange-800">
                 {t("callForPapers.submitDescription")}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center ">
                 <Button size="lg" variant="outline">
                   {t("callForPapers.submitAbstract")}
                 </Button>

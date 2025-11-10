@@ -27,27 +27,27 @@ const VenueLocation = () => {
               <Card className="shadow-congress">
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center gap-3">
-                    <MapPin className="h-8 w-8 text-coral" />
+                    <MapPin className="h-8 w-8 text-coral " />
                     {t("venue.hotelName")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="border-l-4 border-coral pl-4">
-                    <h4 className="font-semibold text-foreground">{t("venue.address")}</h4>
-                    <p className="text-muted-foreground">
+                    <h4 className="font-semibold text-foreground text-orange-700">{t("venue.address")}</h4>
+                    <p className="text-muted-foreground text-orange-700">
                       {t("venue.addressText")}<br />
                       {t("venue.addressText2")}
                     </p>
                   </div>
                   <div className="border-l-4 border-pacific-blue pl-4">
-                    <h4 className="font-semibold text-foreground">{t("venue.facilities")}</h4>
-                    <p className="text-muted-foreground">
+                    <h4 className="font-semibold text-foreground text-orange-700">{t("venue.facilities")}</h4>
+                    <p className="text-muted-foreground text-orange-700" >
                       {t("venue.facilities.desc")}
                     </p>
                   </div>
                   <div className="border-l-4 border-pacific-teal pl-4">
-                    <h4 className="font-semibold text-foreground">{t("venue.accommodation")}</h4>
-                    <p className="text-muted-foreground">
+                    <h4 className="font-semibold text-foreground text-orange-700">{t("venue.accommodation")}</h4>
+                    <p className="text-muted-foreground text-orange-700">
                       {t("venue.accommodation.desc")}
                     </p>
                   </div>
@@ -65,8 +65,8 @@ const VenueLocation = () => {
                   <div className="flex items-start gap-3">
                     <Car className="h-5 w-5 text-pacific-teal mt-1" />
                     <div>
-                      <h4 className="font-semibold text-foreground">{t("venue.fromSantiago")}</h4>
-                      <p className="text-muted-foreground text-sm">
+                      <h4 className="font-semibold text-foreground text-orange-700">{t("venue.fromSantiago")}</h4>
+                      <p className="text-muted-foreground text-sm text-orange-700">
                         {t("venue.fromSantiago.desc")}
                       </p>
                     </div>
@@ -74,8 +74,8 @@ const VenueLocation = () => {
                   <div className="flex items-start gap-3">
                     <Plane className="h-5 w-5 text-pacific-blue mt-1" />
                     <div>
-                      <h4 className="font-semibold text-foreground">{t("venue.internationalFlights")}</h4>
-                      <p className="text-muted-foreground text-sm">
+                      <h4 className="font-semibold text-foreground text-orange-700">{t("venue.internationalFlights")}</h4>
+                      <p className="text-muted-foreground text-sm text-orange-700">
                         {t("venue.internationalFlights.desc")}
                       </p>
                     </div>
@@ -103,8 +103,8 @@ const VenueLocation = () => {
                 <Card className="text-center shadow-card">
                   <CardContent className="pt-6">
                     <Wine className="h-8 w-8 text-coral mx-auto mb-3" />
-                    <h4 className="font-semibold text-foreground mb-2">{t("venue.wineHeritage")}</h4>
-                    <p className="text-muted-foreground text-sm">
+                    <h4 className="font-semibold text-foreground mb-2 text-orange-900">{t("venue.wineHeritage")}</h4>
+                    <p className="text-muted-foreground text-sm text-orange-700">
                       {t("venue.wineHeritage.desc")}
                     </p>
                   </CardContent>
@@ -113,8 +113,8 @@ const VenueLocation = () => {
                 <Card className="text-center shadow-card">
                   <CardContent className="pt-6">
                     <Mountain className="h-8 w-8 text-pacific-blue mx-auto mb-3" />
-                    <h4 className="font-semibold text-foreground mb-2">{t("venue.scenicBeauty")}</h4>
-                    <p className="text-muted-foreground text-sm">
+                    <h4 className="font-semibold text-foreground mb-2 text-orange-900">{t("venue.scenicBeauty")}</h4>
+                    <p className="text-muted-foreground text-sm text-orange-700">
                       {t("venue.scenicBeauty.desc")}
                     </p>
                   </CardContent>
@@ -123,18 +123,18 @@ const VenueLocation = () => {
             </div>
           </div>
 
-          <Card className="shadow-congress  text-orange-800 text-opacity-65">
+          <Card className="shadow-congress  text-orange-900 text-opacity-65">
             <CardContent className="pt-8 text-center">
-              <Camera className="h-12 w-12 mx-auto mb-6 text-orange-800 text-opacity-65" />
+              <Camera className="h-12 w-12 mx-auto mb-6 text-orange-900 text-opacity-65" />
               <h3 className="text-2xl font-bold mb-4">{t("venue.culturalImmersion")}</h3>
-              <p className="text-orange-800 text-opacity-65 leading-relaxed mb-6 max-w-3xl mx-auto">
+              <p className="text-orange-700 text-opacity-65 leading-relaxed mb-6 max-w-3xl mx-auto">
                 {t("venue.culturalImmersion.desc")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="yellow">
                   {t("venue.bookAccommodation")}
                 </Button>
-                <Button size="lg" variant="outline" className="border-grey text-orange-800 text-opacity-65 hover:bg-white hover:text-pacific-blue">
+                <Button size="lg" variant="outline" className="border-grey text-orange-800 text-opacity-65 hover:bg-blue-700  bg-blue-600/40 hover:text-pacific-blue">
                   {t("venue.downloadGuide")}
                 </Button>
               </div>

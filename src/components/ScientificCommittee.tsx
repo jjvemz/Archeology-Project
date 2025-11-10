@@ -69,10 +69,10 @@ const ScientificCommittee = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-700">
               {t("committee.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-700">
               {t("committee.description")}
             </p>
           </div>
@@ -81,10 +81,10 @@ const ScientificCommittee = () => {
             <Card className="shadow-congress text-center">
               <CardHeader>
                 <Globe className="h-12 w-12 text-pacific-blue mx-auto mb-4" />
-                <CardTitle className="text-2xl">{t("committee.globalExpertise")}</CardTitle>
+                <CardTitle className="text-2xl text-orange-700">{t("committee.globalExpertise")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-orange-700">
                   {t("committee.globalExpertise.desc")}
                 </p>
               </CardContent>
@@ -92,11 +92,11 @@ const ScientificCommittee = () => {
 
             <Card className="shadow-congress text-center">
               <CardHeader>
-                <Award className="h-12 w-12 text-coral mx-auto mb-4" />
-                <CardTitle className="text-2xl">{t("committee.rigorousReview")}</CardTitle>
+                <Award className="h-12 w-12 text-coral mx-auto mb-4 " />
+                <CardTitle className="text-2xl text-orange-700">{t("committee.rigorousReview")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-orange-700">
                   {t("committee.rigorousReview.desc")}
                 </p>
               </CardContent>
@@ -105,10 +105,10 @@ const ScientificCommittee = () => {
             <Card className="shadow-congress text-center">
               <CardHeader>
                 <BookOpen className="h-12 w-12 text-pacific-teal mx-auto mb-4" />
-                <CardTitle className="text-2xl">{t("committee.publicationSupport")}</CardTitle>
+                <CardTitle className="text-2xl text-orange-700">{t("committee.publicationSupport")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-orange-700">
                   {t("committee.publicationSupport.desc")}
                 </p>
               </CardContent>
@@ -122,7 +122,7 @@ const ScientificCommittee = () => {
                   <div className="w-16 h-16 bg-gradient-pacific rounded-full mx-auto mb-4 flex items-center justify-center">
                     <Users className="h-8 w-8 text-black" />
                   </div>
-                  <CardTitle className="text-lg leading-tight">{member.name}</CardTitle>
+                  <CardTitle className="text-lg leading-tight text-orange-700">{member.name}</CardTitle>
                   <img
                     src={`/flags/${member.region}.png`}
                     alt={member.region}
@@ -131,9 +131,9 @@ const ScientificCommittee = () => {
                 </CardHeader>
                 <CardContent className="pt-0">
                   <div className="space-y-2 text-center">
-                    <p className="text-sm font-medium text-coral">{t(member.titleKey)}</p>
-                    <p className="text-sm text-muted-foreground font-medium">{member.affiliation}</p>
-                    <p className="text-xs text-muted-foreground italic">
+                    <p className="text-sm font-medium text-orange-700">{t(member.titleKey)}</p>
+                    <p className="text-sm text-muted-foreground font-medium text-orange-700">{member.affiliation}</p>
+                    <p className="text-xs text-muted-foreground italic text-orange-700">
                       {member.specialization}
                     </p>
                   </div>
@@ -145,23 +145,23 @@ const ScientificCommittee = () => {
           <div className="mt-16">
             <Card className="shadow-congress text-black">
               <CardContent className="pt-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">{t("committee.responsibilities")}</h3>
-                <div className="grid md:grid-cols-3 gap-6 text-black/90">
+                <h3 className="text-2xl font-bold mb-4 text-orange-700">{t("committee.responsibilities")}</h3>
+                <div className="grid md:grid-cols-3 gap-6 text-orange-700">
                   <div>
                     <h4 className="font-semibold mb-2">{t("committee.abstractReview")}</h4>
-                    <p className="text-sm">
+                    <p className="text-sm text-orange-700">
                       {t("committee.abstractReview.desc")}
                     </p>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2">{t("committee.programDevelopment")}</h4>
-                    <p className="text-sm">
+                    <p className="text-sm text-orange-700">
                       {t("committee.programDevelopment.desc")}
                     </p>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2">{t("committee.qualityAssurance")}</h4>
-                    <p className="text-sm">
+                    <p className="text-sm text-orange-700">
                       {t("committee.qualityAssurance.desc")}
                     </p>
                   </div>

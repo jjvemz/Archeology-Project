@@ -3,9 +3,9 @@ import hawaiiImage from "@/assets/hawaii-archaeology.jpg";
 import tahitiImage from "@/assets/tahiti-archaeology.jpg";
 import heroImage from "@/assets/hero-pacific-congress.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
-import Circle2 from "/images/circulo2.png";
-import Circle3 from "/images/circulo3.png";
-import Circle4 from "/images/circulo4.png";
+import Circle2 from "/images/03agua_azul.png";
+import Circle3 from "/images/02agua_azul.png";
+import Circle4 from "/images/04agua_azul.png";
 
 
 const PLACEHOLDER_IMAGE = "https://placehold.co/600x400"
@@ -54,10 +54,10 @@ const PacificGallery = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-800">
               {t("gallery.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-700">
               {t("gallery.description")}
             </p>
           </div>
@@ -69,33 +69,33 @@ const PacificGallery = () => {
                   <img
                     src={site.image}
                     alt={`Archaeological site at ${t(site.nameKey)}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-volcanic/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 right-4">
-                    {/* <span className="bg-pacific-blue text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-pacific-blue text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
                       {t(site.locationKey)}
-                    </span> */}
+                    </span>
                   </div>
                 </div>
 
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-pacific-blue transition-colors">
+                  <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-pacific-blue transition-colors text-orange-800">
                     {t(site.nameKey)}
                   </h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-orange-700">
                     {t(site.descKey)}
                   </p>
 
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-sm text-foreground uppercase tracking-wide">
+                    <h4 className="font-semibold text-sm text-foreground uppercase tracking-wide text-orange-700">
                       {t("gallery.keyFeatures")}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {site.highlights.map((highlight, highlightIndex) => (
                         <span
                           key={highlightIndex}
-                          className="bg-pacific-teal/10 text-pacific-teal px-3 py-1 rounded-full text-xs font-medium"
+                          className="bg-pacific-teal/10 text-pacific-teal px-3 py-1 rounded-full text-xs font-medium text-orange-700"
                         >
                           {t(highlight)}
                         </span>

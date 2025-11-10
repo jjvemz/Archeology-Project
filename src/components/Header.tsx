@@ -6,7 +6,7 @@ const Header = () => {
   const { t } = useLanguage();
 
   return (
-    <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <header className="bg-[#f5dda3]/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -35,7 +35,7 @@ const Header = () => {
               {t("header.venue")}
             </a>
             <LanguageToggle />
-            <Button variant="congress">{t("header.registerNow")}</Button>
+            <Button variant="outline">{t("header.registerNow")}</Button>
           </nav>
         </div>
       </div>

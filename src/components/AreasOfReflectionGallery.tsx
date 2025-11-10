@@ -7,12 +7,12 @@ import PlasticSea from "/images/plasticsea.jpeg";
 import tijuanotas from "/images/tijuanotas.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
 
-import Circle2 from "/images/circulo2.png";
-import Circle3 from "/images/circulo3.png";
-import Circle4 from "/images/circulo4.png";
-import Circle5 from "/images/circulo5.png";
-import Circle6 from "/images/circulo6.png";
-import Circle7 from "/images/circulo7.png";
+import Circle2 from "/images/01_agua_azul.png";
+import Circle3 from "/images/03agua_azul.png";
+import Circle4 from "/images/05agua_azul.png";
+import Circle5 from "/images/06agua_azul.png";
+import Circle6 from "/images/07agua_azul.png";
+import Circle7 from "/images/08agua_azul.png";
 
 export function AreasOfReflectionGallery() {
   const { t } = useLanguage();
@@ -106,26 +106,26 @@ export function AreasOfReflectionGallery() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {areas.map((area, index) => (
-            <Card key={index} className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-pacific transition-all duration-300">
+            <Card key={index} className="border-border/50 bg-[#143c8c]/60 backdrop-blur-sm hover:shadow-pacific transition-all duration-300">
               {area.image && (
-                <div className="h-48 bg-cover bg-center rounded-t-lg"
+                <div className="h-48 bg-contain bg-no-repeat bg-center rounded-t-lg"
                      style={{ backgroundImage: `url(${area.image})` }} />
               )}
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
                   <CardTitle className="text-xl text-foreground">{t(area.titleKey)}</CardTitle>
-                  <span className="text-xs text-accent font-semibold bg-accent/10 px-2 py-1 rounded">
+                  <span className="text-xs text-accent font-semibold bg-accent/10 px-2 py-1 rounded text-orange-900">
                     {t(area.scaleKey)}
                   </span>
                 </div>
-                <p className="text-muted-foreground text-sm">{t(area.descKey)}</p>
+                <p className="text-muted-foreground text-sm text-orange-900">{t(area.descKey)}</p>
               </CardHeader>
               <CardContent>
                 <h4 className="font-semibold text-foreground mb-3">{t("areasGallery.keyTopics")}</h4>
                 <ul className="space-y-2">
                   {area.topics.map((topic, topicIndex) => (
-                    <li key={topicIndex} className="text-sm text-muted-foreground flex items-start">
-                      <span className="text-accent mr-2">•</span>
+                    <li key={topicIndex} className="text-sm text-muted-foreground flex items-start text-orange-900">
+                      <span className="text-accent mr-2 text-orange-700">•</span>
                       {t(topic)}
                     </li>
                   ))}

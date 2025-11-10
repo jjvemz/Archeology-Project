@@ -2,10 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/hooks/useLanguage";
 
-import Circle8 from "/images/circulo8.png";
-import Circle9 from "/images/circulo9.png";
-import Circle10 from "/images/circulo10.png";
-import Circle11 from "/images/circulo11.png";
+import Circle8 from "/images/03agua_azul.png";
+import Circle9 from "/images/09agua_azul.png";
+import Circle10 from "/images/10agua_azul.png";
+import Circle11 from "/images/11agua_azul.png";
 
 const CulturalArtifactsGallery = () => {
   const { t } = useLanguage();
@@ -87,14 +87,14 @@ const CulturalArtifactsGallery = () => {
 
                   {/* Origin badge */}
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-pacific-blue/90 text-black backdrop-blur-sm">
+                    <Badge className="bg-pacific-blue/90 text-orange-800">
                       {t(artifact.originKey)}
                     </Badge>
                   </div>
 
                   {/* Type badge */}
                   <div className="absolute bottom-4 left-4 right-4">
-                    <Badge variant="outline" className="bg-white/90 text-foreground backdrop-blur-sm">
+                    <Badge variant="outline" className="text-orange-700 text-foreground backdrop-blur-sm">
                       {t(artifact.typeKey)}
                     </Badge>
                   </div>
@@ -102,10 +102,10 @@ const CulturalArtifactsGallery = () => {
 
                 {/* Content */}
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-pacific-blue transition-colors">
+                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-pacific-blue transition-colors text-orange-900">
                     {t(artifact.nameKey)}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed text-orange-900">
                     {t(artifact.descKey)}
                   </p>
 
@@ -115,7 +115,7 @@ const CulturalArtifactsGallery = () => {
                       <Badge
                         key={patternIdx}
                         variant="outline"
-                        className="text-xs border-coral/30 text-coral hover:bg-coral/10"
+                        className="text-xs border-coral/30 text-coral hover:bg-coral/10 text-orange-900"
                       >
                         {t(pattern)}
                       </Badge>
@@ -127,7 +127,7 @@ const CulturalArtifactsGallery = () => {
           </div>
 
           {/* Additional info section */}
-          <Card className="mt-16 bg-gradient-pacific shadow-congress">
+          <Card className="mt-16 bg-[#143c8c]/60 shadow-congress">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4 text-center text-orange-800 text-opacity-65">
                 {t("artifacts.culturalSignificance.title")}
