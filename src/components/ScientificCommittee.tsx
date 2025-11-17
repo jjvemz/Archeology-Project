@@ -80,7 +80,7 @@ const ScientificCommittee = () => {
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             <Card className="shadow-congress text-center">
               <CardHeader>
-                <Globe className="h-12 w-12 text-pacific-blue mx-auto mb-4" />
+                <Globe className="h-12 w-12 text-pacific-blue mx-auto mb-4 text-orange-800" />
                 <CardTitle className="text-2xl text-orange-700">{t("committee.globalExpertise")}</CardTitle>
               </CardHeader>
               <CardContent>
@@ -92,7 +92,7 @@ const ScientificCommittee = () => {
 
             <Card className="shadow-congress text-center">
               <CardHeader>
-                <Award className="h-12 w-12 text-coral mx-auto mb-4 " />
+                <Award className="h-12 w-12 text-coral mx-auto mb-4 text-orange-800" />
                 <CardTitle className="text-2xl text-orange-700">{t("committee.rigorousReview")}</CardTitle>
               </CardHeader>
               <CardContent>
@@ -104,7 +104,7 @@ const ScientificCommittee = () => {
 
             <Card className="shadow-congress text-center">
               <CardHeader>
-                <BookOpen className="h-12 w-12 text-pacific-teal mx-auto mb-4" />
+                <BookOpen className="h-12 w-12 text-pacific-teal mx-auto mb-4 text-orange-800" />
                 <CardTitle className="text-2xl text-orange-700">{t("committee.publicationSupport")}</CardTitle>
               </CardHeader>
               <CardContent>
@@ -120,13 +120,13 @@ const ScientificCommittee = () => {
               <Card key={index} className="shadow-card hover:shadow-congress transition-all duration-300">
                 <CardHeader className="text-center pb-3">
                   <div className="w-16 h-16 bg-gradient-pacific rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="h-8 w-8 text-black" />
+                    <Users className="h-8 w-8 text-orange-800" />
                   </div>
                   <CardTitle className="text-lg leading-tight text-orange-700">{member.name}</CardTitle>
                   <img
                     src={`/flags/${member.region}.png`}
                     alt={member.region}
-                    className="h-6 w-auto mx-auto"
+                    className="h-6 w-auto mx-auto text-orange-700"
                   />
                 </CardHeader>
                 <CardContent className="pt-0">

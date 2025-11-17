@@ -11,10 +11,10 @@ const CallForPapers = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-calypso-900">
               {t("callForPapers.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-calypso-800">
               {t("callForPapers.description")}
             </p>
           </div>
@@ -28,26 +28,26 @@ const CallForPapers = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6 text-orange-800">
-                <div className="border-l-4 border-pacific-blue pl-6 py-3 text-orange-700">
-                  <h4 className="font-bold text-lg text-foreground text-orange-700">{t("callForPapers.abstractDeadline")}</h4>
-                  <p className="text-muted-foreground text-orange-700">{t("callForPapers.abstractDeadlineDate")}</p>
-                  <p className="text-sm text-muted-foreground mt-1 text-orange-700">
+                <div className="border-l-4 border-pacific-blue pl-6 py-3 text-orange-800">
+                  <h4 className="font-bold text-lg text-foreground text-orange-800">{t("callForPapers.abstractDeadline")}</h4>
+                  <p className="text-muted-foreground text-orange-800">{t("callForPapers.abstractDeadlineDate")}</p>
+                  <p className="text-sm text-muted-foreground mt-1 text-orange-800">
                     {t("callForPapers.abstractDeadlineDesc")}
                   </p>
                 </div>
 
                 <div className="border-l-4 border-pacific-teal pl-6 py-3">
-                  <h4 className="font-bold text-lg text-foreground text-orange-700">{t("callForPapers.acceptanceNotification")}</h4>
-                  <p className="text-muted-foreground text-orange-700">{t("callForPapers.acceptanceDate")}</p>
-                  <p className="text-sm text-muted-foreground mt-1 text-orange-700">
+                  <h4 className="font-bold text-lg text-foreground text-orange-800">{t("callForPapers.acceptanceNotification")}</h4>
+                  <p className="text-muted-foreground text-orange-800">{t("callForPapers.acceptanceDate")}</p>
+                  <p className="text-sm text-muted-foreground mt-1 text-orange-800">
                     {t("callForPapers.acceptanceDesc")}
                   </p>
                 </div>
 
                 <div className="border-l-4 border-coral pl-6 py-3">
-                  <h4 className="font-bold text-lg text-foreground text-orange-700">{t("callForPapers.fullPaperSubmission")}</h4>
-                  <p className="text-muted-foreground text-orange-700">{t("callForPapers.fullPaperDate")}</p>
-                  <p className="text-sm text-muted-foreground mt-1 text-orange-700">
+                  <h4 className="font-bold text-lg text-foreground text-orange-800">{t("callForPapers.fullPaperSubmission")}</h4>
+                  <p className="text-muted-foreground text-orange-800">{t("callForPapers.fullPaperDate")}</p>
+                  <p className="text-sm text-muted-foreground mt-1 text-orange-800">
                     {t("callForPapers.fullPaperDesc")}
                   </p>
                 </div>
@@ -65,19 +65,19 @@ const CallForPapers = () => {
                 <div className="bg-gradient-pacific p-6 rounded-lg ">
                   <h4 className="font-bold text-lg mb-2">{t("callForPapers.bestProfessional")}</h4>
                   <p className="text-2xl font-bold ">$400 USD</p>
-                  <p className="text-sm opacity-90">{t("callForPapers.professionalDesc")}</p>
+                  <p className="text-sm opacity-90 text-orange-800">{t("callForPapers.professionalDesc")}</p>
                 </div>
 
-                <div className="bg-congress-yellow/20 p-4 rounded-lg border border-congress-yellow/30">
+                <div className="bg-congress-yellow/20 p-4 rounded-lg ">
                   <h4 className="font-bold text-lg mb-2 text-volcanic">{t("callForPapers.bestStudent")}</h4>
                   <p className="text-xl font-bold text-volcanic">$50 USD</p>
-                  <p className="text-sm text-muted-foreground">{t("callForPapers.studentDesc")}</p>
+                  <p className="text-sm text-muted-foreground text-orange-800">{t("callForPapers.studentDesc")}</p>
                 </div>
 
-                <div className="bg-pacific-teal/20 p-4 rounded-lg border border-pacific-teal/30">
+                <div className="bg-pacific-teal/20 p-4 rounded-lg ">
                   <h4 className="font-bold text-lg mb-2">{t("callForPapers.bestRetired")}</h4>
                   <p className="text-xl font-bold">$200 USD</p>
-                  <p className="text-sm text-muted-foreground">{t("callForPapers.retiredDesc")}</p>
+                  <p className="text-sm text-muted-foreground text-orange-800">{t("callForPapers.retiredDesc")}</p>
                 </div>
               </CardContent>
             </Card>

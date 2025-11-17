@@ -85,10 +85,10 @@ const AreasOfReflection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-700 text-opacity-65">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-800 text-opacity-65">
               {t("areas.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-700 text-opacity-65">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-800 text-opacity-65">
               {t("areas.description")}
             </p>
           </div>
@@ -100,12 +100,12 @@ const AreasOfReflection = () => {
                 <Card key={index} className="shadow-card hover:shadow-congress transition-all duration-300 group">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-4">
-                      <IconComponent className="h-10 w-10 text-pacific-blue group-hover:text-coral transition-colors" />
+                      <IconComponent className="h-10 w-10 text-pacific-blue group-hover:text-coral transition-colors text-orange-800" />
                       <Badge variant="secondary" className="bg-pacific-blue/10 text-pacific-blue text-orange-700 text-opacity-65">
                         {t(area.scaleKey)}
                       </Badge>
                     </div>
-                    <CardTitle className="text-xl group-hover:text-pacific-blue transition-colors text-orange-700 text-opacity-65">
+                    <CardTitle className="text-xl transition-colors text-orange-700 ">
                       {t(area.titleKey)}
                     </CardTitle>
                   </CardHeader>
@@ -133,7 +133,7 @@ const AreasOfReflection = () => {
           <div className="mt-16 text-center">
             <Card className=" text-orange-700 textopacity-65 shadow-congress max-w-3xl mx-auto">
               <CardContent className="pt-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-700 text-opacity-65">{t("areas.multiScale.title")}</h3>
+                <h3 className="text-2xl font-bold mb-4 text-orange-700 ">{t("areas.multiScale.title")}</h3>
                 <p className=" leading-relaxed text-orange-700 text-opacity-65">
                   {t("areas.multiScale.desc")}
                 </p>

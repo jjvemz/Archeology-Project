@@ -424,10 +424,10 @@ const ConferenceSchedule = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-calypso-900">
               {t("schedule.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-calypso-800">
               {t("schedule.description")}
             </p>
           </div>
@@ -439,7 +439,7 @@ const ConferenceSchedule = () => {
                 key={idx}
                 variant={selectedDay === idx ? "congress" : "outline"}
                 onClick={() => setSelectedDay(idx)}
-                className="flex-shrink-0"
+                className={`flex-shrink-0 ${selectedDay !== idx ? 'bg-[#143c8c]/60 text-orange-700 hover:bg-[#143c8c]/60 ' : 'bg-[#143c8c]/60 text-orange-700 hover:bg-[#143c8c]/60'}`}
               >
                 {t(day.dayNameKey)}
               </Button>
@@ -449,7 +449,7 @@ const ConferenceSchedule = () => {
           {/* Selected day schedule */}
           <Card className="shadow-congress">
             <CardHeader>
-              <CardTitle className="text-2xl">
+              <CardTitle className="text-2xl text-orange-800">
                 {scheduleData[selectedDay].date}
               </CardTitle>
             </CardHeader>
@@ -464,7 +464,7 @@ const ConferenceSchedule = () => {
                     >
                       {/* Time column */}
                       <div className="w-32 flex-shrink-0"> 
-                        <Badge variant="outline" className="text-sm font-mono text-orange-700">
+                        <Badge variant="outline" className="text-sm font-mono text-orange-700 border-orange-700">
                           {session.time}
                         </Badge>
                       </div>
@@ -509,9 +509,9 @@ const ConferenceSchedule = () => {
           </Card>
 
           {/* Download schedule button */}
-          <div className="mt-8 text-center text-black">
-            <Button variant="congress" size="lg">
-              <FileText className="mr-2 h-5 w-5 text-black" />
+          <div className="mt-8 text-center text-orange-800">
+            <Button className="text-orange-800" variant="congress" size="lg">
+              <FileText className="mr-2 h-5 w-5 text-orange-800" />
               {t("schedule.downloadProgram")}
             </Button>
           </div>
@@ -519,7 +519,7 @@ const ConferenceSchedule = () => {
           {/* Session types legend */}
           <Card className="mt-8 shadow-congress">
             <CardContent className="pt-6">
-              <h3 className="text-lg font-semibold mb-4 text-center">
+              <h3 className="text-lg font-semibold mb-4 text-center text-orange-800">
                 {t("schedule.sessionTypes")}
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">

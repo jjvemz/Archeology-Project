@@ -56,10 +56,10 @@ const PacificMigrationTimeline = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-calypso-900">
               {t("timeline.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-calypso-800">
               {t("timeline.description")}
             </p>
           </div>
@@ -103,7 +103,7 @@ const PacificMigrationTimeline = () => {
                       {/* Center icon */}
                       <div className="w-2/12 flex justify-center relative z-10">
                         <div className="w-16 h-16 bg-pacific-blue rounded-full flex items-center justify-center shadow-congress hover:scale-110 transition-transform duration-300">
-                          <IconComponent className="w-8 h-8 text-black" />
+                          <IconComponent className="w-8 h-8 text-orange-800" />
                         </div>
                       </div>
 

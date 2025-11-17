@@ -96,10 +96,10 @@ export function AreasOfReflectionGallery() {
     <section className="py-20 px-4 ">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground ">
-            {t("areasGallery.areasOf")} <span className="text-accent">{t("areasGallery.ofReflection")}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-calypso-800">
+            {t("areasGallery.areasOf")} <span className="text-accent text-orange-700">{t("areasGallery.ofReflection")}</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-calypso-800">
             {t("areasGallery.galleryDesc")}
           </p>
         </div>
@@ -113,7 +113,7 @@ export function AreasOfReflectionGallery() {
               )}
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
-                  <CardTitle className="text-xl text-foreground">{t(area.titleKey)}</CardTitle>
+                  <CardTitle className="text-xl text-foreground text-orange-900">{t(area.titleKey)}</CardTitle>
                   <span className="text-xs text-accent font-semibold bg-accent/10 px-2 py-1 rounded text-orange-900">
                     {t(area.scaleKey)}
                   </span>
@@ -121,7 +121,7 @@ export function AreasOfReflectionGallery() {
                 <p className="text-muted-foreground text-sm text-orange-900">{t(area.descKey)}</p>
               </CardHeader>
               <CardContent>
-                <h4 className="font-semibold text-foreground mb-3">{t("areasGallery.keyTopics")}</h4>
+                <h4 className="font-semibold text-foreground mb-3 text-orange-900">{t("areasGallery.keyTopics")}</h4>
                 <ul className="space-y-2">
                   {area.topics.map((topic, topicIndex) => (
                     <li key={topicIndex} className="text-sm text-muted-foreground flex items-start text-orange-900">
