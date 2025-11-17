@@ -123,18 +123,18 @@ const VenueLocation = () => {
             </div>
           </div>
 
-          <Card className="shadow-congress  text-orange-900 text-opacity-65">
+          <Card className="shadow-congress  text-orange-900 ">
             <CardContent className="pt-8 text-center">
-              <Camera className="h-12 w-12 mx-auto mb-6 text-orange-900 text-opacity-65" />
+              <Camera className="h-12 w-12 mx-auto mb-6 text-orange-900 " />
               <h3 className="text-2xl font-bold mb-4">{t("venue.culturalImmersion")}</h3>
-              <p className="text-orange-700 text-opacity-65 leading-relaxed mb-6 max-w-3xl mx-auto">
+              <p className="text-orange-700  leading-relaxed mb-6 max-w-3xl mx-auto">
                 {t("venue.culturalImmersion.desc")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="yellow">
                   {t("venue.bookAccommodation")}
                 </Button>
-                <Button size="lg" variant="outline" className="border-grey text-orange-800 text-opacity-65 hover:bg-blue-700  bg-blue-600/40 hover:text-pacific-blue">
+                <Button size="lg" variant="yellow" className="border-grey text-orange-800  hover:bg-blue-700/40  bg-blue-600/40 hover:text-pacific-blue">
                   {t("venue.downloadGuide")}
                 </Button>
               </div>

@@ -117,8 +117,8 @@ const RegistrationFees = () => {
                       ))}
                     </ul>
                     <Button
-                      className="w-full mt-6 text-orange-800 text-opacity-65"
-                      variant={fee.highlight ? "congress" : "outline"}
+                      className="w-full mt-6 text-orange-700 text-opacity-65"
+                      variant="congress" 
                     >
                       {t("registration.registerNow")}
                     </Button>

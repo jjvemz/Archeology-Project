@@ -129,10 +129,10 @@ const CulturalArtifactsGallery = () => {
           {/* Additional info section */}
           <Card className="mt-16 bg-[#143c8c]/60 shadow-congress">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-center text-orange-800 text-opacity-65">
+              <h3 className="text-2xl font-bold mb-4 text-center text-orange-800 ">
                 {t("artifacts.culturalSignificance.title")}
               </h3>
-              <p className="text-orange-800 text-opacity-65 leading-relaxed max-w-4xl mx-auto text-center mb-6">
+              <p className="text-orange-800  leading-relaxed max-w-4xl mx-auto text-center mb-6">
                 {t("artifacts.culturalSignificance.desc")}
               </p>
               <div className="grid md:grid-cols-3 gap-6 mt-8">

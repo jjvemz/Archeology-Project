@@ -108,24 +108,24 @@ const PacificGallery = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <Card className=" text-orange-800 text-opacity-65 shadow-congress max-w-4xl mx-auto">
+            <Card className=" text-orange-800  shadow-congress max-w-4xl mx-auto">
               <CardContent className="pt-8">
                 <h3 className="text-3xl font-bold mb-4">{t("gallery.connecting.title")}</h3>
-                <p className="text-orange-800 text-opacity-65/90 leading-relaxed mb-6 text-lg">
+                <p className="text-orange-800  leading-relaxed mb-6 text-lg">
                   {t("gallery.connecting.desc")}
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div>
                     <div className="text-3xl font-bold mb-2">1000+</div>
-                    <div className="text-orange-800 text-opacity-65">{t("gallery.stats.sites")}</div>
+                    <div className="text-orange-800 ">{t("gallery.stats.sites")}</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold mb-2">50+</div>
-                    <div className="text-orange-800 text-opacity-65">{t("gallery.stats.islands")}</div>
+                    <div className="text-orange-800 ">{t("gallery.stats.islands")}</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold mb-2">3000+</div>
-                    <div className="text-orange-800 text-opacity-65">{t("gallery.stats.history")}</div>
+                    <div className="text-orange-800 ">{t("gallery.stats.history")}</div>
                   </div>
                 </div>
               </CardContent>
