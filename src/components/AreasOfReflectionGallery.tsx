@@ -96,10 +96,10 @@ export function AreasOfReflectionGallery() {
     <section className="py-20 px-4 ">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-calypso-800">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-800">
             {t("areasGallery.areasOf")} <span className="text-accent text-orange-700">{t("areasGallery.ofReflection")}</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-calypso-800">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-orange-800">
             {t("areasGallery.galleryDesc")}
           </p>
         </div>
@@ -138,10 +138,10 @@ export function AreasOfReflectionGallery() {
         <div className="mt-12 text-center">
           <Card className="border-border/50 bg-card/30 backdrop-blur-sm max-w-4xl mx-auto">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-accent">
+              <h3 className="text-2xl font-bold mb-4 text-accent text-orange-700">
                 {t("areasGallery.interdisciplinary.title")}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-orange-700">
                 {t("areasGallery.interdisciplinary.desc")}
               </p>
             </CardContent>

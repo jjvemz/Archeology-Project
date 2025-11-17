@@ -56,10 +56,10 @@ const PacificMigrationTimeline = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-calypso-900">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-900">
               {t("timeline.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-calypso-800">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-800">
               {t("timeline.description")}
             </p>
           </div>
@@ -157,10 +157,10 @@ const PacificMigrationTimeline = () => {
           {/* Additional info section */}
           <Card className="mt-16 shadow-congress">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-center text-orange-800 text-opacity-65">
+              <h3 className="text-2xl font-bold mb-4 text-center text-orange-800 ">
                 {t("timeline.seafaring.title")}
               </h3>
-              <p className="text-orange-800 text-opacity-65 leading-relaxed max-w-4xl mx-auto text-center">
+              <p className="text-orange-800  leading-relaxed max-w-4xl mx-auto text-center">
                 {t("timeline.seafaring.desc")}
               </p>
             </CardContent>

@@ -11,10 +11,10 @@ const CallForPapers = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-calypso-900">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-900">
               {t("callForPapers.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-calypso-800">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-800">
               {t("callForPapers.description")}
             </p>
           </div>
