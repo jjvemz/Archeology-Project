@@ -85,10 +85,10 @@ const AreasOfReflection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-800 text-opacity-65">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-800 ">
               {t("areas.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-800 text-opacity-65">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-800 ">
               {t("areas.description")}
             </p>
           </div>
