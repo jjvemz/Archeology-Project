@@ -2,8 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
-import MataKiteRangiLogo from "/images/logo_fundacion_mktr_white.png";
-
+//import MataKiteRangiLogo from "/images/logo_fundacion_mktr_white.png";
+const MataKiteRangiLogo = "/images/logo_fundacion_mktr_white.png";
 
 const PLACEHOLDER_LOGO = "https://placehold.co/300x120/1e3a5f/ffffff?text=Logo";
 
