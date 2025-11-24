@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 import LanguageToggle from "./LanguageToggle";
+import MataKiteRangiLogo from "/images/logo_fundacion_mktr_white.png";
 
 const Header = () => {
   const { t } = useLanguage();
@@ -11,6 +12,10 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="flex items-center space-x-2 flex-wrap">
+              {/* <img src={MataKiteRangiLogo} 
+              alt="MataKiteRangiFundation" 
+              width="80" 
+              height="80"/> */}
               <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-primary whitespace-nowrap">
                 {t("header.title")}
               </h1>

@@ -2,6 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
+import MataKiteRangiLogo from "/images/logo_fundacion_mktr_white.png";
+
 
 const PLACEHOLDER_LOGO = "https://placehold.co/300x120/1e3a5f/ffffff?text=Logo";
 
@@ -12,7 +14,7 @@ const SponsorsPartners = () => {
     platinum: [
       {
         nameKey: "sponsors.mataKiTeRangi.name",
-        logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHkkodk2p4UlA/company-logo_200_200/company-logo_200_200/0/1710190960217?e=2147483647&v=beta&t=ilxWZsHaz9S7feJOpJffT-yNIhrUXyTP-NrRhTLKS68",
+        logo: MataKiteRangiLogo,
         url: "https://fundacionmatakiterangi.cl/index.php/es/",
         descKey: "sponsors.mataKiTeRangi.desc"
       }
@@ -105,10 +107,10 @@ const SponsorsPartners = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-800">
               {t("sponsors.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-800">
               {t("sponsors.description")}
             </p>
           </div>
@@ -117,7 +119,7 @@ const SponsorsPartners = () => {
           <div className="mb-16">
             <div className="flex items-center justify-center gap-3 mb-8">
               <div className="h-px bg-pacific-blue w-20" />
-              <h3 className="text-2xl font-bold text-pacific-blue">
+              <h3 className="text-2xl font-bold text-orange-800">
                 {t("sponsors.platinum")}
               </h3>
               <div className="h-px bg-pacific-blue w-20" />
@@ -133,11 +135,11 @@ const SponsorsPartners = () => {
                         alt={t(sponsor.nameKey)}
                         className="h-32 mx-auto mb-6 object-contain"
                       />
-                      <h4 className="text-xl font-bold mb-3 text-pacific-blue">
+                      <h4 className="text-xl font-bold mb-3 text-orange-800">
                         {t(sponsor.nameKey)}
                       </h4>
                       {sponsor.descKey && (
-                        <p className="text-muted-foreground">
+                        <p className="text-muted-foreground text-orange-800">
                           {t(sponsor.descKey)}
                         </p>
                       )}
@@ -148,7 +150,7 @@ const SponsorsPartners = () => {
             </div>
           </div>
 
-          {/* Gold Tier */}
+          {/* Gold Tier
           <div className="mb-16">
             <div className="flex items-center justify-center gap-3 mb-8">
               <div className="h-px bg-congress-yellow w-20" />
@@ -179,7 +181,7 @@ const SponsorsPartners = () => {
           </div>
 
           {/* Silver Tier */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <div className="flex items-center justify-center gap-3 mb-8">
               <div className="h-px bg-gray-400 w-20" />
               <h3 className="text-2xl font-bold text-gray-600">
@@ -205,11 +207,11 @@ const SponsorsPartners = () => {
                   </CardContent>
                 </Card>
               ))}
-            </div>
-          </div>
+            </div> 
+          </div>*/}
 
           {/* Partners Section */}
-          <div className="mt-20">
+          {/*<div className="mt-20">
             <div className="flex items-center justify-center gap-3 mb-12">
               <div className="h-px bg-pacific-teal w-20" />
               <h3 className="text-3xl font-bold text-pacific-teal text-center">
@@ -237,7 +239,7 @@ const SponsorsPartners = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Become a Sponsor CTA */}
           <Card className="mt-16 shadow-congress">
@@ -248,11 +250,11 @@ const SponsorsPartners = () => {
               <p className="text-orange-800 text-opacity-65 mb-6 max-w-2xl mx-auto leading-relaxed">
                 {t("sponsors.sponsorshipBenefits")}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center text-orange-800">
                 <Button variant="yellow" size="lg">
                   {t("sponsors.viewPackages")}
                 </Button>
-                <Button variant="outline" size="lg" className="bg-white/90">
+                <Button variant="outline" size="lg" className="text-orange-800">
                   {t("sponsors.contactUs")}
                 </Button>
               </div>
