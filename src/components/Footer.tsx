@@ -30,12 +30,12 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">{t("footer.congressLinks")}</h4>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><a href="#call-papers" className="hover:text-primary-foreground transition-colors">{t("footer.callForPapers")}</a></li>
-              <li><a href="#areas" className="hover:text-primary-foreground transition-colors">{t("footer.researchAreas")}</a></li>
-              <li><a href="#registration" className="hover:text-primary-foreground transition-colors">{t("footer.registration")}</a></li>
-              <li><a href="#venue" className="hover:text-primary-foreground transition-colors">{t("footer.venueTravel")}</a></li>
-              <li><a href="#schedule" className="hover:text-primary-foreground transition-colors">{t("footer.schedule")}</a></li>
-              <li><a href="#committee" className="hover:text-primary-foreground transition-colors">{t("footer.committee")}</a></li>
+              <li><a href="#call-papers" className="hover:text-primary-foreground text-primary">{t("footer.callForPapers")}</a></li>
+              <li><a href="#areas" className="hover:text-primary-foreground text-primary">{t("footer.researchAreas")}</a></li>
+              <li><a href="#registration" className="hover:text-primary-foreground text-primary">{t("footer.registration")}</a></li>
+              <li><a href="#venue" className="hover:text-primary-foreground text-primary">{t("footer.venueTravel")}</a></li>
+              <li><a href="#schedule" className="hover:text-primary-foreground text-primary">{t("footer.schedule")}</a></li>
+              <li><a href="#committee" className="hover:text-primary-foreground text-primary">{t("footer.committee")}</a></li>
             </ul>
           </div>
 
@@ -51,7 +51,7 @@ const Footer = () => {
                   href="https://earlypacificmigration.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary-foreground transition-colors underline"
+                  className="hover:text-primary-foreground text-primary underline"
                 >
                   {t("footer.website")}
                 </a>
@@ -62,16 +62,16 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">{t("footer.followUs")}</h4>
             <div className="flex flex-col space-y-2 text-primary-foreground/80 text-sm">
-              <a href="#" className="hover:text-primary-foreground transition-colors">
+              <a href="#" className="hover:text-primary-foreground text-primary">
                 {t("footer.facebook")}
               </a>
-              <a href="#" className="hover:text-primary-foreground transition-colors">
+              <a href="#" className="hover:text-primary-foreground text-primary">
                 {t("footer.twitter")}
               </a>
-              <a href="#" className="hover:text-primary-foreground transition-colors">
+              <a href="#" className="hover:text-primary-foreground text-primary">
                 {t("footer.instagram")}
               </a>
-              <a href="#" className="hover:text-primary-foreground transition-colors">
+              <a href="#" className="hover:text-primary-foreground text-primary">
                 {t("footer.linkedin")}
               </a>
             </div>

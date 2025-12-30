@@ -56,10 +56,10 @@ const PacificMigrationTimeline = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-900">
-              {t("timeline.title")}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-[#143c8c]">
+              {t("timeline.title").toUpperCase()}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-800">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto  text-primary">
               {t("timeline.description")}
             </p>
           </div>
@@ -84,16 +84,16 @@ const PacificMigrationTimeline = () => {
                     >
                       {/* Content card */}
                       <div className="w-5/12">
-                        <Card className="shadow-congress hover:shadow-warm transition-all duration-300 group text-orange-800">
-                          <CardContent className="p-6">
-                            <Badge className="mb-3 bg-pacific-blue text-orange-800">{t(event.yearKey)}</Badge>
-                            <h3 className="text-xl font-bold mb-2 group-hover:text-pacific-blue transition-colors text-orange-800">
-                              {t(event.eventKey)}
+                        <Card className="shadow-congress hover:shadow-warm transition-all duration-300 group  text-primary text-center">
+                          <CardContent className="p-6 ">
+                            <Badge className="mb-3 bg-pacific-blue  text-primary text-center text-primary">{t(event.yearKey)}</Badge>
+                            <h3 className="text-xl font-bold mb-2 group-hover:text-pacific-blue text-[#143c8c] text-center">
+                              {t(event.eventKey).toUpperCase()}
                             </h3>
-                            <p className="text-sm text-muted-foreground mb-3 font-semibold text-orange-700">
+                            <p className="text-sm text-muted-foreground mb-3 font-semibold  text-primary text-center">
                               {t(event.locationKey)}
                             </p>
-                            <p className="text-sm text-foreground/80 leading-relaxed text-orange-700">
+                            <p className="text-sm text-foreground/80 leading-relaxed  text-primary text-center">
                               {t(event.descKey)}
                             </p>
                           </CardContent>
@@ -103,7 +103,7 @@ const PacificMigrationTimeline = () => {
                       {/* Center icon */}
                       <div className="w-2/12 flex justify-center relative z-10">
                         <div className="w-16 h-16 bg-pacific-blue rounded-full flex items-center justify-center shadow-congress hover:scale-110 transition-transform duration-300">
-                          <IconComponent className="w-8 h-8 text-orange-800" />
+                          <IconComponent className="w-8 h-8  text-primary" />
                         </div>
                       </div>
 
@@ -157,10 +157,10 @@ const PacificMigrationTimeline = () => {
           {/* Additional info section */}
           <Card className="mt-16 shadow-congress">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-center text-orange-800 ">
-                {t("timeline.seafaring.title")}
+              <h3 className="text-2xl font-bold mb-4 text-center text-[#143c8c]">
+                {t("timeline.seafaring.title").toUpperCase()}
               </h3>
-              <p className="text-orange-800  leading-relaxed max-w-4xl mx-auto text-center">
+              <p className="text-primary leading-relaxed max-w-4xl mx-auto text-center">
                 {t("timeline.seafaring.desc")}
               </p>
             </CardContent>

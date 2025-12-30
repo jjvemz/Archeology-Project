@@ -19,10 +19,10 @@ const Index = () => {
     <div className="min-h-screen bg-[#ffeecd]">
       <Header />
       <CongressHero />
+      <AreasOfReflectionGallery />
       <CallForPapers />
       <PacificMigrationTimeline />
-      <AreasOfReflection />
-      <AreasOfReflectionGallery />
+      {/* <AreasOfReflection /> */}
       <CulturalArtifactsGallery />
       <VideoSection />
       <PacificGallery />

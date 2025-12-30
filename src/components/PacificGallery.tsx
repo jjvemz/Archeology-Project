@@ -54,10 +54,10 @@ const PacificGallery = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-800">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-primary">
               {t("gallery.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-700">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-primary">
               {t("gallery.description")}
             </p>
           </div>
@@ -73,29 +73,29 @@ const PacificGallery = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-volcanic/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 right-4">
-                    <span className="bg-pacific-blue text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-pacific-blue text-foreground px-3 py-1 rounded-full text-sm font-medium text-center">
                       {t(site.locationKey)}
                     </span>
                   </div>
                 </div>
 
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-pacific-blue transition-colors text-orange-800">
+                  <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-pacific-blue text-primary text-center">
                     {t(site.nameKey)}
                   </h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed text-orange-700">
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-primary text-center">
                     {t(site.descKey)}
                   </p>
 
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-sm text-foreground uppercase tracking-wide text-orange-700">
+                    <h4 className="font-semibold text-sm text-foreground uppercase tracking-wide text-primary text-center">
                       {t("gallery.keyFeatures")}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {site.highlights.map((highlight, highlightIndex) => (
                         <span
                           key={highlightIndex}
-                          className="bg-pacific-teal/10 text-pacific-teal px-3 py-1 rounded-full text-xs font-medium text-orange-700"
+                          className="text-foreground px-3 py-1 rounded-full text-xs font-medium text-center"
                         >
                           {t(highlight)}
                         </span>
@@ -108,24 +108,24 @@ const PacificGallery = () => {
           </div>
 
           <div className="mt-16 text-center">
-            <Card className=" text-orange-800  shadow-congress max-w-4xl mx-auto">
+            <Card className="text-foreground shadow-congress max-w-4xl mx-auto">
               <CardContent className="pt-8">
                 <h3 className="text-3xl font-bold mb-4">{t("gallery.connecting.title")}</h3>
-                <p className="text-orange-800  leading-relaxed mb-6 text-lg">
+                <p className="text-foreground leading-relaxed mb-6 text-lg">
                   {t("gallery.connecting.desc")}
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div>
-                    <div className="text-3xl font-bold mb-2">1000+</div>
-                    <div className="text-orange-800 ">{t("gallery.stats.sites")}</div>
+                    <div className="text-foreground text-3xl font-bold mb-2">1000+</div>
+                    <div className="text-foreground ">{t("gallery.stats.sites")}</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold mb-2">50+</div>
-                    <div className="text-orange-800 ">{t("gallery.stats.islands")}</div>
+                    <div className="text-foreground text-3xl font-bold mb-2">50+</div>
+                    <div className="text-foreground ">{t("gallery.stats.islands")}</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold mb-2">3000+</div>
-                    <div className="text-orange-800 ">{t("gallery.stats.history")}</div>
+                    <div className="text-foreground text-3xl font-bold mb-2">3000+</div>
+                    <div className="text-foreground ">{t("gallery.stats.history")}</div>
                   </div>
                 </div>
               </CardContent>

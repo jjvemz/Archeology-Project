@@ -2,19 +2,39 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-const Card = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
-      className
-    )}
-    {...props}
-  />
-))
+type CardShape = "rounded" | "circular" | "circle"
+
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  shape?: CardShape
+  radius?: number
+}
+
+const shapeClasses: Record<CardShape, string> = {
+  rounded: "rounded-lg",
+  circular: "rounded-full",
+  circle: "rounded-full aspect-square w-full h-auto"
+}
+
+const Card = React.forwardRef<HTMLDivElement, CardProps>(
+  ({ className, shape = "rounded", radius, ...props }, ref) => {
+    const isCircle = shape === "circle"
+    const circleStyle = isCircle && radius ? { borderRadius: `${radius}px` } : undefined
+    
+    return (
+      <div
+        ref={ref}
+        className={cn(
+          "border !bg-transparent text-card-foreground shadow-sm",
+          shapeClasses[shape],
+          isCircle && "flex flex-col items-center justify-center",
+          className
+        )}
+        style={circleStyle}
+        {...props}
+      />
+    )
+  }
+)
 Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<
@@ -23,7 +43,7 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    className={cn("flex flex-col space-y-1.5 p-6 items-center text-center", className)}
     {...props}
   />
 ))
@@ -60,7 +80,7 @@ const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+  <div ref={ref} className={cn("p-6 pt-0 flex flex-col items-center text-center", className)} {...props} />
 ))
 CardContent.displayName = "CardContent"
 
@@ -70,7 +90,7 @@ const CardFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
+    className={cn("flex items-center justify-center p-6 pt-0 text-center", className)}
     {...props}
   />
 ))

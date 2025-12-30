@@ -40,16 +40,16 @@ const CongressHero = () => {
             {t("congressHero.badge")}
           </Badge>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-orange-800 text-opacity-65 leading-tight tracking-wider w-full">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8  text-primary text-opacity-65 leading-tight tracking-wider w-full">
             <span className="text-blue-800">{t("congressHero.title1")}</span>
             <br />
             {t("congressHero.title2")}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pacific-blue to-coral text-orange-800 text-opacity-65"></span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pacific-blue to-coral  text-primary text-opacity-65"></span>
             <br />
             {t("congressHero.title3")}
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl mt-4 text-accent leading-relaxed text-orange-800 text-opacity-65 w-full">
+          <p className="text-base sm:text-lg md:text-xl mt-4 text-accent leading-relaxed font-bold text-primary text-opacity-65 w-full">
             {t("congressHero.description")}
           </p>
 
@@ -57,14 +57,14 @@ const CongressHero = () => {
             <Button
               size="lg"
               variant="congress"
-              className="text-sm sm:text-base md:text-lg px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-orange-800 text-opacity-65 w-full lg:w-auto"
+              className="text-sm sm:text-base md:text-lg px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6  text-primary text-opacity-65 w-full lg:w-auto"
             >
               {t("congressHero.submitAbstract")}
             </Button>
             <Button
               size="lg"
               variant="congress"
-              className="text-sm sm:text-base md:text-lg px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-orange-800 text-opacity-65 w-full lg:w-auto"
+              className="text-sm sm:text-base md:text-lg px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6  text-primary text-opacity-65 w-full lg:w-auto"
             >
               {t("congressHero.registerNow")}
             </Button>

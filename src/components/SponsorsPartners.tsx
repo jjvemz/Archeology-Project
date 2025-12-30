@@ -107,10 +107,10 @@ const SponsorsPartners = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-800">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground  text-primary">
               {t("sponsors.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-800">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto  text-primary">
               {t("sponsors.description")}
             </p>
           </div>
@@ -119,7 +119,7 @@ const SponsorsPartners = () => {
           <div className="mb-16">
             <div className="flex items-center justify-center gap-3 mb-8">
               <div className="h-px bg-pacific-blue w-20" />
-              <h3 className="text-2xl font-bold text-orange-800">
+              <h3 className="text-2xl font-bold  text-primary">
                 {t("sponsors.platinum")}
               </h3>
               <div className="h-px bg-pacific-blue w-20" />
@@ -135,11 +135,11 @@ const SponsorsPartners = () => {
                         alt={t(sponsor.nameKey)}
                         className="h-32 mx-auto mb-6 object-contain"
                       />
-                      <h4 className="text-xl font-bold mb-3 text-orange-800">
+                      <h4 className="text-xl font-bold mb-3  text-primary">
                         {t(sponsor.nameKey)}
                       </h4>
                       {sponsor.descKey && (
-                        <p className="text-muted-foreground text-orange-800">
+                        <p className="text-muted-foreground  text-primary">
                           {t(sponsor.descKey)}
                         </p>
                       )}
@@ -244,17 +244,17 @@ const SponsorsPartners = () => {
           {/* Become a Sponsor CTA */}
           <Card className="mt-16 shadow-congress">
             <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4 text-orange-800 text-opacity-65">
+              <h3 className="text-2xl font-bold mb-4  text-primary text-opacity-65">
                 {t("sponsors.becomeASponsor")}
               </h3>
-              <p className="text-orange-800 text-opacity-65 mb-6 max-w-2xl mx-auto leading-relaxed">
+              <p className=" text-primary text-opacity-65 mb-6 max-w-2xl mx-auto leading-relaxed">
                 {t("sponsors.sponsorshipBenefits")}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center text-orange-800">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center  text-primary">
                 <Button variant="yellow" size="lg">
                   {t("sponsors.viewPackages")}
                 </Button>
-                <Button variant="outline" size="lg" className="text-orange-800">
+                <Button variant="outline" size="lg" className=" text-primary">
                   {t("sponsors.contactUs")}
                 </Button>
               </div>

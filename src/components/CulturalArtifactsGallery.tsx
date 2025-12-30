@@ -62,10 +62,10 @@ const CulturalArtifactsGallery = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-800">
-              {t("artifacts.title")}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground  text-[#143c8c]">
+              {t("artifacts.title").toUpperCase()}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-800">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-primary">
               {t("artifacts.description")}
             </p>
           </div>
@@ -87,14 +87,14 @@ const CulturalArtifactsGallery = () => {
 
                   {/* Origin badge */}
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-pacific-blue/90 text-orange-800">
+                    <Badge className="bg-pacific-blue/90 text-primary">
                       {t(artifact.originKey)}
                     </Badge>
                   </div>
 
                   {/* Type badge */}
                   <div className="absolute bottom-4 left-4 right-4">
-                    <Badge variant="outline" className="text-orange-700 text-foreground backdrop-blur-sm">
+                    <Badge variant="outline" className=" text-primary text-foreground backdrop-blur-sm text-primary">
                       {t(artifact.typeKey)}
                     </Badge>
                   </div>
@@ -102,10 +102,10 @@ const CulturalArtifactsGallery = () => {
 
                 {/* Content */}
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-pacific-blue transition-colors text-orange-900">
-                    {t(artifact.nameKey)}
+                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-pacific-blue text-[#143c8c]">
+                    {t(artifact.nameKey).toUpperCase()}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed text-orange-900">
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed text-primary">
                     {t(artifact.descKey)}
                   </p>
 
@@ -115,7 +115,7 @@ const CulturalArtifactsGallery = () => {
                       <Badge
                         key={patternIdx}
                         variant="outline"
-                        className="text-xs border-coral/30 text-coral hover:bg-coral/10 text-orange-900"
+                        className="text-xs border-coral/30 text-coral hover:bg-coral/10 text-primary"
                       >
                         {t(pattern)}
                       </Badge>
@@ -127,26 +127,26 @@ const CulturalArtifactsGallery = () => {
           </div>
 
           {/* Additional info section */}
-          <Card className="mt-16 bg-[#143c8c]/60 shadow-congress">
+          <Card className="mt-16   shadow-congress">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-center text-orange-800 ">
-                {t("artifacts.culturalSignificance.title")}
+              <h3 className="text-2xl font-bold mb-4 text-center  text-[#143c8c]">
+                {t("artifacts.culturalSignificance.title").toUpperCase()}
               </h3>
-              <p className="text-orange-800  leading-relaxed max-w-4xl mx-auto text-center mb-6">
+              <p className="text-primary leading-relaxed max-w-4xl mx-auto text-center mb-6">
                 {t("artifacts.culturalSignificance.desc")}
               </p>
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-2 text-orange-800 text-opacity-65">1000+</div>
-                  <div className="text-sm text-orange-800 text-opacity-65">{t("artifacts.stats.artifacts")}</div>
+                  <div className="text-3xl font-bold mb-2  text-primary text-opacity-65">1000+</div>
+                  <div className="text-sm  text-primary text-opacity-65">{t("artifacts.stats.artifacts")}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-2 text-orange-800 text-opacity-65">20+</div>
-                  <div className="text-sm text-orange-800 text-opacity-65">{t("artifacts.stats.cultures")}</div>
+                  <div className="text-3xl font-bold mb-2  text-primary text-opacity-65">20+</div>
+                  <div className="text-sm  text-primary text-opacity-65">{t("artifacts.stats.cultures")}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-2 text-orange-800 text-opacity-65">4000+</div>
-                  <div className="text-sm text-orange-800 text-opacity-65">{t("artifacts.stats.years")}</div>
+                  <div className="text-3xl font-bold mb-2  text-primary text-opacity-65">4000+</div>
+                  <div className="text-sm  text-primary text-opacity-65">{t("artifacts.stats.years")}</div>
                 </div>
               </div>
             </CardContent>

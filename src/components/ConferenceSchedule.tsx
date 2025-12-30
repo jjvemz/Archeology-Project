@@ -424,10 +424,10 @@ const ConferenceSchedule = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-900">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground  text-primary">
               {t("schedule.title")}
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-orange-800">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto  text-primary">
               {t("schedule.description")}
             </p>
           </div>
@@ -439,7 +439,7 @@ const ConferenceSchedule = () => {
                 key={idx}
                 variant={selectedDay === idx ? "congress" : "outline"}
                 onClick={() => setSelectedDay(idx)}
-                className={`flex-shrink-0 ${selectedDay !== idx ? 'bg-[#143c8c]/60 text-orange-700 hover:bg-[#143c8c]/60 ' : 'bg-[#143c8c]/60 text-orange-700 hover:bg-[#143c8c]/60'}`}
+                className={`flex-shrink-0 ${selectedDay !== idx ? '   text-primary hover:  ' : '   text-primary hover: '}`}
               >
                 {t(day.dayNameKey)}
               </Button>
@@ -449,7 +449,7 @@ const ConferenceSchedule = () => {
           {/* Selected day schedule */}
           <Card className="shadow-congress">
             <CardHeader>
-              <CardTitle className="text-2xl text-orange-800">
+              <CardTitle className="text-2xl  text-primary">
                 {scheduleData[selectedDay].date}
               </CardTitle>
             </CardHeader>
@@ -460,11 +460,11 @@ const ConferenceSchedule = () => {
                   return (
                     <div
                       key={idx}
-                      className="flex gap-4 p-4  rounded-lg transition-colors border border-transparent "
+                      className="flex gap-4 p-4  rounded-lg text-primary border border-transparent "
                     >
                       {/* Time column */}
                       <div className="w-32 flex-shrink-0"> 
-                        <Badge variant="outline" className="text-sm font-mono text-orange-700 border-orange-700">
+                        <Badge variant="outline" className="text-sm font-mono  text-primary border-orange-700">
                           {session.time}
                         </Badge>
                       </div>
@@ -474,7 +474,7 @@ const ConferenceSchedule = () => {
                         <div className="flex items-start justify-between mb-2 gap-3">
                           <div className="flex items-center gap-2">
                             <IconComponent className="h-5 w-5 text-blue-800 flex-shrink-0" />
-                            <h4 className="text-lg font-semibold text-orange-800">
+                            <h4 className="text-lg font-semibold  text-primary">
                               {t(session.titleKey)}
                             </h4>
                           </div>
@@ -484,19 +484,19 @@ const ConferenceSchedule = () => {
                         </div>
 
                         {session.speakersKey && (
-                          <p className="text-sm text-muted-foreground mb-1 text-orange-700">
+                          <p className="text-sm text-muted-foreground mb-1  text-primary">
                             <Users className="w-4 h-4 inline mr-1 " />
                             {t(session.speakersKey)}
                           </p>
                         )}
 
-                        <p className="text-sm text-muted-foreground mb-1 text-orange-700">
+                        <p className="text-sm text-muted-foreground mb-1  text-primary">
                           <MapPin className="w-4 h-4 inline mr-1" />
                           {t(session.locationKey)}
                         </p>
 
                         {session.descKey && (
-                          <p className="text-sm mt-2 text-foreground/80 text-orange-700">
+                          <p className="text-sm mt-2 text-foreground/80  text-primary">
                             {t(session.descKey)}
                           </p>
                         )}
@@ -509,9 +509,9 @@ const ConferenceSchedule = () => {
           </Card>
 
           {/* Download schedule button */}
-          <div className="mt-8 text-center text-orange-800">
-            <Button className="text-orange-800" variant="congress" size="lg">
-              <FileText className="mr-2 h-5 w-5 text-orange-800" />
+          <div className="mt-8 text-center  text-primary">
+            <Button className=" text-primary" variant="congress" size="lg">
+              <FileText className="mr-2 h-5 w-5  text-primary" />
               {t("schedule.downloadProgram")}
             </Button>
           </div>
@@ -519,7 +519,7 @@ const ConferenceSchedule = () => {
           {/* Session types legend */}
           <Card className="mt-8 shadow-congress">
             <CardContent className="pt-6">
-              <h3 className="text-lg font-semibold mb-4 text-center text-orange-800">
+              <h3 className="text-lg font-semibold mb-4 text-center  text-primary">
                 {t("schedule.sessionTypes")}
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">

@@ -61,7 +61,7 @@ const FeaturedArtifacts = () => {
                   <span className="text-muted-foreground">•</span>
                   <span className="text-sm text-muted-foreground">{artifact.period}</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary text-primary">
                   {artifact.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">

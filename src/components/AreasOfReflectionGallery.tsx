@@ -96,36 +96,33 @@ export function AreasOfReflectionGallery() {
     <section className="py-20 px-4 ">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-orange-800">
-            {t("areasGallery.areasOf")} <span className="text-accent text-orange-700">{t("areasGallery.ofReflection")}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6  text-[#143c8c]">
+            {t("areasGallery.areasOf").toUpperCase()} <span >{t("areasGallery.ofReflection").toUpperCase()}</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-orange-800">
+          <p className="text-xl max-w-3xl mx-auto text-primary">
             {t("areasGallery.galleryDesc")}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {areas.map((area, index) => (
-            <Card key={index} className="border-border/50 bg-[#143c8c]/60 backdrop-blur-sm hover:shadow-pacific transition-all duration-300">
+            <Card key={index} className="border-border/50 backdrop-blur-sm hover:shadow-pacific transition-all duration-300 ">
               {area.image && (
-                <div className="h-48 bg-contain bg-no-repeat bg-center rounded-t-lg"
+                <div className="h-52 bg-contain bg-no-repeat bg-center rounded-t-lg"
                      style={{ backgroundImage: `url(${area.image})` }} />
               )}
               <CardHeader>
-                <div className="flex justify-between items-start mb-2">
-                  <CardTitle className="text-xl text-foreground text-orange-900">{t(area.titleKey)}</CardTitle>
-                  <span className="text-xs text-accent font-semibold bg-accent/10 px-2 py-1 rounded text-orange-900">
-                    {t(area.scaleKey)}
-                  </span>
+                <div className="text-center mb-2">
+                  <CardTitle className="text-xl text-[#143c8c]">{t(area.titleKey).toUpperCase()}</CardTitle>
                 </div>
-                <p className="text-muted-foreground text-sm text-orange-900">{t(area.descKey)}</p>
+                <p className="text-muted-foreground text-base text-primary text-center">{t(area.descKey)}</p>
               </CardHeader>
               <CardContent>
-                <h4 className="font-semibold text-foreground mb-3 text-orange-900">{t("areasGallery.keyTopics")}</h4>
-                <ul className="space-y-2">
+                <h4 className="font-semibold  mb-3 text-[#143c8c] text-center">{t("areasGallery.keyTopics")}</h4>
+                <ul className="flex flex-wrap gap-2 justify-center">
                   {area.topics.map((topic, topicIndex) => (
-                    <li key={topicIndex} className="text-sm text-muted-foreground flex items-start text-orange-900">
-                      <span className="text-accent mr-2 text-orange-700">•</span>
+                    <li key={topicIndex} className="text-xs text-muted-foreground text-primary text-center">
+                      {/* <span className="text-accent text-primary">•</span>  */}
                       {t(topic)}
                     </li>
                   ))}
@@ -136,12 +133,17 @@ export function AreasOfReflectionGallery() {
         </div>
 
         <div className="mt-12 text-center">
-          <Card className="border-border/50 bg-card/30 backdrop-blur-sm max-w-4xl mx-auto">
+          <Card shape="circle" className="border-border/50  backdrop-blur-sm max-w-4xl mx-auto bg-[#143c8c]">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-accent text-orange-700">
-                {t("areasGallery.interdisciplinary.title")}
+              <img
+              src={Circle2}
+              alt="Pacific Congress Logo"
+              className="w-4/12 h-4/12 object-cover"
+            />
+              <h3 className="text-2xl font-bold mb-4 text-[#143c8c] font-bold">
+                {t("areasGallery.interdisciplinary.title").toUpperCase()}
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-orange-700">
+              <p className="text-muted-foreground leading-relaxed text-primary">
                 {t("areasGallery.interdisciplinary.desc")}
               </p>
             </CardContent>

@@ -17,26 +17,26 @@ const Header = () => {
               width="80" 
               height="80"/> */}
               <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-primary whitespace-nowrap">
-                {t("header.title")}
+                {t("header.title").toUpperCase()}
               </h1>
               <span className="text-muted-foreground hidden sm:inline">|</span>
-              <span className="text-xs sm:text-sm md:text-base text-muted-foreground">
-                {t("header.subtitle")}
+              <span className="text-xs sm:text-sm md:text-base text-[#143c8c] font-bold">
+                {t("header.subtitle").toUpperCase()}
               </span>
             </div>
           </div>
 
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#call-papers" className="text-foreground hover:text-primary transition-colors">
+            <a href="#call-papers" className="text-foreground hover:text-primary text-[#143c8c]">
               {t("header.callForPapers")}
             </a>
-            <a href="#areas" className="text-foreground hover:text-primary transition-colors">
+            <a href="#areas" className="text-foreground hover:text-primary text-[#143c8c]">
               {t("header.areas")}
             </a>
-            <a href="#registration" className="text-foreground hover:text-primary transition-colors">
+            <a href="#registration" className="text-foreground hover:text-primary text-[#143c8c]">
               {t("header.registration")}
             </a>
-            <a href="#venue" className="text-foreground hover:text-primary transition-colors">
+            <a href="#venue" className="text-foreground hover:text-primary text-[#143c8c]">
               {t("header.venue")}
             </a>
             <LanguageToggle />
