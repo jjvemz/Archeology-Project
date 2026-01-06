@@ -2,10 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/hooks/useLanguage";
 
-import Circle8 from "/images/03agua_azul.png";
-import Circle9 from "/images/09agua_azul.png";
-import Circle10 from "/images/10agua_azul.png";
-import Circle11 from "/images/11agua_azul.png";
+import statue from "/images/statue.png";
+import spiral from "/images/spiral.png";
+import stone from "/images/stone.png";
+import bowl from "/images/bowl.png";
 
 const CulturalArtifactsGallery = () => {
   const { t } = useLanguage();
@@ -16,7 +16,7 @@ const CulturalArtifactsGallery = () => {
       typeKey: "artifacts.woodenBowl.type",
       originKey: "artifacts.woodenBowl.origin",
       descKey: "artifacts.woodenBowl.desc",
-      image: Circle8,
+      image: bowl,
       patterns: [
         "artifacts.woodenBowl.pattern1",
         "artifacts.woodenBowl.pattern2"
@@ -27,7 +27,7 @@ const CulturalArtifactsGallery = () => {
       typeKey: "artifacts.spiralArt.type",
       originKey: "artifacts.spiralArt.origin",
       descKey: "artifacts.spiralArt.desc",
-      image: Circle9,
+      image: spiral,
       patterns: [
         "artifacts.spiralArt.pattern1",
         "artifacts.spiralArt.pattern2"
@@ -38,7 +38,7 @@ const CulturalArtifactsGallery = () => {
       typeKey: "artifacts.stoneRelief.type",
       originKey: "artifacts.stoneRelief.origin",
       descKey: "artifacts.stoneRelief.desc",
-      image: Circle10,
+      image: stone,
       patterns: [
         "artifacts.stoneRelief.pattern1",
         "artifacts.stoneRelief.pattern2"
@@ -49,7 +49,7 @@ const CulturalArtifactsGallery = () => {
       typeKey: "artifacts.portrait.type",
       originKey: "artifacts.portrait.origin",
       descKey: "artifacts.portrait.desc",
-      image: Circle11,
+      image: statue,
       patterns: [
         "artifacts.portrait.pattern1",
         "artifacts.portrait.pattern2"
@@ -58,99 +58,115 @@ const CulturalArtifactsGallery = () => {
   ];
 
   return (
-    <section id="artifacts" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground  text-[#143c8c]">
-              {t("artifacts.title").toUpperCase()}
-            </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-primary">
-              {t("artifacts.description")}
-            </p>
+    <section id="artifacts" className="py-0 bg-background">
+      {/* Header Section */}
+      <div className="bg-blue-900 py-16 px-4">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto flex items-center gap-8">
+            <div className="flex items-center gap-6">
+              <h2 className="text-8xl font-bold text-primary"></h2>
+            </div>
+            <div className="flex-1">
+              <h2 className="text-5xl font-bold text-primary leading-tight">
+                VII_ {t("artifacts.title").toUpperCase()}
+              </h2>
+              <div className="mt-4  p-4 ">
+                <p className="text-sm text-orange-700 leading-relaxed">
+                  {t("artifacts.description")}
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {artifacts.map((artifact, idx) => (
-              <Card
-                key={idx}
-                className="shadow-congress hover:shadow-warm transition-all duration-300 group overflow-hidden cursor-pointer"
-              >
-                {/* Image */}
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={artifact.image}
-                    alt={t(artifact.nameKey)}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-volcanic/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                  {/* Origin badge */}
-                  <div className="absolute top-4 right-4">
-                    <Badge className="bg-pacific-blue/90 text-primary">
-                      {t(artifact.originKey)}
-                    </Badge>
+      {/* Artifacts Grid */}
+      <div className="py-16 ">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {artifacts.map((artifact, idx) => (
+                <div key={idx} className="flex flex-col items-center">
+                  {/* Circular Image Container */}
+                  <div className="w-40 h-40 rounded-full bg-primary flex items-center justify-center overflow-hidden mb-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <img
+                      src={artifact.image}
+                      alt={t(artifact.nameKey)}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
 
-                  {/* Type badge */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <Badge variant="outline" className=" text-primary text-foreground backdrop-blur-sm text-primary">
-                      {t(artifact.typeKey)}
-                    </Badge>
+                  {/* Card Content */}
+                  <div className="w-full text-center">
+                    <h3 className="text-lg font-bold mb-2 text-blue-900">
+                      {t(artifact.nameKey).toUpperCase()}
+                    </h3>
+                    <p className="text-sm font-semibold text-primary mb-3">
+                      {t(artifact.typeKey).toUpperCase()} / {t(artifact.originKey).toUpperCase()}
+                    </p>
+                    <p className="text-xs text-blue-900 leading-relaxed mb-4">
+                      {t(artifact.descKey)}
+                    </p>
+
+                    {/* Pattern tags */}
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      {artifact.patterns.map((pattern, patternIdx) => (
+                        <Badge
+                          key={patternIdx}
+                          variant="outline"
+                          className="text-xs border-primary text-primary hover:bg-primary/10"
+                        >
+                          {t(pattern)}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 </div>
-
-                {/* Content */}
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-pacific-blue text-[#143c8c]">
-                    {t(artifact.nameKey).toUpperCase()}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed text-primary">
-                    {t(artifact.descKey)}
-                  </p>
-
-                  {/* Pattern tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {artifact.patterns.map((pattern, patternIdx) => (
-                      <Badge
-                        key={patternIdx}
-                        variant="outline"
-                        className="text-xs border-coral/30 text-coral hover:bg-coral/10 text-primary"
-                      >
-                        {t(pattern)}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+              ))}
+            </div>
           </div>
+        </div>
+      </div>
 
-          {/* Additional info section */}
-          <Card className="mt-16   shadow-congress">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-center  text-[#143c8c]">
-                {t("artifacts.culturalSignificance.title").toUpperCase()}
-              </h3>
-              <p className="text-primary leading-relaxed max-w-4xl mx-auto text-center mb-6">
-                {t("artifacts.culturalSignificance.desc")}
-              </p>
-              <div className="grid md:grid-cols-3 gap-6 mt-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2  text-primary text-opacity-65">1000+</div>
-                  <div className="text-sm  text-primary text-opacity-65">{t("artifacts.stats.artifacts")}</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2  text-primary text-opacity-65">20+</div>
-                  <div className="text-sm  text-primary text-opacity-65">{t("artifacts.stats.cultures")}</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-2  text-primary text-opacity-65">4000+</div>
-                  <div className="text-sm  text-primary text-opacity-65">{t("artifacts.stats.years")}</div>
+      {/* Stats Section */}
+      <div className="py-12 px-4  border-t border-primary/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2 text-primary">1000+</div>
+                <div className="text-sm font-bold text-blue-900">
+                  {t("artifacts.stats.artifacts").toUpperCase()}
                 </div>
               </div>
-            </CardContent>
-          </Card>
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2 text-primary">20+</div>
+                <div className="text-sm font-bold text-blue-900">
+                  {t("artifacts.stats.cultures").toUpperCase()}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold mb-2 text-primary">4000+</div>
+                <div className="text-sm font-bold text-blue-900">
+                  {t("artifacts.stats.years").toUpperCase()}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Cultural Significance Section */}
+      <div className="py-12 px-4 ">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h3 className="text-2xl font-bold mb-4 text-primary">
+              {t("artifacts.culturalSignificance.title").toUpperCase()}
+            </h3>
+            <p className="text-primary leading-relaxed max-w-4xl mx-auto text-sm">
+              {t("artifacts.culturalSignificance.desc").toUpperCase()}
+            </p>
+          </div>
         </div>
       </div>
     </section>

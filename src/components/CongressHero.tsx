@@ -13,7 +13,7 @@ const CongressHero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-5 gap-0 w-full h-full">
         {/* Image on the left */}
-        <div className="col-span-full md:col-span-3 row-span-full md:row-span-5 relative bg-[#ffeecd]">
+        <div className="col-span-full md:col-span-3 row-span-full md:row-span-5 relative ">
           <div className="absolute inset-0 bg-gradient-to-r from-volcanic/80 via-volcanic/60 to-transparent flex items-center justify-center">
             {/* <img
               src="/images/logo_centro-removebg-preview.png"
@@ -36,20 +36,20 @@ const CongressHero = () => {
       <div className="relative z-10 w-full px-4 md:px-8 lg:px-12 flex justify-center md:justify-end">
         <div className="w-full md:w-2/5 lg:w-2/5 flex flex-col items-center md:items-end text-center md:text-right">
           
-          <Badge className="mb-6 bg-congress-yellow text-volcanic font-bold text-lg px-6 py-2 text-blue-900 text-opacity-65 ">
+          <Badge className="mb-6 bg-congress-yellow text-volcanic font-bold text-lg px-6 py-2 text-orange-700">
             {t("congressHero.badge")}
           </Badge>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8  text-primary text-opacity-65 leading-tight tracking-wider w-full">
-            <span className="text-blue-800">{t("congressHero.title1")}</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-orange-700 leading-tight tracking-wider w-full">
+            <span className="text-blue-900">{t("congressHero.title1")}</span>
             <br />
             {t("congressHero.title2")}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pacific-blue to-coral  text-primary text-opacity-65"></span>
+            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8  text-orange-700 leading-tight tracking-wider w-full"></span>
             <br />
             {t("congressHero.title3")}
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl mt-4 text-accent leading-relaxed font-bold text-primary text-opacity-65 w-full">
+          <p className="text-base sm:text-lg md:text-xl mt-4 text-accent leading-relaxed font-bold text-volcanic text-orange-700  w-full">
             {t("congressHero.description")}
           </p>
 
@@ -79,14 +79,7 @@ const CongressHero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70">
-        <div className="animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
-          </div>
-        </div>
-      </div>
+    
     </section>
   );
 };

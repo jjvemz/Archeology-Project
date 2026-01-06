@@ -93,61 +93,65 @@ export function AreasOfReflectionGallery() {
   ];
 
   return (
-    <section className="py-20 px-4 ">
-      <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6  text-[#143c8c]">
-            {t("areasGallery.areasOf").toUpperCase()} <span >{t("areasGallery.ofReflection").toUpperCase()}</span>
-          </h2>
-          <p className="text-xl max-w-3xl mx-auto text-primary">
-            {t("areasGallery.galleryDesc")}
-          </p>
+    <section className="py-0 bg-background">
+      {/* Header Section */}
+      <div className="bg-blue-900 py-8 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex items-start gap-6 mb-6">
+            
+            <h2 className="text-5xl md:text-6xl font-bold text-primary pt-2 leading-tight">
+              {t("areasGallery.areasOf").toUpperCase()}  {t("areasGallery.ofReflection").toUpperCase()}
+            </h2>
+          </div>
+          <div className=" p-4 border-l-4 border-primary">
+            <p className="text-sm text-orange-700 leading-relaxed font-semibold">
+              {t("areasGallery.galleryDesc")}
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {areas.map((area, index) => (
-            <Card key={index} className="border-border/50 backdrop-blur-sm hover:shadow-pacific transition-all duration-300 ">
-              {area.image && (
-                <div className="h-52 bg-contain bg-no-repeat bg-center rounded-t-lg"
-                     style={{ backgroundImage: `url(${area.image})` }} />
-              )}
-              <CardHeader>
-                <div className="text-center mb-2">
-                  <CardTitle className="text-xl text-[#143c8c]">{t(area.titleKey).toUpperCase()}</CardTitle>
+      {/* Gallery Section */}
+      <div className="py-16 px-4 ">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {areas.map((area, index) => (
+              <div key={index} className="flex flex-col items-center">
+                {/* Number and Circular Image */}
+                <div className="flex items-center gap-4 mb-6 w-full justify-center">
+                  <div className="text-5xl font-bold text-primary">
+                    O{index + 1}
+                  </div>
+                  {area.image && (
+                    <div className="w-40 h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-blue-900"
+                         style={{ backgroundImage: `url(${area.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+                  )}
                 </div>
-                <p className="text-muted-foreground text-base text-primary text-center">{t(area.descKey)}</p>
-              </CardHeader>
-              <CardContent>
-                <h4 className="font-semibold  mb-3 text-[#143c8c] text-center">{t("areasGallery.keyTopics")}</h4>
-                <ul className="flex flex-wrap gap-2 justify-center">
-                  {area.topics.map((topic, topicIndex) => (
-                    <li key={topicIndex} className="text-xs text-muted-foreground text-primary text-center">
-                      {/* <span className="text-accent text-primary">•</span>  */}
-                      {t(topic)}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <Card shape="circle" className="border-border/50  backdrop-blur-sm max-w-4xl mx-auto bg-[#143c8c]">
-            <CardContent className="p-8">
-              <img
-              src={Circle2}
-              alt="Pacific Congress Logo"
-              className="w-4/12 h-4/12 object-cover"
-            />
-              <h3 className="text-2xl font-bold mb-4 text-[#143c8c] font-bold">
-                {t("areasGallery.interdisciplinary.title").toUpperCase()}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed text-primary">
-                {t("areasGallery.interdisciplinary.desc")}
-              </p>
-            </CardContent>
-          </Card>
+                
+                {/* Content */}
+                <div className="w-full text-center">
+                  <h3 className="text-lg font-bold text-blue-900 mb-3 uppercase">
+                    {t(area.titleKey)}
+                  </h3>
+                  
+                  <p className="text-sm font-semibold text-primary mb-4">
+                    {t(area.descKey)}
+                  </p>
+                  
+                  <div>
+                    <h4 className="font-semibold text-blue-900 mb-2 text-sm">{t("areasGallery.keyTopics")}</h4>
+                    <ul className="flex flex-col gap-1">
+                      {area.topics.map((topic, topicIndex) => (
+                        <li key={topicIndex} className="text-xs text-primary hover:underline cursor-pointer">
+                          {t(topic)}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

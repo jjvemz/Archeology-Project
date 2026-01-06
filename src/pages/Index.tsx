@@ -13,6 +13,8 @@ import ConferenceSchedule from "@/components/ConferenceSchedule";
 import SponsorsPartners from "@/components/SponsorsPartners";
 import CulturalArtifactsGallery from "@/components/CulturalArtifactsGallery";
 import PacificMigrationTimeline from "@/components/PacificMigrationTimeline";
+import ConferenceScheduleTable from "@/components/ConferenceScheduleTable";
+import CommitteeWheelTest from "./CommitteeWheelTest";
 
 const Index = () => {
   return (
@@ -24,11 +26,11 @@ const Index = () => {
       <PacificMigrationTimeline />
       {/* <AreasOfReflection /> */}
       <CulturalArtifactsGallery />
-      <VideoSection />
+      {/* <VideoSection />
       <PacificGallery />
       <RegistrationFees />
-      <VenueLocation />
-      <ConferenceSchedule />
+      <VenueLocation /> */}
+      <ConferenceScheduleTable />
       <ScientificCommittee />
       <SponsorsPartners />
       <Footer />

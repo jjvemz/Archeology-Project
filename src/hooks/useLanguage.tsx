@@ -167,6 +167,14 @@ const translations: Translations = {
     en: "Download Guidelines",
     es: "Descargar Directrices"
   },
+  "callForPapers.interdisciplinary": {
+    en: "Interdisciplinary Studies",
+    es: "Estudios Interdisciplinarios"
+  },
+  "callForPapers.interdisciplinaryDesc": {
+    en: "We encourage submissions that bridge multiple areas of reflection and scales of analysis. The most innovative research often emerges at the intersection of archaeological evidence, environmental data, and cultural interpretation. Consider how your work contributes to our broader understanding of human-environment interactions in the pacific region.",
+    es: "Alentamos presentaciones que bridgen múltiples áreas de reflexión y escalas de análisis. La investigación más innovadora a menudo surge en la intersección de evidencia arqueológica, datos ambientales e interpretación cultural. Considera cómo tu trabajo contribuye a nuestra comprensión más amplia de las interacciones humano-ambiente en la región del Pacífico."
+  },
 
   // Areas of Reflection
   "areas.title": {
@@ -778,8 +786,8 @@ const translations: Translations = {
     es: "SIG y análisis espacial"
   },
   "areasGallery.areasOf": {
-    en: "Areas",
-    es: "Áreas"
+    en: "I_ Areas",
+    es: "I_ Áreas"
   },
   "areasGallery.ofReflection": {
     en: "Of Reflection",
@@ -1567,6 +1575,14 @@ const translations: Translations = {
   },
 
   // Pacific Migration Timeline
+  "timeline.timelineOf": {
+    en: "TIMELINE OF",
+    es: "CRONOLOGÍA DE"
+  },
+  "timeline.pacificMigration": {
+    en: "PACIFIC MIGRATION",
+    es: "MIGRACIÓN DEL PACÍFICO"
+  },
   "timeline.title": {
     en: "Timeline of Pacific Migration",
     es: "Línea de Tiempo de Migración del Pacífico"
@@ -1578,6 +1594,14 @@ const translations: Translations = {
   "timeline.event1.year": {
     en: "1500-1300 BCE",
     es: "1500-1300 a.C."
+  },
+  "timeline.event1.title": {
+    en: "LAPITA CULTURE EXPANSION",
+    es: "EXPANSIÓN DE LA CULTURA LAPITA"
+  },
+  "timeline.event1.period": {
+    en: "1500-1300 BCE / Bismarck Archipelago, Fiji, Tonga, Samoa",
+    es: "1500-1300 a.C. / Archipiélago de Bismarck, Fiji, Tonga, Samoa"
   },
   "timeline.event1.event": {
     en: "Lapita Culture Expansion",
@@ -1595,6 +1619,14 @@ const translations: Translations = {
     en: "200 BCE - 300 CE",
     es: "200 a.C. - 300 d.C."
   },
+  "timeline.event2.title": {
+    en: "SETTLEMENT OF EASTERN POLYNESIA",
+    es: "ASENTAMIENTO DE POLINESIA ORIENTAL"
+  },
+  "timeline.event2.period": {
+    en: "200 BCE-300 CE / Society Islands, Cook Islands",
+    es: "200 a.C.-300 d.C. / Islas de la Sociedad, Islas Cook"
+  },
   "timeline.event2.event": {
     en: "Settlement of Eastern Polynesia",
     es: "Asentamiento de Polinesia Oriental"
@@ -1610,6 +1642,14 @@ const translations: Translations = {
   "timeline.event3.year": {
     en: "300-500 CE",
     es: "300-500 d.C."
+  },
+  "timeline.event3.title": {
+    en: "MARQUESA ISLANDS SETTLEMENTS",
+    es: "ASENTAMIENTO DE LAS ISLAS MARQUESAS"
+  },
+  "timeline.event3.period": {
+    en: "300-500 BCE / Marquesas Islands",
+    es: "300-500 a.C. / Islas Marquesas"
   },
   "timeline.event3.event": {
     en: "Marquesas Islands Settlement",
@@ -1627,6 +1667,14 @@ const translations: Translations = {
     en: "500-700 CE",
     es: "500-700 d.C."
   },
+  "timeline.event4.title": {
+    en: "HAWAII COLONIZATION",
+    es: "COLONIZACIÓN DE HAWAII"
+  },
+  "timeline.event4.period": {
+    en: "500-700 CE / Hawaiian Islands",
+    es: "500-700 d.C. / Islas Hawaianas"
+  },
   "timeline.event4.event": {
     en: "Hawaii Colonization",
     es: "Colonización de Hawaii"
@@ -1643,6 +1691,14 @@ const translations: Translations = {
     en: "800-1000 CE",
     es: "800-1000 d.C."
   },
+  "timeline.event5.title": {
+    en: "RAPANUI EASTER ISLAND SETTLEMENT",
+    es: "ASENTAMIENTO DE RAPA NUI ISLA DE PASCUA"
+  },
+  "timeline.event5.period": {
+    en: "800-1000CE / Easter Island ( Rapa Nui)",
+    es: "800-1000 d.C. / Isla de Pascua (Rapa Nui)"
+  },
   "timeline.event5.event": {
     en: "Rapa Nui (Easter Island) Settlement",
     es: "Asentamiento de Rapa Nui (Isla de Pascua)"
@@ -1658,6 +1714,14 @@ const translations: Translations = {
   "timeline.event6.year": {
     en: "1200-1300 CE",
     es: "1200-1300 d.C."
+  },
+  "timeline.event6.title": {
+    en: "NEW ZEALAND AOTEAROA SETTLEMENT",
+    es: "ASENTAMIENTO DE NUEVA ZELANDA AOTEAROA"
+  },
+  "timeline.event6.period": {
+    en: "1200-1300 CE / Aotearoa ( New Zealand)",
+    es: "1200-1300 d.C. / Aotearoa (Nueva Zelanda)"
   },
   "timeline.event6.event": {
     en: "New Zealand (Aotearoa) Settlement",

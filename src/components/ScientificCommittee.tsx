@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, Award, BookOpen, Users } from "lucide-react";
+import { Globe, Award, BookOpen } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
+import CommitteeWheel from "./CommitteeWheel";
 
 const ScientificCommittee = () => {
   const { t } = useLanguage();
@@ -115,32 +116,8 @@ const ScientificCommittee = () => {
             </Card>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {committee.map((member, index) => (
-              <Card key={index} className="shadow-card hover:shadow-congress transition-all duration-300">
-                <CardHeader className="text-center pb-3">
-                  <div className="w-16 h-16 bg-gradient-pacific rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="h-8 w-8  text-primary" />
-                  </div>
-                  <CardTitle className="text-lg leading-tight  text-primary">{member.name}</CardTitle>
-                  <img
-                    src={`/flags/${member.region}.png`}
-                    alt={member.region}
-                    className="h-6 w-auto mx-auto  text-primary"
-                  />
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <div className="space-y-2 text-center">
-                    <p className="text-sm font-medium  text-primary">{t(member.titleKey)}</p>
-                    <p className="text-sm text-muted-foreground font-medium  text-primary">{member.affiliation}</p>
-                    <p className="text-xs text-muted-foreground italic  text-primary">
-                      {member.specialization}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          {/* Committee Wheel */}
+          <CommitteeWheel members={committee} />
 
           <div className="mt-16">
             <Card className="shadow-congress text-black">
