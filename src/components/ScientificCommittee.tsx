@@ -85,18 +85,29 @@ const ScientificCommittee = () => {
 
   return (
     <section id="committee" className="py-20 ">
+      <div className="bg-blue-800 py-16 px-4">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto flex items-center gap-8">
+            <div className="flex items-center gap-6">
+              <h2 className="text-8xl font-bold text-primary"></h2>
+            </div>
+            <div className="flex-1">
+              <h2 className="text-5xl font-bold text-primary leading-tight">
+                IX_ {t("committee.title").toUpperCase()}
+              </h2>
+              <div className="mt-4  p-4 ">
+                <p className="text-sm text-orange-700 leading-relaxed">
+                  {t("committee.description")}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground  text-primary">
-              {t("committee.title")}
-            </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto  text-primary">
-              {t("committee.description")}
-            </p>
-          </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid lg:grid-cols-3 gap-8 pt-32 mb-12">
             <Card className="shadow-congress text-center">
               <CardHeader>
                 <Globe className="h-12 w-12 text-pacific-blue mx-auto mb-4  text-primary" />

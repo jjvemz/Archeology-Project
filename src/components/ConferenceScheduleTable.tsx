@@ -31,21 +31,25 @@ const ConferenceScheduleTable = () => {
   return (
     <section className="py-20 px-0 ">
       <div className=" px-0">
-        <div className="bg-blue-900 py-8 px-4">
-        <div className="">
-          <div className="flex items-start gap-6 mb-6">
-            
-            <h2 className="text-5xl md:text-6xl font-bold text-primary pt-2 leading-tight">
-             VIII_{t("schedule.title")}
-            </h2>
-          </div>
-          <div className=" p-4 border-l-4 border-primary">
-            <p className="text-sm text-orange-700 leading-relaxed font-semibold">
-              {t("schedule.description")}
-            </p>
+        <div className=" py-16 px-4">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto flex items-center gap-8">
+              <div className="flex items-center gap-6">
+                <h2 className="text-8xl font-bold text-primary"></h2>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-5xl font-bold text-primary leading-tight">
+                  VIII_{t("schedule.title").toUpperCase()}
+                </h2>
+                <div className="mt-4  p-4 ">
+                  <p className="text-sm text-orange-700 leading-relaxed">
+                    {t("schedule.description")}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
         
 

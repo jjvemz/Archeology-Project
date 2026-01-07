@@ -52,11 +52,11 @@ const PacificMigrationTimeline = () => {
           {/* Right side - Timeline */}
           <div className="bg-gradient-to-b ">
             {/* Title Section with Blue Background */}
-            <div className="bg-[#143c8c] pt-20 pb-12 px-8">
+            <div className=" pt-20 pb-12 px-8">
               <h2 className="text-5xl font-bold">
                 <span className="text-primary">{t("timeline.timelineOf")}</span>
                 <br />
-                <span className="text-white">{t("timeline.pacificMigration")}</span>
+                <span className="text-blue-900">{t("timeline.pacificMigration")}</span>
               </h2>
             </div>
 

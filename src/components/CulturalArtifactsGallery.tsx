@@ -60,7 +60,7 @@ const CulturalArtifactsGallery = () => {
   return (
     <section id="artifacts" className="py-0 bg-background">
       {/* Header Section */}
-      <div className="bg-blue-900 py-16 px-4">
+      <div className="bg-blue-800 py-16 px-4">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto flex items-center gap-8">
             <div className="flex items-center gap-6">
@@ -84,27 +84,27 @@ const CulturalArtifactsGallery = () => {
       <div className="py-16 ">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 ">
               {artifacts.map((artifact, idx) => (
                 <div key={idx} className="flex flex-col items-center">
                   {/* Circular Image Container */}
-                  <div className="w-40 h-40 rounded-full bg-primary flex items-center justify-center overflow-hidden mb-6 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="w-60 h-60 rounded-full bg-primary flex items-center justify-center overflow-hidden mb-6 shadow-lg hover:shadow-xl transition-shadow bg-[#c55a11]">
                     <img
                       src={artifact.image}
                       alt={t(artifact.nameKey)}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                      className="w-5/6 h-5/6 object-cover hover:scale-110 transition-transform duration-300 rounded-full"
                     />
                   </div>
 
                   {/* Card Content */}
                   <div className="w-full text-center">
-                    <h3 className="text-lg font-bold mb-2 text-blue-900">
+                    <h3 className="text-2xl font-bold mb-2 text-blue-900">
                       {t(artifact.nameKey).toUpperCase()}
                     </h3>
-                    <p className="text-sm font-semibold text-primary mb-3">
+                    <p className="text-lg font-semibold text-primary mb-3">
                       {t(artifact.typeKey).toUpperCase()} / {t(artifact.originKey).toUpperCase()}
                     </p>
-                    <p className="text-xs text-blue-900 leading-relaxed mb-4">
+                    <p className="text-base text-blue-900 leading-relaxed mb-4">
                       {t(artifact.descKey)}
                     </p>
 

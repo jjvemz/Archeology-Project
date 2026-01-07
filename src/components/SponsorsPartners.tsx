@@ -103,17 +103,32 @@ const SponsorsPartners = () => {
   };
 
   return (
-    <section id="sponsors" className="py-20 ">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground  text-primary">
-              {t("sponsors.title")}
-            </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto  text-primary">
-              {t("sponsors.description")}
-            </p>
+    <section id="sponsors" className="py-14 bg-background">
+      {/* Header Section */}
+      <div className=" py-16 px-4">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto flex items-center gap-8">
+            <div className="flex items-center gap-6">
+              <h2 className="text-8xl font-bold text-primary"></h2>
+            </div>
+            <div className="flex-1">
+              <h2 className="text-5xl font-bold text-primary ">
+              X_ {t("sponsors.title").toUpperCase()}
+              </h2>
+              <div className="mt-4 pt-4">
+                <p className="text-base text-orange-700 ">
+                  {t("sponsors.description")}
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+
+      {/* Sponsors Content */}
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
 
           {/* Platinum Tier */}
           <div className="mb-16">
@@ -260,6 +275,7 @@ const SponsorsPartners = () => {
               </div>
             </CardContent>
           </Card>
+          </div>
         </div>
       </div>
     </section>
