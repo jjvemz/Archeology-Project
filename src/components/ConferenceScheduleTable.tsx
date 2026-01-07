@@ -85,16 +85,16 @@ const ConferenceScheduleTable = () => {
               {/* Column Headers Row */}
               <div className="grid grid-cols-12 gap-6 py-4 items-center">
                 <div className="col-span-12 md:col-span-5">
-                  <h3 className="text-lg font-bold text-orange-700">{t("schedule.headers.event")}</h3>
+                  <h3 className="text-3xl font-bold text-orange-700">{t("schedule.headers.event")}</h3>
                 </div>
                 <div className="col-span-12 md:col-span-2">
-                  <h3 className="text-lg font-bold text-orange-700">{t("schedule.headers.time")}</h3>
+                  <h3 className="text-3xl font-bold text-orange-700">{t("schedule.headers.time")}</h3>
                 </div>
                 <div className="col-span-12 md:col-span-2">
-                  <h3 className="text-lg font-bold text-orange-700">{t("schedule.headers.type")}</h3>
+                  <h3 className="text-3xl font-bold text-orange-700">{t("schedule.headers.type")}</h3>
                 </div>
                 <div className="col-span-12 md:col-span-3">
-                  <h3 className="text-lg font-bold text-orange-700">{t("schedule.headers.location")}</h3>
+                  <h3 className="text-3xl font-bold text-orange-700">{t("schedule.headers.location")}</h3>
                 </div>
               </div>
               
@@ -123,21 +123,21 @@ const ConferenceScheduleTable = () => {
 
                     {/* Time - Center Left Column */}
                     <div className="col-span-12 md:col-span-2">
-                      <p className="text-base font-bold text-orange-700">
+                      <p className="text-lg font-bold text-orange-700">
                         {session.time}
                       </p>
                     </div>
 
                     {/* Type - Center Right Column */}
                     <div className="col-span-12 md:col-span-2">
-                      <p className="text-base font-bold text-orange-700">
+                      <p className="text-lg font-bold text-orange-700">
                         {t(`schedule.type.${session.type}`)}
                       </p>
                     </div>
 
                     {/* Location - Right Column */}
                     <div className="col-span-12 md:col-span-3">
-                      <p className="text-base font-bold text-orange-700">
+                      <p className="text-lg font-bold text-orange-700">
                         {t(session.locationKey)}
                       </p>
                     </div>
@@ -145,7 +145,7 @@ const ConferenceScheduleTable = () => {
 
                   {/* Separator Line */}
                   {sessionIndex < day.sessions.length - 1 && (
-                    <div className="border-b-2 border-primary/30"></div>
+                    <div className="border-b-4 border-primary"></div>
                   )}
                 </motion.div>
               ))}
@@ -153,7 +153,7 @@ const ConferenceScheduleTable = () => {
               {/* Day Separator Line */}
               {dayIndex < scheduleData.length - 1 && (
                 <motion.div 
-                  className="border-b-4 border-primary my-4"
+                  className="border-b-8 border-primary my-4"
                   initial={{ opacity: 0, scaleX: 0 }}
                   whileInView={{ opacity: 1, scaleX: 1 }}
                   viewport={{ once: true, amount: 0.1 }}
@@ -167,7 +167,7 @@ const ConferenceScheduleTable = () => {
             </div>
           ))}
           <motion.div 
-            className="border-b-4 border-primary my-4"
+            className="border-b-8 border-primary my-4"
             initial={{ opacity: 0, scaleX: 0 }}
             whileInView={{ opacity: 1, scaleX: 1 }}
             viewport={{ once: true, amount: 0.1 }}
