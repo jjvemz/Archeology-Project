@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CirculoImage from "/images/circulo2.png";
+import { useLanguage } from "@/hooks/useLanguage";
 
 interface CommitteeMember {
   name: string;
@@ -7,6 +7,7 @@ interface CommitteeMember {
   affiliation: string;
   specialization: string;
   region: string;
+  picture: string;
 }
 
 interface CommitteeWheelProps {
@@ -14,6 +15,7 @@ interface CommitteeWheelProps {
 }
 
 const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
+  const { t } = useLanguage();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -43,19 +45,17 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
         onMouseMove={handleMouseMove}
       >
         {/* Center circle - always visible */}
-        <div className="absolute w-64 h-64 rounded-full  border-4 border-primary flex items-center justify-center z-50 shadow-lg">
+        <div className="absolute w-64 h-64 rounded-full border-4 border-primary flex items-center justify-center z-50 shadow-lg overflow-hidden">
           {hoveredIndex !== null ? (
-            <div className="text-center">
-              <img
-                src={CirculoImage}
-                alt="committee member"
-                className="w-full h-full rounded-full object-cover"
-              />
-            </div>
+            <img
+              src={members[hoveredIndex].picture}
+              alt={members[hoveredIndex].name}
+              className="w-full h-full object-cover"
+            />
           ) : (
             <div className="text-center">
-              <h3 className="text-3xl font-bold text-primary">Congress</h3>
-              <p className="text-sm text-orange-700 mt-2">Hover over a name</p>
+              <h3 className="text-3xl font-bold text-primary">{t("committeeWheel.congress")}</h3>
+              <p className="text-sm text-orange-700 mt-2">{t("committeeWheel.hoverOverName")}</p>
             </div>
           )}
         </div>

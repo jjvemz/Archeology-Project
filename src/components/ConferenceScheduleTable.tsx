@@ -29,14 +29,14 @@ const ConferenceScheduleTable = () => {
   };
 
   return (
-    <section className="py-20 px-4 ">
-      <div className="container mx-auto max-w-7xl">
+    <section className="py-20 px-0 ">
+      <div className=" px-0">
         <div className="bg-blue-900 py-8 px-4">
-        <div className="container mx-auto max-w-7xl">
+        <div className="">
           <div className="flex items-start gap-6 mb-6">
             
             <h2 className="text-5xl md:text-6xl font-bold text-primary pt-2 leading-tight">
-              {t("schedule.title")}
+             VIII_{t("schedule.title")}
             </h2>
           </div>
           <div className=" p-4 border-l-4 border-primary">

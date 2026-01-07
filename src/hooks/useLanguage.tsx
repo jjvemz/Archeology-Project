@@ -810,6 +810,16 @@ const translations: Translations = {
     es: "Alentamos presentaciones que conecten múltiples áreas de reflexión y escalas de análisis. La investigación más innovadora a menudo emerge en la intersección de evidencia arqueológica, datos ambientales e interpretación cultural. Considere cómo su trabajo contribuye a nuestra comprensión más amplia de las interacciones humano-ambiente en la región del Pacífico"
   },
 
+  // Committee Wheel
+  "committeeWheel.congress": {
+    en: "Congress",
+    es: "Congreso"
+  },
+  "committeeWheel.hoverOverName": {
+    en: "Hover over a name",
+    es: "Pasa el ratón sobre un nombre"
+  },
+
   // Scientific Committee
   "committee.title": {
     en: "International Scientific Committee",

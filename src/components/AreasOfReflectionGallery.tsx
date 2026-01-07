@@ -93,7 +93,7 @@ export function AreasOfReflectionGallery() {
   ];
 
   return (
-    <section className="py-0 bg-background">
+    <section className="my-6 bg-background ">
       {/* Header Section */}
       <div className="bg-blue-900 py-8 px-4">
         <div className="container mx-auto max-w-7xl">
@@ -116,33 +116,35 @@ export function AreasOfReflectionGallery() {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {areas.map((area, index) => (
-              <div key={index} className="flex flex-col items-center">
+              <div key={index} className="flex flex-col items-center my-4">
                 {/* Number and Circular Image */}
-                <div className="flex items-center gap-4 mb-6 w-full justify-center">
-                  <div className="text-5xl font-bold text-primary">
+                <div className="flex items-center gap-4 mb-12 w-full justify-center">
+                  {/* <div className="text-3xl  text-primary">
                     O{index + 1}
-                  </div>
+                  </div> */}
                   {area.image && (
-                    <div className="w-40 h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-blue-900"
+                    <div className="w-60 h-60 rounded-full overflow-hidden flex-shrink-0 border-4 border-blue-900"
                          style={{ backgroundImage: `url(${area.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
                   )}
                 </div>
-                
+                <div className="text-5xl  text-primary">
+                    O{index + 1}
+                  </div>
                 {/* Content */}
                 <div className="w-full text-center">
-                  <h3 className="text-lg font-bold text-blue-900 mb-3 uppercase">
+                  <h3 className="text-2xl font-bold text-blue-900 mb-3 uppercase">
                     {t(area.titleKey)}
                   </h3>
                   
-                  <p className="text-sm font-semibold text-primary mb-4">
+                  <p className="text-lg font-semibold text-primary mb-4">
                     {t(area.descKey)}
                   </p>
                   
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-2 text-sm">{t("areasGallery.keyTopics")}</h4>
+                    <h4 className="font-semibold text-blue-900 mb-2 text-lg">{t("areasGallery.keyTopics")}</h4>
                     <ul className="flex flex-col gap-1">
                       {area.topics.map((topic, topicIndex) => (
-                        <li key={topicIndex} className="text-xs text-primary hover:underline cursor-pointer">
+                        <li key={topicIndex} className="text-sm text-primary hover:underline cursor-pointer">
                           {t(topic)}
                         </li>
                       ))}

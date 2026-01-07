@@ -9,7 +9,7 @@ const CongressHero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden ">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-8 mb-24">
       {/* Background Image */}
       <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-5 gap-0 w-full h-full">
         {/* Image on the left */}

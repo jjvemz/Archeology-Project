@@ -3,6 +3,16 @@ import { Globe, Award, BookOpen } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import CommitteeWheel from "./CommitteeWheel";
 
+import Anderson from "/images/committee/Anderson.jpg"
+import Dubois from "/images/committee/Dubois.png";
+import Lopez from "/images/committee/Lopez.jpg";
+import Morales from "/images/committee/Morales.jpg";
+import Tanaka from "/images/committee/Tanaka.jpg";
+import Marchetti from "/images/committee/Marchetti.jpg";
+import Thompson from "/images/committee/Thompson.jpg";
+import zhang from "/images/committee/Zhang.png";
+
+
 const ScientificCommittee = () => {
   const { t } = useLanguage();
 
@@ -12,56 +22,64 @@ const ScientificCommittee = () => {
       titleKey: "committee.chair",
       affiliation: "University of Auckland, New Zealand",
       specialization: "Pacific Maritime Archaeology",
-      region: "New Zealand"
+      region: "New Zealand",
+      picture: Marchetti
     },
     {
       name: "Prof. Hiroshi Tanaka",
       titleKey: "committee.viceChair",
       affiliation: "Kyoto University, Japan",
       specialization: "Island Settlement Patterns",
-      region: "Japan"
+      region: "Japan",
+      picture: Tanaka
     },
     {
       name: "Dr. Maria Fernandez-Lopez",
       titleKey: "committee.member",
       affiliation: "Universidad de Chile",
       specialization: "Colonial Impact Studies",
-      region: "Chile"
+      region: "Chile",
+      picture: Lopez
     },
     {
       name: "Prof. Robert Anderson",
       titleKey: "committee.member",
       affiliation: "University of Hawaii at Manoa, USA",
       specialization: "Polynesian Archaeology",
-      region: "Hawaii"
+      region: "Hawaii",
+      picture: Anderson
     },
     {
       name: "Dr. Claudine Dubois",
       titleKey: "committee.member",
       affiliation: "Université de la Polynésie française",
       specialization: "Cultural Change Analysis",
-      region: "French Polynesia"
+      region: "French Polynesia",
+      picture: Dubois
     },
     {
       name: "Prof. Zhang Wei",
       titleKey: "committee.member",
       affiliation: "Chinese Academy of Social Sciences",
       specialization: "Trans-Pacific Connections",
-      region: "China"
+      region: "China",
+      picture: zhang
     },
     {
       name: "Dr. Sarah Thompson",
       titleKey: "committee.member",
       affiliation: "Australian National University",
       specialization: "Environmental Archaeology",
-      region: "Australia"
+      region: "Australia",
+      picture: Thompson
     },
     {
       name: "Prof. Carlos Morales",
       titleKey: "committee.member",
       affiliation: "Universidad Nacional de Colombia",
       specialization: "Coastal Adaptations",
-      region: "Colombia"
+      region: "Colombia",
+      picture: Morales
     }
   ];
 

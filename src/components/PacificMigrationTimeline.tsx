@@ -41,7 +41,7 @@ const PacificMigrationTimeline = () => {
       <div className="container-fluid p-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
           {/* Left side - Map */}
-          <div className="flex items-center justify-center bg-blue-900 p-0 min-h-screen">
+          <div className="flex items-center justify-center bg-[#143c8c] p-0 min-h-screen">
             <img 
               src="/images/polynesiamMap.png" 
               alt="Pacific Migration Map" 
@@ -52,7 +52,7 @@ const PacificMigrationTimeline = () => {
           {/* Right side - Timeline */}
           <div className="bg-gradient-to-b ">
             {/* Title Section with Blue Background */}
-            <div className="bg-blue-900 pt-20 pb-12 px-8">
+            <div className="bg-[#143c8c] pt-20 pb-12 px-8">
               <h2 className="text-5xl font-bold">
                 <span className="text-primary">{t("timeline.timelineOf")}</span>
                 <br />
@@ -64,12 +64,12 @@ const PacificMigrationTimeline = () => {
             <div className="px-8 py-12">
               <div className="space-y-6 max-w-2xl">
                 {timelineEvents.map((event, idx) => (
-                  <Card key={idx} className="bg-yellow-50 border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow">
-                    <div className="p-6">
+                  <Card key={idx} className="bg-yellow-50  shadow-sm hover:shadow-md transition-shadow">
+                    <div className={`p-6 ${idx % 2 === 0 ? "text-left" : "text-right"}`}>
                       <h3 className="text-lg font-bold text-blue-900 mb-2">
                         {event.title}
                       </h3>
-                      <p className="text-sm font-semibold text-primary mb-3">
+                      <p className="text-sm font-semibold text-blue-900 mb-3">
                         {event.period}
                       </p>
                       <p className="text-sm text-blue-900 leading-relaxed">
