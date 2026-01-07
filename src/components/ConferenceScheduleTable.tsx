@@ -30,12 +30,12 @@ const ConferenceScheduleTable = () => {
   };
 
   return (
-    <section className="py-20 px-0 ">
-      <div className=" px-0">
-        <div className=" py-16 px-4">
+    <section className="py-20  bg-blue-800">
+      <div className=" ">
+        <div className=" py-16 ">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto flex items-center gap-8">
-              <div className="flex items-center gap-6">
+            <div className="flex items-center ">
+              <div className="flex items-center ">
                 <h2 className="text-8xl font-bold text-primary"></h2>
               </div>
               <div className="flex-1">
@@ -43,7 +43,7 @@ const ConferenceScheduleTable = () => {
                   VIII_{t("schedule.title").toUpperCase()}
                 </h2>
                 <div className="mt-4  p-4 ">
-                  <p className="text-sm text-orange-700 leading-relaxed">
+                  <p className="text-lg font-bold text-orange-700 leading-relaxed">
                     {t("schedule.description")}
                   </p>
                 </div>
@@ -55,80 +55,100 @@ const ConferenceScheduleTable = () => {
         
 
         {/* Schedule Table */}
-        <div className="space-y-0">
-            <br/>
-            <motion.div 
-              className="border-b-4 border-primary my-4"
-              initial={{ opacity: 0, scaleX: 0 }}
-              whileInView={{ opacity: 1, scaleX: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ 
-                duration: 0.8,
-                ease: [0.25, 1, 0.5, 1]
-              }}
-            ></motion.div>
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="border-b-4 border-primary my-4"
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ 
+              duration: 0.8,
+              ease: [0.25, 1, 0.5, 1]
+            }}
+          ></motion.div>
+          
           {scheduleData.map((day, dayIndex) => (
             <div key={dayIndex} className="space-y-0">
-              {/* Day Header */}
-              <div className="flex items-start gap-8 py-16">
-                <div className="text-5xl md:text-6xl font-bold text-orange-700 whitespace-nowrap flex-shrink-0">
-                  {day.date.split(",")[0].split(" ")[1]}-
-                  {day.date.split(",")[0].split(" ")[0].slice(0, 2)}
+              {/* Day Header - Above Event Column */}
+              <div className="grid grid-cols-12 gap-6 py-4">
+                <div className="col-span-12 md:col-span-5">
+                  <div className="text-4xl md:text-5xl font-bold text-orange-700">
+                    {day.date.split(",")[0].split(" ")[1]}-
+                    {day.date.split(",")[0].split(" ")[0].slice(0, 2)}
+                  </div>
                 </div>
-                <div className="flex-1">
-                  {/* Sessions for this day */}
-                  {day.sessions.map((session, sessionIndex) => (
-                    <motion.div 
-                      key={sessionIndex} 
-                      className="space-y-0"
-                      initial={{ opacity: 0, y: 50 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.3 }}
-                      transition={{ 
-                        duration: 0.6,
-                        delay: sessionIndex * 0.1,
-                        ease: [0.25, 1, 0.5, 1]
-                      }}
-                    >
-                      {/* Session Row */}
-                      <div className="grid grid-cols-12 gap-6 py-16 items-center">
-                        {/* Event Name - Left Column */}
-                        <div className="col-span-12 md:col-span-5">
-                          <h4 className="text-lg font-semibold text-orange-700">
-                            {t(session.titleKey)}
-                          </h4>
-                        </div>
-
-                        {/* Time - Center Left Column */}
-                        <div className="col-span-12 md:col-span-2">
-                          <p className="text-sm font-mono text-orange-700">
-                            {session.time}
-                          </p>
-                        </div>
-
-                        {/* Type - Center Right Column */}
-                        <div className="col-span-12 md:col-span-2">
-                          <Badge className={`${getTypeColor(session.type)} text-xs`}>
-                            {t(`schedule.type.${session.type}`)}
-                          </Badge>
-                        </div>
-
-                        {/* Location - Right Column */}
-                        <div className="col-span-12 md:col-span-3">
-                          <p className="text-sm text-orange-700">
-                            {t(session.locationKey)}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Separator Line */}
-                      {sessionIndex < day.sessions.length - 1 && (
-                        <div className="border-b-2 border-primary/30"></div>
-                      )}
-                    </motion.div>
-                  ))}
+                <div className="col-span-12 md:col-span-2"></div>
+                <div className="col-span-12 md:col-span-2"></div>
+                <div className="col-span-12 md:col-span-3"></div>
+              </div>
+              
+              {/* Column Headers Row */}
+              <div className="grid grid-cols-12 gap-6 py-4 items-center">
+                <div className="col-span-12 md:col-span-5">
+                  <h3 className="text-lg font-bold text-orange-700">{t("schedule.headers.event")}</h3>
+                </div>
+                <div className="col-span-12 md:col-span-2">
+                  <h3 className="text-lg font-bold text-orange-700">{t("schedule.headers.time")}</h3>
+                </div>
+                <div className="col-span-12 md:col-span-2">
+                  <h3 className="text-lg font-bold text-orange-700">{t("schedule.headers.type")}</h3>
+                </div>
+                <div className="col-span-12 md:col-span-3">
+                  <h3 className="text-lg font-bold text-orange-700">{t("schedule.headers.location")}</h3>
                 </div>
               </div>
+              
+              {/* Sessions for this day */}
+              {day.sessions.map((session, sessionIndex) => (
+                <motion.div 
+                  key={sessionIndex} 
+                  className="space-y-0"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ 
+                    duration: 0.6,
+                    delay: sessionIndex * 0.1,
+                    ease: [0.25, 1, 0.5, 1]
+                  }}
+                >
+                  {/* Session Row */}
+                  <div className="grid grid-cols-12 gap-6 py-8 items-center">
+                    {/* Event Name - Left Column */}
+                    <div className="col-span-12 md:col-span-5">
+                      <h4 className="text-lg font-semibold text-orange-700">
+                        {t(session.titleKey)}
+                      </h4>
+                    </div>
+
+                    {/* Time - Center Left Column */}
+                    <div className="col-span-12 md:col-span-2">
+                      <p className="text-base font-bold text-orange-700">
+                        {session.time}
+                      </p>
+                    </div>
+
+                    {/* Type - Center Right Column */}
+                    <div className="col-span-12 md:col-span-2">
+                      <p className="text-base font-bold text-orange-700">
+                        {t(`schedule.type.${session.type}`)}
+                      </p>
+                    </div>
+
+                    {/* Location - Right Column */}
+                    <div className="col-span-12 md:col-span-3">
+                      <p className="text-base font-bold text-orange-700">
+                        {t(session.locationKey)}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Separator Line */}
+                  {sessionIndex < day.sessions.length - 1 && (
+                    <div className="border-b-2 border-primary/30"></div>
+                  )}
+                </motion.div>
+              ))}
 
               {/* Day Separator Line */}
               {dayIndex < scheduleData.length - 1 && (

@@ -957,6 +957,22 @@ const translations: Translations = {
     en: "Download Full Program (PDF)",
     es: "Descargar Programa Completo (PDF)"
   },
+  "schedule.headers.event": {
+    en: "Event",
+    es: "Evento"
+  },
+  "schedule.headers.time": {
+    en: "Time",
+    es: "Hora"
+  },
+  "schedule.headers.type": {
+    en: "Type",
+    es: "Tipo"
+  },
+  "schedule.headers.location": {
+    en: "Location",
+    es: "Ubicación"
+  },
   "schedule.sessionTypes": {
     en: "Session Types",
     es: "Tipos de Sesión"

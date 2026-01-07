@@ -103,7 +103,7 @@ const SponsorsPartners = () => {
   };
 
   return (
-    <section id="sponsors" className="py-14 bg-background">
+    <section id="sponsors" className="py-14 bg-blue-800 ">
       {/* Header Section */}
       <div className=" py-16 px-4">
         <div className="container mx-auto px-4">
@@ -142,7 +142,7 @@ const SponsorsPartners = () => {
 
             <div className="grid md:grid-cols-1 gap-8 max-w-3xl mx-auto">
               {sponsors.platinum.map((sponsor, idx) => (
-                <Card key={idx} className="shadow-congress hover:shadow-warm transition-shadow">
+                <Card key={idx} className="shadow-congress hover:shadow-warm transition-shadow border-4 border-dashed border-orange-700">
                   <CardContent className="p-8 text-center">
                     <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
                       <img
@@ -257,7 +257,7 @@ const SponsorsPartners = () => {
           </div> */}
 
           {/* Become a Sponsor CTA */}
-          <Card className="mt-16 shadow-congress">
+          <Card className="mt-16 shadow-congress border-4 border-dotted border-orange-700">
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold mb-4  text-primary text-opacity-65">
                 {t("sponsors.becomeASponsor")}
@@ -269,7 +269,7 @@ const SponsorsPartners = () => {
                 <Button variant="yellow" size="lg">
                   {t("sponsors.viewPackages")}
                 </Button>
-                <Button variant="outline" size="lg" className=" text-primary">
+                <Button variant="outline" size="lg" className="bg-blue-800 text-primary border-orange-700 hover:bg-blue-800 hover:text-primary hover:border-orange-700">
                   {t("sponsors.contactUs")}
                 </Button>
               </div>

@@ -84,8 +84,8 @@ const ScientificCommittee = () => {
   ];
 
   return (
-    <section id="committee" className="py-20 ">
-      <div className="bg-blue-800 py-16 px-4">
+    <section id="committee" className="pb-40 ">
+      <div className="bg-blue-800 py-36 px-4">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto flex items-center gap-8">
             <div className="flex items-center gap-6">
@@ -95,7 +95,7 @@ const ScientificCommittee = () => {
               <h2 className="text-5xl font-bold text-primary leading-tight">
                 IX_ {t("committee.title").toUpperCase()}
               </h2>
-              <div className="mt-4  p-4 ">
+              <div className="mt-4  px-4 ">
                 <p className="text-sm text-orange-700 leading-relaxed">
                   {t("committee.description")}
                 </p>

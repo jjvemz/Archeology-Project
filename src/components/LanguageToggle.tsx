@@ -9,7 +9,7 @@ const LanguageToggle = () => {
       variant="outline"
       size="sm"
       onClick={toggleLanguage}
-      className="font-semibold min-w-[50px] bg-blue-800 border-blue-800 text-orange-600"
+      className="font-semibold min-w-[50px] bg-blue-800 border-blue-800 text-orange-600 hover:bg-blue-800 hover:border-blue-800 hover:text-orange-600"
     >
       {language === "en" ? "ES" : "EN"}
     </Button>
