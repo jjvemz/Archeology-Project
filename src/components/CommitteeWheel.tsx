@@ -101,7 +101,7 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
             >
               {/* Name Label */}
               <div
-                className={`text-center transition-all duration-300 w-36 h-36 rounded-full border-2 flex items-center justify-center ${
+                className={`text-center transition-all duration-300 w-36 h-36 rounded-full border-2 border-dashed flex items-center justify-center ${
                   isHovered ? "scale-110 border-primary" : "scale-100 border-blue-800"
                 }`}
               >
