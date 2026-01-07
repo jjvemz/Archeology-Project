@@ -1,6 +1,7 @@
 import { useLanguage } from "@/hooks/useLanguage";
 import { scheduleData } from "@/lib/scheduleData";
 import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 
 const ConferenceScheduleTable = () => {
   const { t } = useLanguage();
@@ -56,11 +57,20 @@ const ConferenceScheduleTable = () => {
         {/* Schedule Table */}
         <div className="space-y-0">
             <br/>
-            <div className="border-b-4 border-primary my-4"></div>
+            <motion.div 
+              className="border-b-4 border-primary my-4"
+              initial={{ opacity: 0, scaleX: 0 }}
+              whileInView={{ opacity: 1, scaleX: 1 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ 
+                duration: 0.8,
+                ease: [0.25, 1, 0.5, 1]
+              }}
+            ></motion.div>
           {scheduleData.map((day, dayIndex) => (
             <div key={dayIndex} className="space-y-0">
               {/* Day Header */}
-              <div className="flex items-start gap-8 py-8">
+              <div className="flex items-start gap-8 py-16">
                 <div className="text-5xl md:text-6xl font-bold text-orange-700 whitespace-nowrap flex-shrink-0">
                   {day.date.split(",")[0].split(" ")[1]}-
                   {day.date.split(",")[0].split(" ")[0].slice(0, 2)}
@@ -68,9 +78,20 @@ const ConferenceScheduleTable = () => {
                 <div className="flex-1">
                   {/* Sessions for this day */}
                   {day.sessions.map((session, sessionIndex) => (
-                    <div key={sessionIndex} className="space-y-0">
+                    <motion.div 
+                      key={sessionIndex} 
+                      className="space-y-0"
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ 
+                        duration: 0.6,
+                        delay: sessionIndex * 0.1,
+                        ease: [0.25, 1, 0.5, 1]
+                      }}
+                    >
                       {/* Session Row */}
-                      <div className="grid grid-cols-12 gap-6 py-4 items-center">
+                      <div className="grid grid-cols-12 gap-6 py-16 items-center">
                         {/* Event Name - Left Column */}
                         <div className="col-span-12 md:col-span-5">
                           <h4 className="text-lg font-semibold text-orange-700">
@@ -104,18 +125,38 @@ const ConferenceScheduleTable = () => {
                       {sessionIndex < day.sessions.length - 1 && (
                         <div className="border-b-2 border-primary/30"></div>
                       )}
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
 
               {/* Day Separator Line */}
               {dayIndex < scheduleData.length - 1 && (
-                <div className="border-b-4 border-primary my-4"></div>
+                <motion.div 
+                  className="border-b-4 border-primary my-4"
+                  initial={{ opacity: 0, scaleX: 0 }}
+                  whileInView={{ opacity: 1, scaleX: 1 }}
+                  viewport={{ once: true, amount: 0.1 }}
+                  transition={{ 
+                    duration: 0.8,
+                    delay: 0.2,
+                    ease: [0.25, 1, 0.5, 1]
+                  }}
+                ></motion.div>
               )}
             </div>
           ))}
-          <div className="border-b-4 border-primary my-4"></div>
+          <motion.div 
+            className="border-b-4 border-primary my-4"
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ 
+              duration: 0.8,
+              delay: 0.3,
+              ease: [0.25, 1, 0.5, 1]
+            }}
+          ></motion.div>
         </div>
       </div>
     </section>
