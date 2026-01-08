@@ -71,7 +71,7 @@ const CulturalArtifactsGallery = () => {
                 VII_ {t("artifacts.title").toUpperCase()}
               </h2>
               <div className="mt-4  p-4 ">
-                <p className="text-sm text-orange-700 leading-relaxed">
+                <p className="text-xl text-orange-700 leading-relaxed">
                   {t("artifacts.description")}
                 </p>
               </div>
