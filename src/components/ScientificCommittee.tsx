@@ -84,7 +84,13 @@ const ScientificCommittee = () => {
   ];
 
   return (
-    <section id="committee" className="pb-40 ">
+    <section 
+      id="committee" 
+      className="pb-40"
+      style={{
+        background: `linear-gradient(180deg, #ffeecd 60%, #143c8c 60%)`
+      }}
+    >
       <div className="bg-blue-800 py-36 px-4">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto flex items-center gap-8">

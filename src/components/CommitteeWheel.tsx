@@ -40,7 +40,7 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
   };
 
   return (
-    <div className="w-full h-screen flex items-center justify-center  relative overflow-hidden">
+    <div className="w-full h-screen flex items-center justify-center relative overflow-hidden">
       <div
         className="relative w-full h-full flex items-center justify-center"
         onMouseMove={handleMouseMove}
@@ -86,6 +86,16 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
         {members.map((member, index) => {
           const { x, y } = getMemberPosition(index);
           const isHovered = hoveredIndex === index;
+          
+          // Determine if circle is in blue area based on gradient transition at 65%
+          // The wheel center is at 50% of container height, transition at 65%
+          // So blue area starts 15% below wheel center
+          // With radius 300, this translates to roughly y > 100 for partially blue
+          const isInBlueArea = y > 100;
+          const isPartiallyInBlueArea = y > -50 && y <= 100;
+          
+          // Debug specific members
+          const isTargetMember = member.name.includes("Sarah Thompson") || member.name.includes("Maria Fernandez-Lopez");
 
           return (
             <div
@@ -102,17 +112,26 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
               {/* Name Label */}
               <div
                 className={`text-center transition-all duration-300 w-36 h-36 rounded-full border-2 border-dashed flex items-center justify-center ${
-                  isHovered ? "scale-110 border-primary" : "scale-100 border-blue-800"
+                  isHovered ? "scale-110 border-primary" : 
+                  isInBlueArea ? "scale-100 border-white" : 
+                  isPartiallyInBlueArea || isTargetMember ? "scale-100 border-orange-500" : 
+                  "scale-100 border-blue-800"
                 }`}
               >
                 <div className="text-center">
                   <p className={`font-bold text-xs leading-tight transition-colors ${
-                    isHovered ? "text-primary" : "text-blue-800"
+                    isHovered ? "text-primary" : 
+                    isInBlueArea ? "text-white" : 
+                    isPartiallyInBlueArea || isTargetMember ? "text-orange-500" : 
+                    "text-blue-800"
                   }`}>
                     {member.name}
                   </p>
                   <p className={`text-xs transition-colors ${
-                    isHovered ? "text-primary font-semibold" : "text-blue-800"
+                    isHovered ? "text-primary font-semibold" : 
+                    isInBlueArea ? "text-white" : 
+                    isPartiallyInBlueArea || isTargetMember ? "text-orange-500" : 
+                    "text-blue-800"
                   }`}>
                     {member.region}
                   </p>
@@ -120,7 +139,10 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
                   {/* Indicator circle */}
                   <div
                     className={`w-3 h-3 rounded-full mx-auto mt-2 transition-all duration-300 ${
-                      isHovered ? "bg-primary scale-150" : "bg-blue-800"
+                      isHovered ? "bg-primary scale-150" : 
+                      isInBlueArea ? "bg-white" : 
+                      isPartiallyInBlueArea || isTargetMember ? "bg-orange-500" : 
+                      "bg-blue-800"
                     }`}
                   ></div>
                 </div>
