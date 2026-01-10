@@ -1956,6 +1956,90 @@ const translations: Translations = {
   "footer.copyright": {
     en: "© 2025 Pacific Congress on Archaeology & Changing Environment. All rights reserved.",
     es: "© 2025 Congreso del Pacífico sobre Arqueología y Medio Ambiente Cambiante. Todos los derechos reservados."
+  },
+
+  // Committee Wheel
+  "committeeWheel.congress": {
+    en: "Congress",
+    es: "Congreso"
+  },
+  "committeeWheel.hoverOverName": {
+    en: "Hover over an animal to reveal the committee member",
+    es: "Pasa el ratón sobre un animal para revelar el miembro del comité"
+  },
+
+  // Committee
+  "committee.title": {
+    en: "Scientific Committee",
+    es: "Comité Científico"
+  },
+  "committee.description": {
+    en: "Our distinguished international committee brings together leading experts in Pacific archaeology, environmental studies, and cultural heritage preservation.",
+    es: "Nuestro distinguido comité internacional reúne a expertos líderes en arqueología del Pacífico, estudios ambientales y preservación del patrimonio cultural."
+  },
+  "committee.chair": {
+    en: "Chair",
+    es: "Presidenta"
+  },
+  "committee.viceChair": {
+    en: "Vice-Chair",
+    es: "Vicepresidente"
+  },
+  "committee.member": {
+    en: "Member",
+    es: "Miembro"
+  },
+  "committee.globalExpertise": {
+    en: "Global Expertise",
+    es: "Experiencia Global"
+  },
+  "committee.globalExpertise.desc": {
+    en: "International committee representing diverse Pacific regions and research specializations.",
+    es: "Comité internacional que representa diversas regiones del Pacífico y especializaciones de investigación."
+  },
+  "committee.rigorousReview": {
+    en: "Rigorous Review",
+    es: "Revisión Rigurosa"
+  },
+  "committee.rigorousReview.desc": {
+    en: "Thorough peer review process ensuring the highest standards of archaeological scholarship.",
+    es: "Proceso de revisión por pares exhaustivo que asegura los más altos estándares de beca arqueológica."
+  },
+  "committee.publicationSupport": {
+    en: "Publication Support",
+    es: "Apoyo a la Publicación"
+  },
+  "committee.publicationSupport.desc": {
+    en: "Guidance and support for researchers seeking to publish their findings in leading journals.",
+    es: "Orientación y apoyo para investigadores que buscan publicar sus hallazgos en revistas líderes."
+  },
+  "committee.responsibilities": {
+    en: "Committee Responsibilities",
+    es: "Responsabilidades del Comité"
+  },
+  "committee.abstractReview": {
+    en: "Abstract Review",
+    es: "Revisión de Resúmenes"
+  },
+  "committee.abstractReview.desc": {
+    en: "Comprehensive evaluation of all submitted abstracts for scientific quality and relevance.",
+    es: "Evaluación integral de todos los resúmenes enviados por calidad científica y relevancia."
+  },
+  "committee.programDevelopment": {
+    en: "Program Development",
+    es: "Desarrollo del Programa"
+  },
+  "committee.programDevelopment.desc": {
+    en: "Designing the congress program to maximize learning opportunities and scholarly exchange.",
+    es: "Diseñando el programa del congreso para maximizar las oportunidades de aprendizaje e intercambio académico."
+  },
+  "committee.qualityAssurance": {
+    en: "Quality Assurance",
+    es: "Aseguramiento de Calidad"
+  },
+  "committee.qualityAssurance.desc": {
+    en: "Ensuring all presentations meet the highest standards of archaeological research and methodology.",
+    es: "Asegurando que todas las presentaciones cumplan con los más altos estándares de investigación arqueológica y metodología."
   }
 };
 

@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/hooks/useLanguage";
+import bird1 from "/images/committee/Circles/bird1.png";
+import bird2 from "/images/committee/Circles/bird2.png";
+import bird3 from "/images/committee/Circles/bird3.png";
+import whale1 from "/images/committee/Circles/whale1.png";
+import whale2 from "/images/committee/Circles/whale2.png";
+import whale3 from "/images/committee/Circles/whale3.png";
+import whale4 from "/images/committee/Circles/whale4.png";
+import whale5 from "/images/committee/Circles/whale5.png";
 
 interface CommitteeMember {
   name: string;
@@ -23,6 +31,35 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
   // Calculate angle for each member in the wheel
   const angleSlice = 360 / members.length;
   const radius = 300; // Distance from center
+
+  // Function to get animal image for specific members
+  const getAnimalImage = (memberName: string) => {
+    // Bird images
+    if (memberName.includes("Carlos Morales")) return bird1;
+    if (memberName.includes("Elena Marchetti")) return bird2;
+    if (memberName.includes("Tanaka")) return bird3;
+    
+    // Whale images
+    if (memberName.includes("Maria Fernandez-Lopez")) return whale1;
+    if (memberName.includes("Robert Anderson")) return whale2;
+    if (memberName.includes("Claudine Dubois")) return whale3;
+    if (memberName.includes("Zhang Wei")) return whale4;
+    if (memberName.includes("Sarah Thompson")) return whale5;
+    
+    return null;
+  };
+
+  // Check if member should show animal image when unhovered
+  const shouldShowAnimalImage = (memberName: string) => {
+    return memberName.includes("Carlos Morales") || 
+           memberName.includes("Elena Marchetti") || 
+           memberName.includes("Tanaka") ||
+           memberName.includes("Maria Fernandez-Lopez") ||
+           memberName.includes("Robert Anderson") ||
+           memberName.includes("Claudine Dubois") ||
+           memberName.includes("Zhang Wei") ||
+           memberName.includes("Sarah Thompson");
+  };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -113,39 +150,43 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
               <div
                 className={`text-center transition-all duration-300 w-36 h-36 rounded-full border-2 border-dashed flex items-center justify-center ${
                   isHovered ? "scale-110 border-primary" : 
-                  isInBlueArea ? "scale-100 border-white" : 
-                  isPartiallyInBlueArea || isTargetMember ? "scale-100 border-orange-500" : 
-                  "scale-100 border-blue-800"
+                  "scale-100 border-orange-700"
                 }`}
               >
-                <div className="text-center">
-                  <p className={`font-bold text-xs leading-tight transition-colors ${
-                    isHovered ? "text-primary" : 
-                    isInBlueArea ? "text-white" : 
-                    isPartiallyInBlueArea || isTargetMember ? "text-orange-500" : 
-                    "text-blue-800"
-                  }`}>
-                    {member.name}
-                  </p>
-                  <p className={`text-xs transition-colors ${
-                    isHovered ? "text-primary font-semibold" : 
-                    isInBlueArea ? "text-white" : 
-                    isPartiallyInBlueArea || isTargetMember ? "text-orange-500" : 
-                    "text-blue-800"
-                  }`}>
-                    {member.region}
-                  </p>
-                  
-                  {/* Indicator circle */}
-                  <div
-                    className={`w-3 h-3 rounded-full mx-auto mt-2 transition-all duration-300 ${
-                      isHovered ? "bg-primary scale-150" : 
-                      isInBlueArea ? "bg-white" : 
-                      isPartiallyInBlueArea || isTargetMember ? "bg-orange-500" : 
-                      "bg-blue-800"
-                    }`}
-                  ></div>
-                </div>
+                {shouldShowAnimalImage(member.name) && !isHovered ? (
+                  // Show only animal image when not hovered for specific members
+                  <div className="text-center">
+                    <img 
+                      src={getAnimalImage(member.name) || ""} 
+                      alt={`Animal for ${member.name}`}
+                      className="w-16 h-16 object-contain mx-auto"
+                    />
+                  </div>
+                ) : (
+                  // Show name for other members or when hovered
+                  <div className="text-center">
+                    <p className={`font-bold text-xs leading-tight transition-colors ${
+                      isHovered ? "text-primary" : 
+                      "text-orange-700"
+                    }`}>
+                      {member.name}
+                    </p>
+                    <p className={`text-xs transition-colors ${
+                      isHovered ? "text-primary font-semibold" : 
+                      "text-orange-700"
+                    }`}>
+                      {member.region}
+                    </p>
+                    
+                    {/* Indicator circle */}
+                    <div
+                      className={`w-3 h-3 rounded-full mx-auto mt-2 transition-all duration-300 ${
+                        isHovered ? "bg-primary scale-150" : 
+                        "bg-orange-700"
+                      }`}
+                    ></div>
+                  </div>
+                )}
               </div>
             </div>
           );

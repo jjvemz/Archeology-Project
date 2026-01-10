@@ -13,17 +13,18 @@ const CallForPapers = () => {
   });
 
   // Horizontal translate - moves sections from right to left as you scroll
-  const x = useTransform(scrollYProgress, [0, 1], [0, -520]);
+  // Use 100vw to ensure sections scroll exactly one screen width
+  const x = useTransform(scrollYProgress, [0, 1], ["0vw", "-100vw"]);
 
   return (
     <section id="call-papers" className="h-[400vh] relative" ref={container}>
-      <div className="sticky top-0 h-screen flex items-center overflow-hidden ">
-        <motion.div className="flex gap-0" style={{ x }}>
+      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+        <motion.div className="flex w-[200vw]" style={{ x }}>
           {/* Sections II & III Container */}
-          <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48">
+          <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48 w-screen">
             {/* Section II: Interdisciplinary Studies */}
-            <div className="container flex-1">
-              <div className="flex flex-col md:flex-row gap-12 items-baseline">
+            <div className="w-full flex-1 px-4 md:px-8 lg:px-16">
+              <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
                   <div className="text-7xl font-bold text-primary leading-none">II_</div>
@@ -42,8 +43,8 @@ const CallForPapers = () => {
             </div>
 
             {/* Section III: Call for Papers */}
-            <div className="container bg-[#143c8c] flex-1">
-              <div className="flex flex-col md:flex-row gap-12 items-baseline">
+            <div className="w-full bg-[#143c8c] flex-1 px-4 md:px-8 lg:px-16">
+              <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
                   <div className="text-7xl font-bold text-primary leading-none">III_</div>
@@ -63,10 +64,10 @@ const CallForPapers = () => {
           </div>
 
           {/* Sections IV & V Container */}
-          <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48">
+          <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48 w-screen">
             {/* Section IV: Important Dates */}
-            <div className="container flex-1">
-              <div className="flex flex-col md:flex-row gap-12 items-baseline">
+            <div className="w-full flex-1 px-4 md:px-8 lg:px-16">
+              <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
                   <div className="text-7xl font-bold text-primary leading-none">IV_</div>
@@ -111,8 +112,8 @@ const CallForPapers = () => {
             </div>
 
             {/* Section V: Award & Recognition */}
-            <div className="container bg-[#143c8c] flex-1">
-              <div className="flex flex-col md:flex-row gap-12 items-baseline">
+            <div className="w-full bg-[#143c8c] flex-1 px-4 md:px-8 lg:px-16">
+              <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
                   <div className="text-7xl font-bold text-primary leading-none">V _</div>
