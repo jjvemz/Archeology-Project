@@ -113,7 +113,7 @@ const SponsorsPartners = () => {
             </div>
             <div className="flex-1">
               <h2 className="text-5xl font-bold text-primary ">
-              X_ {t("sponsors.title").toUpperCase()}
+              XI_ {t("sponsors.title").toUpperCase()}
               </h2>
               <div className="mt-4 pt-4">
                 <p className="text-base text-orange-700 ">

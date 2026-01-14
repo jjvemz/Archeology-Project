@@ -28,10 +28,10 @@ const Index = () => {
       <CulturalArtifactsGallery />
       {/* <VideoSection />
       <PacificGallery />
-      <RegistrationFees />
-      <VenueLocation /> */}
+      <RegistrationFees />*/}
       <ConferenceScheduleTable />
       <ScientificCommittee />
+      <VenueLocation /> 
       <SponsorsPartners />
       <Footer />
     </div>
