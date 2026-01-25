@@ -41,7 +41,7 @@ const PacificMigrationTimeline = () => {
       <div className="container-fluid p-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
           {/* Left side - Map */}
-          <div className="flex items-center justify-center bg-blue-900 p-8 lg:p-16 min-h-screen">
+          <div className="flex items-center justify-center bg-blue-800 p-8 lg:p-16 min-h-screen">
             <div className="relative w-[90%] aspect-square max-w-[800px]">
               <div className="w-full h-full rounded-full border-[6px] border-dashed border-orange-500 overflow-hidden">
                 <img 

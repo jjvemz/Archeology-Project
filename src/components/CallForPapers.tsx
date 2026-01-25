@@ -43,7 +43,7 @@ const CallForPapers = () => {
             </div>
 
             {/* Section III: Call for Papers */}
-            <div className="w-full bg-[#143c8c] flex-1 px-4 md:px-8 lg:px-16">
+            <div className="w-full bg-blue-800 flex-1 px-4 md:px-8 lg:px-16">
               <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
@@ -112,7 +112,7 @@ const CallForPapers = () => {
             </div>
 
             {/* Section V: Award & Recognition */}
-            <div className="w-full bg-[#143c8c] flex-1 px-4 md:px-8 lg:px-16">
+            <div className="w-full bg-blue-800 flex-1 px-4 md:px-8 lg:px-16">
               <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">

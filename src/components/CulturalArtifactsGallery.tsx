@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/hooks/useLanguage";
+import { motion } from "framer-motion";
 
 import statue from "/images/statue.png";
 import spiral from "/images/spiral.png";
@@ -166,6 +167,165 @@ const CulturalArtifactsGallery = () => {
             <p className="text-primary leading-relaxed max-w-4xl mx-auto text-sm">
               {t("artifacts.culturalSignificance.desc").toUpperCase()}
             </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Payment Information Section */}
+      <div className="bg-blue-800 py-16 px-4">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.h3 
+              className="text-4xl font-bold text-center mb-16 text-orange-600"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              {t("artifacts.payment.title").toUpperCase()}
+            </motion.h3>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-12 lg:gap-16">
+              {/* General Public */}
+              <motion.div 
+                className="flex justify-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <div className="w-80 h-80 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-dashed border-orange-600 flex flex-col items-center justify-center p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 group">
+                  <h4 className="text-lg font-bold text-orange-600 mb-3 text-center transition-all duration-300 group-hover:text-xl">
+                    {t("artifacts.payment.generalPublic.title")}
+                  </h4>
+                  <div className="text-3xl font-bold text-orange-600 mb-4 transition-all duration-300 group-hover:text-4xl">
+                    {t("artifacts.payment.generalPublic.price")}
+                  </div>
+                  <div className="text-xs text-orange-600 space-y-1 text-center transition-all duration-300 group-hover:text-sm">
+                    <div>• {t("artifacts.payment.generalPublic.international")}</div>
+                    <div>• {t("artifacts.payment.generalPublic.fullAccess")}</div>
+                    <div>• {t("artifacts.payment.generalPublic.welcome")}</div>
+                    <div>• {t("artifacts.payment.generalPublic.conference")}</div>
+                    <div>• {t("artifacts.payment.generalPublic.coffee")}</div>
+                    <div>• {t("artifacts.payment.generalPublic.lunch")}</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Chilean Participants */}
+              <motion.div 
+                className="flex justify-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <div className="w-80 h-80 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-dashed border-orange-600 flex flex-col items-center justify-center p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 group">
+                  <h4 className="text-lg font-bold text-orange-600 mb-3 text-center transition-all duration-300 group-hover:text-xl">
+                    {t("artifacts.payment.chilean.title")}
+                  </h4>
+                  <div className="text-3xl font-bold text-orange-600 mb-4 transition-all duration-300 group-hover:text-4xl">
+                    {t("artifacts.payment.chilean.price")}
+                  </div>
+                  <div className="text-xs text-orange-600 space-y-1 text-center transition-all duration-300 group-hover:text-sm">
+                    <div>• {t("artifacts.payment.chilean.specialRate")}</div>
+                    <div>• {t("artifacts.payment.chilean.fullAccess")}</div>
+                    <div>• {t("artifacts.payment.chilean.welcome")}</div>
+                    <div>• {t("artifacts.payment.chilean.conference")}</div>
+                    <div>• {t("artifacts.payment.chilean.coffee")}</div>
+                    <div>• {t("artifacts.payment.chilean.lunch")}</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Students */}
+              <motion.div 
+                className="flex justify-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <div className="w-80 h-80 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-dashed border-orange-600 flex flex-col items-center justify-center p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 group">
+                  <h4 className="text-lg font-bold text-orange-600 mb-3 text-center transition-all duration-300 group-hover:text-xl">
+                    {t("artifacts.payment.students.title")}
+                  </h4>
+                  <div className="text-3xl font-bold text-orange-600 mb-4 transition-all duration-300 group-hover:text-4xl">
+                    {t("artifacts.payment.students.price")}
+                  </div>
+                  <div className="text-xs text-orange-600 space-y-1 text-center transition-all duration-300 group-hover:text-sm">
+                    <div>• {t("artifacts.payment.students.specialRate")}</div>
+                    <div>• {t("artifacts.payment.students.fullAccess")}</div>
+                    <div>• {t("artifacts.payment.students.welcome")}</div>
+                    <div>• {t("artifacts.payment.students.conference")}</div>
+                    <div>• {t("artifacts.payment.students.coffee")}</div>
+                    <div>• {t("artifacts.payment.students.lunch")}</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Retired Participants */}
+              <motion.div 
+                className="flex justify-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 1.0, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
+                <div className="w-80 h-80 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-dashed border-orange-600 flex flex-col items-center justify-center p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 group">
+                  <h4 className="text-lg font-bold text-orange-600 mb-3 text-center transition-all duration-300 group-hover:text-xl">
+                    {t("artifacts.payment.retired.title")}
+                  </h4>
+                  <div className="text-3xl font-bold text-orange-600 mb-4 transition-all duration-300 group-hover:text-4xl">
+                    {t("artifacts.payment.retired.price")}
+                  </div>
+                  <div className="text-xs text-orange-600 space-y-1 text-center transition-all duration-300 group-hover:text-sm">
+                    <div>• {t("artifacts.payment.retired.specialRate")}</div>
+                    <div>• {t("artifacts.payment.retired.fullAccess")}</div>
+                    <div>• {t("artifacts.payment.retired.welcome")}</div>
+                    <div>• {t("artifacts.payment.retired.conference")}</div>
+                    <div>• {t("artifacts.payment.retired.coffee")}</div>
+                    <div>• {t("artifacts.payment.retired.lunch")}</div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Payment Methods and Discounts */}
+            <motion.div 
+              className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <div className="text-center lg:text-left">
+                <h4 className="text-xl font-bold text-orange-600 mb-4">
+                  {t("artifacts.payment.methods.title")}
+                </h4>
+                <p className="text-orange-600 text-lg">
+                  {t("artifacts.payment.methods.subtitle")}
+                </p>
+              </div>
+              <div className="space-y-6">
+                <div className="text-center lg:text-left">
+                  <h4 className="text-lg font-bold text-orange-600 mb-2">
+                    {t("artifacts.payment.discounts.earlyBird")}
+                  </h4>
+                  <p className="text-orange-600 text-sm">
+                    {t("artifacts.payment.discounts.earlyBirdDesc")}
+                  </p>
+                </div>
+                <div className="text-center lg:text-left">
+                  <h4 className="text-lg font-bold text-orange-600 mb-2">
+                    {t("artifacts.payment.discounts.group")}
+                  </h4>
+                  <p className="text-orange-600 text-sm">
+                    {t("artifacts.payment.discounts.groupDesc")}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

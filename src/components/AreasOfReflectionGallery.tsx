@@ -95,7 +95,7 @@ export function AreasOfReflectionGallery() {
   return (
     <section className="my-6 bg-background ">
       {/* Header Section */}
-      <div className="bg-blue-900 py-8 px-4">
+      <div className="bg-blue-800 py-8 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="flex items-start gap-6 mb-6">
             

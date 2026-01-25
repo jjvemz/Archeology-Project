@@ -1600,6 +1600,164 @@ const translations: Translations = {
     es: "Años de Tradición"
   },
 
+  // Payment Information
+  "artifacts.payment.title": {
+    en: "Payment Information",
+    es: "Información de Pago"
+  },
+  "artifacts.payment.generalPublic.title": {
+    en: "General Public",
+    es: "Público General"
+  },
+  "artifacts.payment.generalPublic.price": {
+    en: "$300 USD",
+    es: "$300 USD"
+  },
+  "artifacts.payment.generalPublic.international": {
+    en: "International participants and specialists",
+    es: "Participantes internacionales y especialistas"
+  },
+  "artifacts.payment.generalPublic.fullAccess": {
+    en: "Full congress access",
+    es: "Acceso completo al congreso"
+  },
+  "artifacts.payment.generalPublic.welcome": {
+    en: "Welcome reception",
+    es: "Recepción de bienvenida"
+  },
+  "artifacts.payment.generalPublic.conference": {
+    en: "Conference materials",
+    es: "Materiales de conferencia"
+  },
+  "artifacts.payment.generalPublic.coffee": {
+    en: "Coffee breaks",
+    es: "Pausas para café"
+  },
+  "artifacts.payment.generalPublic.lunch": {
+    en: "Lunch ceremony",
+    es: "Ceremonia de almuerzo"
+  },
+  "artifacts.payment.chilean.title": {
+    en: "Chilean Participants",
+    es: "Participantes Chilenos"
+  },
+  "artifacts.payment.chilean.price": {
+    en: "$250 USD",
+    es: "$250 USD"
+  },
+  "artifacts.payment.chilean.specialRate": {
+    en: "Special rate for Chilean residents",
+    es: "Tarifa especial para residentes chilenos"
+  },
+  "artifacts.payment.chilean.fullAccess": {
+    en: "Full congress access",
+    es: "Acceso completo al congreso"
+  },
+  "artifacts.payment.chilean.welcome": {
+    en: "Welcome reception",
+    es: "Recepción de bienvenida"
+  },
+  "artifacts.payment.chilean.conference": {
+    en: "Conference materials",
+    es: "Materiales de conferencia"
+  },
+  "artifacts.payment.chilean.coffee": {
+    en: "Coffee breaks",
+    es: "Pausas para café"
+  },
+  "artifacts.payment.chilean.lunch": {
+    en: "Lunch ceremony",
+    es: "Ceremonia de almuerzo"
+  },
+  "artifacts.payment.students.title": {
+    en: "Students",
+    es: "Estudiantes"
+  },
+  "artifacts.payment.students.price": {
+    en: "$150 USD",
+    es: "$150 USD"
+  },
+  "artifacts.payment.students.specialRate": {
+    en: "Special rate for Chilean residents",
+    es: "Tarifa especial para residentes chilenos"
+  },
+  "artifacts.payment.students.fullAccess": {
+    en: "Full congress access",
+    es: "Acceso completo al congreso"
+  },
+  "artifacts.payment.students.welcome": {
+    en: "Welcome reception",
+    es: "Recepción de bienvenida"
+  },
+  "artifacts.payment.students.conference": {
+    en: "Conference materials",
+    es: "Materiales de conferencia"
+  },
+  "artifacts.payment.students.coffee": {
+    en: "Coffee breaks",
+    es: "Pausas para café"
+  },
+  "artifacts.payment.students.lunch": {
+    en: "Lunch ceremony",
+    es: "Ceremonia de almuerzo"
+  },
+  "artifacts.payment.retired.title": {
+    en: "Retired participants",
+    es: "Participantes Jubilados"
+  },
+  "artifacts.payment.retired.price": {
+    en: "$100 USD",
+    es: "$100 USD"
+  },
+  "artifacts.payment.retired.specialRate": {
+    en: "Special rate for Chilean residents",
+    es: "Tarifa especial para residentes chilenos"
+  },
+  "artifacts.payment.retired.fullAccess": {
+    en: "Full congress access",
+    es: "Acceso completo al congreso"
+  },
+  "artifacts.payment.retired.welcome": {
+    en: "Welcome reception",
+    es: "Recepción de bienvenida"
+  },
+  "artifacts.payment.retired.conference": {
+    en: "Conference materials",
+    es: "Materiales de conferencia"
+  },
+  "artifacts.payment.retired.coffee": {
+    en: "Coffee breaks",
+    es: "Pausas para café"
+  },
+  "artifacts.payment.retired.lunch": {
+    en: "Lunch ceremony",
+    es: "Ceremonia de almuerzo"
+  },
+  "artifacts.payment.methods.title": {
+    en: "Accepted Payment Methods:",
+    es: "Métodos de Pago Aceptados:"
+  },
+  "artifacts.payment.methods.subtitle": {
+    en: "Credit card, bank transfer, and Paypal",
+    es: "Tarjeta de crédito, transferencia bancaria y Paypal"
+  },
+  "artifacts.payment.discounts.earlyBird": {
+    en: "Early Bird Discount",
+    es: "Descuento Madrugador"
+  },
+  "artifacts.payment.discounts.earlyBirdDesc": {
+    en: "10% off for registrations before January 2026",
+    es: "10% de descuento para registros antes de enero 2026"
+  },
+  "artifacts.payment.discounts.group": {
+    en: "Group Discount",
+    es: "Descuento Grupal"
+  },
+  "artifacts.payment.discounts.groupDesc": {
+    en: "5% off for groups of 3+ participants",
+    es: "5% de descuento para grupos de 3+ participantes"
+  },
+
   // Pacific Migration Timeline
   "timeline.timelineOf": {
     en: "TIMELINE OF",
