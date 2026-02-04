@@ -88,7 +88,7 @@ const ScientificCommittee = () => {
       id="committee" 
       className="pb-40"
       style={{
-        background: `linear-gradient(180deg, #ffeecd 60%, #143c8c 60%)`
+        background: `linear-gradient(180deg, #ffeecd 60%, #1e40af 60%)`
       }}
     >
       <div className="bg-blue-800 py-36 px-4">

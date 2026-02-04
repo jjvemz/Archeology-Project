@@ -72,7 +72,7 @@ const ConferenceScheduleTable = () => {
               {/* Day Header - Above Event Column */}
               <div className="grid grid-cols-12 gap-6 py-4">
                 <div className="col-span-12 md:col-span-5">
-                  <div className="text-4xl md:text-5xl font-bold text-orange-700">
+                  <div className="text-4xl md:text-5xl font-bold text-white">
                     {day.date.split(",")[0].split(" ")[1]}-
                     {day.date.split(",")[0].split(" ")[0].slice(0, 2)}
                   </div>
@@ -85,16 +85,16 @@ const ConferenceScheduleTable = () => {
               {/* Column Headers Row */}
               <div className="grid grid-cols-12 gap-6 py-4 items-center">
                 <div className="col-span-12 md:col-span-5">
-                  <h3 className="text-3xl font-bold text-orange-700">{t("schedule.headers.event")}</h3>
+                  <h3 className="text-3xl font-bold text-white">{t("schedule.headers.event")}</h3>
                 </div>
                 <div className="col-span-12 md:col-span-2">
-                  <h3 className="text-3xl font-bold text-orange-700">{t("schedule.headers.time")}</h3>
+                  <h3 className="text-3xl font-bold text-white">{t("schedule.headers.time")}</h3>
                 </div>
                 <div className="col-span-12 md:col-span-2">
-                  <h3 className="text-3xl font-bold text-orange-700">{t("schedule.headers.type")}</h3>
+                  <h3 className="text-3xl font-bold text-white">{t("schedule.headers.type")}</h3>
                 </div>
                 <div className="col-span-12 md:col-span-3">
-                  <h3 className="text-3xl font-bold text-orange-700">{t("schedule.headers.location")}</h3>
+                  <h3 className="text-3xl font-bold text-white">{t("schedule.headers.location")}</h3>
                 </div>
               </div>
               

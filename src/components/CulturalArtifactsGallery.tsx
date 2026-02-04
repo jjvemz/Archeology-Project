@@ -176,7 +176,7 @@ const CulturalArtifactsGallery = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <motion.h3 
-              className="text-4xl font-bold text-center mb-16 text-orange-600"
+              className="text-4xl font-bold text-center mb-16 text-white"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
@@ -195,7 +195,7 @@ const CulturalArtifactsGallery = () => {
                 viewport={{ once: true }}
               >
                 <div className="w-80 h-80 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-dashed border-orange-600 flex flex-col items-center justify-center p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 group">
-                  <h4 className="text-lg font-bold text-orange-600 mb-3 text-center transition-all duration-300 group-hover:text-xl">
+                  <h4 className="text-lg font-bold text-white mb-3 text-center transition-all duration-300 group-hover:text-xl">
                     {t("artifacts.payment.generalPublic.title")}
                   </h4>
                   <div className="text-3xl font-bold text-orange-600 mb-4 transition-all duration-300 group-hover:text-4xl">
@@ -221,7 +221,7 @@ const CulturalArtifactsGallery = () => {
                 viewport={{ once: true }}
               >
                 <div className="w-80 h-80 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-dashed border-orange-600 flex flex-col items-center justify-center p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 group">
-                  <h4 className="text-lg font-bold text-orange-600 mb-3 text-center transition-all duration-300 group-hover:text-xl">
+                  <h4 className="text-lg font-bold text-white mb-3 text-center transition-all duration-300 group-hover:text-xl">
                     {t("artifacts.payment.chilean.title")}
                   </h4>
                   <div className="text-3xl font-bold text-orange-600 mb-4 transition-all duration-300 group-hover:text-4xl">
@@ -247,7 +247,7 @@ const CulturalArtifactsGallery = () => {
                 viewport={{ once: true }}
               >
                 <div className="w-80 h-80 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-dashed border-orange-600 flex flex-col items-center justify-center p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 group">
-                  <h4 className="text-lg font-bold text-orange-600 mb-3 text-center transition-all duration-300 group-hover:text-xl">
+                  <h4 className="text-lg font-bold text-white mb-3 text-center transition-all duration-300 group-hover:text-xl">
                     {t("artifacts.payment.students.title")}
                   </h4>
                   <div className="text-3xl font-bold text-orange-600 mb-4 transition-all duration-300 group-hover:text-4xl">
@@ -273,7 +273,7 @@ const CulturalArtifactsGallery = () => {
                 viewport={{ once: true }}
               >
                 <div className="w-80 h-80 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-dashed border-orange-600 flex flex-col items-center justify-center p-6 cursor-pointer transition-all duration-300 ease-in-out hover:scale-125 group">
-                  <h4 className="text-lg font-bold text-orange-600 mb-3 text-center transition-all duration-300 group-hover:text-xl">
+                  <h4 className="text-lg font-bold text-white mb-3 text-center transition-all duration-300 group-hover:text-xl">
                     {t("artifacts.payment.retired.title")}
                   </h4>
                   <div className="text-3xl font-bold text-orange-600 mb-4 transition-all duration-300 group-hover:text-4xl">
@@ -300,7 +300,7 @@ const CulturalArtifactsGallery = () => {
               viewport={{ once: true }}
             >
               <div className="text-center lg:text-left">
-                <h4 className="text-xl font-bold text-orange-600 mb-4">
+                <h4 className="text-xl font-bold text-white mb-4">
                   {t("artifacts.payment.methods.title")}
                 </h4>
                 <p className="text-orange-600 text-lg">
@@ -309,7 +309,7 @@ const CulturalArtifactsGallery = () => {
               </div>
               <div className="space-y-6">
                 <div className="text-center lg:text-left">
-                  <h4 className="text-lg font-bold text-orange-600 mb-2">
+                  <h4 className="text-lg font-bold text-white mb-2">
                     {t("artifacts.payment.discounts.earlyBird")}
                   </h4>
                   <p className="text-orange-600 text-sm">
@@ -317,7 +317,7 @@ const CulturalArtifactsGallery = () => {
                   </p>
                 </div>
                 <div className="text-center lg:text-left">
-                  <h4 className="text-lg font-bold text-orange-600 mb-2">
+                  <h4 className="text-lg font-bold text-white mb-2">
                     {t("artifacts.payment.discounts.group")}
                   </h4>
                   <p className="text-orange-600 text-sm">

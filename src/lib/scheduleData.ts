@@ -2,7 +2,7 @@ import { Coffee, Award, Globe, Users, MapPin } from "lucide-react";
 
 export const scheduleData = [
   {
-    date: "November 10, 2026",
+    date: "November 18, 2026",
     dayNameKey: "schedule.day1.name",
     sessions: [
       {
@@ -86,8 +86,92 @@ export const scheduleData = [
     ]
   },
   {
-    date: "November 11, 2026",
+    date: "November 19, 2026",
     dayNameKey: "schedule.day2.name",
+    sessions: [
+      {
+        time: "8:00 - 9:00",
+        titleKey: "schedule.day1.session1.title",
+        type: "social",
+        locationKey: "schedule.location.lobby",
+        icon: Coffee
+      },
+      {
+        time: "9:00 - 10:00",
+        titleKey: "schedule.day1.session2.title",
+        type: "plenary",
+        locationKey: "schedule.location.grandHall",
+        speakersKey: "schedule.day1.session2.speakers",
+        descKey: "schedule.day1.session2.desc",
+        icon: Users
+      },
+      {
+        time: "10:00 - 11:00",
+        titleKey: "schedule.day1.session3.title",
+        type: "keynote",
+        locationKey: "schedule.location.grandHall",
+        speakersKey: "schedule.day1.session3.speakers",
+        descKey: "schedule.day1.session3.desc",
+        icon: Globe
+      },
+      {
+        time: "11:00 - 11:30",
+        titleKey: "schedule.coffeeBreak",
+        type: "social",
+        locationKey: "schedule.location.terrace",
+        icon: Coffee
+      },
+      {
+        time: "11:30 - 13:00",
+        titleKey: "schedule.day1.session4.title",
+        type: "concurrent",
+        locationKey: "schedule.location.multiple",
+        descKey: "schedule.day1.session4.desc",
+        icon: Users
+      },
+      {
+        time: "13:00 - 14:30",
+        titleKey: "schedule.lunchBreak",
+        type: "social",
+        locationKey: "schedule.location.dining",
+        icon: Coffee
+      },
+      {
+        time: "14:30 - 16:00",
+        titleKey: "schedule.day1.session5.title",
+        type: "concurrent",
+        locationKey: "schedule.location.multiple",
+        descKey: "schedule.day1.session5.desc",
+        icon: Users
+      },
+      {
+        time: "16:00 - 16:30",
+        titleKey: "schedule.coffeeBreak",
+        type: "social",
+        locationKey: "schedule.location.terrace",
+        icon: Coffee
+      },
+      {
+        time: "16:30 - 18:00",
+        titleKey: "schedule.day1.session6.title",
+        type: "poster",
+        locationKey: "schedule.location.exhibitHall",
+        descKey: "schedule.day1.session6.desc",
+        icon: MapPin
+      },
+      {
+        time: "19:00 - 21:00",
+        titleKey: "schedule.day1.session7.title",
+        type: "social",
+        locationKey: "schedule.location.ballroom",
+        descKey: "schedule.day1.session7.desc",
+        icon: Award
+      }
+    ]
+  },
+  {
+    date: "November 20, 2026",
+    dayNameKey: "schedule.day3.name",
     sessions: [
       {
         time: "9:00 - 10:30",
@@ -146,8 +230,8 @@ export const scheduleData = [
     ]
   },
   {
-    date: "November 12, 2026",
-    dayNameKey: "schedule.day3.name",
+    date: "November 21, 2026",
+    dayNameKey: "schedule.day4.name",
     sessions: [
       {
         time: "9:00 - 10:30",
@@ -202,185 +286,6 @@ export const scheduleData = [
         locationKey: "schedule.location.exhibitHall",
         descKey: "schedule.day3.session4.desc",
         icon: MapPin
-      }
-    ]
-  },
-  {
-    date: "November 13, 2026",
-    dayNameKey: "schedule.day4.name",
-    sessions: [
-      {
-        time: "8:00 - 17:00",
-        titleKey: "schedule.day4.session1.title",
-        type: "fieldtrip",
-        locationKey: "schedule.day4.session1.location",
-        descKey: "schedule.day4.session1.desc",
-        icon: MapPin
-      },
-      {
-        time: "19:00 - 22:00",
-        titleKey: "schedule.day4.session2.title",
-        type: "social",
-        locationKey: "schedule.location.vineyard",
-        descKey: "schedule.day4.session2.desc",
-        icon: Award
-      }
-    ]
-  },
-  {
-    date: "November 14, 2026",
-    dayNameKey: "schedule.day5.name",
-    sessions: [
-      {
-        time: "9:00 - 10:30",
-        titleKey: "schedule.day5.session1.title",
-        type: "keynote",
-        locationKey: "schedule.location.grandHall",
-        speakersKey: "schedule.day5.session1.speakers",
-        descKey: "schedule.day5.session1.desc",
-        icon: Globe
-      },
-      {
-        time: "10:30 - 11:00",
-        titleKey: "schedule.coffeeBreak",
-        type: "social",
-        locationKey: "schedule.location.terrace",
-        icon: Coffee
-      },
-      {
-        time: "11:00 - 13:00",
-        titleKey: "schedule.day5.session2.title",
-        type: "concurrent",
-        locationKey: "schedule.location.multiple",
-        descKey: "schedule.day5.session2.desc",
-        icon: Users
-      },
-      {
-        time: "13:00 - 14:30",
-        titleKey: "schedule.lunchBreak",
-        type: "social",
-        locationKey: "schedule.location.dining",
-        icon: Coffee
-      },
-      {
-        time: "14:30 - 16:00",
-        titleKey: "schedule.day5.session3.title",
-        type: "concurrent",
-        locationKey: "schedule.location.multiple",
-        descKey: "schedule.day5.session3.desc",
-        icon: Users
-      },
-      {
-        time: "16:00 - 16:30",
-        titleKey: "schedule.coffeeBreak",
-        type: "social",
-        locationKey: "schedule.location.terrace",
-        icon: Coffee
-      },
-      {
-        time: "16:30 - 18:00",
-        titleKey: "schedule.day5.session4.title",
-        type: "workshop",
-        locationKey: "schedule.location.roomB",
-        descKey: "schedule.day5.session4.desc",
-        icon: Users
-      }
-    ]
-  },
-  {
-    date: "November 15, 2026",
-    dayNameKey: "schedule.day6.name",
-    sessions: [
-      {
-        time: "9:00 - 10:30",
-        titleKey: "schedule.day6.session1.title",
-        type: "panel",
-        locationKey: "schedule.location.grandHall",
-        descKey: "schedule.day6.session1.desc",
-        icon: Users
-      },
-      {
-        time: "10:30 - 11:00",
-        titleKey: "schedule.coffeeBreak",
-        type: "social",
-        locationKey: "schedule.location.terrace",
-        icon: Coffee
-      },
-      {
-        time: "11:00 - 13:00",
-        titleKey: "schedule.day6.session2.title",
-        type: "concurrent",
-        locationKey: "schedule.location.multiple",
-        descKey: "schedule.day6.session2.desc",
-        icon: Users
-      },
-      {
-        time: "13:00 - 14:30",
-        titleKey: "schedule.lunchBreak",
-        type: "social",
-        locationKey: "schedule.location.dining",
-        icon: Coffee
-      },
-      {
-        time: "14:30 - 16:00",
-        titleKey: "schedule.day6.session3.title",
-        type: "concurrent",
-        locationKey: "schedule.location.multiple",
-        descKey: "schedule.day6.session3.desc",
-        icon: Users
-      },
-      {
-        time: "16:00 - 16:30",
-        titleKey: "schedule.coffeeBreak",
-        type: "social",
-        locationKey: "schedule.location.terrace",
-        icon: Coffee
-      },
-      {
-        time: "16:30 - 18:00",
-        titleKey: "schedule.day6.session4.title",
-        type: "plenary",
-        locationKey: "schedule.location.grandHall",
-        descKey: "schedule.day6.session4.desc",
-        icon: Award
-      }
-    ]
-  },
-  {
-    date: "November 16, 2026",
-    dayNameKey: "schedule.day7.name",
-    sessions: [
-      {
-        time: "9:00 - 11:00",
-        titleKey: "schedule.day7.session1.title",
-        type: "plenary",
-        locationKey: "schedule.location.grandHall",
-        descKey: "schedule.day7.session1.desc",
-        icon: Users
-      },
-      {
-        time: "11:00 - 11:30",
-        titleKey: "schedule.coffeeBreak",
-        type: "social",
-        locationKey: "schedule.location.terrace",
-        icon: Coffee
-      },
-      {
-        time: "11:30 - 13:00",
-        titleKey: "schedule.day7.session2.title",
-        type: "plenary",
-        locationKey: "schedule.location.grandHall",
-        speakersKey: "schedule.day7.session2.speakers",
-        descKey: "schedule.day7.session2.desc",
-        icon: Award
-      },
-      {
-        time: "13:00 - 14:00",
-        titleKey: "schedule.day7.session3.title",
-        type: "social",
-        locationKey: "schedule.location.ballroom",
-        descKey: "schedule.day7.session3.desc",
-        icon: Award
       }
     ]
   }
