@@ -1,10 +1,10 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import ProfileStatueImage from "/images/RapaNiuProfileStatue.png";
-import NavCard from "/images/NavCard.jpg";
-import NavCard2 from "/images/NavCard2.jpg";
-import SeaWoods from "/images/SeaWoods.webp";
-import PlasticSea from "/images/plasticsea.jpeg";
-import tijuanotas from "/images/tijuanotas.jpg";
+// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+// import ProfileStatueImage from "/images/RapaNiuProfileStatue.png";
+// import NavCard from "/images/NavCard.jpg";
+// import NavCard2 from "/images/NavCard2.jpg";
+// import SeaWoods from "/images/SeaWoods.webp";
+// import PlasticSea from "/images/plasticsea.jpeg";
+// import tijuanotas from "/images/tijuanotas.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useRotatingImage } from "@/hooks/useRotatingImage";
 

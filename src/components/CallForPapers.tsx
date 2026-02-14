@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/hooks/useLanguage";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { IframeModal, ColorPalette} from "./IframeModal";
 import { useRef } from "react";
 
 const CallForPapers = () => {
@@ -58,6 +59,15 @@ const CallForPapers = () => {
                   <p className="text-primary leading-relaxed">
                     {t("callForPapers.description")}
                   </p>
+                  <div className="mt-6">
+                    <IframeModal
+                      buttonText="Abrir Formulario de Abstracts"
+                      iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
+                      iframeTitle="Formulario de Envío Dryfta"
+                      colorPalette={ColorPalette.BlueOrange}
+                      closeButtonText="Cerrar"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

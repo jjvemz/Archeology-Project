@@ -209,6 +209,7 @@ const CulturalArtifactsGallery = () => {
                     <div>• {t("artifacts.payment.generalPublic.coffee")}</div>
                     <div>• {t("artifacts.payment.generalPublic.lunch")}</div>
                   </div>
+                  
                 </div>
               </motion.div>
 
