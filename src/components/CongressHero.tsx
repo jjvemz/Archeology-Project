@@ -1,32 +1,76 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/hooks/useLanguage";
-import OceanImg from "/images/ocean.jpg";
-import Circulos from "/images/circulos1.png";
+import { useRotatingImage } from "@/hooks/useRotatingImage";
 
+// Images from public/images/NoCircles
+const NO_CIRCLES_IMAGES = [
+  '/images/NoCircles/5 rapa.jpeg',
+  '/images/NoCircles/6 rapa.jpeg',
+  '/images/NoCircles/7 rapa.jpeg',
+  '/images/NoCircles/8 rapa.jpeg',
+  '/images/NoCircles/9 rapa.jpeg',
+  '/images/NoCircles/10 rapa.jpeg',
+  '/images/NoCircles/11 rapa.jpeg',
+  '/images/NoCircles/12 rapa.jpeg',
+  '/images/NoCircles/13 rapa.jpeg',
+  '/images/NoCircles/14 rapa.jpeg',
+  '/images/NoCircles/15 rapa.jpeg',
+  '/images/NoCircles/16 rapa.jpeg',
+  '/images/NoCircles/17 rapa.jpeg',
+  '/images/NoCircles/18 rapa.jpeg',
+  '/images/NoCircles/19 rapa.jpeg',
+  '/images/NoCircles/21 rapa.jpeg',
+  '/images/NoCircles/22 rapa.jpeg',
+  '/images/NoCircles/24 rapa.jpeg',
+  '/images/NoCircles/25 rapa.jpeg',
+  '/images/NoCircles/26 rapa.jpeg',
+];
+
+const RotatingCircle = ({ delay = 0 }: { delay?: number }) => {
+  const { currentImage, opacity } = useRotatingImage(NO_CIRCLES_IMAGES, 4000);
+  
+  // Optional: add a delay to desynchronize the rotations if needed, 
+  // though useRotatingImage logic might need adjustment for true delay start.
+  // For now, simple random start in hook helps, but we can also use CSS animation delay if we were animating CSS.
+  // Since the hook handles rotation logic, let's just rely on the hook's random start or we could pass offset to hook.
+  // The current hook doesn't support start delay, but it randomizes start image.
+  
+  return (
+    <div className="w-full h-full rounded-full overflow-hidden relative aspect-square">
+        {currentImage && (
+          <div
+            className="absolute inset-0 w-full h-full"
+            style={{
+              backgroundImage: `url("${currentImage}")`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              opacity: opacity,
+              transition: 'opacity 1s ease-in-out'
+            }}
+          />
+        )}
+    </div>
+  );
+};
 
 const CongressHero = () => {
   const { t } = useLanguage();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-8 mb-24">
-      {/* Background Image */}
+      {/* Background Image Grid */}
       <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-5 gap-0 w-full h-full">
-        {/* Image on the left */}
-        <div className="col-span-full md:col-span-3 row-span-full md:row-span-5 relative ">
-          <div className="absolute inset-0 bg-gradient-to-r from-volcanic/80 via-volcanic/60 to-transparent flex items-center justify-center">
-            {/* <img
-              src="/images/logo_centro-removebg-preview.png"
-              alt="Pacific Congress Logo"
-              className="w-full h-full object-cover"
-            /> */}
+        {/* Images on the left */}
+        <div className="col-span-full md:col-span-3 row-span-full md:row-span-5 relative flex items-center justify-center p-8">
+          <div className="grid grid-cols-2 gap-8 max-w-2xl w-full aspect-square">
+             <RotatingCircle delay={8000} />
+             <RotatingCircle delay={8000} />
+             <RotatingCircle delay={8000} />
+             <RotatingCircle delay={8000} />
           </div>
-          <img
-            src={Circulos}
-            alt="Moai statues at Easter Island representing Pacific archaeology"
-            className="w-full h-full object-contain"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-volcanic/80 via-volcanic/60 to-transparent"></div>
+          {/* Gradient Overlay */}
+           <div className="absolute inset-0 bg-gradient-to-r from-volcanic/10 via-volcanic/5 to-transparent pointer-events-none"></div>
         </div>
         {/* Empty grid area for spacing */}
         <div className="hidden md:block md:col-span-2 md:row-span-5"></div>

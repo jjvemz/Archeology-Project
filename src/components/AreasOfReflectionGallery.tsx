@@ -43,15 +43,22 @@ function AreaCard({ area, index }: { area: any; index: number }) {
       <div className="flex items-center gap-4 mb-12 w-full justify-center">
         {currentImage && (
           <div
-            className="w-60 h-60 rounded-full overflow-hidden flex-shrink-0 border-4 border-blue-900"
+            className="w-60 h-60 rounded-full overflow-hidden flex-shrink-0 border-4 relative"
             style={{
-              backgroundImage: `url("${currentImage}")`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              opacity: opacity,
-              transition: 'opacity 0.5s ease-in-out'
+              borderColor: '#1c1d57'
             }}
-          />
+          >
+            <div
+              className="absolute inset-0 w-full h-full"
+              style={{
+                backgroundImage: `url("${currentImage}")`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                opacity: opacity,
+                transition: 'opacity 0.5s ease-in-out'
+              }}
+            />
+          </div>
         )}
       </div>
       <div className="text-5xl text-primary">O{index + 1}</div>
