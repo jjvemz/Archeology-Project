@@ -20,7 +20,6 @@ const NO_CIRCLES_IMAGES = [
   '/images/NoCircles/17 rapa.jpeg',
   '/images/NoCircles/18 rapa.jpeg',
   '/images/NoCircles/19 rapa.jpeg',
-  '/images/NoCircles/21 rapa.jpeg',
   '/images/NoCircles/22 rapa.jpeg',
   '/images/NoCircles/24 rapa.jpeg',
   '/images/NoCircles/25 rapa.jpeg',
@@ -63,11 +62,11 @@ const CongressHero = () => {
       <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-5 gap-0 w-full h-full">
         {/* Images on the left */}
         <div className="col-span-full md:col-span-3 row-span-full md:row-span-5 relative flex items-center justify-center p-8">
-          <div className="grid grid-cols-2 gap-8 max-w-2xl w-full aspect-square">
+          <div className="grid grid-cols-2 gap-8 max-w-2xl w-full aspect-square scale-90">
+             <RotatingCircle delay={9000} />
+             <RotatingCircle delay={10500} />
              <RotatingCircle delay={8000} />
-             <RotatingCircle delay={8000} />
-             <RotatingCircle delay={8000} />
-             <RotatingCircle delay={8000} />
+             <RotatingCircle delay={7500} />
           </div>
           {/* Gradient Overlay */}
            <div className="absolute inset-0 bg-gradient-to-r from-volcanic/10 via-volcanic/5 to-transparent pointer-events-none"></div>
