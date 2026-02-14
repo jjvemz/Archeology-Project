@@ -73,6 +73,14 @@ const translations: Translations = {
     en: "Call for Papers",
     es: "Convocatoria de ponencías"
   },
+  "congressHero.iframeTitle": {
+    en: "Dryfta Submission Form",
+    es: "Formulario de Envío Dryfta"
+  },
+  "congressHero.closeButton": {
+    en: "Close",
+    es: "Cerrar"
+  },
 
   // Call for Papers
   "callForPapers.title": {

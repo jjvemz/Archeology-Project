@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useRotatingImage } from "@/hooks/useRotatingImage";
+import { IframeModal, ColorPalette } from "./IframeModal";
 
 // Images from public/images/NoCircles
 const NO_CIRCLES_IMAGES = [
@@ -97,13 +98,14 @@ const CongressHero = () => {
           </p>
 
           <div className="flex flex-col xlg:flex-row gap-3 sm:gap-4 justify-center lg:justify-end w-full mt-8 md:mt-12">
-            <Button
-              size="lg"
-              variant="congress"
-              className="text-sm sm:text-base md:text-lg px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6  text-primary text-opacity-65 w-full lg:w-auto"
-            >
-              {t("congressHero.submitAbstract")}
-            </Button>
+            <IframeModal
+              buttonText={t("congressHero.submitAbstract")}
+              iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
+              iframeTitle={t("congressHero.iframeTitle")}
+              colorPalette={ColorPalette.BlueOrange}
+              closeButtonText={t("congressHero.closeButton")}
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-to-r from-pacific-blue to-pacific-teal hover:shadow-congress hover:scale-105 transition-all duration-300 font-semibold h-11 px-8 text-sm sm:text-base md:text-lg py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-primary text-opacity-65 w-full lg:w-auto"
+            />
             <Button
               size="lg"
               variant="congress"

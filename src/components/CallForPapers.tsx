@@ -24,7 +24,7 @@ const CallForPapers = () => {
           {/* Sections II & III Container */}
           <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48 w-screen">
             {/* Section II: Interdisciplinary Studies */}
-            <div className="w-full flex-1 px-4 md:px-8 lg:px-16">
+            <div className="w-full flex-1 min-h-0 px-4 md:px-8 lg:px-16">
               <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
@@ -44,7 +44,7 @@ const CallForPapers = () => {
             </div>
 
             {/* Section III: Call for Papers */}
-            <div className="w-full bg-blue-800 flex-1 px-4 md:px-8 lg:px-16">
+            <div className="w-full bg-blue-800 flex-1 min-h-0 px-4 md:px-8 lg:px-16">
               <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
@@ -59,15 +59,6 @@ const CallForPapers = () => {
                   <p className="text-primary leading-relaxed">
                     {t("callForPapers.description")}
                   </p>
-                  <div className="mt-6">
-                    <IframeModal
-                      buttonText="Abrir Formulario de Abstracts"
-                      iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
-                      iframeTitle="Formulario de Envío Dryfta"
-                      colorPalette={ColorPalette.BlueOrange}
-                      closeButtonText="Cerrar"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -76,7 +67,7 @@ const CallForPapers = () => {
           {/* Sections IV & V Container */}
           <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48 w-screen">
             {/* Section IV: Important Dates */}
-            <div className="w-full flex-1 px-4 md:px-8 lg:px-16">
+            <div className="w-full flex-1 min-h-0 px-4 md:px-8 lg:px-16">
               <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
@@ -122,7 +113,7 @@ const CallForPapers = () => {
             </div>
 
             {/* Section V: Award & Recognition */}
-            <div className="w-full bg-blue-800 flex-1 px-4 md:px-8 lg:px-16">
+            <div className="w-full bg-blue-800 flex-1 min-h-0 px-4 md:px-8 lg:px-16">
               <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">

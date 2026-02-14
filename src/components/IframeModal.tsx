@@ -23,6 +23,8 @@ interface IframeModalProps {
   colorPalette?: ColorPalette;
   /** Texto del botón de cerrar */
   closeButtonText?: string;
+  /** Clases CSS adicionales para el botón */
+  className?: string;
 }
 
 /**
@@ -34,7 +36,8 @@ export function IframeModal({
   iframeUrl,
   iframeTitle = "Modal Iframe",
   colorPalette = ColorPalette.BlueOrange,
-  closeButtonText = "Cerrar"
+  closeButtonText = "Cerrar",
+  className = ""
 }: IframeModalProps) {
   const [showModal, setShowModal] = useState(false);
 
@@ -60,7 +63,7 @@ export function IframeModal({
     <>
       <button
         onClick={() => setShowModal(true)}
-        className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl ${styles.button}`}
+        className={className || `px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl ${styles.button}`}
       >
         {buttonText}
       </button>
