@@ -1,12 +1,10 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { MapPin, Car, Plane, Wine, Mountain, Camera } from "lucide-react";
+
 import { useLanguage } from "@/hooks/useLanguage";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 //import colchaguaValley from "@/assets/colchagua-valley.jpg";
 
-const PLACEHOLDER_IMAGE = "https://placehold.co/600x400"
+
 
 const VenueLocation = () => {
   const { t } = useLanguage();
@@ -18,10 +16,10 @@ const VenueLocation = () => {
 
   // Horizontal translate - moves sections from right to left as you scroll
   // Use 100vw to ensure sections scroll exactly one screen width
-  const x = useTransform(scrollYProgress, [0, 1], ["0vw", "-125vw"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0vw", "-100vw"]);
 
   return (
-    <section id="venue" className="h-[400vh] relative" ref={container}>
+    <section id="venue" className="h-[200vh] relative" ref={container}>
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <motion.div className="flex w-[200vw]" style={{ x }}>
           {/* Sections I & II Container */}
@@ -53,15 +51,6 @@ const VenueLocation = () => {
                 </div>
               </div>
             </div>
-
-            {/* Cards Content - Left Column */}
-            {/* <div className="container mx-auto px-4 flex-1">
-              <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-12">
-                   ... content hidden ...
-                </div>
-              </div>
-            </div> */}
           </div>
 
           {/* Sections III & IV Container */}
@@ -81,7 +70,7 @@ const VenueLocation = () => {
                       onClick={() => window.open("https://www.rutacruz.cl/", "_blank")}
                     >
                       <img
-                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/57/7e/fa/photo0jpg.jpg?w=900&h=500&s=1"
+                        src="/images/Venue/Colchagua.jpg"
                         alt="Colchagua Valley wine region landscape"
                         className="w-full h-64 object-cover"
                       />
@@ -92,16 +81,32 @@ const VenueLocation = () => {
                         </div>
                       </div>
                     </motion.div>
+                  </div>
 
-                    {/* <div className="grid grid-cols-2 gap-4">
-                       ... content hidden ...
-                    </div> */}
+                  <div className="space-y-6">
+                    <motion.div
+                      className="relative overflow-hidden rounded-lg shadow-congress cursor-pointer"
+                      initial={{ opacity: 0, y: 50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 1, 0.5, 1] }}
+                      whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
+                      onClick={() => window.open("https://www.rutacruz.cl/", "_blank")}
+                    >
+                      <img
+                        src="/images/Venue/SantaCruzMap.jpg"
+                        alt="Santa Cruz Map"
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-volcanic/60 to-transparent flex items-end">
+                        <div className="p-6 text-black">
+                          <h3 className="text-xl font-bold mb-2">{t("venue.santaCruzMap.title")}</h3>
+                          <p className="text-black  text-sm">{t("venue.santaCruzMap.description")}</p>
+                        </div>
+                      </div>
+                    </motion.div>
                   </div>
                 </div>
-
-                {/* <motion.div
-                   ... content hidden ...
-                </motion.div> */}
               </div>
             </div>
           </div>

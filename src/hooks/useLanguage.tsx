@@ -482,8 +482,16 @@ const translations: Translations = {
     es: "Valle de Colchagua"
   },
   "venue.unescoBadge": {
-    en: "A UNESCO World Heritage wine region",
-    es: "Región vitivinícola Patrimonio Mundial de la UNESCO"
+    en: "A UNESCO World Heritage wine region. Located in Chile's 6th Region, it is the vibrant heart of the famous Wine Route.",
+    es: "Región vitivinícola Patrimonio Mundial de la UNESCO. Ubicada en la sexta región de Chile, es el corazón vibrante de la famosa Ruta del Vino."
+  },
+  "venue.santaCruzMap.title": {
+    en: "Santa Cruz, Colchagua",
+    es: "Santa Cruz, Colchagua"
+  },
+  "venue.santaCruzMap.description": {
+    en: "Discover Santa Cruz, a charming locality in Chile's 6th Region. Situated in the heart of the Wine Route, it blends colonial heritage with modern viticulture.",
+    es: "Descubre Santa Cruz, una encantadora localidad en la sexta región de Chile. Situada en el corazón de la Ruta del Vino, combina herencia colonial con viticultura moderna."
   },
   "venue.wineHeritage": {
     en: "Wine Heritage",
