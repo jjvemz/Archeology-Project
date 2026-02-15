@@ -835,7 +835,7 @@ const translations: Translations = {
     es: "Comité Científico",
   },
   "committeeWheel.keynotes": {
-    en: "Keynote Speakers",
+    en: "master lecturers",
     es: "Charlas Magistrales",
   },
   "committeeWheel.hoverOverName": {
