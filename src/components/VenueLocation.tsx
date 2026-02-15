@@ -35,7 +35,7 @@ const VenueLocation = () => {
             {/* Colchagua Card */}
             <div className="flex flex-col items-center text-center space-y-6">
               <motion.div
-                className="relative overflow-hidden rounded-lg shadow-congress cursor-pointer w-full"
+                className="relative overflow-hidden rounded-full shadow-congress cursor-pointer w-72 h-72 md:w-80 md:h-80 border-[6px] border-dashed border-orange-500"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -44,7 +44,11 @@ const VenueLocation = () => {
                   delay: 0.2,
                   ease: [0.25, 1, 0.5, 1],
                 }}
-                whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+                whileHover={{
+                  scale: 1.05,
+                  rotate: 2,
+                  transition: { duration: 0.3 },
+                }}
                 onClick={() =>
                   window.open("https://www.rutacruz.cl/", "_blank")
                 }
@@ -52,11 +56,11 @@ const VenueLocation = () => {
                 <img
                   src="/images/Venue/Colchagua.jpg"
                   alt="Colchagua Valley wine region landscape"
-                  className="w-full h-80 object-cover"
+                  className="w-full h-full object-cover"
                 />
               </motion.div>
               <div className="w-full max-w-md">
-                <h3 className="text-2xl font-bold text-blue-900 mb-3 uppercase">
+                <h3 className="text-2xl font-bold text-orange-600 mb-3 uppercase">
                   {t("venue.colchaguaValley")}
                 </h3>
                 <p className="text-lg font-semibold text-primary mb-4">
@@ -68,7 +72,7 @@ const VenueLocation = () => {
             {/* Santa Cruz Map Card */}
             <div className="flex flex-col items-center text-center space-y-6">
               <motion.div
-                className="relative overflow-hidden rounded-lg shadow-congress cursor-pointer w-full"
+                className="relative overflow-hidden rounded-full shadow-congress cursor-pointer w-72 h-72 md:w-80 md:h-80 border-[6px] border-dashed border-orange-500"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -77,7 +81,11 @@ const VenueLocation = () => {
                   delay: 0.4,
                   ease: [0.25, 1, 0.5, 1],
                 }}
-                whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+                whileHover={{
+                  scale: 1.05,
+                  rotate: -2,
+                  transition: { duration: 0.3 },
+                }}
                 onClick={() =>
                   window.open("https://www.rutacruz.cl/", "_blank")
                 }
@@ -85,11 +93,11 @@ const VenueLocation = () => {
                 <img
                   src="/images/circles/worldmap.png"
                   alt="Santa Cruz Map"
-                  className="w-full h-80 object-cover"
+                  className="w-full h-full object-cover"
                 />
               </motion.div>
               <div className="w-full max-w-md">
-                <h3 className="text-2xl font-bold text-blue-900 mb-3 uppercase">
+                <h3 className="text-2xl font-bold text-orange-600 mb-3 uppercase">
                   {t("venue.santaCruzMap.title")}
                 </h3>
                 <p className="text-lg font-semibold text-primary mb-4">
