@@ -2,25 +2,25 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { useRotatingImage } from "@/hooks/useRotatingImage";
 
 const RAPA_IMAGES: string[] = [
-  '/images/NoCircles/5 rapa.jpeg',
-  '/images/NoCircles/6 rapa.jpeg',
-  '/images/NoCircles/7 rapa.jpeg',
-  '/images/NoCircles/8 rapa.jpeg',
-  '/images/NoCircles/9 rapa.jpeg',
-  '/images/NoCircles/10 rapa.jpeg',
-  '/images/NoCircles/11 rapa.jpeg',
-  '/images/NoCircles/12 rapa.jpeg',
-  '/images/NoCircles/13 rapa.jpeg',
-  '/images/NoCircles/14 rapa.jpeg',
-  '/images/NoCircles/15 rapa.jpeg',
-  '/images/NoCircles/16 rapa.jpeg',
-  '/images/NoCircles/17 rapa.jpeg',
-  '/images/NoCircles/18 rapa.jpeg',
-  '/images/NoCircles/19 rapa.jpeg',
-  '/images/NoCircles/22 rapa.jpeg',
-  '/images/NoCircles/24 rapa.jpeg',
-  '/images/NoCircles/25 rapa.jpeg',
-  '/images/NoCircles/26 rapa.jpeg',
+  "/images/NoCircles/5 rapa.jpeg",
+  "/images/NoCircles/6 rapa.jpeg",
+  "/images/NoCircles/7 rapa.jpeg",
+  "/images/NoCircles/8 rapa.jpeg",
+  "/images/NoCircles/9 rapa.jpeg",
+  "/images/NoCircles/10 rapa.jpeg",
+  "/images/NoCircles/11 rapa.jpeg",
+  "/images/NoCircles/12 rapa.jpeg",
+  "/images/NoCircles/13 rapa.jpeg",
+  "/images/NoCircles/14 rapa.jpeg",
+  "/images/NoCircles/15 rapa.jpeg",
+  "/images/NoCircles/16 rapa.jpeg",
+  "/images/NoCircles/17 rapa.jpeg",
+  "/images/NoCircles/18 rapa.jpeg",
+  "/images/NoCircles/19 rapa.jpeg",
+  "/images/NoCircles/22 rapa.jpeg",
+  "/images/NoCircles/24 rapa.jpeg",
+  "/images/NoCircles/25 rapa.jpeg",
+  "/images/NoCircles/26 rapa.jpeg",
 ];
 
 function AreaCard({ area, index }: { area: any; index: number }) {
@@ -34,17 +34,17 @@ function AreaCard({ area, index }: { area: any; index: number }) {
           <div
             className="w-60 h-60 rounded-full overflow-hidden flex-shrink-0 border-8 relative"
             style={{
-              borderColor: '#143c8c'
+              borderColor: "#000000ff",
             }}
           >
             <div
               className="absolute inset-0 w-full h-full"
               style={{
                 backgroundImage: `url("${currentImage}")`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundSize: "cover",
+                backgroundPosition: "center",
                 opacity: opacity,
-                transition: 'opacity 0.5s ease-in-out'
+                transition: "opacity 0.5s ease-in-out",
               }}
             />
           </div>
@@ -92,8 +92,8 @@ export function AreasOfReflectionGallery() {
         "areasGallery.islands.topic1",
         "areasGallery.islands.topic2",
         "areasGallery.islands.topic3",
-        "areasGallery.islands.topic4"
-      ]
+        "areasGallery.islands.topic4",
+      ],
     },
     {
       titleKey: "areasGallery.cultural.title",
@@ -103,8 +103,8 @@ export function AreasOfReflectionGallery() {
         "areasGallery.cultural.topic1",
         "areasGallery.cultural.topic2",
         "areasGallery.cultural.topic3",
-        "areasGallery.cultural.topic4"
-      ]
+        "areasGallery.cultural.topic4",
+      ],
     },
     {
       titleKey: "areasGallery.diseases.title",
@@ -114,8 +114,8 @@ export function AreasOfReflectionGallery() {
         "areasGallery.diseases.topic1",
         "areasGallery.diseases.topic2",
         "areasGallery.diseases.topic3",
-        "areasGallery.diseases.topic4"
-      ]
+        "areasGallery.diseases.topic4",
+      ],
     },
     {
       titleKey: "areasGallery.climate.title",
@@ -125,8 +125,8 @@ export function AreasOfReflectionGallery() {
         "areasGallery.climate.topic1",
         "areasGallery.climate.topic2",
         "areasGallery.climate.topic3",
-        "areasGallery.climate.topic4"
-      ]
+        "areasGallery.climate.topic4",
+      ],
     },
     {
       titleKey: "areasGallery.coastal.title",
@@ -136,8 +136,8 @@ export function AreasOfReflectionGallery() {
         "areasGallery.coastal.topic1",
         "areasGallery.coastal.topic2",
         "areasGallery.coastal.topic3",
-        "areasGallery.coastal.topic4"
-      ]
+        "areasGallery.coastal.topic4",
+      ],
     },
     {
       titleKey: "areasGallery.paleo.title",
@@ -147,9 +147,9 @@ export function AreasOfReflectionGallery() {
         "areasGallery.paleo.topic1",
         "areasGallery.paleo.topic2",
         "areasGallery.paleo.topic3",
-        "areasGallery.paleo.topic4"
-      ]
-    }
+        "areasGallery.paleo.topic4",
+      ],
+    },
   ];
 
   return (
@@ -157,9 +157,9 @@ export function AreasOfReflectionGallery() {
       <div className="bg-blue-800 py-8 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="flex items-start gap-6 mb-6">
-            
             <h2 className="text-5xl md:text-6xl font-bold text-primary pt-2 leading-tight">
-              {t("areasGallery.areasOf").toUpperCase()}  {t("areasGallery.ofReflection").toUpperCase()}
+              {t("areasGallery.areasOf").toUpperCase()}{" "}
+              {t("areasGallery.ofReflection").toUpperCase()}
             </h2>
           </div>
           <div className=" p-4 border-l-4 border-primary">
