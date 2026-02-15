@@ -12,8 +12,6 @@ const CallForPapers = () => {
     offset: ["start start", "end end"],
   });
 
-  // Horizontal translate - moves sections from right to left as you scroll
-  // Use 100vw to ensure sections scroll exactly one screen width
   const x = useTransform(scrollYProgress, [0, 1], ["0vw", "-100vw"]);
 
   return (

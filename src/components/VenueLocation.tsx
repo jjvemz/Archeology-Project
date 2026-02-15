@@ -91,7 +91,7 @@ const VenueLocation = () => {
                 }
               >
                 <img
-                  src="/images/circles/worldmap.png"
+                  src="/images/Venue/SantaCruzBlueMap.jpg"
                   alt="Santa Cruz Map"
                   className="w-full h-full object-cover"
                 />
