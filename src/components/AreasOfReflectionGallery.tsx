@@ -34,7 +34,7 @@ function AreaCard({ area, index }: { area: any; index: number }) {
           <div
             className="w-60 h-60 rounded-full overflow-hidden flex-shrink-0 border-8 relative"
             style={{
-              borderColor: "#000000ff",
+              borderColor: "#143c8c",
             }}
           >
             <div
