@@ -1,113 +1,104 @@
-
 import { useLanguage } from "@/hooks/useLanguage";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-
-
+import { motion } from "framer-motion";
 
 const VenueLocation = () => {
   const { t } = useLanguage();
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start start", "end end"],
-  });
-
-  // Horizontal translate - moves sections from right to left as you scroll
-  // Use 100vw to ensure sections scroll exactly one screen width
-  const x = useTransform(scrollYProgress, [0, 1], ["0vw", "-100vw"]);
 
   return (
-    <section id="venue" className="h-[200vh] relative" ref={container}>
-      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-        <motion.div className="flex w-[200vw]" style={{ x }}>
-          <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48 w-screen">
-            <div className="py-16 px-4">
-              <div className="container mx-auto px-4">
-                <div className="max-w-6xl mx-auto flex items-center gap-8">
-                  <div className="flex items-center gap-6">
-                    <h2 className="text-8xl font-bold text-primary"></h2>
-                  </div>
-                  <div className="flex-1">
-                    <motion.div
-                      initial={{ opacity: 0, y: 50 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.3 }}
-                      transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
-                    >
-                      <h2 className="text-5xl font-bold text-primary">
-                        X_ {t("venue.title").toUpperCase()}
-                      </h2>
-                      <div className="mt-4 pt-4">
-                        <p className="text-base text-orange-700">
-                          {t("venue.description")}
-                        </p>
-                      </div>
-                    </motion.div>
-                  </div>
-                </div>
+    <section
+      id="venue"
+      className="py-24 bg-background relative overflow-hidden"
+    >
+      <div className="container mx-auto px-4">
+        {/* Header Section */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+          >
+            <h2 className="text-5xl font-bold text-primary mb-8">
+              X_ {t("venue.title").toUpperCase()}
+            </h2>
+            <div className="max-w-3xl">
+              <p className="text-lg text-orange-700 leading-relaxed font-semibold">
+                {t("venue.description")}
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Cards Content */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Colchagua Card */}
+            <div className="flex flex-col items-center text-center space-y-6">
+              <motion.div
+                className="relative overflow-hidden rounded-lg shadow-congress cursor-pointer w-full"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.2,
+                  ease: [0.25, 1, 0.5, 1],
+                }}
+                whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+                onClick={() =>
+                  window.open("https://www.rutacruz.cl/", "_blank")
+                }
+              >
+                <img
+                  src="/images/Venue/Colchagua.jpg"
+                  alt="Colchagua Valley wine region landscape"
+                  className="w-full h-80 object-cover"
+                />
+              </motion.div>
+              <div className="w-full max-w-md">
+                <h3 className="text-2xl font-bold text-blue-900 mb-3 uppercase">
+                  {t("venue.colchaguaValley")}
+                </h3>
+                <p className="text-lg font-semibold text-primary mb-4">
+                  {t("venue.unescoBadge")}
+                </p>
+              </div>
+            </div>
+
+            {/* Santa Cruz Map Card */}
+            <div className="flex flex-col items-center text-center space-y-6">
+              <motion.div
+                className="relative overflow-hidden rounded-lg shadow-congress cursor-pointer w-full"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.4,
+                  ease: [0.25, 1, 0.5, 1],
+                }}
+                whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+                onClick={() =>
+                  window.open("https://www.rutacruz.cl/", "_blank")
+                }
+              >
+                <img
+                  src="/images/circles/worldmap.png"
+                  alt="Santa Cruz Map"
+                  className="w-full h-80 object-cover"
+                />
+              </motion.div>
+              <div className="w-full max-w-md">
+                <h3 className="text-2xl font-bold text-blue-900 mb-3 uppercase">
+                  {t("venue.santaCruzMap.title")}
+                </h3>
+                <p className="text-lg font-semibold text-primary mb-4">
+                  {t("venue.santaCruzMap.description")}
+                </p>
               </div>
             </div>
           </div>
-
-          {/* Sections III & IV Container */}
-          <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48 w-screen">
-            {/* Cards Content - Right Column and Bottom */}
-            <div className="container mx-auto px-4 flex-1">
-              <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-12">
-                  <div className="space-y-6">
-                    <motion.div
-                      className="relative overflow-hidden rounded-lg shadow-congress cursor-pointer"
-                      initial={{ opacity: 0, y: 50 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.3 }}
-                      transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
-                      whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-                      onClick={() => window.open("https://www.rutacruz.cl/", "_blank")}
-                    >
-                      <img
-                        src="/images/Venue/Colchagua.jpg"
-                        alt="Colchagua Valley wine region landscape"
-                        className="w-full h-64 object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-volcanic/60 to-transparent flex items-end">
-                        <div className="p-6 text-white">
-                          <h3 className="text-xl font-bold mb-2">{t("venue.colchaguaValley")}</h3>
-                          <p className="text-white/90 text-sm">{t("venue.unescoBadge")}</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </div>
-
-                  <div className="space-y-6">
-                    <motion.div
-                      className="relative overflow-hidden rounded-lg shadow-congress cursor-pointer"
-                      initial={{ opacity: 0, y: 50 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.3 }}
-                      transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 1, 0.5, 1] }}
-                      whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
-                      onClick={() => window.open("https://www.rutacruz.cl/", "_blank")}
-                    >
-                      <img
-                        src="/images/Venue/SantaCruzMap.jpg"
-                        alt="Santa Cruz Map"
-                        className="w-full h-64 object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-volcanic/60 to-transparent flex items-end">
-                        <div className="p-6 text-black">
-                          <h3 className="text-xl font-bold mb-2">{t("venue.santaCruzMap.title")}</h3>
-                          <p className="text-black  text-sm">{t("venue.santaCruzMap.description")}</p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

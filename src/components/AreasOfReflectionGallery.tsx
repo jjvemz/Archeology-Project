@@ -25,16 +25,16 @@ const RAPA_IMAGES: string[] = [
 
 function AreaCard({ area, index }: { area: any; index: number }) {
   const { t } = useLanguage();
-  const { currentImage, opacity } = useRotatingImage(RAPA_IMAGES, 3000);
+  const { currentImage, opacity } = useRotatingImage(RAPA_IMAGES, 6000);
 
   return (
     <div className="flex flex-col items-center my-4">
       <div className="flex items-center gap-4 mb-12 w-full justify-center">
         {currentImage && (
           <div
-            className="w-60 h-60 rounded-full overflow-hidden flex-shrink-0 border-4 relative"
+            className="w-60 h-60 rounded-full overflow-hidden flex-shrink-0 border-8 relative"
             style={{
-              borderColor: '#0a0a0a'
+              borderColor: '#143c8c'
             }}
           >
             <div
@@ -61,10 +61,15 @@ function AreaCard({ area, index }: { area: any; index: number }) {
         </p>
 
         <div>
-          <h4 className="font-semibold text-blue-900 mb-2 text-lg">{t("areasGallery.keyTopics")}</h4>
+          <h4 className="font-semibold text-blue-900 mb-2 text-lg">
+            {t("areasGallery.keyTopics")}
+          </h4>
           <ul className="flex flex-col gap-1">
             {area.topics.map((topic: string, topicIndex: number) => (
-              <li key={topicIndex} className="text-sm text-primary hover:underline cursor-pointer">
+              <li
+                key={topicIndex}
+                className="text-sm text-primary hover:underline cursor-pointer"
+              >
                 {t(topic)}
               </li>
             ))}
@@ -148,7 +153,7 @@ export function AreasOfReflectionGallery() {
   ];
 
   return (
-    <section className="my-6 bg-background ">
+    <section className="bg-background">
       <div className="bg-blue-800 py-8 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="flex items-start gap-6 mb-6">

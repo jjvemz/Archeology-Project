@@ -6,50 +6,44 @@ import { IframeModal, ColorPalette } from "./IframeModal";
 
 // Images from public/images/NoCircles
 const NO_CIRCLES_IMAGES = [
-  '/images/NoCircles/5 rapa.jpeg',
-  '/images/NoCircles/6 rapa.jpeg',
-  '/images/NoCircles/7 rapa.jpeg',
-  '/images/NoCircles/8 rapa.jpeg',
-  '/images/NoCircles/9 rapa.jpeg',
-  '/images/NoCircles/10 rapa.jpeg',
-  '/images/NoCircles/11 rapa.jpeg',
-  '/images/NoCircles/12 rapa.jpeg',
-  '/images/NoCircles/13 rapa.jpeg',
-  '/images/NoCircles/14 rapa.jpeg',
-  '/images/NoCircles/15 rapa.jpeg',
-  '/images/NoCircles/16 rapa.jpeg',
-  '/images/NoCircles/17 rapa.jpeg',
-  '/images/NoCircles/18 rapa.jpeg',
-  '/images/NoCircles/19 rapa.jpeg',
-  '/images/NoCircles/22 rapa.jpeg',
-  '/images/NoCircles/24 rapa.jpeg',
-  '/images/NoCircles/25 rapa.jpeg',
-  '/images/NoCircles/26 rapa.jpeg',
+  "/images/NoCircles/5 rapa.jpeg",
+  "/images/NoCircles/6 rapa.jpeg",
+  "/images/NoCircles/7 rapa.jpeg",
+  "/images/NoCircles/8 rapa.jpeg",
+  "/images/NoCircles/9 rapa.jpeg",
+  "/images/NoCircles/10 rapa.jpeg",
+  "/images/NoCircles/11 rapa.jpeg",
+  "/images/NoCircles/12 rapa.jpeg",
+  "/images/NoCircles/13 rapa.jpeg",
+  "/images/NoCircles/14 rapa.jpeg",
+  "/images/NoCircles/15 rapa.jpeg",
+  "/images/NoCircles/16 rapa.jpeg",
+  "/images/NoCircles/17 rapa.jpeg",
+  "/images/NoCircles/18 rapa.jpeg",
+  "/images/NoCircles/19 rapa.jpeg",
+  "/images/NoCircles/22 rapa.jpeg",
+  "/images/NoCircles/24 rapa.jpeg",
+  "/images/NoCircles/25 rapa.jpeg",
+  "/images/NoCircles/26 rapa.jpeg",
 ];
 
 const RotatingCircle = ({ delay = 0 }: { delay?: number }) => {
   const { currentImage, opacity } = useRotatingImage(NO_CIRCLES_IMAGES, 4000);
-  
-  // Optional: add a delay to desynchronize the rotations if needed, 
-  // though useRotatingImage logic might need adjustment for true delay start.
-  // For now, simple random start in hook helps, but we can also use CSS animation delay if we were animating CSS.
-  // Since the hook handles rotation logic, let's just rely on the hook's random start or we could pass offset to hook.
-  // The current hook doesn't support start delay, but it randomizes start image.
-  
+
   return (
     <div className="w-full h-full rounded-full overflow-hidden relative aspect-square">
-        {currentImage && (
-          <div
-            className="absolute inset-0 w-full h-full"
-            style={{
-              backgroundImage: `url("${currentImage}")`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              opacity: opacity,
-              transition: 'opacity 1s ease-in-out'
-            }}
-          />
-        )}
+      {currentImage && (
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: `url("${currentImage}")`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: opacity,
+            transition: "opacity 1s ease-in-out",
+          }}
+        />
+      )}
     </div>
   );
 };
@@ -58,19 +52,43 @@ const CongressHero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-8 mb-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image Grid */}
       <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-5 gap-0 w-full h-full">
         {/* Images on the left */}
-        <div className="col-span-full md:col-span-3 row-span-full md:row-span-5 relative flex items-center justify-center p-8">
+        <div className="col-span-full md:col-span-3 row-span-full md:row-span-5 relative flex items-center justify-center p-8 md:border-r-4 md:border-blue-900 shadow-[4px_0_24px_-12px_rgba(0,0,0,0.1)] bg-blue-800">
           <div className="grid grid-cols-2 gap-8 max-w-2xl w-full aspect-square scale-90">
-             <RotatingCircle delay={9000} />
-             <RotatingCircle delay={10500} />
-             <RotatingCircle delay={8000} />
-             <RotatingCircle delay={7500} />
+            <div className="w-full h-full rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500">
+              <img
+                src={NO_CIRCLES_IMAGES[0]}
+                alt="Congreso Arqueología"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-full h-full rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500">
+              <img
+                src={NO_CIRCLES_IMAGES[6]}
+                alt="Congreso Arqueología"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-full h-full rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500">
+              <img
+                src={NO_CIRCLES_IMAGES[2]}
+                alt="Congreso Arqueología"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-full h-full rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500">
+              <img
+                src={NO_CIRCLES_IMAGES[3]}
+                alt="Congreso Arqueología"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
           {/* Gradient Overlay */}
-           <div className="absolute inset-0 bg-gradient-to-r from-volcanic/10 via-volcanic/5 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-volcanic/10 via-volcanic/5 to-transparent pointer-events-none"></div>
         </div>
         {/* Empty grid area for spacing */}
         <div className="hidden md:block md:col-span-2 md:row-span-5"></div>
@@ -79,7 +97,6 @@ const CongressHero = () => {
       {/* Content */}
       <div className="relative z-10 w-full px-4 md:px-8 lg:px-12 flex justify-center md:justify-end">
         <div className="w-full md:w-2/5 lg:w-2/5 flex flex-col items-center md:items-end text-center md:text-right">
-          
           <Badge className="mb-6 bg-congress-yellow text-volcanic font-bold text-lg px-6 py-2 text-orange-700">
             {t("congressHero.badge")}
           </Badge>
@@ -106,25 +123,27 @@ const CongressHero = () => {
               closeButtonText={t("congressHero.closeButton")}
               className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-to-r from-pacific-blue to-pacific-teal hover:shadow-congress hover:scale-105 transition-all duration-300 font-semibold h-11 px-8 text-sm sm:text-base md:text-lg py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-primary text-opacity-65 w-full lg:w-auto"
             />
-            <Button
-              size="lg"
-              variant="congress"
-              className="text-sm sm:text-base md:text-lg px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6  text-primary text-opacity-65 w-full lg:w-auto"
-            >
-              {t("congressHero.registerNow")}
-            </Button>
-            <Button
-              size="lg"
-              variant="congress"
-              className="text-sm sm:text-base md:text-lg px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 border-accent text-pacific-blue bg-blue/20  hover:text-volcanic text-accent w-full lg:w-auto"
-            >
-              {t("congressHero.callForPapers")}
-            </Button>
+
+            <IframeModal
+              buttonText={t("congressHero.registerNow")}
+              iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
+              iframeTitle={t("congressHero.iframeTitle")}
+              colorPalette={ColorPalette.BlueOrange}
+              closeButtonText={t("congressHero.closeButton")}
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-to-r from-pacific-blue to-pacific-teal hover:shadow-congress hover:scale-105 transition-all duration-300 font-semibold h-11 px-8 text-sm sm:text-base md:text-lg py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-primary text-opacity-65 w-full lg:w-auto"
+            />
+
+            <IframeModal
+              buttonText={t("congressHero.callForPapers")}
+              iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
+              iframeTitle={t("congressHero.iframeTitle")}
+              colorPalette={ColorPalette.BlueOrange}
+              closeButtonText={t("congressHero.closeButton")}
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-to-r from-pacific-blue to-pacific-teal hover:shadow-congress hover:scale-105 transition-all duration-300 font-semibold h-11 px-8 text-sm sm:text-base md:text-lg py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-primary text-opacity-65 w-full lg:w-auto"
+            />
           </div>
         </div>
       </div>
-
-    
     </section>
   );
 };
