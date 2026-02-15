@@ -58,8 +58,12 @@ const translations: Translations = {
     es: "EN EL PACÍFICO",
   },
   "congressHero.description": {
-    en: "Exploring the dynamic relationship between archaeological heritage and environmental transformations across Pacific regions. Join leading researchers in Chile's wine country, on the 18th,19th,20th and 21st of November 2026, Santa Cruz, Chile.",
-    es: "Explorando la relación dinámica entre el patrimonio arqueológico y las transformaciones ambientales en las regiones del Pacífico. Únete a investigadores líderes en la región vitivinícola de Chile, el 18,19,20 y 21 de noviembre de 2026, Santa Cruz, Chile.",
+    en: "Exploring the dynamic relationship between archaeological heritage and environmental transformations across Pacific regions.",
+    es: "Explorando la relación dinámica entre el patrimonio arqueológico y las transformaciones ambientales en las regiones del Pacífico.",
+  },
+  "congressHero.eventDetails": {
+    en: "Join leading researchers in Chile's wine country, on the 18th, 19th, 20th and 21st of November 2026, Santa Cruz, Chile.",
+    es: "Únete a investigadores líderes en la región vitivinícola de Chile, el 18, 19, 20 y 21 de noviembre de 2026, Santa Cruz, Chile.",
   },
   "congressHero.submitAbstract": {
     en: "Submit Your Abstract",

@@ -1,8 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useRotatingImage } from "@/hooks/useRotatingImage";
 import { IframeModal, ColorPalette } from "./IframeModal";
+import useEmblaCarousel from "embla-carousel-react";
+import { useEffect } from "react";
 
 // Images from public/images/NoCircles
 const NO_CIRCLES_IMAGES = [
@@ -31,7 +32,7 @@ const RotatingCircle = ({ delay = 0 }: { delay?: number }) => {
   const { currentImage, opacity } = useRotatingImage(NO_CIRCLES_IMAGES, 4000);
 
   return (
-    <div className="w-full h-full rounded-full overflow-hidden relative aspect-square">
+    <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500 bg-white flex-shrink-0">
       {currentImage && (
         <div
           className="absolute inset-0 w-full h-full"
@@ -50,58 +51,79 @@ const RotatingCircle = ({ delay = 0 }: { delay?: number }) => {
 
 const CongressHero = () => {
   const { t } = useLanguage();
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "center",
+    dragFree: true,
+  });
+
+  useEffect(() => {
+    if (emblaApi) {
+      const intervalId = setInterval(() => {
+        emblaApi.scrollNext();
+      }, 1600);
+      return () => clearInterval(intervalId);
+    }
+  }, [emblaApi]);
 
   return (
     <section className="flex flex-col min-h-screen">
-      {/* Blue Header Section */}
-      <div className="bg-blue-800 py-12 px-4 shadow-lg z-10">
-        <div className="max-w-4xl mx-auto flex items-center justify-center gap-4 sm:gap-12 md:gap-24">
-          <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500 bg-white">
-            <img
-              src={NO_CIRCLES_IMAGES[0]}
-              alt="Arqueología Pacifico 1"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500 bg-white">
-            <img
-              src={NO_CIRCLES_IMAGES[6]}
-              alt="Arqueología Pacifico 2"
-              className="w-full h-full object-cover"
-            />
+      {/* Blue Header Section with Carousel */}
+      <div className="bg-blue-800 py-12 px-4 shadow-lg z-10 overflow-hidden">
+        <div className="embla" ref={emblaRef}>
+          <div className="embla__container flex items-center">
+            {/* Carousel Slides - Show at least 6 slides for better carousel feel */}
+            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
+              <RotatingCircle delay={0} />
+            </div>
+            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
+              <RotatingCircle delay={1000} />
+            </div>
+            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
+              <RotatingCircle delay={2000} />
+            </div>
+            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
+              <RotatingCircle delay={3000} />
+            </div>
+            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
+              <RotatingCircle delay={4000} />
+            </div>
+            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
+              <RotatingCircle delay={5000} />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Beige Middle Content Section */}
       <div className="bg-[#ffeecd] flex-1 py-16 px-4 flex flex-col items-center justify-center relative">
-        <div className="max-w-4xl w-full text-center space-y-8">
-          {/* Subtitle/Badge at top right-ish of beige section */}
-          <div className="md:absolute md:top-12 md:right-12 text-orange-700 font-semibold mb-4 md:mb-0">
-            First International Congress
+        <div className="max-w-4xl w-full text-center space-y-8 flex flex-col items-center">
+          {/* Subtitle/Badge now part of the vertical centering stack */}
+          <div className="text-orange-700 font-semibold mb-2">
+            {t("congressHero.badge")}
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight uppercase">
             <span className="text-blue-900 block mb-2">
-              ARCHEOLOGY CONGRESS:
+              {t("congressHero.title1")}
             </span>
             <span className="text-orange-700">
-              CHANGING ENVIRONMENT IN THE PACIFIC
+              {t("congressHero.title2")} {t("congressHero.title3")}
             </span>
           </h1>
 
           <div className="max-w-3xl mx-auto">
             <p className="text-lg md:text-xl text-orange-700 leading-relaxed font-medium">
-              Exploring the dynamic relationship between archaeological heritage
-              and environmental transformations across Pacific regions. Join
-              leading researchers in Chile's wine country, on the 18th, 19th,
-              20th and 21st of November 2026, Santa Cruz, Chile.
+              {t("congressHero.description")}
+              <br />
+              <br />
+              {t("congressHero.eventDetails")}
             </p>
           </div>
 
-          <div className="flex flex-col gap-6 pt-4">
+          <div className="flex flex-col gap-6 pt-4 w-full items-center">
             <IframeModal
-              buttonText="Submit Your Abstract"
+              buttonText={t("congressHero.submitAbstract")}
               iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
               iframeTitle={t("congressHero.iframeTitle")}
               colorPalette={ColorPalette.BlueOrange}
@@ -110,7 +132,7 @@ const CongressHero = () => {
             />
 
             <IframeModal
-              buttonText="Register Now"
+              buttonText={t("congressHero.registerNow")}
               iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
               iframeTitle={t("congressHero.iframeTitle")}
               colorPalette={ColorPalette.BlueOrange}
@@ -119,32 +141,12 @@ const CongressHero = () => {
             />
 
             <IframeModal
-              buttonText="Call for Papers"
+              buttonText={t("congressHero.callForPapers")}
               iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
               iframeTitle={t("congressHero.iframeTitle")}
               colorPalette={ColorPalette.BlueOrange}
               closeButtonText={t("congressHero.closeButton")}
               className="text-orange-700 font-bold text-xl md:text-2xl hover:scale-105 transition-transform bg-transparent p-0 border-none shadow-none"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Blue Footer Section */}
-      <div className="bg-blue-800 py-12 px-4 shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
-        <div className="max-w-4xl mx-auto flex items-center justify-center gap-4 sm:gap-12 md:gap-24">
-          <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500 bg-white">
-            <img
-              src={NO_CIRCLES_IMAGES[2]}
-              alt="Arqueología Pacifico 3"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500 bg-white">
-            <img
-              src={NO_CIRCLES_IMAGES[3]}
-              alt="Arqueología Pacifico 4"
-              className="w-full h-full object-cover"
             />
           </div>
         </div>
