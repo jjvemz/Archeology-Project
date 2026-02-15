@@ -64,25 +64,25 @@ const PacificMigrationTimeline = () => {
           </div>
 
           {/* Right side - Timeline */}
-          <div className="bg-gradient-to-b flex flex-col">
-            {/* Timeline events on white background */}
+          <div className="bg-blue-800 flex flex-col">
+            {/* Timeline events on blue background */}
             <div className="px-8 py-12 lg:pt-32">
               <div className="space-y-6 max-w-2xl">
                 {timelineEvents.map((event, idx) => (
                   <Card
                     key={idx}
-                    className="bg-yellow-50  shadow-sm hover:shadow-md transition-shadow"
+                    className="bg-transparent border-orange-500/30 shadow-none hover:bg-white/5 transition-colors"
                   >
                     <div
                       className={`p-6 ${idx % 2 === 0 ? "text-left" : "text-right"}`}
                     >
-                      <h3 className="text-lg font-bold text-blue-900 mb-2">
+                      <h3 className="text-xl font-bold text-primary mb-2">
                         {event.title}
                       </h3>
-                      <p className="text-sm font-semibold text-blue-900 mb-3">
+                      <p className="text-sm font-semibold text-white/90 mb-3">
                         {event.period}
                       </p>
-                      <p className="text-sm text-blue-900 leading-relaxed">
+                      <p className="text-sm text-white/80 leading-relaxed">
                         {event.description}
                       </p>
                     </div>

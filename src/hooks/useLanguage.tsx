@@ -104,8 +104,8 @@ const translations: Translations = {
     es: "Fecha Límite de Envío de Resúmenes",
   },
   "callForPapers.abstractDeadlineDate": {
-    en: "February 2026",
-    es: "Febrero 2026",
+    en: "6th april 2026",
+    es: "6 de abril 2026",
   },
   "callForPapers.abstractDeadlineDesc": {
     en: "Submit your 300-word abstract with preliminary findings",
@@ -116,8 +116,8 @@ const translations: Translations = {
     es: "Notificación de Aceptación",
   },
   "callForPapers.acceptanceDate": {
-    en: "April 2026",
-    es: "Abril 2026",
+    en: "1st June 2026",
+    es: "1 de junio 2026",
   },
   "callForPapers.acceptanceDesc": {
     en: "Scientific committee will notify acceptance decisions",
@@ -128,8 +128,8 @@ const translations: Translations = {
     es: "Envío de Artículo Completo",
   },
   "callForPapers.fullPaperDate": {
-    en: "June 2026",
-    es: "Junio 2026",
+    en: "7th september 2026",
+    es: "7 de septiembre 2026",
   },
   "callForPapers.fullPaperDesc": {
     en: "Complete manuscripts for publication consideration",
@@ -836,54 +836,54 @@ const translations: Translations = {
     es: "Congreso",
   },
   "committeeWheel.hoverOverName": {
-    en: "Hover over a name",
-    es: "Pasa el ratón sobre un nombre",
+    en: "Hover over an animal to reveal the committee member",
+    es: "Pasa el ratón sobre un animal para revelar el miembro del comité",
   },
 
   // Scientific Committee
   "committee.title": {
-    en: "International Scientific Committee",
-    es: "Comité Científico Internacional",
+    en: "Scientific Committee",
+    es: "Comité Científico",
   },
   "committee.description": {
-    en: "Our distinguished panel of experts represents the finest minds in Pacific archaeology, bringing together diverse perspectives from across the Pacific rim and beyond.",
-    es: "Nuestro distinguido panel de expertos representa las mentes más brillantes en arqueología del Pacífico, reuniendo diversas perspectivas de todo el borde del Pacífico y más allá.",
-  },
-  "committee.globalExpertise": {
-    en: "Global Expertise",
-    es: "Experiencia Global",
-  },
-  "committee.globalExpertise.desc": {
-    en: "Representatives from leading institutions across the Pacific region, ensuring diverse perspectives and comprehensive review standards.",
-    es: "Representantes de instituciones líderes en la región del Pacífico, asegurando perspectivas diversas y estándares de revisión exhaustivos.",
-  },
-  "committee.rigorousReview": {
-    en: "Rigorous Review",
-    es: "Revisión Rigurosa",
-  },
-  "committee.rigorousReview.desc": {
-    en: "Double-blind peer review process ensuring the highest academic standards and fair evaluation of all submissions.",
-    es: "Proceso de revisión por pares doble ciego que garantiza los más altos estándares académicos y una evaluación justa de todas las presentaciones.",
-  },
-  "committee.publicationSupport": {
-    en: "Publication Support",
-    es: "Apoyo a Publicación",
-  },
-  "committee.publicationSupport.desc": {
-    en: "Selected papers will be considered for publication in leading archaeological journals and special congress proceedings.",
-    es: "Los artículos seleccionados serán considerados para publicación en revistas arqueológicas líderes y actas especiales del congreso.",
+    en: "Our distinguished international committee brings together leading experts in Pacific archaeology, environmental studies, and cultural heritage preservation.",
+    es: "Nuestro distinguido comité internacional reúne a expertos líderes en arqueología del Pacífico, estudios ambientales y preservación del patrimonio cultural.",
   },
   "committee.chair": {
-    en: "Chair, International Scientific Committee",
-    es: "Presidente, Comité Científico Internacional",
+    en: "Chair",
+    es: "Presidenta",
   },
   "committee.viceChair": {
     en: "Vice-Chair",
     es: "Vicepresidente",
   },
   "committee.member": {
-    en: "Committee Member",
-    es: "Miembro del Comité",
+    en: "Member",
+    es: "Miembro",
+  },
+  "committee.globalExpertise": {
+    en: "Global Expertise",
+    es: "Experiencia Global",
+  },
+  "committee.globalExpertise.desc": {
+    en: "International committee representing diverse Pacific regions and research specializations.",
+    es: "Comité internacional que representa diversas regiones del Pacífico y especializaciones de investigación.",
+  },
+  "committee.rigorousReview": {
+    en: "Rigorous Review",
+    es: "Revisión Rigurosa",
+  },
+  "committee.rigorousReview.desc": {
+    en: "Thorough peer review process ensuring the highest standards of archaeological scholarship.",
+    es: "Proceso de revisión por pares exhaustivo que asegura los más altos estándares de beca arqueológica.",
+  },
+  "committee.publicationSupport": {
+    en: "Publication Support",
+    es: "Apoyo a la Publicación",
+  },
+  "committee.publicationSupport.desc": {
+    en: "Guidance and support for researchers seeking to publish their findings in leading journals.",
+    es: "Orientación y apoyo para investigadores que buscan publicar sus hallazgos en revistas líderes.",
   },
   "committee.responsibilities": {
     en: "Committee Responsibilities",
@@ -894,24 +894,24 @@ const translations: Translations = {
     es: "Revisión de Resúmenes",
   },
   "committee.abstractReview.desc": {
-    en: "Evaluate submissions for scientific merit, relevance, and innovation",
-    es: "Evaluar presentaciones por mérito científico, relevancia e innovación",
+    en: "Comprehensive evaluation of all submitted abstracts for scientific quality and relevance.",
+    es: "Evaluación integral de todos los resúmenes enviados por calidad científica y relevancia.",
   },
   "committee.programDevelopment": {
     en: "Program Development",
     es: "Desarrollo del Programa",
   },
   "committee.programDevelopment.desc": {
-    en: "Design thematic sessions and facilitate interdisciplinary dialogue",
-    es: "Diseñar sesiones temáticas y facilitar el diálogo interdisciplinario",
+    en: "Designing the congress program to maximize learning opportunities and scholarly exchange.",
+    es: "Diseñando el programa del congreso para maximizar las oportunidades de aprendizaje e intercambio académico.",
   },
   "committee.qualityAssurance": {
     en: "Quality Assurance",
     es: "Aseguramiento de Calidad",
   },
   "committee.qualityAssurance.desc": {
-    en: "Maintain high academic standards and promote best practices",
-    es: "Mantener altos estándares académicos y promover mejores prácticas",
+    en: "Ensuring all presentations meet the highest standards of archaeological research and methodology.",
+    es: "Asegurando que todas las presentaciones cumplan con los más altos estándares de investigación arqueológica y metodología.",
   },
 
   // Additional Areas of Reflection (New Research Topics)
@@ -2134,90 +2134,6 @@ const translations: Translations = {
   "footer.copyright": {
     en: "© 2025 Pacific Congress on Archaeology & Changing Environment. All rights reserved.",
     es: "© 2025 Congreso del Pacífico sobre Arqueología y Medio Ambiente Cambiante. Todos los derechos reservados.",
-  },
-
-  // Committee Wheel
-  "committeeWheel.congress": {
-    en: "Congress",
-    es: "Congreso",
-  },
-  "committeeWheel.hoverOverName": {
-    en: "Hover over an animal to reveal the committee member",
-    es: "Pasa el ratón sobre un animal para revelar el miembro del comité",
-  },
-
-  // Committee
-  "committee.title": {
-    en: "Scientific Committee",
-    es: "Comité Científico",
-  },
-  "committee.description": {
-    en: "Our distinguished international committee brings together leading experts in Pacific archaeology, environmental studies, and cultural heritage preservation.",
-    es: "Nuestro distinguido comité internacional reúne a expertos líderes en arqueología del Pacífico, estudios ambientales y preservación del patrimonio cultural.",
-  },
-  "committee.chair": {
-    en: "Chair",
-    es: "Presidenta",
-  },
-  "committee.viceChair": {
-    en: "Vice-Chair",
-    es: "Vicepresidente",
-  },
-  "committee.member": {
-    en: "Member",
-    es: "Miembro",
-  },
-  "committee.globalExpertise": {
-    en: "Global Expertise",
-    es: "Experiencia Global",
-  },
-  "committee.globalExpertise.desc": {
-    en: "International committee representing diverse Pacific regions and research specializations.",
-    es: "Comité internacional que representa diversas regiones del Pacífico y especializaciones de investigación.",
-  },
-  "committee.rigorousReview": {
-    en: "Rigorous Review",
-    es: "Revisión Rigurosa",
-  },
-  "committee.rigorousReview.desc": {
-    en: "Thorough peer review process ensuring the highest standards of archaeological scholarship.",
-    es: "Proceso de revisión por pares exhaustivo que asegura los más altos estándares de beca arqueológica.",
-  },
-  "committee.publicationSupport": {
-    en: "Publication Support",
-    es: "Apoyo a la Publicación",
-  },
-  "committee.publicationSupport.desc": {
-    en: "Guidance and support for researchers seeking to publish their findings in leading journals.",
-    es: "Orientación y apoyo para investigadores que buscan publicar sus hallazgos en revistas líderes.",
-  },
-  "committee.responsibilities": {
-    en: "Committee Responsibilities",
-    es: "Responsabilidades del Comité",
-  },
-  "committee.abstractReview": {
-    en: "Abstract Review",
-    es: "Revisión de Resúmenes",
-  },
-  "committee.abstractReview.desc": {
-    en: "Comprehensive evaluation of all submitted abstracts for scientific quality and relevance.",
-    es: "Evaluación integral de todos los resúmenes enviados por calidad científica y relevancia.",
-  },
-  "committee.programDevelopment": {
-    en: "Program Development",
-    es: "Desarrollo del Programa",
-  },
-  "committee.programDevelopment.desc": {
-    en: "Designing the congress program to maximize learning opportunities and scholarly exchange.",
-    es: "Diseñando el programa del congreso para maximizar las oportunidades de aprendizaje e intercambio académico.",
-  },
-  "committee.qualityAssurance": {
-    en: "Quality Assurance",
-    es: "Aseguramiento de Calidad",
-  },
-  "committee.qualityAssurance.desc": {
-    en: "Ensuring all presentations meet the highest standards of archaeological research and methodology.",
-    es: "Asegurando que todas las presentaciones cumplan con los más altos estándares de investigación arqueológica y metodología.",
   },
 };
 
