@@ -45,7 +45,7 @@ const PacificMigrationTimeline = () => {
             <div className="relative w-[90%] aspect-square max-w-[800px]">
               <div className="w-full h-full rounded-full border-[6px] border-dashed border-orange-500 overflow-hidden">
                 <img 
-                  src="/images/polynesiamMap.png" 
+                  src="/images/circles/worldmap.png" 
                   alt="Pacific Migration Map" 
                   className="w-full h-full object-cover rounded-full"
                 />
