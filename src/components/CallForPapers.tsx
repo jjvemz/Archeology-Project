@@ -1,8 +1,7 @@
-'use client';
+"use client";
 
 import { useLanguage } from "@/hooks/useLanguage";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { IframeModal, ColorPalette} from "./IframeModal";
 import { useRef } from "react";
 
 const CallForPapers = () => {
@@ -24,11 +23,13 @@ const CallForPapers = () => {
           {/* Sections II & III Container */}
           <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48 w-screen">
             {/* Section II: Interdisciplinary Studies */}
-            <div className="w-full flex-1 min-h-0 px-4 md:px-8 lg:px-16">
+            <div className="w-full bg-blue-800 flex-1 min-h-0 px-4 md:px-8 lg:px-16">
               <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
-                  <div className="text-7xl font-bold text-primary leading-none">II_</div>
+                  <div className="text-7xl font-bold text-primary leading-none">
+                    II_
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -36,7 +37,7 @@ const CallForPapers = () => {
                   <h2 className="text-5xl md:text-6xl font-bold text-primary mb-8 uppercase leading-none">
                     {t("callForPapers.interdisciplinary").toUpperCase()}
                   </h2>
-                  <p className="text-lg text-[#143c8c] leading-relaxed max-w-2xl">
+                  <p className="text-primary leading-relaxed max-w-2xl">
                     {t("callForPapers.interdisciplinaryDesc")}
                   </p>
                 </div>
@@ -44,11 +45,13 @@ const CallForPapers = () => {
             </div>
 
             {/* Section III: Call for Papers */}
-            <div className="w-full bg-blue-800 flex-1 min-h-0 px-4 md:px-8 lg:px-16">
+            <div className="w-full flex-1 min-h-0 px-4 md:px-8 lg:px-16">
               <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
-                  <div className="text-7xl font-bold text-primary leading-none">III_</div>
+                  <div className="text-7xl font-bold text-primary leading-none">
+                    III_
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -56,7 +59,7 @@ const CallForPapers = () => {
                   <h2 className="text-5xl md:text-6xl font-bold text-primary mb-8 uppercase leading-none">
                     {t("callForPapers.title").toUpperCase()}
                   </h2>
-                  <p className="text-primary leading-relaxed">
+                  <p className="text-[#143c8c] leading-relaxed">
                     {t("callForPapers.description")}
                   </p>
                 </div>
@@ -67,11 +70,13 @@ const CallForPapers = () => {
           {/* Sections IV & V Container */}
           <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48 w-screen">
             {/* Section IV: Important Dates */}
-            <div className="w-full flex-1 min-h-0 px-4 md:px-8 lg:px-16">
+            <div className="w-full bg-blue-800 flex-1 min-h-0 px-4 md:px-8 lg:px-16">
               <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
-                  <div className="text-7xl font-bold text-primary leading-none">IV_</div>
+                  <div className="text-7xl font-bold text-primary leading-none">
+                    IV_
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -82,28 +87,33 @@ const CallForPapers = () => {
 
                   <div className="space-y-6">
                     <div>
-                      <h3 className="font-bold text-lg text-[#143c8c] uppercase mb-1">
-                        {t("callForPapers.abstractDeadline").toUpperCase()}. {t("callForPapers.abstractDeadlineDate").toUpperCase()}
+                      <h3 className="font-bold text-lg text-primary uppercase mb-1">
+                        {t("callForPapers.abstractDeadline").toUpperCase()}.{" "}
+                        {t("callForPapers.abstractDeadlineDate").toUpperCase()}
                       </h3>
-                      <p className="text-[#143c8c]">
+                      <p className="text-primary">
                         {t("callForPapers.abstractDeadlineDesc")}
                       </p>
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-lg text-[#143c8c] uppercase mb-1">
-                        {t("callForPapers.acceptanceNotification").toUpperCase()}. {t("callForPapers.acceptanceDate").toUpperCase()}
+                      <h3 className="font-bold text-lg text-primary uppercase mb-1">
+                        {t(
+                          "callForPapers.acceptanceNotification",
+                        ).toUpperCase()}
+                        . {t("callForPapers.acceptanceDate").toUpperCase()}
                       </h3>
-                      <p className="text-[#143c8c]">
+                      <p className="text-primary">
                         {t("callForPapers.acceptanceDesc")}
                       </p>
                     </div>
 
                     <div>
-                      <h3 className="font-bold text-lg text-[#143c8c] uppercase mb-1">
-                        {t("callForPapers.fullPaperSubmission").toUpperCase()}. {t("callForPapers.fullPaperDate").toUpperCase()}
+                      <h3 className="font-bold text-lg text-primary uppercase mb-1">
+                        {t("callForPapers.fullPaperSubmission").toUpperCase()}.{" "}
+                        {t("callForPapers.fullPaperDate").toUpperCase()}
                       </h3>
-                      <p className="text-[#143c8c]">
+                      <p className="text-primary">
                         {t("callForPapers.fullPaperDesc")}
                       </p>
                     </div>
@@ -113,11 +123,13 @@ const CallForPapers = () => {
             </div>
 
             {/* Section V: Award & Recognition */}
-            <div className="w-full bg-blue-800 flex-1 min-h-0 px-4 md:px-8 lg:px-16">
+            <div className="w-full flex-1 min-h-0 px-4 md:px-8 lg:px-16">
               <div className="flex flex-col md:flex-row gap-12 items-baseline max-w-7xl mx-auto">
                 {/* Roman numeral and line */}
                 <div className="flex items-baseline gap-6 flex-shrink-0 w-32">
-                  <div className="text-7xl font-bold text-primary leading-none">V _</div>
+                  <div className="text-7xl font-bold text-primary leading-none">
+                    V _
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -129,42 +141,42 @@ const CallForPapers = () => {
                   <div className="space-y-6">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h3 className="font-bold text-primary uppercase mb-1">
+                        <h3 className="font-bold text-[#143c8c] uppercase mb-1">
                           {t("callForPapers.bestProfessional").toUpperCase()}.
                         </h3>
-                        <p className="text-primary text-sm">
+                        <p className="text-[#143c8c] text-sm">
                           {t("callForPapers.professionalDesc")}
                         </p>
                       </div>
-                      <div className="text-2xl font-bold text-primary whitespace-nowrap ml-4">
+                      <div className="text-2xl font-bold text-[#143c8c] whitespace-nowrap ml-4">
                         400 USD
                       </div>
                     </div>
 
                     <div className="flex justify-between items-start">
                       <div>
-                        <h3 className="font-bold text-primary uppercase mb-1">
+                        <h3 className="font-bold text-[#143c8c] uppercase mb-1">
                           {t("callForPapers.bestStudent").toUpperCase()}.
                         </h3>
-                        <p className="text-primary text-sm">
+                        <p className="text-[#143c8c] text-sm">
                           {t("callForPapers.studentDesc")}
                         </p>
                       </div>
-                      <div className="text-2xl font-bold text-primary whitespace-nowrap ml-4">
+                      <div className="text-2xl font-bold text-[#143c8c] whitespace-nowrap ml-4">
                         50 USD
                       </div>
                     </div>
 
                     <div className="flex justify-between items-start">
                       <div>
-                        <h3 className="font-bold text-primary uppercase mb-1">
+                        <h3 className="font-bold text-[#143c8c] uppercase mb-1">
                           {t("callForPapers.bestRetired").toUpperCase()}.
                         </h3>
-                        <p className="text-primary text-sm">
+                        <p className="text-[#143c8c] text-sm">
                           {t("callForPapers.retiredDesc")}
                         </p>
                       </div>
-                      <div className="text-2xl font-bold text-primary whitespace-nowrap ml-4">
+                      <div className="text-2xl font-bold text-[#143c8c] whitespace-nowrap ml-4">
                         200 USD
                       </div>
                     </div>
