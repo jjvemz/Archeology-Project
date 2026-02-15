@@ -158,9 +158,9 @@ const ScientificCommittee = () => {
           {/* Committee Wheel */}
           <CommitteeWheel members={committee} />
 
-          <div className="mt-16">
-            <Card className="shadow-congress text-black">
-              <CardContent className="pt-8 text-center">
+          <div className="mt-4">
+            <Card className="shadow-congress text-black border-orange-700 border-dashed">
+              <CardContent className="pt-4 text-center">
                 <h3 className="text-2xl font-bold mb-4  text-primary">
                   {t("committee.responsibilities")}
                 </h3>
