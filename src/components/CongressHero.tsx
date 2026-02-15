@@ -52,94 +52,99 @@ const CongressHero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image Grid */}
-      <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-5 grid-rows-1 md:grid-rows-5 gap-0 w-full h-full">
-        {/* Images on the left */}
-        <div className="col-span-full md:col-span-3 row-span-full md:row-span-5 relative flex items-center justify-center p-8 md:border-r-4 md:border-blue-900 shadow-[4px_0_24px_-12px_rgba(0,0,0,0.1)] bg-blue-800">
-          <div className="grid grid-cols-2 gap-8 max-w-2xl w-full aspect-square scale-90">
-            <div className="w-full h-full rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500">
-              <img
-                src={NO_CIRCLES_IMAGES[0]}
-                alt="Congreso Arqueología"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-full h-full rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500">
-              <img
-                src={NO_CIRCLES_IMAGES[6]}
-                alt="Congreso Arqueología"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-full h-full rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500">
-              <img
-                src={NO_CIRCLES_IMAGES[2]}
-                alt="Congreso Arqueología"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="w-full h-full rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500">
-              <img
-                src={NO_CIRCLES_IMAGES[3]}
-                alt="Congreso Arqueología"
-                className="w-full h-full object-cover"
-              />
-            </div>
+    <section className="flex flex-col min-h-screen">
+      {/* Blue Header Section */}
+      <div className="bg-blue-800 py-12 px-4 shadow-lg z-10">
+        <div className="max-w-4xl mx-auto flex items-center justify-center gap-4 sm:gap-12 md:gap-24">
+          <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500 bg-white">
+            <img
+              src={NO_CIRCLES_IMAGES[0]}
+              alt="Arqueología Pacifico 1"
+              className="w-full h-full object-cover"
+            />
           </div>
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-volcanic/10 via-volcanic/5 to-transparent pointer-events-none"></div>
+          <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500 bg-white">
+            <img
+              src={NO_CIRCLES_IMAGES[6]}
+              alt="Arqueología Pacifico 2"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
-        {/* Empty grid area for spacing */}
-        <div className="hidden md:block md:col-span-2 md:row-span-5"></div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 w-full px-4 md:px-8 lg:px-12 flex justify-center md:justify-end">
-        <div className="w-full md:w-2/5 lg:w-2/5 flex flex-col items-center md:items-end text-center md:text-right">
-          <Badge className="mb-6 bg-congress-yellow text-volcanic font-bold text-lg px-6 py-2 text-orange-700">
-            {t("congressHero.badge")}
-          </Badge>
+      {/* Beige Middle Content Section */}
+      <div className="bg-[#ffeecd] flex-1 py-16 px-4 flex flex-col items-center justify-center relative">
+        <div className="max-w-4xl w-full text-center space-y-8">
+          {/* Subtitle/Badge at top right-ish of beige section */}
+          <div className="md:absolute md:top-12 md:right-12 text-orange-700 font-semibold mb-4 md:mb-0">
+            First International Congress
+          </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-orange-700 leading-tight tracking-wider w-full">
-            <span className="text-blue-900">{t("congressHero.title1")}</span>
-            <br />
-            {t("congressHero.title2")}
-            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8  text-orange-700 leading-tight tracking-wider w-full"></span>
-            <br />
-            {t("congressHero.title3")}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight uppercase">
+            <span className="text-blue-900 block mb-2">
+              ARCHEOLOGY CONGRESS:
+            </span>
+            <span className="text-orange-700">
+              CHANGING ENVIRONMENT IN THE PACIFIC
+            </span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl mt-4 text-accent leading-relaxed font-bold text-volcanic text-orange-700  w-full">
-            {t("congressHero.description")}
-          </p>
+          <div className="max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-orange-700 leading-relaxed font-medium">
+              Exploring the dynamic relationship between archaeological heritage
+              and environmental transformations across Pacific regions. Join
+              leading researchers in Chile's wine country, on the 18th, 19th,
+              20th and 21st of November 2026, Santa Cruz, Chile.
+            </p>
+          </div>
 
-          <div className="flex flex-col xlg:flex-row gap-3 sm:gap-4 justify-center lg:justify-end w-full mt-8 md:mt-12">
+          <div className="flex flex-col gap-6 pt-4">
             <IframeModal
-              buttonText={t("congressHero.submitAbstract")}
+              buttonText="Submit Your Abstract"
               iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
               iframeTitle={t("congressHero.iframeTitle")}
               colorPalette={ColorPalette.BlueOrange}
               closeButtonText={t("congressHero.closeButton")}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-to-r from-pacific-blue to-pacific-teal hover:shadow-congress hover:scale-105 transition-all duration-300 font-semibold h-11 px-8 text-sm sm:text-base md:text-lg py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-primary text-opacity-65 w-full lg:w-auto"
+              className="text-orange-700 font-bold text-xl md:text-2xl hover:scale-105 transition-transform bg-transparent p-0 border-none shadow-none"
             />
 
             <IframeModal
-              buttonText={t("congressHero.registerNow")}
+              buttonText="Register Now"
               iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
               iframeTitle={t("congressHero.iframeTitle")}
               colorPalette={ColorPalette.BlueOrange}
               closeButtonText={t("congressHero.closeButton")}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-to-r from-pacific-blue to-pacific-teal hover:shadow-congress hover:scale-105 transition-all duration-300 font-semibold h-11 px-8 text-sm sm:text-base md:text-lg py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-primary text-opacity-65 w-full lg:w-auto"
+              className="text-orange-700 font-bold text-xl md:text-2xl hover:scale-105 transition-transform bg-transparent p-0 border-none shadow-none"
             />
 
             <IframeModal
-              buttonText={t("congressHero.callForPapers")}
+              buttonText="Call for Papers"
               iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
               iframeTitle={t("congressHero.iframeTitle")}
               colorPalette={ColorPalette.BlueOrange}
               closeButtonText={t("congressHero.closeButton")}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-to-r from-pacific-blue to-pacific-teal hover:shadow-congress hover:scale-105 transition-all duration-300 font-semibold h-11 px-8 text-sm sm:text-base md:text-lg py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-primary text-opacity-65 w-full lg:w-auto "
+              className="text-orange-700 font-bold text-xl md:text-2xl hover:scale-105 transition-transform bg-transparent p-0 border-none shadow-none"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Blue Footer Section */}
+      <div className="bg-blue-800 py-12 px-4 shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
+        <div className="max-w-4xl mx-auto flex items-center justify-center gap-4 sm:gap-12 md:gap-24">
+          <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500 bg-white">
+            <img
+              src={NO_CIRCLES_IMAGES[2]}
+              alt="Arqueología Pacifico 3"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500 bg-white">
+            <img
+              src={NO_CIRCLES_IMAGES[3]}
+              alt="Arqueología Pacifico 4"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
