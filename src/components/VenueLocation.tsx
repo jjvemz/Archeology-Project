@@ -35,7 +35,7 @@ const VenueLocation = () => {
             {/* Colchagua Card */}
             <div className="flex flex-col items-center text-center space-y-6">
               <motion.div
-                className="relative overflow-hidden rounded-full shadow-congress cursor-pointer w-72 h-72 md:w-80 md:h-80 border-[6px] border-dashed border-orange-500"
+                className="relative overflow-hidden rounded-full shadow-congress cursor-pointer w-72 h-72 md:w-80 md:h-80 border-[6px] border-solid border-blue-800"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -72,7 +72,7 @@ const VenueLocation = () => {
             {/* Santa Cruz Map Card */}
             <div className="flex flex-col items-center text-center space-y-6">
               <motion.div
-                className="relative overflow-hidden rounded-full shadow-congress cursor-pointer w-72 h-72 md:w-80 md:h-80 border-[6px] border-dashed border-orange-500"
+                className="relative overflow-hidden rounded-full shadow-congress cursor-pointer w-72 h-72 md:w-80 md:h-80 border-[6px] border-solid border-blue-800"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
