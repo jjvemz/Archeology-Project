@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useRotatingImage } from "@/hooks/useRotatingImage";
 import { IframeModal, ColorPalette } from "./IframeModal";

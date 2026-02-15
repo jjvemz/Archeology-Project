@@ -83,14 +83,8 @@ const ScientificCommittee = () => {
   ];
 
   return (
-    <section
-      id="committee"
-      className="pb-40"
-      style={{
-        background: `linear-gradient(180deg, #ffeecd 60%, #1e40af 60%)`,
-      }}
-    >
-      <div className="bg-blue-800 py-24 px-2">
+    <section id="committee" className="pb-40 bg-[#ffeecd]">
+      <div className="bg-[#ffeecd] py-24 px-2">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto flex items-center gap-8">
             <div className="flex items-center gap-6">
@@ -101,7 +95,7 @@ const ScientificCommittee = () => {
                 IX_ {t("committee.title").toUpperCase()}
               </h2>
               <div className="mt-2  px-4 ">
-                <p className="text-2xl text-orange-700 leading-relaxed">
+                <p className="text-2xl text-orange-700 leading-relaxed font-semibold">
                   {t("committee.description")}
                 </p>
               </div>
@@ -109,55 +103,62 @@ const ScientificCommittee = () => {
           </div>
         </div>
       </div>
+
+      <div className="bg-[#1e40af]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-3 gap-16 pt-12 mb-0 pb-16 scale-95 transform">
+              <Card className="shadow-congress text-center bg-transparent border-orange-700/30">
+                <CardHeader>
+                  <Globe className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <CardTitle className="text-2xl text-primary">
+                    {t("committee.globalExpertise")}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-primary opacity-90">
+                    {t("committee.globalExpertise.desc")}
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-congress text-center bg-transparent border-orange-700/30">
+                <CardHeader>
+                  <Award className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <CardTitle className="text-2xl text-primary">
+                    {t("committee.rigorousReview")}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-primary opacity-90">
+                    {t("committee.rigorousReview.desc")}
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-congress text-center bg-transparent border-orange-700/30">
+                <CardHeader>
+                  <BookOpen className="h-12 w-12 mx-auto mb-4 text-primary" />
+                  <CardTitle className="text-2xl text-primary">
+                    {t("committee.publicationSupport")}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-primary opacity-90">
+                    {t("committee.publicationSupport.desc")}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Committee Wheel - Full Width */}
+      <CommitteeWheel members={committee} />
+
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-16 pt-12 mb-10 scale-95 transform">
-            <Card className="shadow-congress text-center">
-              <CardHeader>
-                <Globe className="h-12 w-12 text-pacific-blue mx-auto mb-4  text-primary" />
-                <CardTitle className="text-2xl  text-primary">
-                  {t("committee.globalExpertise")}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground  text-primary">
-                  {t("committee.globalExpertise.desc")}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-congress text-center">
-              <CardHeader>
-                <Award className="h-12 w-12 text-coral mx-auto mb-4  text-primary" />
-                <CardTitle className="text-2xl  text-primary">
-                  {t("committee.rigorousReview")}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground  text-primary">
-                  {t("committee.rigorousReview.desc")}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-congress text-center">
-              <CardHeader>
-                <BookOpen className="h-12 w-12 text-pacific-teal mx-auto mb-4  text-primary" />
-                <CardTitle className="text-2xl  text-primary">
-                  {t("committee.publicationSupport")}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground  text-primary">
-                  {t("committee.publicationSupport.desc")}
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Committee Wheel */}
-          <CommitteeWheel members={committee} />
-
           <div className="mt-4">
             <Card className="shadow-congress text-black border-orange-700 border-dashed">
               <CardContent className="pt-4 text-center">

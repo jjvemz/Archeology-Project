@@ -38,27 +38,29 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
     if (memberName.includes("Carlos Morales")) return bird1;
     if (memberName.includes("Elena Marchetti")) return bird2;
     if (memberName.includes("Tanaka")) return bird3;
-    
+
     // Whale images
     if (memberName.includes("Maria Fernandez-Lopez")) return whale1;
     if (memberName.includes("Robert Anderson")) return whale2;
     if (memberName.includes("Claudine Dubois")) return whale3;
     if (memberName.includes("Zhang Wei")) return whale4;
     if (memberName.includes("Sarah Thompson")) return whale5;
-    
+
     return null;
   };
 
   // Check if member should show animal image when unhovered
   const shouldShowAnimalImage = (memberName: string) => {
-    return memberName.includes("Carlos Morales") || 
-           memberName.includes("Elena Marchetti") || 
-           memberName.includes("Tanaka") ||
-           memberName.includes("Maria Fernandez-Lopez") ||
-           memberName.includes("Robert Anderson") ||
-           memberName.includes("Claudine Dubois") ||
-           memberName.includes("Zhang Wei") ||
-           memberName.includes("Sarah Thompson");
+    return (
+      memberName.includes("Carlos Morales") ||
+      memberName.includes("Elena Marchetti") ||
+      memberName.includes("Tanaka") ||
+      memberName.includes("Maria Fernandez-Lopez") ||
+      memberName.includes("Robert Anderson") ||
+      memberName.includes("Claudine Dubois") ||
+      memberName.includes("Zhang Wei") ||
+      memberName.includes("Sarah Thompson")
+    );
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -77,18 +79,23 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
   };
 
   return (
-    <div className="w-full h-screen flex items-center justify-center relative overflow-hidden">
+    <div
+      className="w-full h-screen flex items-center justify-center relative overflow-hidden"
+      style={{
+        background: "linear-gradient(to bottom, #1e40af 50%, #ffeecd 50%)",
+      }}
+    >
       <div
         className="relative w-full h-full flex items-center justify-center"
         onMouseMove={handleMouseMove}
       >
         {/* Center circle - always visible */}
-        <motion.div 
+        <motion.div
           className="absolute w-80 h-80 rounded-full border-4 border-primary bg-primary flex items-center justify-center z-10 shadow-lg overflow-hidden"
           style={{
             display: "flex",
             justifyContent: "center",
-            alignItems: "center"
+            alignItems: "center",
           }}
         >
           <AnimatePresence mode="wait">
@@ -105,15 +112,19 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
                 style={{ borderRadius: "inherit" }}
               />
             ) : (
-              <motion.div 
+              <motion.div
                 className="text-center"
                 initial={{ opacity: 0, scale: 0.75 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                <h3 className="text-3xl font-bold text-white">{t("committeeWheel.congress")}</h3>
-                <p className="text-sm text-white mt-2">{t("committeeWheel.hoverOverName")}</p>
+                <h3 className="text-3xl font-bold text-white">
+                  {t("committeeWheel.congress")}
+                </h3>
+                <p className="text-sm text-white mt-2">
+                  {t("committeeWheel.hoverOverName")}
+                </p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -123,16 +134,18 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
         {members.map((member, index) => {
           const { x, y } = getMemberPosition(index);
           const isHovered = hoveredIndex === index;
-          
+
           // Determine if circle is in blue area based on gradient transition at 65%
           // The wheel center is at 50% of container height, transition at 65%
           // So blue area starts 15% below wheel center
           // With radius 300, this translates to roughly y > 100 for partially blue
           const isInBlueArea = y > 100;
           const isPartiallyInBlueArea = y > -50 && y <= 100;
-          
+
           // Debug specific members
-          const isTargetMember = member.name.includes("Sarah Thompson") || member.name.includes("Maria Fernandez-Lopez");
+          const isTargetMember =
+            member.name.includes("Sarah Thompson") ||
+            member.name.includes("Maria Fernandez-Lopez");
 
           return (
             <div
@@ -149,15 +162,16 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
               {/* Name Label */}
               <div
                 className={`text-center transition-all duration-300 w-36 h-36 rounded-full border-2 border-dashed flex items-center justify-center ${
-                  isHovered ? "scale-110 border-primary" : 
-                  "scale-100 border-orange-700"
+                  isHovered
+                    ? "scale-110 border-primary"
+                    : "scale-100 border-orange-700"
                 }`}
               >
                 {shouldShowAnimalImage(member.name) && !isHovered ? (
                   // Show only animal image when not hovered for specific members
                   <div className="text-center">
-                    <img 
-                      src={getAnimalImage(member.name) || ""} 
+                    <img
+                      src={getAnimalImage(member.name) || ""}
                       alt={`Animal for ${member.name}`}
                       className="w-16 h-16 object-contain mx-auto"
                     />
@@ -165,24 +179,27 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
                 ) : (
                   // Show name for other members or when hovered
                   <div className="text-center">
-                    <p className={`font-bold text-xs leading-tight transition-colors ${
-                      isHovered ? "text-primary" : 
-                      "text-orange-700"
-                    }`}>
+                    <p
+                      className={`font-bold text-xs leading-tight transition-colors ${
+                        isHovered ? "text-primary" : "text-orange-700"
+                      }`}
+                    >
                       {member.name}
                     </p>
-                    <p className={`text-xs transition-colors ${
-                      isHovered ? "text-primary font-semibold" : 
-                      "text-orange-700"
-                    }`}>
+                    <p
+                      className={`text-xs transition-colors ${
+                        isHovered
+                          ? "text-primary font-semibold"
+                          : "text-orange-700"
+                      }`}
+                    >
                       {member.region}
                     </p>
-                    
+
                     {/* Indicator circle */}
                     <div
                       className={`w-3 h-3 rounded-full mx-auto mt-2 transition-all duration-300 ${
-                        isHovered ? "bg-primary scale-150" : 
-                        "bg-orange-700"
+                        isHovered ? "bg-primary scale-150" : "bg-orange-700"
                       }`}
                     ></div>
                   </div>
