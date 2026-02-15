@@ -20,7 +20,7 @@ const CallForPapers = () => {
   return (
     <section id="call-papers" className="h-[400vh] relative" ref={container}>
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-        <motion.div className="flex w-[200vw]" style={{ x }}>
+        <motion.div className="flex w-[100vw]" style={{ x }}>
           {/* Sections II & III Container */}
           <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48 w-screen">
             {/* Section II: Interdisciplinary Studies */}

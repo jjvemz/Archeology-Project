@@ -28,8 +28,8 @@ const Index = () => {
       <CulturalArtifactsGallery />
       {/* <VideoSection />
       <PacificGallery />
-      <RegistrationFees />*/}
-      <ConferenceScheduleTable />
+      <RegistrationFees />
+      <ConferenceScheduleTable />*/}
       <ScientificCommittee />
       <VenueLocation /> 
       <SponsorsPartners />
