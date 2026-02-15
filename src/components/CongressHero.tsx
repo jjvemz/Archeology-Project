@@ -139,7 +139,7 @@ const CongressHero = () => {
               iframeTitle={t("congressHero.iframeTitle")}
               colorPalette={ColorPalette.BlueOrange}
               closeButtonText={t("congressHero.closeButton")}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-to-r from-pacific-blue to-pacific-teal hover:shadow-congress hover:scale-105 transition-all duration-300 font-semibold h-11 px-8 text-sm sm:text-base md:text-lg py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-primary text-opacity-65 w-full lg:w-auto"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-gradient-to-r from-pacific-blue to-pacific-teal hover:shadow-congress hover:scale-105 transition-all duration-300 font-semibold h-11 px-8 text-sm sm:text-base md:text-lg py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-primary text-opacity-65 w-full lg:w-auto bg-blue-800"
             />
           </div>
         </div>
