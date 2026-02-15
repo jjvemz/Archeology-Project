@@ -2,7 +2,6 @@
 import { useLanguage } from "@/hooks/useLanguage";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-//import colchaguaValley from "@/assets/colchagua-valley.jpg";
 
 
 
@@ -22,9 +21,7 @@ const VenueLocation = () => {
     <section id="venue" className="h-[200vh] relative" ref={container}>
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <motion.div className="flex w-[200vw]" style={{ x }}>
-          {/* Sections I & II Container */}
           <div className="h-screen flex flex-col items-start flex-shrink-0 pt-48 w-screen">
-            {/* Header Section */}
             <div className="py-16 px-4">
               <div className="container mx-auto px-4">
                 <div className="max-w-6xl mx-auto flex items-center gap-8">

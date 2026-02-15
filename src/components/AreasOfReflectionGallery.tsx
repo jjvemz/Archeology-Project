@@ -1,51 +1,40 @@
-// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-// import ProfileStatueImage from "/images/RapaNiuProfileStatue.png";
-// import NavCard from "/images/NavCard.jpg";
-// import NavCard2 from "/images/NavCard2.jpg";
-// import SeaWoods from "/images/SeaWoods.webp";
-// import PlasticSea from "/images/plasticsea.jpeg";
-// import tijuanotas from "/images/tijuanotas.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useRotatingImage } from "@/hooks/useRotatingImage";
 
-// RAPA images constant array for rotating circle images
 const RAPA_IMAGES: string[] = [
-  '/images/circles/A RAPA.png',
-  '/images/circles/B RAPA.png',
-  '/images/circles/C rapa.png',
-  '/images/circles/D RAPA.png',
-  '/images/circles/E RAPA.png',
-  '/images/circles/F RAPA.png',
-  '/images/circles/G RAPA.png',
-  '/images/circles/H RAPA.png',
-  '/images/circles/I RAPA.png',
-  '/images/circles/J RAPA.png',
-  '/images/circles/K RAPA.png',
-  '/images/circles/M RAPA.png',
-  '/images/circles/Ñ RAPA.png',
-  '/images/circles/O RAPA.png',
-  '/images/circles/P RAPA.png',
-  '/images/circles/Q RAPA.png',
-  '/images/circles/R RAPA.png',
-  '/images/circles/S RAPA.png',
-  '/images/circles/T RAPA.png',
-  '/images/circles/W RAPA.png'
+  '/images/NoCircles/5 rapa.jpeg',
+  '/images/NoCircles/6 rapa.jpeg',
+  '/images/NoCircles/7 rapa.jpeg',
+  '/images/NoCircles/8 rapa.jpeg',
+  '/images/NoCircles/9 rapa.jpeg',
+  '/images/NoCircles/10 rapa.jpeg',
+  '/images/NoCircles/11 rapa.jpeg',
+  '/images/NoCircles/12 rapa.jpeg',
+  '/images/NoCircles/13 rapa.jpeg',
+  '/images/NoCircles/14 rapa.jpeg',
+  '/images/NoCircles/15 rapa.jpeg',
+  '/images/NoCircles/16 rapa.jpeg',
+  '/images/NoCircles/17 rapa.jpeg',
+  '/images/NoCircles/18 rapa.jpeg',
+  '/images/NoCircles/19 rapa.jpeg',
+  '/images/NoCircles/22 rapa.jpeg',
+  '/images/NoCircles/24 rapa.jpeg',
+  '/images/NoCircles/25 rapa.jpeg',
+  '/images/NoCircles/26 rapa.jpeg',
 ];
 
-// Component for rendering a single area with rotating circle image
 function AreaCard({ area, index }: { area: any; index: number }) {
   const { t } = useLanguage();
   const { currentImage, opacity } = useRotatingImage(RAPA_IMAGES, 3000);
 
   return (
     <div className="flex flex-col items-center my-4">
-      {/* Number and Circular Image */}
       <div className="flex items-center gap-4 mb-12 w-full justify-center">
         {currentImage && (
           <div
             className="w-60 h-60 rounded-full overflow-hidden flex-shrink-0 border-4 relative"
             style={{
-              borderColor: '#1c1d57'
+              borderColor: '#0a0a0a'
             }}
           >
             <div
@@ -62,7 +51,6 @@ function AreaCard({ area, index }: { area: any; index: number }) {
         )}
       </div>
       <div className="text-5xl text-primary">O{index + 1}</div>
-      {/* Content */}
       <div className="w-full text-center">
         <h3 className="text-2xl font-bold text-blue-900 mb-3 uppercase">
           {t(area.titleKey)}
@@ -161,7 +149,6 @@ export function AreasOfReflectionGallery() {
 
   return (
     <section className="my-6 bg-background ">
-      {/* Header Section */}
       <div className="bg-blue-800 py-8 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="flex items-start gap-6 mb-6">
