@@ -3,82 +3,98 @@ import { Globe, Award, BookOpen } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import CommitteeWheel from "./CommitteeWheel";
 
-import Anderson from "/images/committee/Anderson.jpg";
-import Dubois from "/images/committee/Dubois.png";
-import Lopez from "/images/committee/Lopez.jpg";
-import Morales from "/images/committee/Morales.jpg";
-import Tanaka from "/images/committee/Tanaka.jpg";
-import Marchetti from "/images/committee/Marchetti.jpg";
-import Thompson from "/images/committee/Thompson.jpg";
-import zhang from "/images/committee/Zhang.png";
+import AaronImg from "/images/ScientificWheel/AARON CIECHANOVER.jfif";
+import EskeImg from "/images/ScientificWheel/Eske Willerslev.jpeg";
+import HellenImg from "/images/ScientificWheel/Hellen Wallin.jpeg";
+import JoAnneImg from "/images/ScientificWheel/Jo anne van tillburg.jpg";
+import KurtImg from "/images/ScientificWheel/KurtKjaer.jpeg";
+import SoniaImg from "/images/ScientificWheel/SoniaHaoaCardinali.jpg";
+import ChrisImg from "/images/ScientificWheel/christopher stevenson.jpg";
+import LilianImg from "/images/ScientificWheel/lilian-gonzalez-nualart.webp";
 
 const ScientificCommittee = () => {
   const { t } = useLanguage();
 
   const committee = [
     {
-      name: "Dr. Elena Marchetti",
-      titleKey: "committee.chair",
-      affiliation: "University of Auckland, New Zealand",
-      specialization: "Pacific Maritime Archaeology",
-      region: "New Zealand",
-      picture: Marchetti,
-    },
-    {
-      name: "Prof. Hiroshi Tanaka",
-      titleKey: "committee.viceChair",
-      affiliation: "Kyoto University, Japan",
-      specialization: "Island Settlement Patterns",
-      region: "Japan",
-      picture: Tanaka,
-    },
-    {
-      name: "Dr. Maria Fernandez-Lopez",
-      titleKey: "committee.member",
-      affiliation: "Universidad de Chile",
-      specialization: "Colonial Impact Studies",
+      name: t("member.lilian.name"),
+      titleKey: "member.lilian.title",
+      affiliation: "Fundación Mata Ki Te Rangi",
+      specialization: "Social Anthropology",
       region: "Chile",
-      picture: Lopez,
+      picture: LilianImg,
+      type: "committee",
+      id: "lilian",
     },
     {
-      name: "Prof. Robert Anderson",
-      titleKey: "committee.member",
-      affiliation: "University of Hawaii at Manoa, USA",
-      specialization: "Polynesian Archaeology",
-      region: "Hawaii",
-      picture: Anderson,
+      name: t("member.chris.name"),
+      titleKey: "member.chris.title",
+      affiliation: "Virginia Commonwealth University",
+      specialization: "Archaeology",
+      region: "USA",
+      picture: ChrisImg,
+      type: "committee",
+      id: "chris",
     },
     {
-      name: "Dr. Claudine Dubois",
-      titleKey: "committee.member",
-      affiliation: "Université de la Polynésie française",
-      specialization: "Cultural Change Analysis",
-      region: "French Polynesia",
-      picture: Dubois,
+      name: t("member.eske.name"),
+      titleKey: "member.eske.title",
+      affiliation: "Cambridge / Copenhagen University",
+      specialization: "Evolutionary Genetics",
+      region: "UK/Denmark",
+      picture: EskeImg,
+      type: "keynote",
+      id: "eske",
     },
     {
-      name: "Prof. Zhang Wei",
-      titleKey: "committee.member",
-      affiliation: "Chinese Academy of Social Sciences",
-      specialization: "Trans-Pacific Connections",
-      region: "China",
-      picture: zhang,
+      name: t("member.aaron.name"),
+      titleKey: "member.aaron.title",
+      affiliation: "Technion - Israel Institute of Technology",
+      specialization: "Biology / Nobel Laureate",
+      region: "Israel",
+      picture: AaronImg,
+      type: "keynote",
+      id: "aaron",
     },
     {
-      name: "Dr. Sarah Thompson",
-      titleKey: "committee.member",
-      affiliation: "Australian National University",
-      specialization: "Environmental Archaeology",
-      region: "Australia",
-      picture: Thompson,
+      name: t("member.kurt.name"),
+      titleKey: "member.kurt.title",
+      affiliation: "University of Copenhagen",
+      specialization: "Evolutionary Genetics",
+      region: "Denmark",
+      picture: KurtImg,
+      type: "keynote",
+      id: "kurt",
     },
     {
-      name: "Prof. Carlos Morales",
-      titleKey: "committee.member",
-      affiliation: "Universidad Nacional de Colombia",
-      specialization: "Coastal Adaptations",
-      region: "Colombia",
-      picture: Morales,
+      name: t("member.sonia.name"),
+      titleKey: "member.sonia.title",
+      affiliation: "Fundación Mata Ki Te Rangi",
+      specialization: "Archaeology",
+      region: "Chile / Rapa Nui",
+      picture: SoniaImg,
+      type: "committee",
+      id: "sonia",
+    },
+    {
+      name: t("member.joann.name"),
+      titleKey: "member.joann.title",
+      affiliation: "UCLA - Cotsen Institute",
+      specialization: "Archaeology",
+      region: "USA",
+      picture: JoAnneImg,
+      type: "committee",
+      id: "joann",
+    },
+    {
+      name: t("member.wallin.name"),
+      titleKey: "member.wallin.title",
+      affiliation: "Uppsala University",
+      specialization: "Archaeology",
+      region: "Sweden",
+      picture: HellenImg,
+      type: "committee",
+      id: "wallin",
     },
   ];
 

@@ -28,39 +28,53 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-  // Calculate angle for each member in the wheel
-  const angleSlice = 360 / members.length;
-  const radius = 300; // Distance from center
+  const radius = 320; // Slightly larger for better spacing
 
-  // Function to get animal image for specific members
-  const getAnimalImage = (memberName: string) => {
-    // Bird images
-    if (memberName.includes("Carlos Morales")) return bird1;
-    if (memberName.includes("Elena Marchetti")) return bird2;
-    if (memberName.includes("Tanaka")) return bird3;
-
-    // Whale images
-    if (memberName.includes("Maria Fernandez-Lopez")) return whale1;
-    if (memberName.includes("Robert Anderson")) return whale2;
-    if (memberName.includes("Claudine Dubois")) return whale3;
-    if (memberName.includes("Zhang Wei")) return whale4;
-    if (memberName.includes("Sarah Thompson")) return whale5;
-
-    return null;
+  // Custom angles based on the user's drawing (0 is Top)
+  const getCustomAngle = (id: string) => {
+    switch (id) {
+      case "wallin":
+        return 0;
+      case "lilian":
+        return 45;
+      case "chris":
+        return 90;
+      case "eske":
+        return 135;
+      case "aaron":
+        return 180;
+      case "kurt":
+        return 225;
+      case "sonia":
+        return 270;
+      case "joann":
+        return 315;
+      default:
+        return 0;
+    }
   };
 
-  // Check if member should show animal image when unhovered
-  const shouldShowAnimalImage = (memberName: string) => {
-    return (
-      memberName.includes("Carlos Morales") ||
-      memberName.includes("Elena Marchetti") ||
-      memberName.includes("Tanaka") ||
-      memberName.includes("Maria Fernandez-Lopez") ||
-      memberName.includes("Robert Anderson") ||
-      memberName.includes("Claudine Dubois") ||
-      memberName.includes("Zhang Wei") ||
-      memberName.includes("Sarah Thompson")
-    );
+  const getAnimalImage = (id: string) => {
+    switch (id) {
+      case "lilian":
+        return bird1;
+      case "chris":
+        return whale1;
+      case "eske":
+        return whale2;
+      case "aaron":
+        return whale3;
+      case "kurt":
+        return whale4;
+      case "sonia":
+        return whale5;
+      case "joann":
+        return bird2;
+      case "wallin":
+        return bird3;
+      default:
+        return null;
+    }
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -72,10 +86,15 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
   };
 
   const getMemberPosition = (index: number) => {
-    const angle = (index * angleSlice - 90) * (Math.PI / 180);
+    const member = members[index] as any;
+    const angle = (getCustomAngle(member.id) - 90) * (Math.PI / 180);
     const x = Math.cos(angle) * radius;
     const y = Math.sin(angle) * radius;
-    return { x, y, angle: index * angleSlice };
+    return { x, y };
+  };
+
+  const handleCircleClick = (index: number) => {
+    setHoveredIndex(hoveredIndex === index ? null : index);
   };
 
   return (
@@ -89,15 +108,8 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
         className="relative w-full h-full flex items-center justify-center"
         onMouseMove={handleMouseMove}
       >
-        {/* Center circle - always visible */}
-        <motion.div
-          className="absolute w-80 h-80 rounded-full border-4 border-primary bg-primary flex items-center justify-center z-10 shadow-lg overflow-hidden"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        {/* Center circle - split text */}
+        <motion.div className="absolute w-80 h-80 rounded-full border-4 border-primary bg-primary flex flex-col items-center justify-center z-10 shadow-lg overflow-hidden">
           <AnimatePresence mode="wait">
             {hoveredIndex !== null ? (
               <motion.img
@@ -105,52 +117,51 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
                 src={members[hoveredIndex].picture}
                 alt={members[hoveredIndex].name}
                 className="w-full h-full object-cover"
-                initial={{ opacity: 0, scale: 0.3, borderRadius: "50%" }}
-                animate={{ opacity: 1, scale: 1, borderRadius: "0%" }}
-                exit={{ opacity: 0, scale: 0, borderRadius: "50%" }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-                style={{ borderRadius: "inherit" }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.4 }}
               />
             ) : (
               <motion.div
-                className="text-center"
-                initial={{ opacity: 0, scale: 0.75 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="text-center w-full h-full flex flex-col relative"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
               >
-                <h3 className="text-3xl font-bold text-white">
-                  {t("committeeWheel.congress")}
-                </h3>
-                <p className="text-sm text-white mt-2">
-                  {t("committeeWheel.hoverOverName")}
-                </p>
+                {/* Top Half */}
+                <div className="flex-1 flex flex-col items-center justify-center px-6 pt-4">
+                  <h3 className="text-2xl font-black text-white leading-tight uppercase tracking-tighter">
+                    {t("committeeWheel.congress")}
+                  </h3>
+                </div>
+
+                {/* Split Line */}
+                <div className="w-full h-1 bg-white/30" />
+
+                {/* Bottom Half */}
+                <div className="flex-1 flex flex-col items-center justify-center px-6 pb-4">
+                  <h3 className="text-2xl font-black text-white/80 leading-tight uppercase tracking-tighter">
+                    {t("committeeWheel.keynotes")}
+                  </h3>
+                  <p className="text-[10px] text-white/60 mt-2 uppercase tracking-widest font-bold">
+                    {t("committeeWheel.hoverOverName")}
+                  </p>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
         </motion.div>
 
         {/* Member positions around the wheel */}
-        {members.map((member, index) => {
+        {members.map((member: any, index) => {
           const { x, y } = getMemberPosition(index);
           const isHovered = hoveredIndex === index;
-
-          // Determine if circle is in blue area based on gradient transition at 65%
-          // The wheel center is at 50% of container height, transition at 65%
-          // So blue area starts 15% below wheel center
-          // With radius 300, this translates to roughly y > 100 for partially blue
-          const isInBlueArea = y > 100;
-          const isPartiallyInBlueArea = y > -50 && y <= 100;
-
-          // Debug specific members
-          const isTargetMember =
-            member.name.includes("Sarah Thompson") ||
-            member.name.includes("Maria Fernandez-Lopez");
 
           return (
             <div
               key={index}
-              className="absolute cursor-pointer transition-all duration-300  flex items-center justify-center"
+              className="absolute cursor-pointer transition-all duration-300 flex items-center justify-center"
               style={{
                 transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
                 left: "50%",
@@ -158,50 +169,34 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
               }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
+              onClick={() => handleCircleClick(index)}
             >
-              {/* Name Label */}
               <div
-                className={`text-center transition-all duration-300 w-36 h-36 rounded-full border-2 border-dashed flex items-center justify-center ${
+                className={`text-center transition-all duration-300 w-32 h-32 rounded-full border-2 border-dashed flex items-center justify-center bg-white/5 backdrop-blur-sm ${
                   isHovered
-                    ? "scale-110 border-primary"
-                    : "scale-100 border-orange-700"
+                    ? "scale-110 border-primary bg-white/10"
+                    : "border-orange-700/50"
                 }`}
               >
-                {shouldShowAnimalImage(member.name) && !isHovered ? (
-                  // Show only animal image when not hovered for specific members
+                {!isHovered ? (
                   <div className="text-center">
                     <img
-                      src={getAnimalImage(member.name) || ""}
-                      alt={`Animal for ${member.name}`}
-                      className="w-16 h-16 object-contain mx-auto"
+                      src={getAnimalImage(member.id) || bird1}
+                      alt="Icon"
+                      className="w-12 h-12 object-contain mx-auto mb-1 opacity-80"
                     />
+                    <p className="font-bold text-[10px] leading-tight text-orange-700 dark:text-primary px-2">
+                      {member.name.split(" ").slice(-1)[0]}
+                    </p>
                   </div>
                 ) : (
-                  // Show name for other members or when hovered
-                  <div className="text-center">
-                    <p
-                      className={`font-bold text-xs leading-tight transition-colors ${
-                        isHovered ? "text-primary" : "text-orange-700"
-                      }`}
-                    >
+                  <div className="text-center p-2">
+                    <p className="font-black text-xs text-primary leading-tight uppercase">
                       {member.name}
                     </p>
-                    <p
-                      className={`text-xs transition-colors ${
-                        isHovered
-                          ? "text-primary font-semibold"
-                          : "text-orange-700"
-                      }`}
-                    >
-                      {member.region}
+                    <p className="text-[9px] text-primary/80 font-bold mt-1 uppercase">
+                      {t(member.titleKey)}
                     </p>
-
-                    {/* Indicator circle */}
-                    <div
-                      className={`w-3 h-3 rounded-full mx-auto mt-2 transition-all duration-300 ${
-                        isHovered ? "bg-primary scale-150" : "bg-orange-700"
-                      }`}
-                    ></div>
                   </div>
                 )}
               </div>

@@ -830,20 +830,62 @@ const translations: Translations = {
     es: "Alentamos presentaciones que conecten múltiples áreas de reflexión y escalas de análisis. La investigación más innovadora a menudo emerge en la intersección de evidencia arqueológica, datos ambientales e interpretación cultural. Considere cómo su trabajo contribuye a nuestra comprensión más amplia de las interacciones humano-ambiente en la región del Pacífico",
   },
 
-  // Committee Wheel
   "committeeWheel.congress": {
-    en: "Congress",
-    es: "Congreso",
+    en: "Scientific Committee",
+    es: "Comité Científico",
+  },
+  "committeeWheel.keynotes": {
+    en: "Keynote Speakers",
+    es: "Charlas Magistrales",
   },
   "committeeWheel.hoverOverName": {
-    en: "Hover over an animal to reveal the committee member",
-    es: "Pasa el ratón sobre un animal para revelar el miembro del comité",
+    en: "Click/Hover an animal for details",
+    es: "Click/Hover en un animal para detalles",
   },
+
+  // Committee Member Names & Details
+  "member.lilian.name": {
+    en: "Lilian González Nualart",
+    es: "Lilian González Nualart",
+  },
+  "member.lilian.title": {
+    en: "Social Anthropologist",
+    es: "Antropóloga Social",
+  },
+  "member.wallin.name": {
+    en: "Paul & Helena Wallin",
+    es: "Paul & Helena Wallin",
+  },
+  "member.wallin.title": { en: "Archaeologists", es: "Arqueólogos" },
+  "member.joann.name": { en: "Jo Anne Van Tilburg", es: "Jo Anne Van Tilburg" },
+  "member.joann.title": { en: "Archaeologist", es: "Arqueóloga" },
+  "member.sonia.name": { en: "Sonia Haoa", es: "Sonia Haoa" },
+  "member.sonia.title": { en: "Archaeologist", es: "Arqueóloga" },
+  "member.kurt.name": { en: "Kurt H. Kjær", es: "Kurt H. Kjær" },
+  "member.kurt.title": {
+    en: "Evolutionary Geneticist",
+    es: "Genetista Evolutivo",
+  },
+  "member.aaron.name": { en: "Aaron Ciechanover", es: "Aaron Ciechanover" },
+  "member.aaron.title": {
+    en: "Nobel Laureate / Biologist",
+    es: "Premio Nobel / Biólogo",
+  },
+  "member.eske.name": { en: "Eske Willerslev", es: "Eske Willerslev" },
+  "member.eske.title": {
+    en: "Evolutionary Geneticist",
+    es: "Genetista Evolutivo",
+  },
+  "member.chris.name": {
+    en: "Christopher Stevenson",
+    es: "Christopher Stevenson",
+  },
+  "member.chris.title": { en: "Archaeologist", es: "Arqueólogo" },
 
   // Scientific Committee
   "committee.title": {
-    en: "Scientific Committee",
-    es: "Comité Científico",
+    en: "International Scientific Committee",
+    es: "Comité Científico Internacional",
   },
   "committee.description": {
     en: "Our distinguished international committee brings together leading experts in Pacific archaeology, environmental studies, and cultural heritage preservation.",
