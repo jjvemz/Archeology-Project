@@ -3,7 +3,7 @@ import { Globe, Award, BookOpen } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import CommitteeWheel from "./CommitteeWheel";
 
-import Anderson from "/images/committee/Anderson.jpg"
+import Anderson from "/images/committee/Anderson.jpg";
 import Dubois from "/images/committee/Dubois.png";
 import Lopez from "/images/committee/Lopez.jpg";
 import Morales from "/images/committee/Morales.jpg";
@@ -11,7 +11,6 @@ import Tanaka from "/images/committee/Tanaka.jpg";
 import Marchetti from "/images/committee/Marchetti.jpg";
 import Thompson from "/images/committee/Thompson.jpg";
 import zhang from "/images/committee/Zhang.png";
-
 
 const ScientificCommittee = () => {
   const { t } = useLanguage();
@@ -23,7 +22,7 @@ const ScientificCommittee = () => {
       affiliation: "University of Auckland, New Zealand",
       specialization: "Pacific Maritime Archaeology",
       region: "New Zealand",
-      picture: Marchetti
+      picture: Marchetti,
     },
     {
       name: "Prof. Hiroshi Tanaka",
@@ -31,7 +30,7 @@ const ScientificCommittee = () => {
       affiliation: "Kyoto University, Japan",
       specialization: "Island Settlement Patterns",
       region: "Japan",
-      picture: Tanaka
+      picture: Tanaka,
     },
     {
       name: "Dr. Maria Fernandez-Lopez",
@@ -39,7 +38,7 @@ const ScientificCommittee = () => {
       affiliation: "Universidad de Chile",
       specialization: "Colonial Impact Studies",
       region: "Chile",
-      picture: Lopez
+      picture: Lopez,
     },
     {
       name: "Prof. Robert Anderson",
@@ -47,7 +46,7 @@ const ScientificCommittee = () => {
       affiliation: "University of Hawaii at Manoa, USA",
       specialization: "Polynesian Archaeology",
       region: "Hawaii",
-      picture: Anderson
+      picture: Anderson,
     },
     {
       name: "Dr. Claudine Dubois",
@@ -55,7 +54,7 @@ const ScientificCommittee = () => {
       affiliation: "Université de la Polynésie française",
       specialization: "Cultural Change Analysis",
       region: "French Polynesia",
-      picture: Dubois
+      picture: Dubois,
     },
     {
       name: "Prof. Zhang Wei",
@@ -63,7 +62,7 @@ const ScientificCommittee = () => {
       affiliation: "Chinese Academy of Social Sciences",
       specialization: "Trans-Pacific Connections",
       region: "China",
-      picture: zhang
+      picture: zhang,
     },
     {
       name: "Dr. Sarah Thompson",
@@ -71,7 +70,7 @@ const ScientificCommittee = () => {
       affiliation: "Australian National University",
       specialization: "Environmental Archaeology",
       region: "Australia",
-      picture: Thompson
+      picture: Thompson,
     },
     {
       name: "Prof. Carlos Morales",
@@ -79,19 +78,19 @@ const ScientificCommittee = () => {
       affiliation: "Universidad Nacional de Colombia",
       specialization: "Coastal Adaptations",
       region: "Colombia",
-      picture: Morales
-    }
+      picture: Morales,
+    },
   ];
 
   return (
-    <section 
-      id="committee" 
+    <section
+      id="committee"
       className="pb-40"
       style={{
-        background: `linear-gradient(180deg, #ffeecd 60%, #1e40af 60%)`
+        background: `linear-gradient(180deg, #ffeecd 60%, #1e40af 60%)`,
       }}
     >
-      <div className="bg-blue-800 py-36 px-4">
+      <div className="bg-blue-800 py-24 px-2">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto flex items-center gap-8">
             <div className="flex items-center gap-6">
@@ -101,8 +100,8 @@ const ScientificCommittee = () => {
               <h2 className="text-5xl font-bold text-primary leading-tight">
                 IX_ {t("committee.title").toUpperCase()}
               </h2>
-              <div className="mt-4  px-4 ">
-                <p className="text-sm text-orange-700 leading-relaxed">
+              <div className="mt-2  px-4 ">
+                <p className="text-2xl text-orange-700 leading-relaxed">
                   {t("committee.description")}
                 </p>
               </div>
@@ -112,12 +111,13 @@ const ScientificCommittee = () => {
       </div>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-
-          <div className="grid lg:grid-cols-3 gap-8 pt-32 mb-12">
+          <div className="grid lg:grid-cols-3 gap-16 pt-12 mb-10 scale-95 transform">
             <Card className="shadow-congress text-center">
               <CardHeader>
                 <Globe className="h-12 w-12 text-pacific-blue mx-auto mb-4  text-primary" />
-                <CardTitle className="text-2xl  text-primary">{t("committee.globalExpertise")}</CardTitle>
+                <CardTitle className="text-2xl  text-primary">
+                  {t("committee.globalExpertise")}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground  text-primary">
@@ -129,7 +129,9 @@ const ScientificCommittee = () => {
             <Card className="shadow-congress text-center">
               <CardHeader>
                 <Award className="h-12 w-12 text-coral mx-auto mb-4  text-primary" />
-                <CardTitle className="text-2xl  text-primary">{t("committee.rigorousReview")}</CardTitle>
+                <CardTitle className="text-2xl  text-primary">
+                  {t("committee.rigorousReview")}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground  text-primary">
@@ -141,7 +143,9 @@ const ScientificCommittee = () => {
             <Card className="shadow-congress text-center">
               <CardHeader>
                 <BookOpen className="h-12 w-12 text-pacific-teal mx-auto mb-4  text-primary" />
-                <CardTitle className="text-2xl  text-primary">{t("committee.publicationSupport")}</CardTitle>
+                <CardTitle className="text-2xl  text-primary">
+                  {t("committee.publicationSupport")}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground  text-primary">
@@ -157,22 +161,30 @@ const ScientificCommittee = () => {
           <div className="mt-16">
             <Card className="shadow-congress text-black">
               <CardContent className="pt-8 text-center">
-                <h3 className="text-2xl font-bold mb-4  text-primary">{t("committee.responsibilities")}</h3>
+                <h3 className="text-2xl font-bold mb-4  text-primary">
+                  {t("committee.responsibilities")}
+                </h3>
                 <div className="grid md:grid-cols-3 gap-6  text-primary">
                   <div>
-                    <h4 className="font-semibold mb-2">{t("committee.abstractReview")}</h4>
+                    <h4 className="font-semibold mb-2">
+                      {t("committee.abstractReview")}
+                    </h4>
                     <p className="text-sm  text-primary">
                       {t("committee.abstractReview.desc")}
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">{t("committee.programDevelopment")}</h4>
+                    <h4 className="font-semibold mb-2">
+                      {t("committee.programDevelopment")}
+                    </h4>
                     <p className="text-sm  text-primary">
                       {t("committee.programDevelopment.desc")}
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">{t("committee.qualityAssurance")}</h4>
+                    <h4 className="font-semibold mb-2">
+                      {t("committee.qualityAssurance")}
+                    </h4>
                     <p className="text-sm  text-primary">
                       {t("committee.qualityAssurance.desc")}
                     </p>
