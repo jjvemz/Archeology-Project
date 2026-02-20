@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import statue from "/images/CulturalArtifacts/statue.png";
 import spiral from "/images/CulturalArtifacts/spiral.png";
 import stone from "/images/CulturalArtifacts/stone.jpg";
-import bowl from "/images/CulturalArtifacts/bowl.png";
+import bowl from "/images/CulturalArtifacts/bowl1.png";
 
 const CulturalArtifactsGallery = () => {
   const { t } = useLanguage();

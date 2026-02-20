@@ -1,34 +1,27 @@
 import { useLanguage } from "@/hooks/useLanguage";
-import { useRotatingImage } from "@/hooks/useRotatingImage";
 import { IframeModal, ColorPalette } from "./IframeModal";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect } from "react";
 
 // Images from CulturalArtifactsGallery
 const ARTIFACT_IMAGES = [
-  "/images/CulturalArtifacts/bowl.png",
+  "/images/CulturalArtifacts/bowl1.png",
   "/images/CulturalArtifacts/spiral.png",
   "/images/CulturalArtifacts/stone.jpg",
   "/images/CulturalArtifacts/statue.png",
 ];
 
-const RotatingCircle = ({ delay = 0 }: { delay?: number }) => {
-  const { currentImage, opacity } = useRotatingImage(ARTIFACT_IMAGES, 4000);
-
+const ArtifactCircle = ({ image }: { image: string }) => {
   return (
     <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-blue-900 bg-white flex-shrink-0">
-      {currentImage && (
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: `url("${currentImage}")`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            opacity: opacity,
-            transition: "opacity 1s ease-in-out",
-          }}
-        />
-      )}
+      <div
+        className="absolute inset-0 w-full h-full bg-[#c55a11]"
+        style={{
+          backgroundImage: `url("${image}")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
     </div>
   );
 };
@@ -56,25 +49,15 @@ const CongressHero = () => {
       <div className="bg-blue-800 py-12 px-4 shadow-lg z-10 overflow-hidden">
         <div className="embla" ref={emblaRef}>
           <div className="embla__container flex items-center">
-            {/* Carousel Slides - Show at least 6 slides for better carousel feel */}
-            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
-              <RotatingCircle delay={0} />
-            </div>
-            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
-              <RotatingCircle delay={1000} />
-            </div>
-            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
-              <RotatingCircle delay={2000} />
-            </div>
-            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
-              <RotatingCircle delay={3000} />
-            </div>
-            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
-              <RotatingCircle delay={4000} />
-            </div>
-            <div className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24">
-              <RotatingCircle delay={5000} />
-            </div>
+            {/* Carousel Slides */}
+            {[...ARTIFACT_IMAGES, ...ARTIFACT_IMAGES].map((image, index) => (
+              <div
+                key={index}
+                className="embla__slide flex-[0_0_auto] px-4 sm:px-12 md:px-24 "
+              >
+                <ArtifactCircle image={image} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -110,7 +93,7 @@ const CongressHero = () => {
             <div className="flex flex-wrap gap-4 md:gap-8 justify-center w-full">
               <IframeModal
                 buttonText={t("congressHero.submitAbstract")}
-                iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
+                iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=register&Itemid=477&pr=1&key=cRu4YmsgB2ZJhdvVzX3bMe7j6GTPfK1rWINHt09oxwnyL5UDSq::a06f74c8a6e981aea67ea77848921b21::1981661871&token=anVhbmoudmVyZ2FyYW1AZ21haWwuY29t"
                 iframeTitle={t("congressHero.iframeTitle")}
                 colorPalette={ColorPalette.BlueOrange}
                 closeButtonText={t("congressHero.closeButton")}
