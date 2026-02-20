@@ -1805,7 +1805,7 @@ const translations: Translations = {
   },
   "artifacts.payment.discounts.earlyBird": {
     en: "Early Bird Discount",
-    es: "Descuento Madrugador",
+    es: "Descuento anticipado",
   },
   "artifacts.payment.discounts.earlyBirdDesc": {
     en: "10% off for registrations before January 2026",

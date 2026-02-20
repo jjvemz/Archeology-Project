@@ -3,14 +3,14 @@ import { Globe, Award, BookOpen } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import CommitteeWheel from "./CommitteeWheel";
 
-import AaronImg from "/images/ScientificWheel/AARON CIECHANOVER.jfif";
+import AaronImg from "/images/ScientificWheel/AARON CIECHANOVER.jpeg";
 import EskeImg from "/images/ScientificWheel/Eske Willerslev.jpeg";
 import HellenImg from "/images/ScientificWheel/Hellen Wallin.jpeg";
 import JoAnneImg from "/images/ScientificWheel/Jo anne van tillburg.jpg";
 import KurtImg from "/images/ScientificWheel/KurtKjaer.jpeg";
-import SoniaImg from "/images/ScientificWheel/SoniaHaoaCardinali.jpg";
-import ChrisImg from "/images/ScientificWheel/christopher stevenson.jpg";
-import LilianImg from "/images/ScientificWheel/lilian-gonzalez-nualart.webp";
+import SoniaImg from "/images/ScientificWheel/SoniaHaoaCardinali.jpeg";
+import ChrisImg from "/images/ScientificWheel/christopher stevenson.jpeg";
+import LilianImg from "/images/ScientificWheel/lilian-gonzalez-nualart.jpeg";
 
 const ScientificCommittee = () => {
   const { t } = useLanguage();
