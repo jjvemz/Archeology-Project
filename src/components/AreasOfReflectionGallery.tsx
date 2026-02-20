@@ -107,17 +107,6 @@ export function AreasOfReflectionGallery() {
       ],
     },
     {
-      titleKey: "areasGallery.diseases.title",
-      descKey: "areasGallery.diseases.desc",
-      scaleKey: "areasGallery.diseases.scale",
-      topics: [
-        "areasGallery.diseases.topic1",
-        "areasGallery.diseases.topic2",
-        "areasGallery.diseases.topic3",
-        "areasGallery.diseases.topic4",
-      ],
-    },
-    {
       titleKey: "areasGallery.climate.title",
       descKey: "areasGallery.climate.desc",
       scaleKey: "areasGallery.climate.scale",
@@ -173,9 +162,16 @@ export function AreasOfReflectionGallery() {
       {/* Gallery Section */}
       <div className="py-16 px-4 ">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {areas.map((area, index) => (
+          {/* Top Row - 3 items */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {areas.slice(0, 3).map((area, index) => (
               <AreaCard key={index} area={area} index={index} />
+            ))}
+          </div>
+          {/* Bottom Row - 2 items centered */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {areas.slice(3).map((area, index) => (
+              <AreaCard key={index + 3} area={area} index={index + 3} />
             ))}
           </div>
         </div>

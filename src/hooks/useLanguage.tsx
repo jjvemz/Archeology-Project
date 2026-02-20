@@ -1914,24 +1914,24 @@ const translations: Translations = {
     es: "500-700 d.C.",
   },
   "timeline.event4.title": {
-    en: "HAWAII COLONIZATION",
-    es: "COLONIZACIÓN DE HAWAII",
+    en: "HAWAI REPOPULATION",
+    es: "REPOBLACIÓN DE HAWAI",
   },
   "timeline.event4.period": {
     en: "500-700 CE / Hawaiian Islands",
     es: "500-700 d.C. / Islas Hawaianas",
   },
   "timeline.event4.event": {
-    en: "Hawaii Colonization",
-    es: "Colonización de Hawaii",
+    en: "Hawai Repopulation",
+    es: "Repoblación de Hawai",
   },
   "timeline.event4.location": {
     en: "Hawaiian Islands",
     es: "Islas Hawaianas",
   },
   "timeline.event4.desc": {
-    en: "First Polynesian settlers reach Hawaii via long-distance voyaging, beginning a unique cultural development in isolation.",
-    es: "Primeros colonos polinesios alcanzan Hawaii mediante viajes de larga distancia, comenzando un desarrollo cultural único en aislamiento.",
+    en: "First Polynesian settlers reach Hawai via long-distance voyaging, beginning a unique cultural development in isolation.",
+    es: "Primeros colonos polinesios alcanzan Hawai mediante viajes de larga distancia, comenzando un desarrollo cultural único en aislamiento.",
   },
   "timeline.event5.year": {
     en: "800-1000 CE",

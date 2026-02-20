@@ -26,3 +26,5 @@ dist-ssr
 .kiro
 *.test.tsx
 *.test.ts
+src/test/fileMock.ts
+src/test/setup.tsx

@@ -4,34 +4,19 @@ import { IframeModal, ColorPalette } from "./IframeModal";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect } from "react";
 
-// Images from public/images/NoCircles
-const NO_CIRCLES_IMAGES = [
-  "/images/NoCircles/5 rapa.jpeg",
-  "/images/NoCircles/6 rapa.jpeg",
-  "/images/NoCircles/7 rapa.jpeg",
-  "/images/NoCircles/8 rapa.jpeg",
-  "/images/NoCircles/9 rapa.jpeg",
-  "/images/NoCircles/10 rapa.jpeg",
-  "/images/NoCircles/11 rapa.jpeg",
-  "/images/NoCircles/12 rapa.jpeg",
-  "/images/NoCircles/13 rapa.jpeg",
-  "/images/NoCircles/14 rapa.jpeg",
-  "/images/NoCircles/15 rapa.jpeg",
-  "/images/NoCircles/16 rapa.jpeg",
-  "/images/NoCircles/17 rapa.jpeg",
-  "/images/NoCircles/18 rapa.jpeg",
-  "/images/NoCircles/19 rapa.jpeg",
-  "/images/NoCircles/22 rapa.jpeg",
-  "/images/NoCircles/24 rapa.jpeg",
-  "/images/NoCircles/25 rapa.jpeg",
-  "/images/NoCircles/26 rapa.jpeg",
+// Images from CulturalArtifactsGallery
+const ARTIFACT_IMAGES = [
+  "/images/CulturalArtifacts/bowl.png",
+  "/images/CulturalArtifacts/spiral.png",
+  "/images/CulturalArtifacts/stone.jpg",
+  "/images/CulturalArtifacts/statue.png",
 ];
 
 const RotatingCircle = ({ delay = 0 }: { delay?: number }) => {
-  const { currentImage, opacity } = useRotatingImage(NO_CIRCLES_IMAGES, 4000);
+  const { currentImage, opacity } = useRotatingImage(ARTIFACT_IMAGES, 4000);
 
   return (
-    <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-dashed border-orange-500 bg-white flex-shrink-0">
+    <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full overflow-hidden relative aspect-square border-[6px] border-blue-900 bg-white flex-shrink-0">
       {currentImage && (
         <div
           className="absolute inset-0 w-full h-full"

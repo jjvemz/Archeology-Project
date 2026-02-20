@@ -3,10 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/hooks/useLanguage";
 import { motion } from "framer-motion";
 
-import statue from "/images/statue.png";
-import spiral from "/images/spiral.png";
-import stone from "/images/stone.png";
-import bowl from "/images/bowl.png";
+import statue from "/images/CulturalArtifacts/statue.png";
+import spiral from "/images/CulturalArtifacts/spiral.png";
+import stone from "/images/CulturalArtifacts/stone.jpg";
+import bowl from "/images/CulturalArtifacts/bowl.png";
 
 const CulturalArtifactsGallery = () => {
   const { t } = useLanguage();
