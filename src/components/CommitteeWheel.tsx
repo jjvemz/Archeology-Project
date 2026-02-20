@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/hooks/useLanguage";
 import bird1 from "/images/committee/Circles/bird1.png";
@@ -27,8 +27,19 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
   const { t } = useLanguage();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [radius, setRadius] = useState(300);
 
-  const radius = 320; // Slightly larger for better spacing
+  // Recalculate radius on resize so circles never get clipped
+  useEffect(() => {
+    const update = () => {
+      const vw = window.innerWidth;
+      // clamp radius between 160 (mobile) and 320 (desktop)
+      setRadius(Math.max(160, Math.min(320, vw * 0.28)));
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   // Custom angles based on the user's drawing (0 is Top)
   const getCustomAngle = (id: string) => {
@@ -99,9 +110,12 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
 
   return (
     <div
-      className="w-full h-screen flex items-center justify-center relative overflow-hidden"
+      className="w-full flex items-center justify-center relative"
       style={{
         background: "linear-gradient(to bottom, #1e40af 50%, #ffeecd 50%)",
+        // Dynamic height: tall enough to show all members but never shorter than 700px
+        minHeight: "clamp(700px, calc(var(--radius, 320px) * 2 + 220px), 100vh)",
+        height: `${Math.max(700, radius * 2 + 220)}px`,
       }}
     >
       <div
@@ -172,11 +186,10 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
               onClick={() => handleCircleClick(index)}
             >
               <div
-                className={`text-center transition-all duration-300 w-32 h-32 rounded-full border-2 border-dashed flex items-center justify-center bg-white/5 backdrop-blur-sm ${
-                  isHovered
-                    ? "scale-110 border-primary bg-white/10"
-                    : "border-orange-700/50"
-                }`}
+                className={`text-center transition-all duration-300 w-32 h-32 rounded-full border-2 border-dashed flex items-center justify-center bg-white/5 backdrop-blur-sm ${isHovered
+                  ? "scale-110 border-primary bg-white/10"
+                  : "border-orange-700/50"
+                  }`}
               >
                 {!isHovered ? (
                   <div className="text-center">
