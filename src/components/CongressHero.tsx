@@ -1,5 +1,4 @@
 import { useLanguage } from "@/hooks/useLanguage";
-import { IframeModal, ColorPalette } from "./IframeModal";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect } from "react";
 
@@ -91,34 +90,34 @@ const CongressHero = () => {
           <div className="flex flex-col gap-8 pt-8 w-full items-center">
             {/* Top row: side by side */}
             <div className="flex flex-wrap gap-4 md:gap-8 justify-center w-full">
-              <IframeModal
+              {/* <IframeModal
                 buttonText={t("congressHero.submitAbstract")}
                 iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=register&Itemid=477&pr=1&key=cRu4YmsgB2ZJhdvVzX3bMe7j6GTPfK1rWINHt09oxwnyL5UDSq::a06f74c8a6e981aea67ea77848921b21::1981661871&token=anVhbmoudmVyZ2FyYW1AZ21haWwuY29t"
                 iframeTitle={t("congressHero.iframeTitle")}
                 colorPalette={ColorPalette.BlueOrange}
                 closeButtonText={t("congressHero.closeButton")}
                 className="inline-flex items-center justify-center rounded-full border border-orange-700 px-10 py-4 text-lg md:text-xl font-bold text-orange-700 hover:bg-orange-700/10 transition-all duration-300 shadow-sm uppercase tracking-wider"
-              />
+              /> */}
 
-              <IframeModal
-                buttonText={t("congressHero.registerNow")}
-                iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
-                iframeTitle={t("congressHero.iframeTitle")}
-                colorPalette={ColorPalette.BlueOrange}
-                closeButtonText={t("congressHero.closeButton")}
+              <a
+                href="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=register&Itemid=477&pr=1&key=cRu4YmsgB2ZJhdvVzX3bMe7j6GTPfK1rWINHt09oxwnyL5UDSq::a06f74c8a6e981aea67ea77848921b21::1981661871&token=anVhbmoudmVyZ2FyYW1AZ21haWwuY29t"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-orange-700 px-10 py-4 text-lg md:text-xl font-bold text-orange-700 hover:bg-orange-700/10 transition-all duration-300 shadow-sm uppercase tracking-wider"
-              />
+              >
+                {t("congressHero.registerNow")}
+              </a>
             </div>
 
             {/* Bottom row: centered below */}
-            <IframeModal
+            {/* <IframeModal
               buttonText={t("congressHero.callForPapers")}
               iframeUrl="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=form&form_id=23&Itemid=808&tmpl=component"
               iframeTitle={t("congressHero.iframeTitle")}
               colorPalette={ColorPalette.BlueOrange}
               closeButtonText={t("congressHero.closeButton")}
               className="inline-flex items-center justify-center rounded-full border border-orange-700 px-10 py-4 text-lg md:text-xl font-bold text-orange-700 hover:bg-orange-700/10 transition-all duration-300 shadow-sm uppercase tracking-wider"
-            />
+            /> */}
           </div>
         </div>
       </div>
