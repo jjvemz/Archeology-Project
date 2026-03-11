@@ -123,7 +123,7 @@ const ScientificCommittee = () => {
       <div className="bg-[#1e40af]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-3 gap-16 pt-12 mb-0 pb-16 scale-95 transform">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 py-8 md:py-12">
               <Card className="shadow-congress text-center bg-transparent border-orange-700/30">
                 <CardHeader>
                   <Globe className="h-12 w-12 mx-auto mb-4 text-primary" />
