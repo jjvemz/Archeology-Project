@@ -11,6 +11,7 @@ import whale4 from "/images/committee/Circles/whale4.png";
 import whale5 from "/images/committee/Circles/whale5.png";
 
 interface CommitteeMember {
+  id: string;
   name: string;
   titleKey: string;
   affiliation: string;
@@ -21,10 +22,6 @@ interface CommitteeMember {
 
 interface CommitteeWheelProps {
   members: CommitteeMember[];
-}
-
-interface MemberWithId extends CommitteeMember {
-  id: string;
 }
 
 const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
@@ -101,7 +98,7 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
   };
 
   const getMemberPosition = (index: number) => {
-    const member = members[index] as MemberWithId;
+    const member = members[index];
     const angle = (getCustomAngle(member.id) - 90) * (Math.PI / 180);
     const x = Math.cos(angle) * dimensions.radius;
     const y = Math.sin(angle) * dimensions.radius;
@@ -185,7 +182,6 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
 
         {/* Member positions around the wheel - responsive size */}
         {members.map((member, index) => {
-          const memberWithId = member as MemberWithId;
           const { x, y } = getMemberPosition(index);
           const isHovered = hoveredIndex === index;
 
@@ -211,7 +207,7 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
                 {!isHovered ? (
                   <div className="text-center">
                     <img
-                      src={getAnimalImage(memberWithId.id) || bird1}
+                      src={getAnimalImage(member.id) || bird1}
                       alt="Icon"
                       className="object-contain mx-auto mb-1 opacity-80"
                       style={{ width: dimensions.orbitSize * 0.42, height: dimensions.orbitSize * 0.42 }}
