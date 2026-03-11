@@ -171,7 +171,7 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
                 <div className="flex-1 flex flex-col items-center justify-center px-4 pt-2">
                   <h3 
                     className="font-black text-white leading-tight uppercase tracking-tighter"
-                    style={{ fontSize: Math.max(14, dimensions.centerSize * 0.08) }}
+                    style={{ fontSize: Math.max(14, dimensions.centerSize * 0.072) }}
                   >
                     {t("committeeWheel.congress")}
                   </h3>
@@ -184,13 +184,13 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
                 <div className="flex-1 flex flex-col items-center justify-center px-4 pb-2">
                   <h3 
                     className="font-black text-white/80 leading-tight uppercase tracking-tighter"
-                    style={{ fontSize: Math.max(14, dimensions.centerSize * 0.08) }}
+                    style={{ fontSize: Math.max(14, dimensions.centerSize * 0.072) }}
                   >
                     {t("committeeWheel.keynotes")}
                   </h3>
                   <p 
                     className="text-white/60 mt-1 uppercase tracking-widest font-bold"
-                    style={{ fontSize: Math.max(8, dimensions.centerSize * 0.035) }}
+                    style={{ fontSize: Math.max(8, dimensions.centerSize * 0.03) }}
                   >
                     {t("committeeWheel.hoverOverName")}
                   </p>
