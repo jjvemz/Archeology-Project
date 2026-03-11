@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 import LanguageToggle from "./LanguageToggle";
 import MataKiteRangiLogo from "/images/logo_fundacion_mktr_white.png";
@@ -40,7 +39,6 @@ const Header = () => {
               <a href="#venue" className="text-foreground hover:text-primary text-orange-600 font-bold">
                 {t("header.venue")}
               </a>
-              {/* <Button variant="outline">{t("header.registerNow")}</Button> */}
             </nav>
             <LanguageToggle />
           </div>
