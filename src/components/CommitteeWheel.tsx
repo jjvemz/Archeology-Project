@@ -33,6 +33,13 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [radius, setRadius] = useState(300);
 
+  // Derived dimensions object based on radius
+  const dimensions = {
+    radius: radius,
+    centerSize: radius * 0.9,
+    orbitSize: radius * 0.36,
+  };
+
   // Recalculate radius on resize so circles never get clipped
   useEffect(() => {
     const update = () => {
