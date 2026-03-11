@@ -1,6 +1,13 @@
 import { useLanguage } from "@/hooks/useLanguage";
 import { useRotatingImage } from "@/hooks/useRotatingImage";
 
+interface AreaData {
+  titleKey: string;
+  descKey: string;
+  scaleKey: string;
+  topics: string[];
+}
+
 const RAPA_IMAGES: string[] = [
   "/images/NoCircles/5 rapa.jpeg",
   "/images/NoCircles/6 rapa.jpeg",
@@ -23,7 +30,7 @@ const RAPA_IMAGES: string[] = [
   "/images/NoCircles/26 rapa.jpeg",
 ];
 
-function AreaCard({ area, index }: { area: any; index: number }) {
+function AreaCard({ area, index }: { area: AreaData; index: number }) {
   const { t } = useLanguage();
   const { currentImage, opacity } = useRotatingImage(RAPA_IMAGES, 6000);
 
