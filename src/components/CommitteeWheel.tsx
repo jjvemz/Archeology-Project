@@ -23,6 +23,10 @@ interface CommitteeWheelProps {
   members: CommitteeMember[];
 }
 
+interface MemberWithId extends CommitteeMember {
+  id: string;
+}
+
 const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
   const { t } = useLanguage();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -97,10 +101,10 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
   };
 
   const getMemberPosition = (index: number) => {
-    const member = members[index] as any;
+    const member = members[index] as MemberWithId;
     const angle = (getCustomAngle(member.id) - 90) * (Math.PI / 180);
-    const x = Math.cos(angle) * radius;
-    const y = Math.sin(angle) * radius;
+    const x = Math.cos(angle) * dimensions.radius;
+    const y = Math.sin(angle) * dimensions.radius;
     return { x, y };
   };
 
@@ -122,8 +126,11 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
         className="relative w-full h-full flex items-center justify-center"
         onMouseMove={handleMouseMove}
       >
-        {/* Center circle - split text */}
-        <motion.div className="absolute w-80 h-80 rounded-full border-4 border-primary bg-primary flex flex-col items-center justify-center z-10 shadow-lg overflow-hidden">
+        {/* Center circle - responsive size */}
+        <motion.div 
+          className="absolute rounded-full border-4 border-primary bg-primary flex flex-col items-center justify-center z-10 shadow-lg overflow-hidden"
+          style={{ width: dimensions.centerSize, height: dimensions.centerSize }}
+        >
           <AnimatePresence mode="wait">
             {hoveredIndex !== null ? (
               <motion.img
@@ -144,8 +151,11 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
                 exit={{ opacity: 0 }}
               >
                 {/* Top Half */}
-                <div className="flex-1 flex flex-col items-center justify-center px-6 pt-4">
-                  <h3 className="text-2xl font-black text-white leading-tight uppercase tracking-tighter">
+                <div className="flex-1 flex flex-col items-center justify-center px-4 pt-2">
+                  <h3 
+                    className="font-black text-white leading-tight uppercase tracking-tighter"
+                    style={{ fontSize: Math.max(14, dimensions.centerSize * 0.072) }}
+                  >
                     {t("committeeWheel.congress")}
                   </h3>
                 </div>
@@ -154,11 +164,17 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
                 <div className="w-full h-1 bg-white/30" />
 
                 {/* Bottom Half */}
-                <div className="flex-1 flex flex-col items-center justify-center px-6 pb-4">
-                  <h3 className="text-2xl font-black text-white/80 leading-tight uppercase tracking-tighter">
+                <div className="flex-1 flex flex-col items-center justify-center px-4 pb-2">
+                  <h3 
+                    className="font-black text-white/80 leading-tight uppercase tracking-tighter"
+                    style={{ fontSize: Math.max(14, dimensions.centerSize * 0.072) }}
+                  >
                     {t("committeeWheel.keynotes")}
                   </h3>
-                  <p className="text-[10px] text-white/60 mt-2 uppercase tracking-widest font-bold">
+                  <p 
+                    className="text-white/60 mt-1 uppercase tracking-widest font-bold"
+                    style={{ fontSize: Math.max(8, dimensions.centerSize * 0.03) }}
+                  >
                     {t("committeeWheel.hoverOverName")}
                   </p>
                 </div>
@@ -167,8 +183,9 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
           </AnimatePresence>
         </motion.div>
 
-        {/* Member positions around the wheel */}
-        {members.map((member: any, index) => {
+        {/* Member positions around the wheel - responsive size */}
+        {members.map((member, index) => {
+          const memberWithId = member as MemberWithId;
           const { x, y } = getMemberPosition(index);
           const isHovered = hoveredIndex === index;
 
@@ -194,20 +211,30 @@ const CommitteeWheel = ({ members }: CommitteeWheelProps) => {
                 {!isHovered ? (
                   <div className="text-center">
                     <img
-                      src={getAnimalImage(member.id) || bird1}
+                      src={getAnimalImage(memberWithId.id) || bird1}
                       alt="Icon"
-                      className="w-12 h-12 object-contain mx-auto mb-1 opacity-80"
+                      className="object-contain mx-auto mb-1 opacity-80"
+                      style={{ width: dimensions.orbitSize * 0.42, height: dimensions.orbitSize * 0.42 }}
                     />
-                    <p className="font-bold text-[10px] leading-tight text-orange-700 dark:text-primary px-2">
+                    <p 
+                      className="font-bold leading-tight text-orange-700 dark:text-primary px-1"
+                      style={{ fontSize: Math.max(8, dimensions.orbitSize * 0.10) }}
+                    >
                       {member.name.split(" ").slice(-1)[0]}
                     </p>
                   </div>
                 ) : (
-                  <div className="text-center p-2">
-                    <p className="font-black text-xs text-primary leading-tight uppercase">
+                  <div className="text-center p-1">
+                    <p 
+                      className="font-black text-primary leading-tight uppercase"
+                      style={{ fontSize: Math.max(10, dimensions.orbitSize * 0.12) }}
+                    >
                       {member.name}
                     </p>
-                    <p className="text-[9px] text-primary/80 font-bold mt-1 uppercase">
+                    <p 
+                      className="text-primary/80 font-bold mt-1 uppercase"
+                      style={{ fontSize: Math.max(8, dimensions.orbitSize * 0.10) }}
+                    >
                       {t(member.titleKey)}
                     </p>
                   </div>

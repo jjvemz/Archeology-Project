@@ -26,22 +26,24 @@ const Header = () => {
             </div>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-6">
-            <a href="#call-papers" className="text-foreground hover:text-primary text-orange-600 font-bold">
-              {t("header.callForPapers")}
-            </a>
-            <a href="#areas" className="text-foreground hover:text-primary text-orange-600 font-bold">
-              {t("header.areas")}
-            </a>
-            <a href="#registration" className="text-foreground hover:text-primary text-orange-600 font-bold">
-              {t("header.registration")}
-            </a>
-            <a href="#venue" className="text-foreground hover:text-primary text-orange-600 font-bold">
-              {t("header.venue")}
-            </a>
+          <div className="flex items-center space-x-4">
+            <nav className="hidden md:flex items-center space-x-6">
+              <a href="#call-papers" className="text-foreground hover:text-primary text-orange-600 font-bold">
+                {t("header.callForPapers")}
+              </a>
+              <a href="#areas" className="text-foreground hover:text-primary text-orange-600 font-bold">
+                {t("header.areas")}
+              </a>
+              <a href="#registration" className="text-foreground hover:text-primary text-orange-600 font-bold">
+                {t("header.registration")}
+              </a>
+              <a href="#venue" className="text-foreground hover:text-primary text-orange-600 font-bold">
+                {t("header.venue")}
+              </a>
+              {/* <Button variant="outline">{t("header.registerNow")}</Button> */}
+            </nav>
             <LanguageToggle />
-            {/* <Button variant="outline">{t("header.registerNow")}</Button> */}
-          </nav>
+          </div>
         </div>
       </div>
     </header>
