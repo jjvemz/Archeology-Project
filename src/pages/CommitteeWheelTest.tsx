@@ -3,6 +3,7 @@ import CommitteeWheel from "@/components/CommitteeWheel";
 const CommitteeWheelTest = () => {
   const committee = [
     {
+      id: "elena",
       name: "Dr. Elena Marchetti",
       titleKey: "committee.chair",
       affiliation: "University of Auckland, New Zealand",
@@ -10,6 +11,7 @@ const CommitteeWheelTest = () => {
       region: "New Zealand"
     },
     {
+      id: "hiroshi",
       name: "Prof. Hiroshi Tanaka",
       titleKey: "committee.viceChair",
       affiliation: "Kyoto University, Japan",
@@ -17,6 +19,7 @@ const CommitteeWheelTest = () => {
       region: "Japan"
     },
     {
+      id: "maria",
       name: "Dr. Maria Fernandez-Lopez",
       titleKey: "committee.member",
       affiliation: "Universidad de Chile",
@@ -24,6 +27,7 @@ const CommitteeWheelTest = () => {
       region: "Chile"
     },
     {
+      id: "robert",
       name: "Prof. Robert Anderson",
       titleKey: "committee.member",
       affiliation: "University of Hawaii at Manoa, USA",
@@ -31,6 +35,7 @@ const CommitteeWheelTest = () => {
       region: "Hawaii"
     },
     {
+      id: "claudine",
       name: "Dr. Claudine Dubois",
       titleKey: "committee.member",
       affiliation: "Université de la Polynésie française",
@@ -38,6 +43,7 @@ const CommitteeWheelTest = () => {
       region: "French Polynesia"
     },
     {
+      id: "zhang",
       name: "Prof. Zhang Wei",
       titleKey: "committee.member",
       affiliation: "Chinese Academy of Social Sciences",
@@ -45,6 +51,7 @@ const CommitteeWheelTest = () => {
       region: "China"
     },
     {
+      id: "sarah",
       name: "Dr. Sarah Thompson",
       titleKey: "committee.member",
       affiliation: "Australian National University",
@@ -52,6 +59,7 @@ const CommitteeWheelTest = () => {
       region: "Australia"
     },
     {
+      id: "carlos",
       name: "Prof. Carlos Morales",
       titleKey: "committee.member",
       affiliation: "Universidad Nacional de Colombia",
