@@ -104,8 +104,8 @@ const translations: Translations = {
     es: "Fecha Límite de Envío de Resúmenes",
   },
   "callForPapers.abstractDeadlineDate": {
-    en: "6th april 2026",
-    es: "6 de abril 2026",
+    en: "27th april 2026",
+    es: "27 de abril 2026",
   },
   "callForPapers.abstractDeadlineDesc": {
     en: "Submit your 300-word abstract with preliminary findings",
