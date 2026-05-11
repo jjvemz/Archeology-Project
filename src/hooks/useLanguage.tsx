@@ -1476,8 +1476,8 @@ const translations: Translations = {
     es: "Organización anfitriona y patrocinador principal dedicado a la preservación cultural de Rapa Nui y la investigación del Pacífico",
   },
   "sponsors.PUC.desc": {
-    en: "Since 1888, Pontificia Universidad Católica has been a leading institution in Chile for research and education across multiple disciplines, including archaeology and cultural heritage studies.",
-    es: "Desde 1888, la Pontificia Universidad Católica ha sido una institución líder en Chile para la investigación y la educación en múltiples disciplinas, incluyendo arqueología y estudios de patrimonio cultural.",
+    en: "Since 1888, Pontificia Universidad Católica has been a leading institution in Chile for archaeology and cultural heritage studies.",
+    es: "Desde 1888, la Pontificia Universidad Católica ha sido una institución líder en Chile para la arqueológica y patrimonio cultural.",
   },
   "sponsors.PUC.name": {
     en: "Pontificia Universidad Católica",
