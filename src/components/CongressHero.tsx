@@ -100,12 +100,21 @@ const CongressHero = () => {
               /> */}
 
               <a
-                href="https://matafoundation.dryfta.com/index.php?option=com_dryfta&view=register&Itemid=477&pr=1&key=cRu4YmsgB2ZJhdvVzX3bMe7j6GTPfK1rWINHt09oxwnyL5UDSq::a06f74c8a6e981aea67ea77848921b21::1981661871&token=anVhbmoudmVyZ2FyYW1AZ21haWwuY29t"
+                href="https://meetinghand.com/e/congreso-pacifico/registration"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-orange-700 px-10 py-4 text-lg md:text-xl font-bold text-orange-700 hover:bg-orange-700/10 transition-all duration-300 shadow-sm uppercase tracking-wider"
               >
                 {t("congressHero.registerNow")}
+              </a>
+
+              <a
+                href="https://meetinghand.com/e/congreso-pacifico/abstract"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-orange-700 px-10 py-4 text-lg md:text-xl font-bold text-orange-700 hover:bg-orange-700/10 transition-all duration-300 shadow-sm uppercase tracking-wider"
+              >
+                {t("congressHero.submitAbstract")}
               </a>
             </div>
 
