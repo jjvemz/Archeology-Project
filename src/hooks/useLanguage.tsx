@@ -1475,9 +1475,13 @@ const translations: Translations = {
     en: "Host organization and primary sponsor dedicated to Rapa Nui cultural preservation and Pacific research",
     es: "Organización anfitriona y patrocinador principal dedicado a la preservación cultural de Rapa Nui y la investigación del Pacífico",
   },
-  "sponsors.nationalGeographic.name": {
-    en: "National Geographic Society",
-    es: "National Geographic Society",
+  "sponsors.PUC.desc": {
+    en: "Since 1888, Pontificia Universidad Católica has been a leading institution in Chile for research and education across multiple disciplines, including archaeology and cultural heritage studies.",
+    es: "Desde 1888, la Pontificia Universidad Católica ha sido una institución líder en Chile para la investigación y la educación en múltiples disciplinas, incluyendo arqueología y estudios de patrimonio cultural.",
+  },
+  "sponsors.PUC.name": {
+    en: "Pontificia Universidad Católica",
+    es: "Pontificia Universidad Católica",
   },
   "sponsors.nsf.name": {
     en: "National Science Foundation",
