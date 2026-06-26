@@ -2177,6 +2177,88 @@ const translations: Translations = {
     en: "© 2025 Pacific Congress on Archaeology & Changing Environment. All rights reserved.",
     es: "© 2025 Congreso del Pacífico sobre Arqueología y Medio Ambiente Cambiante. Todos los derechos reservados.",
   },
+
+  // Contact Section
+  "contact.title": {
+    en: "CONTACT US",
+    es: "CONTÁCTANOS",
+  },
+  "contact.description": {
+    en: "Have questions about the congress? We'd love to hear from you.",
+    es: "¿Tienes preguntas sobre el congreso? Nos encantaría escucharte.",
+  },
+  "contact.name": {
+    en: "Full Name",
+    es: "Nombre Completo",
+  },
+  "contact.namePlaceholder": {
+    en: "Your name",
+    es: "Tu nombre",
+  },
+  "contact.email": {
+    en: "Email Address",
+    es: "Correo Electrónico",
+  },
+  "contact.emailPlaceholder": {
+    en: "your@email.com",
+    es: "tu@correo.com",
+  },
+  "contact.subject": {
+    en: "Subject",
+    es: "Asunto",
+  },
+  "contact.subjectPlaceholder": {
+    en: "What is your message about?",
+    es: "¿De qué trata tu mensaje?",
+  },
+  "contact.message": {
+    en: "Message",
+    es: "Mensaje",
+  },
+  "contact.messagePlaceholder": {
+    en: "Write your message here...",
+    es: "Escribe tu mensaje aquí...",
+  },
+  "contact.send": {
+    en: "Send Message",
+    es: "Enviar Mensaje",
+  },
+  "contact.sending": {
+    en: "Sending...",
+    es: "Enviando...",
+  },
+  "contact.successTitle": {
+    en: "Message sent!",
+    es: "¡Mensaje enviado!",
+  },
+  "contact.successMessage": {
+    en: "We'll get back to you as soon as possible.",
+    es: "Te responderemos a la brevedad posible.",
+  },
+  "contact.errorTitle": {
+    en: "Error sending message",
+    es: "Error al enviar el mensaje",
+  },
+  "contact.errorMessage": {
+    en: "Please try again or contact us directly by email.",
+    es: "Por favor intenta nuevamente o contáctanos directamente por correo.",
+  },
+  "contact.nameRequired": {
+    en: "Name is required",
+    es: "El nombre es obligatorio",
+  },
+  "contact.emailRequired": {
+    en: "Valid email is required",
+    es: "Se requiere un correo válido",
+  },
+  "contact.subjectRequired": {
+    en: "Subject is required",
+    es: "El asunto es obligatorio",
+  },
+  "contact.messageRequired": {
+    en: "Message must be at least 10 characters",
+    es: "El mensaje debe tener al menos 10 caracteres",
+  },
 };
 
 interface LanguageContextType {

@@ -8,6 +8,7 @@ import { AreasOfReflectionGallery } from "@/components/AreasOfReflectionGallery"
 import SponsorsPartners from "@/components/SponsorsPartners";
 import CulturalArtifactsGallery from "@/components/CulturalArtifactsGallery";
 import PacificMigrationTimeline from "@/components/PacificMigrationTimeline";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
       <ScientificCommittee />
       <VenueLocation /> 
       <SponsorsPartners />
+      <ContactSection />
       <Footer />
     </div>
   );
