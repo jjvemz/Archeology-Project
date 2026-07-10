@@ -104,8 +104,8 @@ const translations: Translations = {
     es: "Fecha Límite de Envío de Resúmenes",
   },
   "callForPapers.abstractDeadlineDate": {
-    en: "29th june 2026",
-    es: "29 de junio 2026",
+    en: "1st august 2026",
+    es: "1 de agosto 2026",
   },
   "callForPapers.abstractDeadlineDesc": {
     en: "Submit your 300-word abstract with preliminary findings",
@@ -116,8 +116,8 @@ const translations: Translations = {
     es: "Notificación de Aceptación",
   },
   "callForPapers.acceptanceDate": {
-    en: "1st August 2026",
-    es: "1 de agosto 2026",
+    en: "30th August 2026",
+    es: "30 de agosto 2026",
   },
   "callForPapers.acceptanceDesc": {
     en: "Scientific committee will notify acceptance decisions",
